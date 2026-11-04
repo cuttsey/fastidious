@@ -1,0 +1,76 @@
+{
+  "_about": "The third-party skills Fastidious builds on. Each is pinned to an exact commit and copied, unchanged, into the skills directory by scripts/crew_stack.py. Nothing here updates itself: to move a pin, follow 'Moving a pin' in CREW.md.",
+  "locked": "2026-11-04",
+  "policy": "Pin to a release tag or to a commit at least a week old. Only permissive licences (MIT, Apache-2.0) are installed. Skills are installed as their upstream authors wrote them; Fastidious never edits a crew skill.",
+  "packages": [
+    {
+      "id": "impeccable",
+      "group": "core",
+      "role": "Design rules, critique and tuning commands; leads art direction for product UI",
+      "repo": "pbakaus/impeccable",
+      "ref": "skill-v4.8.0",
+      "commit": "414603bf14c7a344edb466bb1f85690c77ce8b7d",
+      "licence": "Apache-2.0",
+      "note": "The Claude Code build of the skill, without the upstream plugin's hooks or agents.",
+      "skills": [{"src": ".claude/skills/impeccable", "as": "impeccable"}]
+    },
+    {
+      "id": "taste",
+      "group": "core",
+      "role": "Art direction for public pages, distilled from 247 curated gallery sites",
+      "repo": "leonxlnx/taste-skill",
+      "ref": "v2.1.5",
+      "commit": "12af471f627f866411b4bd785b19646d3672784c",
+      "licence": "MIT",
+      "skills": [{"src": "skills/taste-skill", "as": "design-taste-frontend"}]
+    },
+    {
+      "id": "emil-kowalski",
+      "group": "core",
+      "role": "Interface and animation craft: easing, springs, gestures, reviews of movement, worst-case data",
+      "repo": "emilkowalski/skills",
+      "ref": "main",
+      "commit": "2d228630ba1446365f614a108cb8252f1feda202",
+      "licence": "MIT",
+      "skills": [
+        {"src": "skills/emil-design-eng", "as": "emil-design-eng"},
+        {"src": "skills/animate", "as": "animate"},
+        {"src": "skills/animate-expo", "as": "animate-expo"},
+        {"src": "skills/animation-performance", "as": "animation-performance"},
+        {"src": "skills/animation-vocabulary", "as": "animation-vocabulary"},
+        {"src": "skills/apple-design", "as": "apple-design"},
+        {"src": "skills/ask-sonner", "as": "ask-sonner"},
+        {"src": "skills/break-ui", "as": "break-ui"},
+        {"src": "skills/find-animation-opportunities", "as": "find-animation-opportunities"},
+        {"src": "skills/improve-animations", "as": "improve-animations"},
+        {"src": "skills/mobile-native", "as": "mobile-native"},
+        {"src": "skills/pick-ui-library", "as": "pick-ui-library"},
+        {"src": "skills/prototype", "as": "prototype"},
+        {"src": "skills/review-animations", "as": "review-animations"}
+      ]
+    },
+    {
+      "id": "gsap",
+      "group": "core",
+      "role": "GreenSock's official GSAP skills: tweens, timelines and scroll-linked animation",
+      "repo": "greensock/gsap-skills",
+      "ref": "main",
+      "commit": "aed9cfd3277740755f6bfc1155c7aa645403b760",
+      "licence": "MIT",
+      "skills": [
+        {"src": "skills/gsap-core", "as": "gsap-core"},
+        {"src": "skills/gsap-scrolltrigger", "as": "gsap-scrolltrigger"}
+      ]
+    },
+    {
+      "id": "anatomy",
+      "group": "core",
+      "role": "Interactive isometric SVG figures that explain a technical idea as a physical object",
+      "repo": "wheresryan22/anatomy",
+      "ref": "main",
+      "commit": "1482e8469b0a9e0d8cc18ea2740a01423d29ae80",
+      "licence": "MIT",
+      "skills": [{"src": ".", "as": "anatomy"}]
+    }
+  ]
+}

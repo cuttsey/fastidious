@@ -1,0 +1,14 @@
+<!doctype html><meta charset="utf-8"><title>GLB check</title>
+<style>html,body{margin:0;background:#E6EAE3}canvas{display:block}</style>
+<script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.160.0/build/three.module.js","three/addons/":"https://unpkg.com/three@0.160.0/examples/jsm/"}}</script>
+<script type="module">
+import * as THREE from 'three';
+import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
+import {DRACOLoader} from 'three/addons/loaders/DRACOLoader.js';
+import {RoomEnvironment} from 'three/addons/environments/RoomEnvironment.js';
+const r=new THREE.WebGLRenderer({antialias:true,preserveDrawingBuffer:true});r.setSize(1200,750);r.toneMapping=THREE.ACESFilmicToneMapping;r.outputColorSpace=THREE.SRGBColorSpace;document.body.append(r.domElement);
+const s=new THREE.Scene();s.background=new THREE.Color('#E6EAE3');s.environment=new THREE.PMREMGenerator(r).fromScene(new RoomEnvironment(),0.04).texture;
+const c=new THREE.PerspectiveCamera(30,1200/750,.01,20);c.position.set(.62,.36,.8);c.lookAt(.06,0,0);
+const d=new DRACOLoader().setDecoderPath('https://unpkg.com/three@0.160.0/examples/jsm/libs/draco/gltf/');
+new GLTFLoader().setDRACOLoader(d).load('out/cudgel.glb',g=>{s.add(g.scene);let info={};g.scene.traverse(o=>{if(o.isMesh){const m=o.material;info={verts:o.geometry.attributes.position.count,map:!!m.map,mapSize:m.map&&[m.map.image.width,m.map.image.height],normal:!!m.normalMap,rough:!!m.roughnessMap,type:m.type}}});r.render(s,c);window.RESULT=info;},undefined,e=>{window.RESULT={error:String(e)}});
+</script>

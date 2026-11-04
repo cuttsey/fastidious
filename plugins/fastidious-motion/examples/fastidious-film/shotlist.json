@@ -1,0 +1,165 @@
+{
+  "film": {
+    "id": "A-001",
+    "ratio": "16:9",
+    "resolution": "1080p",
+    "size": "1920x1080",
+    "fps": 24,
+    "seed": 41,
+    "video_provider": "seedance"
+  },
+  "shots": [
+    {
+      "id": "S01",
+      "intent": "Dissatisfaction: a finished piece that is almost right, and someone who can see it isn't.",
+      "seconds": 5,
+      "clip_seconds": 6,
+      "type_space": "in the upper left third",
+      "super": "The best designers are never satisfied.",
+      "frame": {
+        "prompt": "Overhead macro of a sheet of uncoated off-white paper on an ink-blue drafting surface at night. A crisp cobalt rectangle is printed on the paper. A steel scalpel blade rests against the rectangle's right edge, about to take away a sliver no thicker than a hair",
+        "directions": [
+          "photographic, almost clinical, hard edge of light across the paper",
+          "warmer and quieter, the light pooled only on the blade and the edge"
+        ],
+        "size": "1536x1024"
+      },
+      "motion": {
+        "prompt": "The blade draws down the edge in one steady stroke and lifts away, leaving a hairline sliver of cobalt curling free",
+        "camera": "locked overhead, very slow push in",
+        "camera_fixed": false,
+        "provider": null
+      }
+    },
+    {
+      "id": "S02",
+      "intent": "Purpose: start with why. A needle settling on a true direction.",
+      "seconds": 4,
+      "clip_seconds": 5,
+      "type_space": "in the right third",
+      "super": "Start with why.",
+      "frame": {
+        "prompt": "A brass compass with no markings on its face lies on deep ink-blue felt; its fine needle is still swinging, slightly off true",
+        "directions": [
+          "seen from a low three-quarter angle, the needle catching the only light",
+          "straight down, the compass small in a large dark field"
+        ],
+        "size": "1536x1024"
+      },
+      "motion": {
+        "prompt": "The needle swings, slows and settles exactly, with one last tiny correction",
+        "camera": "locked",
+        "camera_fixed": true,
+        "provider": null
+      }
+    },
+    {
+      "id": "S03",
+      "intent": "Identity: personality is the product. A mark that means something, made once and made well.",
+      "seconds": 4,
+      "clip_seconds": 5,
+      "type_space": "in the left third",
+      "super": "Give it a personality worth keeping.",
+      "frame": {
+        "prompt": "A brass seal with an abstract geometric device, raked stripe and circle, hovers just above a pool of deep cobalt sealing wax on paper",
+        "directions": [
+          "the seal in sharp focus, wax soft below",
+          "the wax in focus, the seal a dark shape entering the frame"
+        ],
+        "size": "1536x1024"
+      },
+      "motion": {
+        "prompt": "The seal presses down into the wax, holds, and lifts cleanly, leaving a crisp raised stripe and circle",
+        "camera": "slow dolly in at table height",
+        "provider": null
+      }
+    },
+    {
+      "id": "S04",
+      "intent": "Craft: the small fixes. A plane taking one translucent curl from an edge until it is true.",
+      "seconds": 4,
+      "clip_seconds": 5,
+      "type_space": "in the upper right third",
+      "super": "Sweat the small things.",
+      "frame": {
+        "prompt": "Extreme close-up of a block plane resting on the edge of a pale planed board, a single translucent wood shaving beginning to curl from its mouth, ink-blue darkness beyond",
+        "directions": [
+          "side-on, the shaving backlit",
+          "low angle along the edge, the board's line leading into the dark"
+        ],
+        "size": "1536x1024"
+      },
+      "motion": {
+        "prompt": "The plane glides along the edge and a long, unbroken, paper-thin shaving curls up and away",
+        "camera": "tracking alongside the plane at its speed",
+        "provider": null
+      }
+    },
+    {
+      "id": "S05",
+      "intent": "Presentation: work is judged as it is shown. A finished object revealed under one good light.",
+      "seconds": 4,
+      "clip_seconds": 5,
+      "type_space": "in the lower left third",
+      "super": "Show it as well as you made it.",
+      "frame": {
+        "prompt": "A small cobalt enamel object of simple, beautiful form stands on a slowly turning ink-blue plinth, a single soft key light from high left",
+        "directions": [
+          "the object half in shadow, only its edge lit",
+          "the object fully lit against a gradient of ink to deep blue"
+        ],
+        "size": "1536x1024"
+      },
+      "motion": {
+        "prompt": "The plinth turns a quarter turn and the light travels across the enamel surface",
+        "camera": "slow arc left around the object",
+        "provider": null
+      }
+    },
+    {
+      "id": "S06",
+      "intent": "Selection: many options, biased towards distinction. One object stands apart from the familiar ones.",
+      "seconds": 4,
+      "clip_seconds": 5,
+      "type_space": "in the upper left third",
+      "super": "Choose the one only you could make.",
+      "frame": {
+        "prompt": "Five small objects of similar shape stand in a row on paper: four in matte grey, one in deep cobalt enamel with a single precise yellow line, ink-blue shadow around them",
+        "directions": [
+          "low angle along the row, the cobalt object nearest",
+          "high angle, the cobalt object in the middle of the row"
+        ],
+        "size": "1536x1024"
+      },
+      "motion": {
+        "prompt": "The light narrows until only the cobalt object is lit and the grey objects fall into shadow",
+        "camera": "locked",
+        "camera_fixed": true,
+        "provider": null
+      }
+    },
+    {
+      "id": "S07",
+      "intent": "Close: back to the sheet. Now it is right, and it still isn't finished.",
+      "seconds": 5,
+      "clip_seconds": 6,
+      "type_space": "centred above the paper",
+      "super": "They are fastidious.",
+      "frame": {
+        "prompt": "The same overhead view of the off-white paper with the cobalt rectangle, now with a perfect, true edge; the scalpel lies parked parallel to it; ink-blue drafting surface",
+        "directions": [
+          "identical framing to the first shot",
+          "pulled back slightly, more of the dark table visible"
+        ],
+        "references": [],
+        "size": "1536x1024"
+      },
+      "motion": {
+        "prompt": "Stillness; the light breathes very slightly, then slowly dims towards ink",
+        "camera": "very slow pull back",
+        "references": [],
+        "provider": null
+      }
+    }
+  ]
+}

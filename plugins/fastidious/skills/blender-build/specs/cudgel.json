@@ -1,0 +1,23 @@
+{
+  "name": "cudgel",
+  "out": "out",
+  "object": { "builder": "objects/cudgel.py", "params": { "seed": 7 } },
+  "material": {
+    "type": "wood_stick", "name": "stained ash",
+    "palette": ["#2A160C", "#55301A", "#85522C", "#AD7440"],
+    "roughness": 0.52, "grip_roughness": 0.36, "coat": 0.12
+  },
+  "studio": {
+    "size": [1600, 1000], "samples": 96, "ground": "#E6EAE3",
+    "hdri": "cache/polyhaven/studio_small_09/studio_small_09_1k.hdr", "hdri_strength": 0.3
+  },
+  "outputs": {
+    "stills": [
+      { "name": "hero", "loc": [0.74, -0.86, 0.36], "target": [0.07, 0.0, 0.015], "lens": 50, "fstop": 11 },
+      { "name": "grip", "loc": [-0.24, -0.5, 0.2], "target": [-0.26, 0.0, 0.015], "lens": 85, "fstop": 16, "samples": 128 },
+      { "name": "end", "loc": [-0.66, -0.16, 0.1], "target": [-0.44, 0.0, 0.015], "lens": 100, "fstop": 9 }
+    ],
+    "turntable": { "frames": 96, "fps": 24, "samples": 24, "size": [960, 600], "loc": [0.0, -1.55, 0.7], "target": [0.0, 0.0, 0.02], "lens": 50 },
+    "glb": { "texture": [512, 4096], "draco": true, "coat": 0.12 }
+  }
+}

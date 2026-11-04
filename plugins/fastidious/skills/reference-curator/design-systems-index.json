@@ -1,0 +1,1647 @@
+[
+ {
+  "org_name": "Adeo",
+  "design_system": "Mozaic Design System",
+  "design_system_url": "https://mozaic.adeo.cloud/",
+  "page_count": 250,
+  "fastidious_id": "DS-001"
+ },
+ {
+  "org_name": "Adobe",
+  "design_system": "Spectrum",
+  "design_system_url": "https://spectrum.adobe.com",
+  "page_count": 137,
+  "fastidious_id": "DS-002"
+ },
+ {
+  "org_name": "Alaska Airlines",
+  "design_system": "Auro",
+  "design_system_url": "https://auro.alaskaair.com",
+  "page_count": 190,
+  "fastidious_id": "DS-003"
+ },
+ {
+  "org_name": "Altinn",
+  "design_system": "Altinn Design System",
+  "design_system_url": "https://docs.altinn.studio",
+  "page_count": 1755,
+  "fastidious_id": "DS-004"
+ },
+ {
+  "org_name": "Ant Financial",
+  "design_system": "Ant Design",
+  "design_system_url": "https://ant.design",
+  "page_count": 1184,
+  "fastidious_id": "DS-005"
+ },
+ {
+  "org_name": "AOTU Labs",
+  "design_system": "AT UIKIT",
+  "design_system_url": "https://at-ui.github.io/at-ui/#/en",
+  "page_count": 1,
+  "fastidious_id": "DS-006"
+ },
+ {
+  "org_name": "Appear here",
+  "design_system": "Bloom",
+  "design_system_url": "https://bloom.appearhere.co.uk",
+  "page_count": 1,
+  "fastidious_id": "DS-007"
+ },
+ {
+  "org_name": "Apple",
+  "design_system": "Human Interface Guidelines",
+  "design_system_url": "https://developer.apple.com/design/human-interface-guidelines",
+  "page_count": 204,
+  "fastidious_id": "DS-008"
+ },
+ {
+  "org_name": "Arbetsförmedlingen",
+  "design_system": "Design system",
+  "design_system_url": "https://designsystem.arbetsformedlingen.se",
+  "page_count": 91,
+  "fastidious_id": "DS-009"
+ },
+ {
+  "org_name": "ArcGIS",
+  "design_system": "Calcite",
+  "design_system_url": "https://developers.arcgis.com/calcite-design-system",
+  "page_count": 165,
+  "fastidious_id": "DS-010"
+ },
+ {
+  "org_name": "Arts",
+  "design_system": "Artsy Palette",
+  "design_system_url": "https://palette.artsy.net",
+  "page_count": 2,
+  "fastidious_id": "DS-011"
+ },
+ {
+  "org_name": "Atlassian",
+  "design_system": "Atlassian Design System",
+  "design_system_url": "https://atlassian.design",
+  "page_count": 2,
+  "fastidious_id": "DS-012"
+ },
+ {
+  "org_name": "Audi",
+  "design_system": "Audi UI",
+  "design_system_url": "https://www.audi.com/ci/en/guides/user-interface/introduction.html?ref=designsystems.directory",
+  "page_count": 1,
+  "fastidious_id": "DS-013"
+ },
+ {
+  "org_name": "Australian Government Department of Health",
+  "design_system": "Health Design System",
+  "design_system_url": "https://designsystem.health.gov.au",
+  "page_count": 140,
+  "fastidious_id": "DS-014"
+ },
+ {
+  "org_name": "Australian Open Source Community",
+  "design_system": "GOLD Design System",
+  "design_system_url": "https://gold.designsystemau.org",
+  "page_count": 76,
+  "fastidious_id": "DS-015"
+ },
+ {
+  "org_name": "AutoGuru",
+  "design_system": "Overdrive",
+  "design_system_url": "https://overdrive.autoguru.io",
+  "page_count": 1,
+  "fastidious_id": "DS-016"
+ },
+ {
+  "org_name": "Automattic",
+  "design_system": "Wordpress.com design handbook",
+  "design_system_url": "https://dotcombrand.wordpress.com",
+  "page_count": 1,
+  "fastidious_id": "DS-017"
+ },
+ {
+  "org_name": "AWS",
+  "design_system": "Cloudscape Design System",
+  "design_system_url": "https://cloudscape.design",
+  "page_count": 2,
+  "fastidious_id": "DS-018"
+ },
+ {
+  "org_name": "AWS Amplify",
+  "design_system": "Amplify UI",
+  "design_system_url": "https://ui.docs.amplify.aws",
+  "page_count": 2,
+  "fastidious_id": "DS-019"
+ },
+ {
+  "org_name": "Backbase",
+  "design_system": "Design system",
+  "design_system_url": "https://designsystem.backbase.com/v2/web-components",
+  "page_count": 44,
+  "fastidious_id": "DS-020"
+ },
+ {
+  "org_name": "Banco Santander",
+  "design_system": "Flame Design System",
+  "design_system_url": "https://bancosantander.invisionapp.com/dsm/santander-group/flame-ds-santander",
+  "page_count": 1,
+  "fastidious_id": "DS-021"
+ },
+ {
+  "org_name": "Barnardo’s",
+  "design_system": "Barnardo’s Design System",
+  "design_system_url": "https://design-system.barnardos.org.uk",
+  "page_count": 1,
+  "fastidious_id": "DS-022"
+ },
+ {
+  "org_name": "BBC",
+  "design_system": "Global Experience Language (GEL)",
+  "design_system_url": "https://www.bbc.co.uk/gel",
+  "page_count": 158,
+  "fastidious_id": "DS-023"
+ },
+ {
+  "org_name": "Benevity",
+  "design_system": "Skyline",
+  "design_system_url": "https://skyline.benevity.org",
+  "page_count": 69,
+  "fastidious_id": "DS-024"
+ },
+ {
+  "org_name": "Biings",
+  "design_system": "Biings Design System",
+  "design_system_url": "https://biings.design",
+  "page_count": 2,
+  "fastidious_id": "DS-025"
+ },
+ {
+  "org_name": "BLiP",
+  "design_system": "UAI Design System",
+  "design_system_url": "https://design.blip.ai/uai-design-system",
+  "page_count": 1,
+  "fastidious_id": "DS-026"
+ },
+ {
+  "org_name": "Brainly",
+  "design_system": "Brainly Style Guide",
+  "design_system_url": "https://styleguide.brainly.com",
+  "page_count": 170,
+  "fastidious_id": "DS-027"
+ },
+ {
+  "org_name": "Brainly",
+  "design_system": "Design",
+  "design_system_url": "https://design.brainly.com",
+  "page_count": 1,
+  "fastidious_id": "DS-028"
+ },
+ {
+  "org_name": "Bridge",
+  "design_system": "Bold design system",
+  "design_system_url": "https://bold.bridge.ufsc.br",
+  "page_count": 156,
+  "fastidious_id": "DS-029"
+ },
+ {
+  "org_name": "Brightcore",
+  "design_system": "UI",
+  "design_system_url": "https://ui.britecore.com",
+  "page_count": 48,
+  "fastidious_id": "DS-030"
+ },
+ {
+  "org_name": "Brighte",
+  "design_system": "Spark Design System",
+  "design_system_url": "https://spark.brighte.com.au",
+  "page_count": 58,
+  "fastidious_id": "DS-031"
+ },
+ {
+  "org_name": "British Gas",
+  "design_system": "Nucleus Design System",
+  "design_system_url": "https://britishgas.design",
+  "page_count": 118,
+  "fastidious_id": "DS-032"
+ },
+ {
+  "org_name": "BT",
+  "design_system": "Arc",
+  "design_system_url": "https://arc.bt.com",
+  "page_count": 1,
+  "fastidious_id": "DS-033"
+ },
+ {
+  "org_name": "Buildit",
+  "design_system": "Gravity",
+  "design_system_url": "https://style.buildit.digital",
+  "page_count": 2,
+  "fastidious_id": "DS-034"
+ },
+ {
+  "org_name": "BuzzFeed",
+  "design_system": "Solid Style Guide",
+  "design_system_url": "https://solid.buzzfeed.com",
+  "page_count": 1,
+  "fastidious_id": "DS-035"
+ },
+ {
+  "org_name": "Canonical",
+  "design_system": "Vanilla framework",
+  "design_system_url": "https://vanillaframework.io",
+  "page_count": 206,
+  "fastidious_id": "DS-036"
+ },
+ {
+  "org_name": "Catho",
+  "design_system": "Quantum",
+  "design_system_url": "https://catho.github.io/quantum",
+  "page_count": 2,
+  "fastidious_id": "DS-037"
+ },
+ {
+  "org_name": "censhare GmbH",
+  "design_system": "Zen",
+  "design_system_url": "https://design.censhare.com",
+  "page_count": 1,
+  "fastidious_id": "DS-038"
+ },
+ {
+  "org_name": "Chakra team",
+  "design_system": "Chakra UI",
+  "design_system_url": "https://chakra-ui.com",
+  "page_count": 528,
+  "fastidious_id": "DS-039"
+ },
+ {
+  "org_name": "City of Boston",
+  "design_system": "Fleet",
+  "design_system_url": "https://patterns.boston.gov",
+  "page_count": 2,
+  "fastidious_id": "DS-040"
+ },
+ {
+  "org_name": "Cloudflare",
+  "design_system": "CF-UI",
+  "design_system_url": "https://cloudflare.github.io/cf-ui",
+  "page_count": 2,
+  "fastidious_id": "DS-041"
+ },
+ {
+  "org_name": "Consumer Financial Protection Bureau",
+  "design_system": "CFPB Design Manual",
+  "design_system_url": "https://cfpb.github.io/design-system",
+  "page_count": 82,
+  "fastidious_id": "DS-042"
+ },
+ {
+  "org_name": "Contentful",
+  "design_system": "Forma 36",
+  "design_system_url": "https://f36.contentful.com",
+  "page_count": 200,
+  "fastidious_id": "DS-043"
+ },
+ {
+  "org_name": "Culture Amp",
+  "design_system": "Kaizen",
+  "design_system_url": "https://cultureamp.design",
+  "page_count": 27,
+  "fastidious_id": "DS-044"
+ },
+ {
+  "org_name": "Datadog",
+  "design_system": "Druids",
+  "design_system_url": "https://druids.datadoghq.com",
+  "page_count": 1,
+  "fastidious_id": "DS-045"
+ },
+ {
+  "org_name": "Decathlon",
+  "design_system": "Design System - Vitamin",
+  "design_system_url": "https://decathlon.design",
+  "page_count": 2,
+  "fastidious_id": "DS-046"
+ },
+ {
+  "org_name": "Decentraland UI",
+  "design_system": "Decentraland UI",
+  "design_system_url": "https://ui.decentraland.org",
+  "page_count": 2,
+  "fastidious_id": "DS-047"
+ },
+ {
+  "org_name": "Design Language",
+  "design_system": "E-Trade",
+  "design_system_url": "https://etrade.design",
+  "page_count": 2,
+  "fastidious_id": "DS-048"
+ },
+ {
+  "org_name": "Discovery Education",
+  "design_system": "Comet",
+  "design_system_url": "https://comet.discoveryeducation.com",
+  "page_count": 54,
+  "fastidious_id": "DS-049"
+ },
+ {
+  "org_name": "Drawbotics",
+  "design_system": "Drylus",
+  "design_system_url": "https://drawbotics.github.io/drylus",
+  "page_count": 1,
+  "fastidious_id": "DS-050"
+ },
+ {
+  "org_name": "Duolingo",
+  "design_system": "Design guidelines",
+  "design_system_url": "https://www.duolingo.com/design",
+  "page_count": 1,
+  "fastidious_id": "DS-051"
+ },
+ {
+  "org_name": "Dynatrace",
+  "design_system": "Barista",
+  "design_system_url": "https://barista.dynatrace.com",
+  "page_count": 1,
+  "fastidious_id": "DS-052"
+ },
+ {
+  "org_name": "eBay",
+  "design_system": "Playbook",
+  "design_system_url": "https://playbook.ebay.com",
+  "page_count": 129,
+  "fastidious_id": "DS-053"
+ },
+ {
+  "org_name": "eBay",
+  "design_system": "Skin",
+  "design_system_url": "https://ebay.github.io/skin",
+  "page_count": 2,
+  "fastidious_id": "DS-054"
+ },
+ {
+  "org_name": "Elastic UI",
+  "design_system": "Elastic UI Framework",
+  "design_system_url": "https://elastic.github.io/eui",
+  "page_count": 2,
+  "fastidious_id": "DS-055"
+ },
+ {
+  "org_name": "Elia Group",
+  "design_system": "Nova",
+  "design_system_url": "https://nova.eliagroup.io",
+  "page_count": 165,
+  "fastidious_id": "DS-056"
+ },
+ {
+  "org_name": "ENGIE",
+  "design_system": "Fluid",
+  "design_system_url": "https://www.engie.design",
+  "page_count": 130,
+  "fastidious_id": "DS-057"
+ },
+ {
+  "org_name": "Enigma",
+  "design_system": "Boundless",
+  "design_system_url": "https://boundless.js.org",
+  "page_count": 27,
+  "fastidious_id": "DS-058"
+ },
+ {
+  "org_name": "Equinor",
+  "design_system": "EDS",
+  "design_system_url": "https://eds.equinor.com",
+  "page_count": 41,
+  "fastidious_id": "DS-059"
+ },
+ {
+  "org_name": "Estonia",
+  "design_system": "Brand Estonia",
+  "design_system_url": "https://brand.estonia.ee",
+  "page_count": 230,
+  "fastidious_id": "DS-060"
+ },
+ {
+  "org_name": "Eurostar",
+  "design_system": "GLU",
+  "design_system_url": "https://style.eurostar.com",
+  "page_count": 2,
+  "fastidious_id": "DS-061"
+ },
+ {
+  "org_name": "Family Search",
+  "design_system": "Frontier",
+  "design_system_url": "https://www.familysearch.org/frontier/styleguide",
+  "page_count": 2,
+  "fastidious_id": "DS-062"
+ },
+ {
+  "org_name": "Financial Times",
+  "design_system": "Origami",
+  "design_system_url": "https://origami.ft.com",
+  "page_count": 140,
+  "fastidious_id": "DS-063"
+ },
+ {
+  "org_name": "Finastra",
+  "design_system": "Finastra Design System",
+  "design_system_url": "https://design.fusionfabric.cloud",
+  "page_count": 1,
+  "fastidious_id": "DS-064"
+ },
+ {
+  "org_name": "Firefox",
+  "design_system": "Photon Design System",
+  "design_system_url": "https://design.firefox.com/photon",
+  "page_count": 1,
+  "fastidious_id": "DS-065"
+ },
+ {
+  "org_name": "Flexport",
+  "design_system": "Latitude",
+  "design_system_url": "https://www.flexport.com/design",
+  "page_count": 1,
+  "fastidious_id": "DS-066"
+ },
+ {
+  "org_name": "Foundation",
+  "design_system": "Foundation",
+  "design_system_url": "https://get.foundation",
+  "page_count": 443,
+  "fastidious_id": "DS-067"
+ },
+ {
+  "org_name": "Foyer",
+  "design_system": "Foyer Design System",
+  "design_system_url": "https://design.foyer.lu",
+  "page_count": 2,
+  "fastidious_id": "DS-068"
+ },
+ {
+  "org_name": "FutureLearn",
+  "design_system": "FutureLearn Pattern Library",
+  "design_system_url": "https://storybook.futurelearn.com",
+  "page_count": 2,
+  "fastidious_id": "DS-069"
+ },
+ {
+  "org_name": "GE",
+  "design_system": "Edison Design System",
+  "design_system_url": "https://edisondesignsystem.com",
+  "page_count": 2,
+  "fastidious_id": "DS-070"
+ },
+ {
+  "org_name": "General Electric",
+  "design_system": "Predix Design System",
+  "design_system_url": "https://www.predix-ui.com",
+  "page_count": 5,
+  "fastidious_id": "DS-071"
+ },
+ {
+  "org_name": "Github",
+  "design_system": "Primer",
+  "design_system_url": "https://primer.style",
+  "page_count": 571,
+  "fastidious_id": "DS-072"
+ },
+ {
+  "org_name": "GitLab",
+  "design_system": "Pajamas Design System",
+  "design_system_url": "https://design.gitlab.com",
+  "page_count": 209,
+  "fastidious_id": "DS-073"
+ },
+ {
+  "org_name": "GO-JEK",
+  "design_system": "Asphalt",
+  "design_system_url": "https://asphalt.gojek.io",
+  "page_count": 11,
+  "fastidious_id": "DS-074"
+ },
+ {
+  "org_name": "Goldman Sachs",
+  "design_system": "Goldman Sachs Design System",
+  "design_system_url": "https://design.gs.com/home",
+  "page_count": 1,
+  "fastidious_id": "DS-075"
+ },
+ {
+  "org_name": "GoodBarber",
+  "design_system": "GoodBarber Design System",
+  "design_system_url": "https://www.goodbarber.com/uxdesign",
+  "page_count": 2,
+  "fastidious_id": "DS-076"
+ },
+ {
+  "org_name": "Google",
+  "design_system": "Material 2",
+  "design_system_url": "https://material.io/guidelines/#introduction-goals",
+  "page_count": 1,
+  "fastidious_id": "DS-077"
+ },
+ {
+  "org_name": "Google",
+  "design_system": "Material Design",
+  "design_system_url": "https://material.io",
+  "page_count": 685,
+  "fastidious_id": "DS-078"
+ },
+ {
+  "org_name": "GOV.UK",
+  "design_system": "GOV.UK Design System",
+  "design_system_url": "https://design-system.service.gov.uk",
+  "page_count": 202,
+  "fastidious_id": "DS-079"
+ },
+ {
+  "org_name": "GOV.UK",
+  "design_system": "GOV.UK Design System",
+  "design_system_url": "https://www.gov.uk/design-system",
+  "page_count": 1,
+  "fastidious_id": "DS-080"
+ },
+ {
+  "org_name": "Government of Canada",
+  "design_system": "Aurora Design System",
+  "design_system_url": "https://design.gccollab.ca",
+  "page_count": 44,
+  "fastidious_id": "DS-081"
+ },
+ {
+  "org_name": "Government of Canada",
+  "design_system": "Canada.ca design system",
+  "design_system_url": "https://www.canada.ca/en/government/about/design-system.html?ref=designsystems.directory",
+  "page_count": 1,
+  "fastidious_id": "DS-082"
+ },
+ {
+  "org_name": "Gusto",
+  "design_system": "Workbench",
+  "design_system_url": "https://workbench.gusto.com",
+  "page_count": 89,
+  "fastidious_id": "DS-083"
+ },
+ {
+  "org_name": "Gympass",
+  "design_system": "Yoga",
+  "design_system_url": "https://gympass.github.io/yoga",
+  "page_count": 8,
+  "fastidious_id": "DS-084"
+ },
+ {
+  "org_name": "Halstack",
+  "design_system": "Halstack Design System",
+  "design_system_url": "https://developer.dxc.com/design",
+  "page_count": 1,
+  "fastidious_id": "DS-085"
+ },
+ {
+  "org_name": "Heartbeat",
+  "design_system": ".pulse",
+  "design_system_url": "https://pulse.heartbeat.ua",
+  "page_count": 2,
+  "fastidious_id": "DS-086"
+ },
+ {
+  "org_name": "Helios Design System",
+  "design_system": "Hashicorp",
+  "design_system_url": "https://helios.hashicorp.design?ref=designsystems.directory",
+  "page_count": 2,
+  "fastidious_id": "DS-087"
+ },
+ {
+  "org_name": "Help Scout",
+  "design_system": "Help Scout Style Guide",
+  "design_system_url": "https://style.helpscout.com",
+  "page_count": 2,
+  "fastidious_id": "DS-088"
+ },
+ {
+  "org_name": "Helsinki",
+  "design_system": "Helsinki Design System",
+  "design_system_url": "https://hds.hel.fi",
+  "page_count": 111,
+  "fastidious_id": "DS-089"
+ },
+ {
+  "org_name": "Heroku",
+  "design_system": "Heroki Design",
+  "design_system_url": "https://design.herokai.com",
+  "page_count": 9,
+  "fastidious_id": "DS-090"
+ },
+ {
+  "org_name": "Hewlett Packard",
+  "design_system": "Grommet",
+  "design_system_url": "https://v2.grommet.io",
+  "page_count": 114,
+  "fastidious_id": "DS-091"
+ },
+ {
+  "org_name": "Hewlett Packard",
+  "design_system": "Grommet",
+  "design_system_url": "https://grommet.io",
+  "page_count": 147,
+  "fastidious_id": "DS-092"
+ },
+ {
+  "org_name": "Hubspot",
+  "design_system": "Canvas Design System",
+  "design_system_url": "https://canvas.hubspot.com",
+  "page_count": 2,
+  "fastidious_id": "DS-093"
+ },
+ {
+  "org_name": "Hudl",
+  "design_system": "Uniform",
+  "design_system_url": "https://uniform.hudl.com",
+  "page_count": 2,
+  "fastidious_id": "DS-094"
+ },
+ {
+  "org_name": "IBM",
+  "design_system": "Carbon Design System",
+  "design_system_url": "https://www.carbondesignsystem.com",
+  "page_count": 701,
+  "fastidious_id": "DS-095"
+ },
+ {
+  "org_name": "IBM",
+  "design_system": "IBM Design Language",
+  "design_system_url": "https://www.ibm.com/design/language",
+  "page_count": 49,
+  "fastidious_id": "DS-096"
+ },
+ {
+  "org_name": "Indiana University",
+  "design_system": "Rivet",
+  "design_system_url": "https://rivet.uits.iu.edu",
+  "page_count": 8,
+  "fastidious_id": "DS-097"
+ },
+ {
+  "org_name": "Infor",
+  "design_system": "Infor Design System",
+  "design_system_url": "https://design.infor.com",
+  "page_count": 129,
+  "fastidious_id": "DS-098"
+ },
+ {
+  "org_name": "ING",
+  "design_system": "Lion",
+  "design_system_url": "https://lion-web.netlify.app",
+  "page_count": 95,
+  "fastidious_id": "DS-099"
+ },
+ {
+  "org_name": "Instacart",
+  "design_system": "Snacks",
+  "design_system_url": "https://instacart.github.io/Snacks",
+  "page_count": 2,
+  "fastidious_id": "DS-100"
+ },
+ {
+  "org_name": "Instructure Inc",
+  "design_system": "Instructure UI",
+  "design_system_url": "https://instructure.design",
+  "page_count": 2,
+  "fastidious_id": "DS-101"
+ },
+ {
+  "org_name": "Intuit",
+  "design_system": "Design system",
+  "design_system_url": "https://design.intuit.com/quickbooks?ref=designsystems.directory",
+  "page_count": 31,
+  "fastidious_id": "DS-102"
+ },
+ {
+  "org_name": "Intuit",
+  "design_system": "QuickBooks Design System",
+  "design_system_url": "https://design.intuit.com/quickbooks",
+  "page_count": 31,
+  "fastidious_id": "DS-103"
+ },
+ {
+  "org_name": "iStreamPlanet",
+  "design_system": "Pebble Design System",
+  "design_system_url": "https://pebble.istreamplanet.net",
+  "page_count": 1,
+  "fastidious_id": "DS-104"
+ },
+ {
+  "org_name": "Italian Public Administration",
+  "design_system": ".it Designers Italy",
+  "design_system_url": "https://designers.italia.it",
+  "page_count": 300,
+  "fastidious_id": "DS-105"
+ },
+ {
+  "org_name": "JetBrains",
+  "design_system": "JetBrains Web UI",
+  "design_system_url": "https://jetbrains.github.io/ring-ui",
+  "page_count": 42,
+  "fastidious_id": "DS-106"
+ },
+ {
+  "org_name": "JSTOR",
+  "design_system": "Pharos",
+  "design_system_url": "https://pharos.jstor.org",
+  "page_count": 2,
+  "fastidious_id": "DS-107"
+ },
+ {
+  "org_name": "Just Eat Takeaway",
+  "design_system": "PIE",
+  "design_system_url": "https://pie.design",
+  "page_count": 130,
+  "fastidious_id": "DS-108"
+ },
+ {
+  "org_name": "Kajabi",
+  "design_system": "Sage",
+  "design_system_url": "https://sage.kajabi.com?ref=designsystems.directory",
+  "page_count": 74,
+  "fastidious_id": "DS-109"
+ },
+ {
+  "org_name": "kickstart",
+  "design_system": "kickstartDS",
+  "design_system_url": "https://www.kickstartds.com",
+  "page_count": 303,
+  "fastidious_id": "DS-110"
+ },
+ {
+  "org_name": "Kiwi.com",
+  "design_system": "Orbit",
+  "design_system_url": "https://orbit.kiwi",
+  "page_count": 200,
+  "fastidious_id": "DS-111"
+ },
+ {
+  "org_name": "KoliBri",
+  "design_system": "KoliBri - Public UI",
+  "design_system_url": "https://public-ui.github.io",
+  "page_count": 255,
+  "fastidious_id": "DS-112"
+ },
+ {
+  "org_name": "Kontur",
+  "design_system": "Kontur",
+  "design_system_url": "https://guides.kontur.ru",
+  "page_count": 2,
+  "fastidious_id": "DS-113"
+ },
+ {
+  "org_name": "Latitude Financial",
+  "design_system": "Basis Design System",
+  "design_system_url": "https://basis.now.sh",
+  "page_count": 2,
+  "fastidious_id": "DS-114"
+ },
+ {
+  "org_name": "Liferay",
+  "design_system": "Lexicon",
+  "design_system_url": "https://lexicondesign.io",
+  "page_count": 11,
+  "fastidious_id": "DS-115"
+ },
+ {
+  "org_name": "LINE",
+  "design_system": "LINE Design System",
+  "design_system_url": "https://designsystem.line.me",
+  "page_count": 130,
+  "fastidious_id": "DS-116"
+ },
+ {
+  "org_name": "LocalTapiola",
+  "design_system": "Duet",
+  "design_system_url": "https://www.duetds.com",
+  "page_count": 190,
+  "fastidious_id": "DS-117"
+ },
+ {
+  "org_name": "Lonely Planet",
+  "design_system": "Rizzo",
+  "design_system_url": "https://rizzo.lonelyplanet.com",
+  "page_count": 1,
+  "fastidious_id": "DS-118"
+ },
+ {
+  "org_name": "Loom",
+  "design_system": "Lens",
+  "design_system_url": "https://lens.loom.dev",
+  "page_count": 60,
+  "fastidious_id": "DS-119"
+ },
+ {
+  "org_name": "Louder Than Ten",
+  "design_system": "Manual",
+  "design_system_url": "https://www.louderthanten.com/manual",
+  "page_count": 1,
+  "fastidious_id": "DS-120"
+ },
+ {
+  "org_name": "Mail.ru",
+  "design_system": "Group Paradigm",
+  "design_system_url": "https://design.mail.ru",
+  "page_count": 2,
+  "fastidious_id": "DS-121"
+ },
+ {
+  "org_name": "MailChimp",
+  "design_system": "Mailchimp Content Styleguide",
+  "design_system_url": "https://styleguide.mailchimp.com",
+  "page_count": 18,
+  "fastidious_id": "DS-122"
+ },
+ {
+  "org_name": "MailChimp",
+  "design_system": "MailChimp Pattern Library",
+  "design_system_url": "https://ux.mailchimp.com",
+  "page_count": 1,
+  "fastidious_id": "DS-123"
+ },
+ {
+  "org_name": "MailChimp",
+  "design_system": "Mailchimp Patterns",
+  "design_system_url": "https://ux.mailchimp.com/patterns",
+  "page_count": 1,
+  "fastidious_id": "DS-124"
+ },
+ {
+  "org_name": "Mantine",
+  "design_system": "Mantine",
+  "design_system_url": "https://mantine.dev",
+  "page_count": 2,
+  "fastidious_id": "DS-125"
+ },
+ {
+  "org_name": "Mapbox",
+  "design_system": "Mapbox Base",
+  "design_system_url": "https://www.mapbox.com/base",
+  "page_count": 2,
+  "fastidious_id": "DS-126"
+ },
+ {
+  "org_name": "Marvel",
+  "design_system": "Marvel Styleguide",
+  "design_system_url": "https://marvelapp.com/styleguide",
+  "page_count": 25,
+  "fastidious_id": "DS-127"
+ },
+ {
+  "org_name": "Material 3",
+  "design_system": "",
+  "design_system_url": "https://m3.material.io",
+  "page_count": 478,
+  "fastidious_id": "DS-128"
+ },
+ {
+  "org_name": "Materialize",
+  "design_system": "Materialize CSS",
+  "design_system_url": "https://materializecss.com",
+  "page_count": 101,
+  "fastidious_id": "DS-129"
+ },
+ {
+  "org_name": "Meetup",
+  "design_system": "Swarm Design System",
+  "design_system_url": "https://meetup.github.io/swarm-design-system",
+  "page_count": 1,
+  "fastidious_id": "DS-130"
+ },
+ {
+  "org_name": "Merck",
+  "design_system": "Liquid",
+  "design_system_url": "https://www.emd.design",
+  "page_count": 2,
+  "fastidious_id": "DS-131"
+ },
+ {
+  "org_name": "Mesosphere",
+  "design_system": "CNVS",
+  "design_system_url": "https://mesosphere.github.io/cnvs",
+  "page_count": 2,
+  "fastidious_id": "DS-132"
+ },
+ {
+  "org_name": "Microsoft",
+  "design_system": "Fluent",
+  "design_system_url": "https://www.microsoft.com/design/fluent",
+  "page_count": 2,
+  "fastidious_id": "DS-133"
+ },
+ {
+  "org_name": "Microsoft",
+  "design_system": "Fluent UI",
+  "design_system_url": "https://developer.microsoft.com/en-us/fluentui#",
+  "page_count": 4,
+  "fastidious_id": "DS-134"
+ },
+ {
+  "org_name": "Mixpanel",
+  "design_system": "Mixpanel DS",
+  "design_system_url": "https://design.mixpanel.com",
+  "page_count": 1,
+  "fastidious_id": "DS-135"
+ },
+ {
+  "org_name": "MongoDB",
+  "design_system": "MongoDB Design System",
+  "design_system_url": "https://www.mongodb.design",
+  "page_count": 17,
+  "fastidious_id": "DS-136"
+ },
+ {
+  "org_name": "MongoDB",
+  "design_system": "MongoDB Design System",
+  "design_system_url": "https://mongodb.design",
+  "page_count": 24,
+  "fastidious_id": "DS-137"
+ },
+ {
+  "org_name": "Monzo",
+  "design_system": "Monzo Tone of Voice",
+  "design_system_url": "https://monzo.com/tone-of-voice",
+  "page_count": 1,
+  "fastidious_id": "DS-138"
+ },
+ {
+  "org_name": "Morningstar",
+  "design_system": "Morningstar Design System",
+  "design_system_url": "https://designsystem.morningstar.com",
+  "page_count": 2,
+  "fastidious_id": "DS-139"
+ },
+ {
+  "org_name": "Mozilla",
+  "design_system": "Protocol",
+  "design_system_url": "https://protocol.mozilla.org",
+  "page_count": 2,
+  "fastidious_id": "DS-140"
+ },
+ {
+  "org_name": "Mozilla firefox",
+  "design_system": "Acorn",
+  "design_system_url": "https://acorn.firefox.com",
+  "page_count": 89,
+  "fastidious_id": "DS-141"
+ },
+ {
+  "org_name": "Mutual of Omaha",
+  "design_system": "Digital Design Guide",
+  "design_system_url": "https://design.mutualofomaha.com/digital",
+  "page_count": 18,
+  "fastidious_id": "DS-142"
+ },
+ {
+  "org_name": "MYOB",
+  "design_system": "Feelix",
+  "design_system_url": "https://feelix.myob.com",
+  "page_count": 2,
+  "fastidious_id": "DS-143"
+ },
+ {
+  "org_name": "NASA",
+  "design_system": "NASA Web Design System",
+  "design_system_url": "https://github.com/bruffridge/nasawds",
+  "page_count": 7,
+  "fastidious_id": "DS-144"
+ },
+ {
+  "org_name": "National Instruments",
+  "design_system": "Fuse",
+  "design_system_url": "https://ni.github.io/design-system",
+  "page_count": 18,
+  "fastidious_id": "DS-145"
+ },
+ {
+  "org_name": "NationBuilder",
+  "design_system": "Radius",
+  "design_system_url": "https://www.nationbuilder.design",
+  "page_count": 2,
+  "fastidious_id": "DS-146"
+ },
+ {
+  "org_name": "Neurodiversity",
+  "design_system": "Design system",
+  "design_system_url": "https://neurodiversity.design",
+  "page_count": 36,
+  "fastidious_id": "DS-147"
+ },
+ {
+  "org_name": "New Zealand Government",
+  "design_system": "New Zealand Government Design System (NZGDS)",
+  "design_system_url": "https://design-system-alpha.digital.govt.nz",
+  "page_count": 71,
+  "fastidious_id": "DS-148"
+ },
+ {
+  "org_name": "New Zealand Ministry of Education",
+  "design_system": "Design System",
+  "design_system_url": "https://designsystem.education.govt.nz",
+  "page_count": 32,
+  "fastidious_id": "DS-149"
+ },
+ {
+  "org_name": "News UK",
+  "design_system": "NewsKit",
+  "design_system_url": "https://www.newskit.co.uk",
+  "page_count": 110,
+  "fastidious_id": "DS-150"
+ },
+ {
+  "org_name": "NHS.UK",
+  "design_system": "Service Manual",
+  "design_system_url": "https://service-manual.nhs.uk",
+  "page_count": 216,
+  "fastidious_id": "DS-151"
+ },
+ {
+  "org_name": "nib",
+  "design_system": "Mesh Design System",
+  "design_system_url": "https://www.meshdesignsystem.com",
+  "page_count": 2,
+  "fastidious_id": "DS-152"
+ },
+ {
+  "org_name": "Nordhealth",
+  "design_system": "Nord Design System",
+  "design_system_url": "https://nordhealth.design",
+  "page_count": 577,
+  "fastidious_id": "DS-153"
+ },
+ {
+  "org_name": "Nulogy",
+  "design_system": "Nulogy Design System",
+  "design_system_url": "https://nulogy.design",
+  "page_count": 63,
+  "fastidious_id": "DS-154"
+ },
+ {
+  "org_name": "OPower",
+  "design_system": "OPattern",
+  "design_system_url": "https://ux.opower.com/opattern",
+  "page_count": 32,
+  "fastidious_id": "DS-155"
+ },
+ {
+  "org_name": "Oracle",
+  "design_system": "Alta",
+  "design_system_url": "https://www.oracle.com/webfolder/technetwork/jet",
+  "page_count": 1,
+  "fastidious_id": "DS-156"
+ },
+ {
+  "org_name": "Oracle",
+  "design_system": "Alta UI",
+  "design_system_url": "https://www.oracle.com/webfolder/ux/middleware/alta/index.html?ref=designsystems.directory",
+  "page_count": 1,
+  "fastidious_id": "DS-157"
+ },
+ {
+  "org_name": "Oracle",
+  "design_system": "Redwood",
+  "design_system_url": "https://redwood.oracle.com",
+  "page_count": 2,
+  "fastidious_id": "DS-158"
+ },
+ {
+  "org_name": "Palantir",
+  "design_system": "Blueprint",
+  "design_system_url": "https://blueprintjs.com",
+  "page_count": 2,
+  "fastidious_id": "DS-159"
+ },
+ {
+  "org_name": "PAQT",
+  "design_system": "Graphite Design System",
+  "design_system_url": "https://graphitedesignsystem.com",
+  "page_count": 2,
+  "fastidious_id": "DS-160"
+ },
+ {
+  "org_name": "Patreon",
+  "design_system": "Studio",
+  "design_system_url": "https://studio.patreon.com",
+  "page_count": 158,
+  "fastidious_id": "DS-161"
+ },
+ {
+  "org_name": "PatternFly",
+  "design_system": "PatternFly",
+  "design_system_url": "https://www.patternfly.org/v4",
+  "page_count": 4,
+  "fastidious_id": "DS-162"
+ },
+ {
+  "org_name": "Pega Digital",
+  "design_system": "Bolt Design System",
+  "design_system_url": "https://boltdesignsystem.com",
+  "page_count": 332,
+  "fastidious_id": "DS-163"
+ },
+ {
+  "org_name": "Pegasystems",
+  "design_system": "Pega Cosmos",
+  "design_system_url": "https://design.pega.com",
+  "page_count": 136,
+  "fastidious_id": "DS-164"
+ },
+ {
+  "org_name": "Pinterest",
+  "design_system": "Gestalt",
+  "design_system_url": "https://pinterest.github.io/gestalt/#",
+  "page_count": 1,
+  "fastidious_id": "DS-165"
+ },
+ {
+  "org_name": "Pivotal software",
+  "design_system": "Pivotal UI",
+  "design_system_url": "https://styleguide.pivotal.io",
+  "page_count": 2,
+  "fastidious_id": "DS-166"
+ },
+ {
+  "org_name": "Pluralsight",
+  "design_system": "Pluralsight Design System",
+  "design_system_url": "https://design-system.pluralsight.com",
+  "page_count": 2,
+  "fastidious_id": "DS-167"
+ },
+ {
+  "org_name": "Priceline",
+  "design_system": "Priceline One",
+  "design_system_url": "https://pricelinelabs.github.io/design-system",
+  "page_count": 5,
+  "fastidious_id": "DS-168"
+ },
+ {
+  "org_name": "Priceline",
+  "design_system": "Priceline One",
+  "design_system_url": "https://priceline.github.io/design-system",
+  "page_count": 24,
+  "fastidious_id": "DS-169"
+ },
+ {
+  "org_name": "Pusher",
+  "design_system": "Chameleon",
+  "design_system_url": "https://pusher.github.io/chameleon",
+  "page_count": 12,
+  "fastidious_id": "DS-170"
+ },
+ {
+  "org_name": "Quicken Loans",
+  "design_system": "Spark Design System",
+  "design_system_url": "https://sparkdesignsystem.com",
+  "page_count": 9,
+  "fastidious_id": "DS-171"
+ },
+ {
+  "org_name": "Radix",
+  "design_system": "Radix UI",
+  "design_system_url": "https://www.radix-ui.com",
+  "page_count": 174,
+  "fastidious_id": "DS-172"
+ },
+ {
+  "org_name": "Rambler",
+  "design_system": "Rambler",
+  "design_system_url": "https://rambler-digital-solutions.github.io/rambler-ui",
+  "page_count": 2,
+  "fastidious_id": "DS-173"
+ },
+ {
+  "org_name": "Rambler",
+  "design_system": "Ratio",
+  "design_system_url": "https://ui-kit.rambler.ru/#",
+  "page_count": 2,
+  "fastidious_id": "DS-174"
+ },
+ {
+  "org_name": "React95",
+  "design_system": "React95",
+  "design_system_url": "https://react95.github.io/React95",
+  "page_count": 2,
+  "fastidious_id": "DS-175"
+ },
+ {
+  "org_name": "SAP",
+  "design_system": "Fiori",
+  "design_system_url": "https://experience.sap.com/fiori-design-web",
+  "page_count": 577,
+  "fastidious_id": "DS-176"
+ },
+ {
+  "org_name": "SAP",
+  "design_system": "Fiori Fundamentals",
+  "design_system_url": "https://sap.github.io/fundamental",
+  "page_count": 2,
+  "fastidious_id": "DS-177"
+ },
+ {
+  "org_name": "SAP OpenUI",
+  "design_system": "SAP OpenUI",
+  "design_system_url": "https://sdk.openui5.org/controls",
+  "page_count": 3,
+  "fastidious_id": "DS-178"
+ },
+ {
+  "org_name": "Scania",
+  "design_system": "Tegel",
+  "design_system_url": "https://tegel.scania.com",
+  "page_count": 197,
+  "fastidious_id": "DS-179"
+ },
+ {
+  "org_name": "Scania Digital Design System",
+  "design_system": "Scania Digital Design System",
+  "design_system_url": "https://tegel.scania.com/home",
+  "page_count": 1,
+  "fastidious_id": "DS-180"
+ },
+ {
+  "org_name": "Seek",
+  "design_system": "Braid Design System",
+  "design_system_url": "https://seek-oss.github.io/braid-design-system",
+  "page_count": 264,
+  "fastidious_id": "DS-181"
+ },
+ {
+  "org_name": "Seek",
+  "design_system": "Seek Style Guide",
+  "design_system_url": "https://seek-oss.github.io/seek-style-guide",
+  "page_count": 2,
+  "fastidious_id": "DS-182"
+ },
+ {
+  "org_name": "Segment",
+  "design_system": "Evergreen",
+  "design_system_url": "https://evergreen.segment.com",
+  "page_count": 2,
+  "fastidious_id": "DS-183"
+ },
+ {
+  "org_name": "Semantic",
+  "design_system": "Semantic UI",
+  "design_system_url": "https://semantic-ui.com",
+  "page_count": 316,
+  "fastidious_id": "DS-184"
+ },
+ {
+  "org_name": "Semi Design",
+  "design_system": "Semi Design",
+  "design_system_url": "https://semi.design/en-US",
+  "page_count": 79,
+  "fastidious_id": "DS-185"
+ },
+ {
+  "org_name": "Semrush",
+  "design_system": "Intergalactic",
+  "design_system_url": "https://developer.semrush.com/intergalactic",
+  "page_count": 518,
+  "fastidious_id": "DS-186"
+ },
+ {
+  "org_name": "ServiceNow",
+  "design_system": "ServiceNow Design System",
+  "design_system_url": "https://styleguide.servicenow.com/#!",
+  "page_count": 2,
+  "fastidious_id": "DS-187"
+ },
+ {
+  "org_name": "ServiceTitan",
+  "design_system": "Anvil",
+  "design_system_url": "https://anvil.servicetitan.com",
+  "page_count": 31,
+  "fastidious_id": "DS-188"
+ },
+ {
+  "org_name": "Shopify",
+  "design_system": "Polaris",
+  "design_system_url": "https://polaris.shopify.com",
+  "page_count": 701,
+  "fastidious_id": "DS-189"
+ },
+ {
+  "org_name": "Siemens iX",
+  "design_system": "Siemens iX",
+  "design_system_url": "https://ix.siemens.io",
+  "page_count": 797,
+  "fastidious_id": "DS-190"
+ },
+ {
+  "org_name": "Singapore Government Design System",
+  "design_system": "Singapore Government Design System",
+  "design_system_url": "https://www.designsystem.tech.gov.sg",
+  "page_count": 69,
+  "fastidious_id": "DS-191"
+ },
+ {
+  "org_name": "Sipgate",
+  "design_system": "pandaUI",
+  "design_system_url": "https://panda.sipgatedesign.com",
+  "page_count": 2,
+  "fastidious_id": "DS-192"
+ },
+ {
+  "org_name": "Sky Toolkit",
+  "design_system": "Sky Toolkit",
+  "design_system_url": "https://www.sky.com/toolkit",
+  "page_count": 1,
+  "fastidious_id": "DS-193"
+ },
+ {
+  "org_name": "Skyscanner",
+  "design_system": "Backpack",
+  "design_system_url": "https://skyscanner.design",
+  "page_count": 358,
+  "fastidious_id": "DS-194"
+ },
+ {
+  "org_name": "Skyscanner",
+  "design_system": "Backpack",
+  "design_system_url": "https://backpack.github.io",
+  "page_count": 23,
+  "fastidious_id": "DS-195"
+ },
+ {
+  "org_name": "SpareBank 1",
+  "design_system": "SpareBank 1 Designsystem",
+  "design_system_url": "https://design.sparebank1.no",
+  "page_count": 1,
+  "fastidious_id": "DS-196"
+ },
+ {
+  "org_name": "Sprout Social",
+  "design_system": "Seeds",
+  "design_system_url": "https://sproutsocial.com/seeds",
+  "page_count": 1,
+  "fastidious_id": "DS-197"
+ },
+ {
+  "org_name": "Stack Overflow",
+  "design_system": "Stacks",
+  "design_system_url": "https://stackoverflow.design",
+  "page_count": 2,
+  "fastidious_id": "DS-198"
+ },
+ {
+  "org_name": "Starbucks Style Guide",
+  "design_system": "Starbucks Style Guide",
+  "design_system_url": "https://www.starbucks.com/static/reference/styleguide",
+  "page_count": 2,
+  "fastidious_id": "DS-199"
+ },
+ {
+  "org_name": "State of New South Wales",
+  "design_system": "Digital NSW",
+  "design_system_url": "https://www.digital.nsw.gov.au/digital-design-system",
+  "page_count": 2,
+  "fastidious_id": "DS-200"
+ },
+ {
+  "org_name": "StudyPortals",
+  "design_system": "Styleguide",
+  "design_system_url": "https://styleguide.studyportals.com",
+  "page_count": 2,
+  "fastidious_id": "DS-201"
+ },
+ {
+  "org_name": "Sumup",
+  "design_system": "CircuitUI",
+  "design_system_url": "https://circuit.sumup.com",
+  "page_count": 2,
+  "fastidious_id": "DS-202"
+ },
+ {
+  "org_name": "Teambition Clarity Design",
+  "design_system": "Teambition Clarity Design",
+  "design_system_url": "https://design.teambition.com",
+  "page_count": 2,
+  "fastidious_id": "DS-203"
+ },
+ {
+  "org_name": "Telefónica",
+  "design_system": "Mística",
+  "design_system_url": "https://brandfactory.telefonica.com/mistica",
+  "page_count": 2,
+  "fastidious_id": "DS-204"
+ },
+ {
+  "org_name": "Thumbtack",
+  "design_system": "Thumbprint",
+  "design_system_url": "https://thumbprint.design",
+  "page_count": 2,
+  "fastidious_id": "DS-205"
+ },
+ {
+  "org_name": "TOTVS",
+  "design_system": "Portinari UI",
+  "design_system_url": "https://po-ui.io",
+  "page_count": 133,
+  "fastidious_id": "DS-206"
+ },
+ {
+  "org_name": "Transport for West Midlands",
+  "design_system": "Transport for West Midlands",
+  "design_system_url": "https://designsystem.tfwm.org.uk",
+  "page_count": 71,
+  "fastidious_id": "DS-207"
+ },
+ {
+  "org_name": "Trello",
+  "design_system": "Nachos",
+  "design_system_url": "https://design.trello.com",
+  "page_count": 1,
+  "fastidious_id": "DS-208"
+ },
+ {
+  "org_name": "Twilio",
+  "design_system": "Paste",
+  "design_system_url": "https://paste.twilio.design",
+  "page_count": 348,
+  "fastidious_id": "DS-209"
+ },
+ {
+  "org_name": "U.S. Department of Veterans Affairs",
+  "design_system": "Design system",
+  "design_system_url": "https://design.va.gov",
+  "page_count": 212,
+  "fastidious_id": "DS-210"
+ },
+ {
+  "org_name": "U.S. Government",
+  "design_system": "U.S. Web Design System",
+  "design_system_url": "https://designsystem.digital.gov",
+  "page_count": 299,
+  "fastidious_id": "DS-211"
+ },
+ {
+  "org_name": "Uber",
+  "design_system": "Base Web",
+  "design_system_url": "https://baseweb.design",
+  "page_count": 179,
+  "fastidious_id": "DS-212"
+ },
+ {
+  "org_name": "United States Centers for Medicare & Medicaid Services",
+  "design_system": "CMS Design System",
+  "design_system_url": "https://design.cms.gov",
+  "page_count": 242,
+  "fastidious_id": "DS-213"
+ },
+ {
+  "org_name": "United States Patent and Trademark Office",
+  "design_system": "USPTO UI Design Library",
+  "design_system_url": "https://uspto.github.io/USPTO-Design-System",
+  "page_count": 22,
+  "fastidious_id": "DS-214"
+ },
+ {
+  "org_name": "United States Space Force",
+  "design_system": "Astro",
+  "design_system_url": "https://www.astrouxds.com",
+  "page_count": 156,
+  "fastidious_id": "DS-215"
+ },
+ {
+  "org_name": "USAJobs",
+  "design_system": "USA jobs design system",
+  "design_system_url": "https://usajobs.github.io/design-system",
+  "page_count": 2,
+  "fastidious_id": "DS-216"
+ },
+ {
+  "org_name": "uSwitch",
+  "design_system": "uStyle",
+  "design_system_url": "https://ustyle.guide",
+  "page_count": 2,
+  "fastidious_id": "DS-217"
+ },
+ {
+  "org_name": "Vercel",
+  "design_system": "Geist",
+  "design_system_url": "https://vercel.com/design/introduction",
+  "page_count": 2,
+  "fastidious_id": "DS-218"
+ },
+ {
+  "org_name": "Vimeo",
+  "design_system": "Vimeo Design System",
+  "design_system_url": "https://vimeo.github.io/iris",
+  "page_count": 2,
+  "fastidious_id": "DS-219"
+ },
+ {
+  "org_name": "VMware",
+  "design_system": "Clarity Design System",
+  "design_system_url": "https://clarity.design",
+  "page_count": 2,
+  "fastidious_id": "DS-220"
+ },
+ {
+  "org_name": "Volvo Cars Web Design System",
+  "design_system": "Volvo",
+  "design_system_url": "https://developer.volvocars.com/design-system/web",
+  "page_count": 2,
+  "fastidious_id": "DS-221"
+ },
+ {
+  "org_name": "VTEX",
+  "design_system": "Styleguide",
+  "design_system_url": "https://styleguide.vtex.com",
+  "page_count": 2,
+  "fastidious_id": "DS-222"
+ },
+ {
+  "org_name": "Vue Design System",
+  "design_system": "Vue Design System",
+  "design_system_url": "https://vueds.com",
+  "page_count": 2,
+  "fastidious_id": "DS-223"
+ },
+ {
+  "org_name": "Washington Post",
+  "design_system": "Washington Post Design System (WPDS)",
+  "design_system_url": "https://build.washingtonpost.com",
+  "page_count": 2,
+  "fastidious_id": "DS-224"
+ },
+ {
+  "org_name": "Webex",
+  "design_system": "Momentum Design System",
+  "design_system_url": "https://momentum.design",
+  "page_count": 2,
+  "fastidious_id": "DS-225"
+ },
+ {
+  "org_name": "Welcome to the Jungle",
+  "design_system": "Welcome UI",
+  "design_system_url": "https://www.welcome-ui.com",
+  "page_count": 2,
+  "fastidious_id": "DS-226"
+ },
+ {
+  "org_name": "Westpac",
+  "design_system": "GEL",
+  "design_system_url": "https://gel.westpacgroup.com.au",
+  "page_count": 2,
+  "fastidious_id": "DS-227"
+ },
+ {
+  "org_name": "WeWork",
+  "design_system": "Ray",
+  "design_system_url": "https://ray.wework.com",
+  "page_count": 2,
+  "fastidious_id": "DS-228"
+ },
+ {
+  "org_name": "Wise",
+  "design_system": "Design system",
+  "design_system_url": "https://wise.design",
+  "page_count": 2,
+  "fastidious_id": "DS-229"
+ },
+ {
+  "org_name": "Wonderbly",
+  "design_system": "Lost My Name Design System",
+  "design_system_url": "https://design-system.lostmy.name",
+  "page_count": 2,
+  "fastidious_id": "DS-230"
+ },
+ {
+  "org_name": "Wonderbly",
+  "design_system": "Wonderbly Design System",
+  "design_system_url": "https://design-system.wonderbly.com",
+  "page_count": 2,
+  "fastidious_id": "DS-231"
+ },
+ {
+  "org_name": "Wonderflow",
+  "design_system": "Wanda Design System",
+  "design_system_url": "https://design.wonderflow.ai",
+  "page_count": 2,
+  "fastidious_id": "DS-232"
+ },
+ {
+  "org_name": "Workday",
+  "design_system": "Workday Canvas",
+  "design_system_url": "https://design.workday.com",
+  "page_count": 2,
+  "fastidious_id": "DS-233"
+ },
+ {
+  "org_name": "Yelp",
+  "design_system": "Yelp Styleguide",
+  "design_system_url": "https://www.yelp.com/styleguide",
+  "page_count": 2,
+  "fastidious_id": "DS-234"
+ },
+ {
+  "org_name": "Zendesk",
+  "design_system": "Garden",
+  "design_system_url": "https://garden.zendesk.com",
+  "page_count": 2,
+  "fastidious_id": "DS-235"
+ }
+]

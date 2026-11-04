@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate the marketplace, plugins and skills
+        run: python3 scripts/validate.py
+      - name: Test the crew and promo-stack installers
+        run: python3 -m unittest discover -v plugins/fastidious/tests
+      - name: Test fastidious-motion
+        run: python3 -m unittest discover -v plugins/fastidious-motion/tests
+      - name: Shell syntax
+        run: bash -n install.sh

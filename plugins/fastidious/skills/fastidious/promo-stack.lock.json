@@ -1,0 +1,77 @@
+{
+  "_about": "Third-party skills Fastidious uses for promotional film. Each is pinned to an exact commit and copied, unchanged except where 'rename' says, into the skills directory. Nothing here updates itself: to move a pin, follow 'Moving a pin' in PROMO-STACK.md.",
+  "locked": "2026-11-04",
+  "policy": "Pin to a commit at least a week old, or to the final release of a mature line. Only permissive licences (MIT, Apache-2.0) are installed; copyleft and non-commercial packages are referenced, never bundled.",
+  "packages": [
+    {
+      "id": "hyperframes",
+      "group": "core",
+      "role": "Renderer: HTML compositions rendered to MP4, frame by frame and identical on every render",
+      "repo": "heygen-com/hyperframes",
+      "ref": "v0.8.231",
+      "commit": "f0b2dd0cdbd926e32cb11435c53819933fcc1ef3",
+      "licence": "Apache-2.0",
+      "cli": "hyperframes@0.8.231",
+      "note": "Final release of the 0.8 line (2 November 2026). 0.9.0 shipped the same day and was patched ten times in two days; move to 0.9 once a release has stood for two weeks.",
+      "skills": [
+        {"src": "skills/hyperframes", "as": "hyperframes"},
+        {"src": "skills/hyperframes-cli", "as": "hyperframes-cli"},
+        {"src": "skills/hyperframes-registry", "as": "hyperframes-registry"},
+        {"src": "skills/media-use", "as": "media-use"}
+      ]
+    },
+    {
+      "id": "motionmaxxing",
+      "group": "core",
+      "role": "Motion judgement: craft laws measured from professional films, a precedent library, and gates computed on the render (look.py, lint.mjs)",
+      "repo": "Tejashmakwana/motionmaxxing",
+      "ref": "main",
+      "commit": "8c8ec0f2a6f6c9a0da15cd24f7b1298ab298368c",
+      "licence": "Apache-2.0 (GSAP under the GreenSock Standard License; Three.js and opentype.js MIT; Inter OFL)",
+      "skills": [{"src": ".", "as": "motionmaxxing"}]
+    },
+    {
+      "id": "business-motion-film",
+      "group": "core",
+      "role": "Independent review: the Gauntlet loop, critic prompts, quality bar, frozen-time and loudness scripts, music back-timing",
+      "repo": "echris6/motion-video-kit",
+      "ref": "main",
+      "commit": "e4b1c0004080fe6a0deb883631bad5eba1e5f339",
+      "licence": "MIT",
+      "skills": [{"src": "business-motion-film", "as": "business-motion-film"}]
+    },
+    {
+      "id": "elevenlabs",
+      "group": "core",
+      "role": "Sound: music, sound effects, voiceover and transcription through ElevenLabs' own skills",
+      "repo": "elevenlabs/skills",
+      "ref": "main",
+      "commit": "503d4e9fda0190ab9357142f44e51de626f97f90",
+      "licence": "MIT",
+      "needs_env": ["ELEVENLABS_API_KEY"],
+      "skills": [
+        {"src": "music", "as": "elevenlabs-music", "rename": true},
+        {"src": "sound-effects", "as": "elevenlabs-sound-effects", "rename": true},
+        {"src": "text-to-speech", "as": "elevenlabs-text-to-speech", "rename": true},
+        {"src": "speech-to-text", "as": "elevenlabs-speech-to-text", "rename": true}
+      ]
+    },
+    {
+      "id": "watch",
+      "group": "watch",
+      "role": "Lets Claude watch a reference film or its own cut: frames and a transcript, locally by default",
+      "repo": "bradautomates/claude-video",
+      "ref": "main",
+      "commit": "03ceb42f7fa2c4439aca01752118044baabffb8f",
+      "licence": "MIT",
+      "note": "Optional. Installed as a skill folder only, without the plugin's SessionStart hook. Its Gemini engine uploads video to Google; use the local engine for anything confidential.",
+      "skills": [{"src": "skills/watch", "as": "watch"}]
+    }
+  ],
+  "referenced_not_installed": [
+    {"name": "Remotion and video-shotcraft", "why": "Company licence needed above three employees; kept only for existing Remotion projects"},
+    {"name": "OpenMontage", "why": "AGPL-3.0; its budget and provider-selection patterns are studied, not bundled"},
+    {"name": "onetake", "why": "PolyForm Noncommercial; commercial use needs its paid licence"},
+    {"name": "charlie947/motion-graphics-skills", "why": "Overlaps brand-system-architect and showreel-director; borrow single formats by hand if needed"}
+  ]
+}

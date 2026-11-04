@@ -1,0 +1,2497 @@
+{
+  "version": "1.1.0",
+  "name": "Design Intelligence Source Registry",
+  "description": "A curated registry of design inspiration and design intelligence sources for autonomous crawling, pattern extraction, trend detection and research. Extended with three sources added after the original registry (21st.dev, Godly, Motionsites.ai), and a precomputed weighted_score on every entry using the registry's own source_weight_formula (freshness converted from its qualitative label via low=2, medium=5, high=8, very_high=10, since reference-curator has no code-execution tool to compute this live).",
+  "updated": "2026-09-02",
+  "categories": [
+    {
+      "id": "product_ui_ux",
+      "name": "Product UI & UX",
+      "description": "Real product interfaces, screens, flows and UX patterns."
+    },
+    {
+      "id": "web_design",
+      "name": "Web Design",
+      "description": "Contemporary websites, landing pages and digital experiences."
+    },
+    {
+      "id": "design_communities",
+      "name": "Design Communities",
+      "description": "Community-driven portfolios, experiments and emerging visual trends."
+    },
+    {
+      "id": "branding",
+      "name": "Branding & Identity",
+      "description": "Brand systems, identity design, logos and visual strategy."
+    },
+    {
+      "id": "typography",
+      "name": "Typography",
+      "description": "Typography, type pairing and typographic systems."
+    },
+    {
+      "id": "motion_interaction",
+      "name": "Motion & Interaction",
+      "description": "Animation, interaction, creative coding and immersive experiences."
+    },
+    {
+      "id": "specialist",
+      "name": "Specialist Collections",
+      "description": "Focused collections for specific aesthetics, components or design patterns."
+    }
+  ],
+  "scoring": {
+    "formula": {
+      "authority": 0.25,
+      "freshness": 0.2,
+      "production_relevance": 0.3,
+      "priority": 0.25
+    },
+    "freshness_numeric_mapping": {
+      "low": 2,
+      "medium": 5,
+      "high": 8,
+      "very_high": 10
+    },
+    "note": "weighted_score on each source below is precomputed from this formula. Recompute only if a source's underlying fields are revised."
+  },
+  "pattern_taxonomy": [
+    "branding",
+    "logo",
+    "colour",
+    "typography",
+    "layout",
+    "grid",
+    "bento",
+    "hero",
+    "navigation",
+    "sidebar",
+    "tabs",
+    "command_palette",
+    "cards",
+    "tables",
+    "forms",
+    "dashboards",
+    "data_visualisation",
+    "pricing",
+    "cta",
+    "social_proof",
+    "onboarding",
+    "empty_state",
+    "interaction",
+    "hover",
+    "scroll",
+    "motion",
+    "microinteraction",
+    "3d",
+    "accessibility",
+    "dark_mode",
+    "mobile",
+    "ai_interface"
+  ],
+  "sources": [
+    {
+      "id": "brand_new",
+      "name": "Brand New",
+      "url": "https://www.underconsideration.com/brandnew",
+      "category": "branding",
+      "subcategories": [
+        "identity",
+        "rebrands"
+      ],
+      "priority": 10,
+      "authority": 10,
+      "freshness": "high",
+      "production_relevance": 10,
+      "crawl_frequency": "daily",
+      "source_type": "publication",
+      "primary_value": "Critical analysis of brand identity launches",
+      "tags": [
+        "branding",
+        "identity",
+        "rebrand"
+      ],
+      "weighted_score": 9.6,
+      "provenance": "original_registry",
+      "fastidious_id": "L-052"
+    },
+    {
+      "id": "bpando",
+      "name": "BP&O",
+      "url": "https://bpando.org",
+      "category": "branding",
+      "subcategories": [
+        "branding",
+        "identity",
+        "packaging"
+      ],
+      "priority": 10,
+      "authority": 10,
+      "freshness": "high",
+      "production_relevance": 9,
+      "crawl_frequency": "daily",
+      "source_type": "publication",
+      "primary_value": "Contemporary branding and packaging analysis",
+      "tags": [
+        "branding",
+        "identity"
+      ],
+      "weighted_score": 9.3,
+      "provenance": "original_registry",
+      "fastidious_id": "L-053"
+    },
+    {
+      "id": "brandfetch",
+      "name": "Brandfetch",
+      "url": "https://brandfetch.com",
+      "category": "branding",
+      "subcategories": [
+        "brand_assets",
+        "logos"
+      ],
+      "priority": 9,
+      "authority": 9,
+      "freshness": "high",
+      "production_relevance": 10,
+      "crawl_frequency": "weekly",
+      "source_type": "brand_database",
+      "primary_value": "Real-world brand assets and systems",
+      "tags": [
+        "branding",
+        "logos"
+      ],
+      "weighted_score": 9.1,
+      "provenance": "original_registry",
+      "fastidious_id": "L-054"
+    },
+    {
+      "id": "the_brand_identity",
+      "name": "The Brand Identity",
+      "url": "https://the-brandidentity.com",
+      "category": "branding",
+      "subcategories": [
+        "identity",
+        "branding"
+      ],
+      "priority": 10,
+      "authority": 9,
+      "freshness": "high",
+      "production_relevance": 9,
+      "crawl_frequency": "daily",
+      "source_type": "publication",
+      "primary_value": "Contemporary brand identity",
+      "tags": [
+        "branding",
+        "identity"
+      ],
+      "weighted_score": 9.05,
+      "provenance": "original_registry",
+      "fastidious_id": "L-055"
+    },
+    {
+      "id": "identity_designed",
+      "name": "Identity Designed",
+      "url": "https://identitydesigned.com",
+      "category": "branding",
+      "subcategories": [
+        "identity",
+        "brand_systems"
+      ],
+      "priority": 10,
+      "authority": 10,
+      "freshness": "medium",
+      "production_relevance": 10,
+      "crawl_frequency": "weekly",
+      "source_type": "case_study",
+      "primary_value": "Detailed identity system case studies",
+      "tags": [
+        "branding",
+        "identity"
+      ],
+      "weighted_score": 9.0,
+      "provenance": "original_registry",
+      "fastidious_id": "L-056"
+    },
+    {
+      "id": "branding_style_guides",
+      "name": "Branding Style Guides",
+      "url": "https://brandingstyleguides.com",
+      "category": "branding",
+      "subcategories": [
+        "guidelines",
+        "brand_systems"
+      ],
+      "priority": 9,
+      "authority": 9,
+      "freshness": "medium",
+      "production_relevance": 10,
+      "crawl_frequency": "weekly",
+      "source_type": "archive",
+      "primary_value": "Real brand guidelines",
+      "tags": [
+        "brand_guidelines",
+        "identity"
+      ],
+      "weighted_score": 8.5,
+      "provenance": "original_registry",
+      "fastidious_id": "L-057"
+    },
+    {
+      "id": "logolounge",
+      "name": "LogoLounge",
+      "url": "https://www.logolounge.com",
+      "category": "branding",
+      "subcategories": [
+        "logos",
+        "identity"
+      ],
+      "priority": 9,
+      "authority": 10,
+      "freshness": "medium",
+      "production_relevance": 9,
+      "crawl_frequency": "weekly",
+      "source_type": "library",
+      "primary_value": "Logo pattern and trend research",
+      "tags": [
+        "logo",
+        "identity"
+      ],
+      "weighted_score": 8.45,
+      "provenance": "original_registry",
+      "fastidious_id": "L-058"
+    },
+    {
+      "id": "packaging_of_the_world",
+      "name": "Packaging of the World",
+      "url": "https://packagingoftheworld.com",
+      "category": "branding",
+      "subcategories": [
+        "packaging",
+        "identity"
+      ],
+      "priority": 8,
+      "authority": 9,
+      "freshness": "high",
+      "production_relevance": 8,
+      "crawl_frequency": "weekly",
+      "source_type": "gallery",
+      "primary_value": "Packaging and brand expression",
+      "tags": [
+        "packaging",
+        "branding"
+      ],
+      "weighted_score": 8.25,
+      "provenance": "original_registry",
+      "fastidious_id": "L-059"
+    },
+    {
+      "id": "branding_served",
+      "name": "Branding Served",
+      "url": "https://www.behance.net/galleries/branding",
+      "category": "branding",
+      "subcategories": [
+        "identity",
+        "branding"
+      ],
+      "priority": 8,
+      "authority": 8,
+      "freshness": "very_high",
+      "production_relevance": 7,
+      "crawl_frequency": "daily",
+      "source_type": "community_gallery",
+      "primary_value": "Large-scale branding inspiration",
+      "tags": [
+        "branding"
+      ],
+      "weighted_score": 8.1,
+      "provenance": "original_registry",
+      "fastidious_id": "L-060"
+    },
+    {
+      "id": "world_brand_design_society",
+      "name": "World Brand Design Society",
+      "url": "https://worldbranddesign.com",
+      "category": "branding",
+      "subcategories": [
+        "branding",
+        "identity"
+      ],
+      "priority": 8,
+      "authority": 8,
+      "freshness": "high",
+      "production_relevance": 8,
+      "crawl_frequency": "weekly",
+      "source_type": "community",
+      "primary_value": "Global branding projects",
+      "tags": [
+        "branding"
+      ],
+      "weighted_score": 8.0,
+      "provenance": "original_registry",
+      "fastidious_id": "L-061"
+    },
+    {
+      "id": "logo_design_love",
+      "name": "Logo Design Love",
+      "url": "https://www.logodesignlove.com",
+      "category": "branding",
+      "subcategories": [
+        "logos",
+        "identity"
+      ],
+      "priority": 8,
+      "authority": 9,
+      "freshness": "medium",
+      "production_relevance": 8,
+      "crawl_frequency": "weekly",
+      "source_type": "publication",
+      "primary_value": "Logo and identity design",
+      "tags": [
+        "logo",
+        "branding"
+      ],
+      "weighted_score": 7.65,
+      "provenance": "original_registry",
+      "fastidious_id": "L-062"
+    },
+    {
+      "id": "brand_archive",
+      "name": "Brand Archive",
+      "url": "https://www.brandarchive.xyz",
+      "category": "branding",
+      "subcategories": [
+        "identity",
+        "brand_systems"
+      ],
+      "priority": 8,
+      "authority": 7,
+      "freshness": "medium",
+      "production_relevance": 8,
+      "crawl_frequency": "weekly",
+      "source_type": "archive",
+      "primary_value": "Brand identity references",
+      "tags": [
+        "branding"
+      ],
+      "weighted_score": 7.15,
+      "provenance": "original_registry",
+      "fastidious_id": "L-063"
+    },
+    {
+      "id": "figma_community",
+      "name": "Figma Community",
+      "url": "https://www.figma.com/community",
+      "category": "design_communities",
+      "subcategories": [
+        "design_systems",
+        "ui_kits",
+        "components"
+      ],
+      "priority": 9,
+      "authority": 10,
+      "freshness": "very_high",
+      "production_relevance": 10,
+      "crawl_frequency": "daily",
+      "source_type": "community",
+      "primary_value": "Actual reusable design systems and components",
+      "tags": [
+        "figma",
+        "design_system",
+        "ui"
+      ],
+      "weighted_score": 9.75,
+      "provenance": "original_registry",
+      "fastidious_id": "L-041"
+    },
+    {
+      "id": "behance",
+      "name": "Behance",
+      "url": "https://www.behance.net",
+      "category": "design_communities",
+      "subcategories": [
+        "portfolios",
+        "branding",
+        "ui"
+      ],
+      "priority": 10,
+      "authority": 10,
+      "freshness": "very_high",
+      "production_relevance": 8,
+      "crawl_frequency": "daily",
+      "source_type": "community",
+      "primary_value": "Complete creative projects and case studies",
+      "tags": [
+        "portfolio",
+        "branding",
+        "ui"
+      ],
+      "weighted_score": 9.4,
+      "provenance": "original_registry",
+      "fastidious_id": "L-042"
+    },
+    {
+      "id": "dribbble",
+      "name": "Dribbble",
+      "url": "https://dribbble.com",
+      "category": "design_communities",
+      "subcategories": [
+        "ui",
+        "visual_design",
+        "trends"
+      ],
+      "priority": 10,
+      "authority": 10,
+      "freshness": "very_high",
+      "production_relevance": 6,
+      "crawl_frequency": "daily",
+      "source_type": "community",
+      "primary_value": "Emerging visual trends and design exploration",
+      "tags": [
+        "ui",
+        "visual",
+        "trends"
+      ],
+      "weighted_score": 8.8,
+      "provenance": "original_registry",
+      "fastidious_id": "L-043"
+    },
+    {
+      "id": "pinterest",
+      "name": "Pinterest",
+      "url": "https://www.pinterest.com",
+      "category": "design_communities",
+      "subcategories": [
+        "moodboards",
+        "visual_research"
+      ],
+      "priority": 8,
+      "authority": 10,
+      "freshness": "very_high",
+      "production_relevance": 6,
+      "crawl_frequency": "daily",
+      "source_type": "community",
+      "primary_value": "Broad visual exploration",
+      "tags": [
+        "moodboard",
+        "visual"
+      ],
+      "weighted_score": 8.3,
+      "provenance": "original_registry",
+      "fastidious_id": "L-044"
+    },
+    {
+      "id": "muzli",
+      "name": "Muzli",
+      "url": "https://muz.li",
+      "category": "design_communities",
+      "subcategories": [
+        "design_discovery",
+        "trends"
+      ],
+      "priority": 8,
+      "authority": 8,
+      "freshness": "very_high",
+      "production_relevance": 7,
+      "crawl_frequency": "daily",
+      "source_type": "aggregator",
+      "primary_value": "Broad design trend discovery",
+      "tags": [
+        "trends",
+        "discovery"
+      ],
+      "weighted_score": 8.1,
+      "provenance": "original_registry",
+      "fastidious_id": "L-045"
+    },
+    {
+      "id": "savee",
+      "name": "Savee",
+      "url": "https://savee.it",
+      "category": "design_communities",
+      "subcategories": [
+        "visual_research",
+        "moodboards"
+      ],
+      "priority": 9,
+      "authority": 8,
+      "freshness": "high",
+      "production_relevance": 7,
+      "crawl_frequency": "daily",
+      "source_type": "visual_library",
+      "primary_value": "High-quality visual references",
+      "tags": [
+        "visual",
+        "art_direction"
+      ],
+      "weighted_score": 7.95,
+      "provenance": "original_registry",
+      "fastidious_id": "L-046"
+    },
+    {
+      "id": "cosmos",
+      "name": "Cosmos",
+      "url": "https://www.cosmos.so",
+      "category": "design_communities",
+      "subcategories": [
+        "visual_research",
+        "inspiration"
+      ],
+      "priority": 9,
+      "authority": 8,
+      "freshness": "high",
+      "production_relevance": 7,
+      "crawl_frequency": "daily",
+      "source_type": "visual_library",
+      "primary_value": "Visual discovery and research",
+      "tags": [
+        "visual",
+        "inspiration"
+      ],
+      "weighted_score": 7.95,
+      "provenance": "original_registry",
+      "fastidious_id": "L-047"
+    },
+    {
+      "id": "abduzeedo",
+      "name": "Abduzeedo",
+      "url": "https://abduzeedo.com",
+      "category": "design_communities",
+      "subcategories": [
+        "visual_design",
+        "editorial"
+      ],
+      "priority": 8,
+      "authority": 9,
+      "freshness": "high",
+      "production_relevance": 7,
+      "crawl_frequency": "daily",
+      "source_type": "publication",
+      "primary_value": "Visual design and creative inspiration",
+      "tags": [
+        "visual",
+        "graphic_design"
+      ],
+      "weighted_score": 7.95,
+      "provenance": "original_registry",
+      "fastidious_id": "L-048"
+    },
+    {
+      "id": "are_na",
+      "name": "Are.na",
+      "url": "https://www.are.na",
+      "category": "design_communities",
+      "subcategories": [
+        "research",
+        "visual_culture"
+      ],
+      "priority": 8,
+      "authority": 9,
+      "freshness": "high",
+      "production_relevance": 6,
+      "crawl_frequency": "weekly",
+      "source_type": "research_network",
+      "primary_value": "Conceptual and visual research",
+      "tags": [
+        "research",
+        "culture"
+      ],
+      "weighted_score": 7.65,
+      "provenance": "original_registry",
+      "fastidious_id": "L-049"
+    },
+    {
+      "id": "layers",
+      "name": "Layers",
+      "url": "https://layers.to",
+      "category": "design_communities",
+      "subcategories": [
+        "design",
+        "creative_work"
+      ],
+      "priority": 7,
+      "authority": 7,
+      "freshness": "high",
+      "production_relevance": 7,
+      "crawl_frequency": "weekly",
+      "source_type": "community",
+      "primary_value": "Contemporary creative work",
+      "tags": [
+        "creative",
+        "design"
+      ],
+      "weighted_score": 7.2,
+      "provenance": "original_registry",
+      "fastidious_id": "L-050"
+    },
+    {
+      "id": "designspiration",
+      "name": "Designspiration",
+      "url": "https://www.designspiration.com",
+      "category": "design_communities",
+      "subcategories": [
+        "visual_research"
+      ],
+      "priority": 7,
+      "authority": 8,
+      "freshness": "medium",
+      "production_relevance": 6,
+      "crawl_frequency": "weekly",
+      "source_type": "visual_library",
+      "primary_value": "Visual inspiration",
+      "tags": [
+        "visual"
+      ],
+      "weighted_score": 6.55,
+      "provenance": "original_registry",
+      "fastidious_id": "L-051"
+    },
+    {
+      "id": "lottiefiles",
+      "name": "LottieFiles",
+      "url": "https://lottiefiles.com",
+      "category": "motion_interaction",
+      "subcategories": [
+        "ui_animation",
+        "microinteractions"
+      ],
+      "priority": 9,
+      "authority": 10,
+      "freshness": "very_high",
+      "production_relevance": 10,
+      "crawl_frequency": "daily",
+      "source_type": "library",
+      "primary_value": "UI animation patterns",
+      "tags": [
+        "animation",
+        "ui",
+        "microinteraction"
+      ],
+      "weighted_score": 9.75,
+      "provenance": "original_registry",
+      "fastidious_id": "L-072"
+    },
+    {
+      "id": "motionographer",
+      "name": "Motionographer",
+      "url": "https://motionographer.com",
+      "category": "motion_interaction",
+      "subcategories": [
+        "motion",
+        "animation"
+      ],
+      "priority": 10,
+      "authority": 10,
+      "freshness": "high",
+      "production_relevance": 8,
+      "crawl_frequency": "daily",
+      "source_type": "publication",
+      "primary_value": "Leading motion design",
+      "tags": [
+        "motion",
+        "animation"
+      ],
+      "weighted_score": 9.0,
+      "provenance": "original_registry",
+      "fastidious_id": "L-073"
+    },
+    {
+      "id": "codrops",
+      "name": "Codrops",
+      "url": "https://tympanus.net/codrops",
+      "category": "motion_interaction",
+      "subcategories": [
+        "creative_coding",
+        "interaction",
+        "webgl"
+      ],
+      "priority": 10,
+      "authority": 10,
+      "freshness": "high",
+      "production_relevance": 8,
+      "crawl_frequency": "daily",
+      "source_type": "publication",
+      "primary_value": "Experimental web interaction techniques",
+      "tags": [
+        "interaction",
+        "webgl",
+        "creative_coding"
+      ],
+      "weighted_score": 9.0,
+      "provenance": "original_registry",
+      "fastidious_id": "L-074"
+    },
+    {
+      "id": "ui_movement",
+      "name": "UI Movement",
+      "url": "https://uimovement.com",
+      "category": "motion_interaction",
+      "subcategories": [
+        "ui_animation",
+        "interaction"
+      ],
+      "priority": 9,
+      "authority": 9,
+      "freshness": "high",
+      "production_relevance": 9,
+      "crawl_frequency": "daily",
+      "source_type": "gallery",
+      "primary_value": "Interface animation",
+      "tags": [
+        "motion",
+        "ui"
+      ],
+      "weighted_score": 8.8,
+      "provenance": "original_registry",
+      "fastidious_id": "L-075"
+    },
+    {
+      "id": "threejs_examples",
+      "name": "Three.js Examples",
+      "url": "https://threejs.org/examples",
+      "category": "motion_interaction",
+      "subcategories": [
+        "3d",
+        "webgl"
+      ],
+      "priority": 8,
+      "authority": 10,
+      "freshness": "high",
+      "production_relevance": 8,
+      "crawl_frequency": "weekly",
+      "source_type": "technical_library",
+      "primary_value": "3D interaction patterns",
+      "tags": [
+        "3d",
+        "webgl"
+      ],
+      "weighted_score": 8.5,
+      "provenance": "original_registry",
+      "fastidious_id": "L-076"
+    },
+    {
+      "id": "locomotive",
+      "name": "Locomotive",
+      "url": "https://locomotive.ca",
+      "category": "motion_interaction",
+      "subcategories": [
+        "interaction",
+        "web_experiences"
+      ],
+      "priority": 9,
+      "authority": 9,
+      "freshness": "medium",
+      "production_relevance": 8,
+      "crawl_frequency": "monthly",
+      "source_type": "studio",
+      "primary_value": "Advanced web interaction",
+      "tags": [
+        "interaction",
+        "web"
+      ],
+      "weighted_score": 7.9,
+      "provenance": "original_registry",
+      "fastidious_id": "L-077"
+    },
+    {
+      "id": "active_theory",
+      "name": "Active Theory",
+      "url": "https://activetheory.net",
+      "category": "motion_interaction",
+      "subcategories": [
+        "immersive",
+        "creative_technology"
+      ],
+      "priority": 9,
+      "authority": 10,
+      "freshness": "medium",
+      "production_relevance": 7,
+      "crawl_frequency": "monthly",
+      "source_type": "studio",
+      "primary_value": "Immersive digital experiences",
+      "tags": [
+        "immersive",
+        "webgl"
+      ],
+      "weighted_score": 7.85,
+      "provenance": "original_registry",
+      "fastidious_id": "L-078"
+    },
+    {
+      "id": "lusion",
+      "name": "Lusion",
+      "url": "https://lusion.co",
+      "category": "motion_interaction",
+      "subcategories": [
+        "creative_technology",
+        "3d"
+      ],
+      "priority": 8,
+      "authority": 9,
+      "freshness": "medium",
+      "production_relevance": 7,
+      "crawl_frequency": "monthly",
+      "source_type": "studio",
+      "primary_value": "Creative technology and immersive experiences",
+      "tags": [
+        "3d",
+        "creative_technology"
+      ],
+      "weighted_score": 7.35,
+      "provenance": "original_registry",
+      "fastidious_id": "L-079"
+    },
+    {
+      "id": "motionsites_ai",
+      "name": "Motionsites.ai",
+      "url": "https://motionsites.ai",
+      "category": "motion_interaction",
+      "subcategories": [
+        "interaction",
+        "motion"
+      ],
+      "priority": 7,
+      "authority": 6,
+      "freshness": "high",
+      "production_relevance": 8,
+      "crawl_frequency": "weekly",
+      "source_type": "specialist_gallery",
+      "primary_value": "Interaction and motion technique reference",
+      "tags": [
+        "motion",
+        "interaction"
+      ],
+      "provenance": "added_after_original_registry",
+      "weighted_score": 7.25,
+      "fastidious_id": "L-080"
+    },
+    {
+      "id": "bruno_simon",
+      "name": "Bruno Simon",
+      "url": "https://bruno-simon.com",
+      "category": "motion_interaction",
+      "subcategories": [
+        "3d",
+        "experimental_web"
+      ],
+      "priority": 8,
+      "authority": 9,
+      "freshness": "low",
+      "production_relevance": 6,
+      "crawl_frequency": "monthly",
+      "source_type": "portfolio",
+      "primary_value": "Experimental 3D interaction",
+      "tags": [
+        "3d",
+        "interaction"
+      ],
+      "weighted_score": 6.45,
+      "provenance": "original_registry",
+      "fastidious_id": "L-081"
+    },
+    {
+      "id": "mobbin",
+      "name": "Mobbin",
+      "url": "https://mobbin.com",
+      "category": "product_ui_ux",
+      "subcategories": [
+        "mobile",
+        "web",
+        "screens",
+        "flows",
+        "ui_patterns"
+      ],
+      "priority": 10,
+      "authority": 10,
+      "freshness": "high",
+      "production_relevance": 10,
+      "crawl_frequency": "daily",
+      "source_type": "curated_library",
+      "primary_value": "Real-world product UI and user flows",
+      "tags": [
+        "ui",
+        "ux",
+        "mobile",
+        "saas",
+        "flows"
+      ],
+      "weighted_score": 9.6,
+      "provenance": "original_registry",
+      "fastidious_id": "L-005"
+    },
+    {
+      "id": "refero",
+      "name": "Refero",
+      "url": "https://refero.design",
+      "category": "product_ui_ux",
+      "subcategories": [
+        "ui_patterns",
+        "flows",
+        "saas",
+        "web"
+      ],
+      "priority": 10,
+      "authority": 10,
+      "freshness": "high",
+      "production_relevance": 10,
+      "crawl_frequency": "daily",
+      "source_type": "curated_library",
+      "primary_value": "Pattern-based research across real product interfaces",
+      "tags": [
+        "ui",
+        "ux",
+        "patterns",
+        "flows",
+        "ai"
+      ],
+      "weighted_score": 9.6,
+      "provenance": "original_registry",
+      "fastidious_id": "L-006"
+    },
+    {
+      "id": "page_flows",
+      "name": "Page Flows",
+      "url": "https://pageflows.com",
+      "category": "product_ui_ux",
+      "subcategories": [
+        "user_flows",
+        "mobile",
+        "web",
+        "interaction"
+      ],
+      "priority": 10,
+      "authority": 9,
+      "freshness": "high",
+      "production_relevance": 10,
+      "crawl_frequency": "daily",
+      "source_type": "flow_library",
+      "primary_value": "Complete real-world user journeys",
+      "tags": [
+        "flows",
+        "ux",
+        "onboarding",
+        "checkout"
+      ],
+      "weighted_score": 9.35,
+      "provenance": "original_registry",
+      "fastidious_id": "L-007"
+    },
+    {
+      "id": "saasframe",
+      "name": "SaaSFrame",
+      "url": "https://www.saasframe.io",
+      "category": "product_ui_ux",
+      "subcategories": [
+        "saas",
+        "web",
+        "product_ui"
+      ],
+      "priority": 9,
+      "authority": 8,
+      "freshness": "high",
+      "production_relevance": 10,
+      "crawl_frequency": "daily",
+      "source_type": "curated_library",
+      "primary_value": "Real SaaS product interfaces",
+      "tags": [
+        "saas",
+        "b2b",
+        "dashboard"
+      ],
+      "weighted_score": 8.85,
+      "provenance": "original_registry",
+      "fastidious_id": "L-008"
+    },
+    {
+      "id": "screenlane",
+      "name": "Screenlane",
+      "url": "https://screenlane.com",
+      "category": "product_ui_ux",
+      "subcategories": [
+        "mobile",
+        "screens",
+        "ui_patterns"
+      ],
+      "priority": 9,
+      "authority": 8,
+      "freshness": "high",
+      "production_relevance": 9,
+      "crawl_frequency": "weekly",
+      "source_type": "curated_gallery",
+      "primary_value": "Mobile UI inspiration",
+      "tags": [
+        "mobile",
+        "ui",
+        "ios",
+        "android"
+      ],
+      "weighted_score": 8.55,
+      "provenance": "original_registry",
+      "fastidious_id": "L-009"
+    },
+    {
+      "id": "growth_design",
+      "name": "Growth.Design",
+      "url": "https://growth.design",
+      "category": "product_ui_ux",
+      "subcategories": [
+        "ux_psychology",
+        "case_studies"
+      ],
+      "priority": 9,
+      "authority": 9,
+      "freshness": "medium",
+      "production_relevance": 9,
+      "crawl_frequency": "monthly",
+      "source_type": "case_study",
+      "primary_value": "Behavioural UX analysis",
+      "tags": [
+        "ux",
+        "psychology",
+        "growth"
+      ],
+      "weighted_score": 8.2,
+      "provenance": "original_registry",
+      "fastidious_id": "L-010"
+    },
+    {
+      "id": "21st_dev",
+      "name": "21st.dev",
+      "url": "https://21st.dev",
+      "category": "product_ui_ux",
+      "subcategories": [
+        "components",
+        "ui_patterns"
+      ],
+      "priority": 8,
+      "authority": 7,
+      "freshness": "high",
+      "production_relevance": 9,
+      "crawl_frequency": "weekly",
+      "source_type": "component_library",
+      "primary_value": "Component-level UI patterns for direct reuse",
+      "tags": [
+        "ui",
+        "components"
+      ],
+      "provenance": "added_after_original_registry",
+      "weighted_score": 8.05,
+      "fastidious_id": "L-011"
+    },
+    {
+      "id": "collect_ui",
+      "name": "Collect UI",
+      "url": "https://collectui.com",
+      "category": "product_ui_ux",
+      "subcategories": [
+        "components",
+        "ui_patterns"
+      ],
+      "priority": 8,
+      "authority": 8,
+      "freshness": "high",
+      "production_relevance": 7,
+      "crawl_frequency": "daily",
+      "source_type": "community_gallery",
+      "primary_value": "Large volume component inspiration",
+      "tags": [
+        "ui",
+        "components"
+      ],
+      "weighted_score": 7.7,
+      "provenance": "original_registry",
+      "fastidious_id": "L-012"
+    },
+    {
+      "id": "ui_sources",
+      "name": "UI Sources",
+      "url": "https://www.uisources.com",
+      "category": "product_ui_ux",
+      "subcategories": [
+        "mobile",
+        "flows",
+        "interaction"
+      ],
+      "priority": 8,
+      "authority": 8,
+      "freshness": "medium",
+      "production_relevance": 9,
+      "crawl_frequency": "weekly",
+      "source_type": "flow_library",
+      "primary_value": "Real app interactions and flows",
+      "tags": [
+        "mobile",
+        "interaction",
+        "flows"
+      ],
+      "weighted_score": 7.7,
+      "provenance": "original_registry",
+      "fastidious_id": "L-013"
+    },
+    {
+      "id": "ux_archive",
+      "name": "UX Archive",
+      "url": "https://uxarchive.com",
+      "category": "product_ui_ux",
+      "subcategories": [
+        "mobile",
+        "flows"
+      ],
+      "priority": 8,
+      "authority": 8,
+      "freshness": "medium",
+      "production_relevance": 9,
+      "crawl_frequency": "weekly",
+      "source_type": "flow_library",
+      "primary_value": "Mobile user flows",
+      "tags": [
+        "mobile",
+        "ux",
+        "flows"
+      ],
+      "weighted_score": 7.7,
+      "provenance": "original_registry",
+      "fastidious_id": "L-014"
+    },
+    {
+      "id": "ui8",
+      "name": "UI8",
+      "url": "https://ui8.net",
+      "category": "product_ui_ux",
+      "subcategories": [
+        "ui_kits",
+        "design_systems"
+      ],
+      "priority": 7,
+      "authority": 8,
+      "freshness": "high",
+      "production_relevance": 7,
+      "crawl_frequency": "weekly",
+      "source_type": "marketplace",
+      "primary_value": "Design systems and UI kits",
+      "tags": [
+        "ui",
+        "kits",
+        "figma"
+      ],
+      "weighted_score": 7.45,
+      "provenance": "original_registry",
+      "fastidious_id": "L-015"
+    },
+    {
+      "id": "really_good_ux",
+      "name": "Really Good UX",
+      "url": "https://www.reallygoodux.io",
+      "category": "product_ui_ux",
+      "subcategories": [
+        "ux",
+        "patterns"
+      ],
+      "priority": 7,
+      "authority": 7,
+      "freshness": "medium",
+      "production_relevance": 9,
+      "crawl_frequency": "weekly",
+      "source_type": "pattern_library",
+      "primary_value": "UX pattern examples",
+      "tags": [
+        "ux",
+        "patterns"
+      ],
+      "weighted_score": 7.2,
+      "provenance": "original_registry",
+      "fastidious_id": "L-016"
+    },
+    {
+      "id": "design_vault",
+      "name": "Design Vault",
+      "url": "https://designvault.io",
+      "category": "product_ui_ux",
+      "subcategories": [
+        "product_design",
+        "saas",
+        "ui"
+      ],
+      "priority": 8,
+      "authority": 7,
+      "freshness": "medium",
+      "production_relevance": 8,
+      "crawl_frequency": "weekly",
+      "source_type": "curated_gallery",
+      "primary_value": "Premium product design references",
+      "tags": [
+        "product",
+        "ui",
+        "saas"
+      ],
+      "weighted_score": 7.15,
+      "provenance": "original_registry",
+      "fastidious_id": "L-017"
+    },
+    {
+      "id": "pttrns",
+      "name": "Pttrns",
+      "url": "https://pttrns.com",
+      "category": "product_ui_ux",
+      "subcategories": [
+        "mobile",
+        "ui_patterns"
+      ],
+      "priority": 7,
+      "authority": 8,
+      "freshness": "medium",
+      "production_relevance": 8,
+      "crawl_frequency": "weekly",
+      "source_type": "pattern_library",
+      "primary_value": "Mobile design patterns",
+      "tags": [
+        "mobile",
+        "ui"
+      ],
+      "weighted_score": 7.15,
+      "provenance": "original_registry",
+      "fastidious_id": "L-018"
+    },
+    {
+      "id": "bento_grids",
+      "name": "Bento Grids",
+      "url": "https://bentogrids.com",
+      "category": "product_ui_ux",
+      "subcategories": [
+        "layout",
+        "bento"
+      ],
+      "priority": 8,
+      "authority": 7,
+      "freshness": "medium",
+      "production_relevance": 8,
+      "crawl_frequency": "weekly",
+      "source_type": "specialist_gallery",
+      "primary_value": "Bento layout patterns",
+      "tags": [
+        "bento",
+        "layout",
+        "cards"
+      ],
+      "weighted_score": 7.15,
+      "provenance": "original_registry",
+      "fastidious_id": "L-019"
+    },
+    {
+      "id": "nicely_done",
+      "name": "Nicely Done",
+      "url": "https://nicelydone.club",
+      "category": "product_ui_ux",
+      "subcategories": [
+        "product_ui",
+        "web"
+      ],
+      "priority": 7,
+      "authority": 7,
+      "freshness": "medium",
+      "production_relevance": 8,
+      "crawl_frequency": "weekly",
+      "source_type": "gallery",
+      "primary_value": "High-quality product interfaces",
+      "tags": [
+        "product",
+        "ui"
+      ],
+      "weighted_score": 6.9,
+      "provenance": "original_registry",
+      "fastidious_id": "L-020"
+    },
+    {
+      "id": "saas_pages",
+      "name": "SaaS Pages",
+      "url": "https://saaspages.xyz",
+      "category": "product_ui_ux",
+      "subcategories": [
+        "saas",
+        "landing_pages"
+      ],
+      "priority": 7,
+      "authority": 6,
+      "freshness": "medium",
+      "production_relevance": 8,
+      "crawl_frequency": "weekly",
+      "source_type": "gallery",
+      "primary_value": "SaaS page patterns",
+      "tags": [
+        "saas",
+        "landing_page"
+      ],
+      "weighted_score": 6.65,
+      "provenance": "original_registry",
+      "fastidious_id": "L-021"
+    },
+    {
+      "id": "ui_garage",
+      "name": "UI Garage",
+      "url": "https://uigarage.net",
+      "category": "product_ui_ux",
+      "subcategories": [
+        "ui_patterns",
+        "components"
+      ],
+      "priority": 7,
+      "authority": 7,
+      "freshness": "medium",
+      "production_relevance": 7,
+      "crawl_frequency": "weekly",
+      "source_type": "pattern_library",
+      "primary_value": "Interface component patterns",
+      "tags": [
+        "ui",
+        "components"
+      ],
+      "weighted_score": 6.6,
+      "provenance": "original_registry",
+      "fastidious_id": "L-022"
+    },
+    {
+      "id": "ui_jar",
+      "name": "UIJar",
+      "url": "https://uijar.com",
+      "category": "product_ui_ux",
+      "subcategories": [
+        "ui_patterns",
+        "screens"
+      ],
+      "priority": 6,
+      "authority": 6,
+      "freshness": "medium",
+      "production_relevance": 7,
+      "crawl_frequency": "weekly",
+      "source_type": "gallery",
+      "primary_value": "UI inspiration",
+      "tags": [
+        "ui"
+      ],
+      "weighted_score": 6.1,
+      "provenance": "original_registry",
+      "fastidious_id": "L-023"
+    },
+    {
+      "id": "lazyweb",
+      "name": "Lazyweb",
+      "url": "https://www.lazyweb.com",
+      "category": "specialist",
+      "subcategories": [
+        "design_research",
+        "ai_design"
+      ],
+      "priority": 9,
+      "authority": 8,
+      "freshness": "high",
+      "production_relevance": 10,
+      "crawl_frequency": "daily",
+      "source_type": "design_research",
+      "primary_value": "Design research and AI-agent-oriented UI references",
+      "tags": [
+        "ai",
+        "design_research",
+        "ui",
+        "agents"
+      ],
+      "weighted_score": 8.85,
+      "provenance": "original_registry",
+      "fastidious_id": "L-082"
+    },
+    {
+      "id": "cta_gallery",
+      "name": "CTA.gallery",
+      "url": "https://cta.gallery",
+      "category": "specialist",
+      "subcategories": [
+        "cta",
+        "conversion"
+      ],
+      "priority": 8,
+      "authority": 8,
+      "freshness": "high",
+      "production_relevance": 10,
+      "crawl_frequency": "daily",
+      "source_type": "specialist_gallery",
+      "primary_value": "Call-to-action patterns",
+      "tags": [
+        "cta",
+        "conversion"
+      ],
+      "weighted_score": 8.6,
+      "provenance": "original_registry",
+      "fastidious_id": "L-083"
+    },
+    {
+      "id": "refframe",
+      "name": "Refframe",
+      "url": "https://refframe.com",
+      "category": "specialist",
+      "subcategories": [
+        "design_research",
+        "web_references"
+      ],
+      "priority": 8,
+      "authority": 7,
+      "freshness": "high",
+      "production_relevance": 9,
+      "crawl_frequency": "daily",
+      "source_type": "design_research",
+      "primary_value": "Reusable web design references and research",
+      "tags": [
+        "web",
+        "design_research"
+      ],
+      "weighted_score": 8.05,
+      "provenance": "original_registry",
+      "fastidious_id": "L-084"
+    },
+    {
+      "id": "the_designest",
+      "name": "The Designest",
+      "url": "https://thedesignest.net",
+      "category": "specialist",
+      "subcategories": [
+        "graphic_design",
+        "visual_culture"
+      ],
+      "priority": 7,
+      "authority": 8,
+      "freshness": "high",
+      "production_relevance": 6,
+      "crawl_frequency": "weekly",
+      "source_type": "publication",
+      "primary_value": "Contemporary graphic and visual design",
+      "tags": [
+        "graphic_design",
+        "visual"
+      ],
+      "weighted_score": 7.15,
+      "provenance": "original_registry",
+      "fastidious_id": "L-085"
+    },
+    {
+      "id": "minimalissimo",
+      "name": "Minimalissimo",
+      "url": "https://minimalissimo.com",
+      "category": "specialist",
+      "subcategories": [
+        "minimalism",
+        "art_direction"
+      ],
+      "priority": 8,
+      "authority": 9,
+      "freshness": "medium",
+      "production_relevance": 6,
+      "crawl_frequency": "weekly",
+      "source_type": "publication",
+      "primary_value": "Minimalist visual direction",
+      "tags": [
+        "minimalism",
+        "art_direction"
+      ],
+      "weighted_score": 7.05,
+      "provenance": "original_registry",
+      "fastidious_id": "L-086"
+    },
+    {
+      "id": "dark_mode_design",
+      "name": "Dark Mode Design",
+      "url": "https://www.darkmodedesign.com",
+      "category": "specialist",
+      "subcategories": [
+        "dark_mode"
+      ],
+      "priority": 7,
+      "authority": 7,
+      "freshness": "medium",
+      "production_relevance": 8,
+      "crawl_frequency": "weekly",
+      "source_type": "specialist_gallery",
+      "primary_value": "Dark interface patterns",
+      "tags": [
+        "dark_mode"
+      ],
+      "weighted_score": 6.9,
+      "provenance": "original_registry",
+      "fastidious_id": "L-087"
+    },
+    {
+      "id": "site_see",
+      "name": "SiteSee",
+      "url": "https://sitesee.co",
+      "category": "specialist",
+      "subcategories": [
+        "web",
+        "visual_research"
+      ],
+      "priority": 7,
+      "authority": 7,
+      "freshness": "medium",
+      "production_relevance": 7,
+      "crawl_frequency": "weekly",
+      "source_type": "gallery",
+      "primary_value": "Website inspiration",
+      "tags": [
+        "web",
+        "inspiration"
+      ],
+      "weighted_score": 6.6,
+      "provenance": "original_registry",
+      "fastidious_id": "L-088"
+    },
+    {
+      "id": "brutalist_websites",
+      "name": "Brutalist Websites",
+      "url": "https://brutalistwebsites.com",
+      "category": "specialist",
+      "subcategories": [
+        "brutalism",
+        "experimental"
+      ],
+      "priority": 7,
+      "authority": 8,
+      "freshness": "medium",
+      "production_relevance": 5,
+      "crawl_frequency": "weekly",
+      "source_type": "specialist_gallery",
+      "primary_value": "Brutalist and anti-pattern web aesthetics",
+      "tags": [
+        "brutalism",
+        "experimental"
+      ],
+      "weighted_score": 6.25,
+      "provenance": "original_registry",
+      "fastidious_id": "L-089"
+    },
+    {
+      "id": "typewolf",
+      "name": "Typewolf",
+      "url": "https://www.typewolf.com",
+      "category": "typography",
+      "subcategories": [
+        "type_pairing",
+        "web_typography"
+      ],
+      "priority": 10,
+      "authority": 10,
+      "freshness": "high",
+      "production_relevance": 10,
+      "crawl_frequency": "weekly",
+      "source_type": "publication",
+      "primary_value": "Typography trends and type systems",
+      "tags": [
+        "typography",
+        "fonts"
+      ],
+      "weighted_score": 9.6,
+      "provenance": "original_registry",
+      "fastidious_id": "L-064"
+    },
+    {
+      "id": "fonts_in_use",
+      "name": "Fonts In Use",
+      "url": "https://fontsinuse.com",
+      "category": "typography",
+      "subcategories": [
+        "typography",
+        "real_world_examples"
+      ],
+      "priority": 10,
+      "authority": 10,
+      "freshness": "high",
+      "production_relevance": 10,
+      "crawl_frequency": "daily",
+      "source_type": "archive",
+      "primary_value": "Typography in real-world context",
+      "tags": [
+        "typography",
+        "fonts"
+      ],
+      "weighted_score": 9.6,
+      "provenance": "original_registry",
+      "fastidious_id": "L-065"
+    },
+    {
+      "id": "communication_arts",
+      "name": "Communication Arts",
+      "url": "https://www.commarts.com",
+      "category": "typography",
+      "subcategories": [
+        "editorial",
+        "typography",
+        "graphic_design"
+      ],
+      "priority": 9,
+      "authority": 10,
+      "freshness": "high",
+      "production_relevance": 8,
+      "crawl_frequency": "weekly",
+      "source_type": "publication",
+      "primary_value": "Editorial and visual design excellence",
+      "tags": [
+        "editorial",
+        "typography"
+      ],
+      "weighted_score": 8.75,
+      "provenance": "original_registry",
+      "fastidious_id": "L-066"
+    },
+    {
+      "id": "future_fonts",
+      "name": "Future Fonts",
+      "url": "https://www.futurefonts.xyz",
+      "category": "typography",
+      "subcategories": [
+        "variable_fonts",
+        "experimental"
+      ],
+      "priority": 9,
+      "authority": 9,
+      "freshness": "high",
+      "production_relevance": 8,
+      "crawl_frequency": "weekly",
+      "source_type": "foundry",
+      "primary_value": "Emerging contemporary typefaces",
+      "tags": [
+        "fonts",
+        "variable_fonts"
+      ],
+      "weighted_score": 8.5,
+      "provenance": "original_registry",
+      "fastidious_id": "L-067"
+    },
+    {
+      "id": "tdc",
+      "name": "Type Directors Club",
+      "url": "https://www.tdc.org",
+      "category": "typography",
+      "subcategories": [
+        "typography",
+        "awards"
+      ],
+      "priority": 9,
+      "authority": 10,
+      "freshness": "medium",
+      "production_relevance": 8,
+      "crawl_frequency": "weekly",
+      "source_type": "organization",
+      "primary_value": "Professional typography excellence",
+      "tags": [
+        "typography"
+      ],
+      "weighted_score": 8.15,
+      "provenance": "original_registry",
+      "fastidious_id": "L-068"
+    },
+    {
+      "id": "typeverything",
+      "name": "Typeverything",
+      "url": "https://typeverything.com",
+      "category": "typography",
+      "subcategories": [
+        "typography",
+        "experimental_type"
+      ],
+      "priority": 8,
+      "authority": 8,
+      "freshness": "high",
+      "production_relevance": 7,
+      "crawl_frequency": "weekly",
+      "source_type": "gallery",
+      "primary_value": "Experimental and contemporary typography",
+      "tags": [
+        "typography",
+        "experimental"
+      ],
+      "weighted_score": 7.7,
+      "provenance": "original_registry",
+      "fastidious_id": "L-069"
+    },
+    {
+      "id": "fontpair",
+      "name": "Fontpair",
+      "url": "https://www.fontpair.co",
+      "category": "typography",
+      "subcategories": [
+        "font_pairing"
+      ],
+      "priority": 7,
+      "authority": 7,
+      "freshness": "medium",
+      "production_relevance": 8,
+      "crawl_frequency": "monthly",
+      "source_type": "tool",
+      "primary_value": "Font pairing references",
+      "tags": [
+        "fonts",
+        "typography"
+      ],
+      "weighted_score": 6.9,
+      "provenance": "original_registry",
+      "fastidious_id": "L-070"
+    },
+    {
+      "id": "type_scale",
+      "name": "Type Scale",
+      "url": "https://typescale.com",
+      "category": "typography",
+      "subcategories": [
+        "type_systems",
+        "scales"
+      ],
+      "priority": 7,
+      "authority": 8,
+      "freshness": "low",
+      "production_relevance": 9,
+      "crawl_frequency": "monthly",
+      "source_type": "tool",
+      "primary_value": "Typographic scale systems",
+      "tags": [
+        "typography",
+        "design_system"
+      ],
+      "weighted_score": 6.85,
+      "provenance": "original_registry",
+      "fastidious_id": "L-071"
+    },
+    {
+      "id": "land_book",
+      "name": "Land-book",
+      "url": "https://land-book.com",
+      "category": "web_design",
+      "subcategories": [
+        "landing_pages",
+        "saas"
+      ],
+      "priority": 10,
+      "authority": 9,
+      "freshness": "high",
+      "production_relevance": 10,
+      "crawl_frequency": "daily",
+      "source_type": "curated_gallery",
+      "primary_value": "Landing page design patterns",
+      "tags": [
+        "landing_page",
+        "saas",
+        "conversion"
+      ],
+      "weighted_score": 9.35,
+      "provenance": "original_registry",
+      "fastidious_id": "L-024"
+    },
+    {
+      "id": "recent",
+      "name": "Recent",
+      "url": "https://recent.design",
+      "category": "web_design",
+      "subcategories": [
+        "web",
+        "editorial",
+        "typography"
+      ],
+      "priority": 10,
+      "authority": 9,
+      "freshness": "high",
+      "production_relevance": 9,
+      "crawl_frequency": "daily",
+      "source_type": "curated_gallery",
+      "primary_value": "Contemporary high-craft web design",
+      "tags": [
+        "web",
+        "editorial",
+        "modern"
+      ],
+      "weighted_score": 9.05,
+      "provenance": "original_registry",
+      "fastidious_id": "L-025"
+    },
+    {
+      "id": "awwwards",
+      "name": "Awwwards",
+      "url": "https://www.awwwards.com",
+      "category": "web_design",
+      "subcategories": [
+        "web",
+        "creative",
+        "interaction"
+      ],
+      "priority": 10,
+      "authority": 10,
+      "freshness": "high",
+      "production_relevance": 8,
+      "crawl_frequency": "daily",
+      "source_type": "awards",
+      "primary_value": "Leading-edge web design and interaction",
+      "tags": [
+        "web",
+        "creative",
+        "interaction"
+      ],
+      "weighted_score": 9.0,
+      "provenance": "original_registry",
+      "fastidious_id": "L-026"
+    },
+    {
+      "id": "siteinspire",
+      "name": "SiteInspire",
+      "url": "https://www.siteinspire.com",
+      "category": "web_design",
+      "subcategories": [
+        "web",
+        "layout",
+        "portfolios"
+      ],
+      "priority": 9,
+      "authority": 9,
+      "freshness": "high",
+      "production_relevance": 9,
+      "crawl_frequency": "daily",
+      "source_type": "curated_gallery",
+      "primary_value": "Broad archive of contemporary websites",
+      "tags": [
+        "web",
+        "layout"
+      ],
+      "weighted_score": 8.8,
+      "provenance": "original_registry",
+      "fastidious_id": "L-027"
+    },
+    {
+      "id": "lapa_ninja",
+      "name": "Lapa Ninja",
+      "url": "https://www.lapa.ninja",
+      "category": "web_design",
+      "subcategories": [
+        "landing_pages",
+        "saas"
+      ],
+      "priority": 9,
+      "authority": 9,
+      "freshness": "high",
+      "production_relevance": 9,
+      "crawl_frequency": "daily",
+      "source_type": "gallery",
+      "primary_value": "Landing page patterns",
+      "tags": [
+        "landing_page",
+        "saas"
+      ],
+      "weighted_score": 8.8,
+      "provenance": "original_registry",
+      "fastidious_id": "L-028"
+    },
+    {
+      "id": "one_page_love",
+      "name": "One Page Love",
+      "url": "https://onepagelove.com",
+      "category": "web_design",
+      "subcategories": [
+        "one_page",
+        "landing_pages"
+      ],
+      "priority": 8,
+      "authority": 9,
+      "freshness": "high",
+      "production_relevance": 9,
+      "crawl_frequency": "daily",
+      "source_type": "curated_gallery",
+      "primary_value": "Single-page websites",
+      "tags": [
+        "one_page",
+        "landing_page"
+      ],
+      "weighted_score": 8.55,
+      "provenance": "original_registry",
+      "fastidious_id": "L-029"
+    },
+    {
+      "id": "webflow_showcase",
+      "name": "Webflow Showcase",
+      "url": "https://webflow.com/made-in-webflow",
+      "category": "web_design",
+      "subcategories": [
+        "webflow",
+        "web"
+      ],
+      "priority": 8,
+      "authority": 9,
+      "freshness": "high",
+      "production_relevance": 9,
+      "crawl_frequency": "weekly",
+      "source_type": "community_gallery",
+      "primary_value": "Production-ready modern websites",
+      "tags": [
+        "webflow",
+        "web"
+      ],
+      "weighted_score": 8.55,
+      "provenance": "original_registry",
+      "fastidious_id": "L-030"
+    },
+    {
+      "id": "the_fwa",
+      "name": "The FWA",
+      "url": "https://thefwa.com",
+      "category": "web_design",
+      "subcategories": [
+        "creative_technology",
+        "web",
+        "interaction"
+      ],
+      "priority": 9,
+      "authority": 10,
+      "freshness": "high",
+      "production_relevance": 7,
+      "crawl_frequency": "daily",
+      "source_type": "awards",
+      "primary_value": "Experimental digital experiences",
+      "tags": [
+        "creative",
+        "webgl",
+        "interaction"
+      ],
+      "weighted_score": 8.45,
+      "provenance": "original_registry",
+      "fastidious_id": "L-031"
+    },
+    {
+      "id": "godly",
+      "name": "Godly",
+      "url": "https://godly.website",
+      "category": "web_design",
+      "subcategories": [
+        "web",
+        "craft"
+      ],
+      "priority": 9,
+      "authority": 8,
+      "freshness": "high",
+      "production_relevance": 8,
+      "crawl_frequency": "weekly",
+      "source_type": "curated_gallery",
+      "primary_value": "Full-site craft, smaller and more consistently high-bar than Awwwards",
+      "tags": [
+        "web",
+        "craft"
+      ],
+      "provenance": "added_after_original_registry",
+      "weighted_score": 8.25,
+      "fastidious_id": "L-032"
+    },
+    {
+      "id": "css_design_awards",
+      "name": "CSS Design Awards",
+      "url": "https://www.cssdesignawards.com",
+      "category": "web_design",
+      "subcategories": [
+        "web",
+        "awards"
+      ],
+      "priority": 8,
+      "authority": 8,
+      "freshness": "high",
+      "production_relevance": 7,
+      "crawl_frequency": "daily",
+      "source_type": "awards",
+      "primary_value": "Award-winning web design",
+      "tags": [
+        "web",
+        "awards"
+      ],
+      "weighted_score": 7.7,
+      "provenance": "original_registry",
+      "fastidious_id": "L-033"
+    },
+    {
+      "id": "css_winner",
+      "name": "CSS Winner",
+      "url": "https://www.csswinner.com",
+      "category": "web_design",
+      "subcategories": [
+        "web"
+      ],
+      "priority": 7,
+      "authority": 7,
+      "freshness": "high",
+      "production_relevance": 7,
+      "crawl_frequency": "daily",
+      "source_type": "gallery",
+      "primary_value": "Contemporary website discovery",
+      "tags": [
+        "web"
+      ],
+      "weighted_score": 7.2,
+      "provenance": "original_registry",
+      "fastidious_id": "L-034"
+    },
+    {
+      "id": "minimal_gallery",
+      "name": "Minimal Gallery",
+      "url": "https://minimal.gallery",
+      "category": "web_design",
+      "subcategories": [
+        "minimal",
+        "web"
+      ],
+      "priority": 8,
+      "authority": 7,
+      "freshness": "medium",
+      "production_relevance": 8,
+      "crawl_frequency": "weekly",
+      "source_type": "specialist_gallery",
+      "primary_value": "Minimalist web design",
+      "tags": [
+        "minimal",
+        "web"
+      ],
+      "weighted_score": 7.15,
+      "provenance": "original_registry",
+      "fastidious_id": "L-035"
+    },
+    {
+      "id": "httpster",
+      "name": "Httpster",
+      "url": "https://httpster.net",
+      "category": "web_design",
+      "subcategories": [
+        "web",
+        "minimal"
+      ],
+      "priority": 8,
+      "authority": 8,
+      "freshness": "medium",
+      "production_relevance": 7,
+      "crawl_frequency": "weekly",
+      "source_type": "curated_gallery",
+      "primary_value": "Independent and minimalist websites",
+      "tags": [
+        "minimal",
+        "web"
+      ],
+      "weighted_score": 7.1,
+      "provenance": "original_registry",
+      "fastidious_id": "L-036"
+    },
+    {
+      "id": "footer_design",
+      "name": "Footer Design",
+      "url": "https://footer.design",
+      "category": "web_design",
+      "subcategories": [
+        "footer",
+        "components"
+      ],
+      "priority": 7,
+      "authority": 7,
+      "freshness": "medium",
+      "production_relevance": 8,
+      "crawl_frequency": "weekly",
+      "source_type": "specialist_gallery",
+      "primary_value": "Footer patterns",
+      "tags": [
+        "footer",
+        "component"
+      ],
+      "weighted_score": 6.9,
+      "provenance": "original_registry",
+      "fastidious_id": "L-037"
+    },
+    {
+      "id": "css_nectar",
+      "name": "CSS Nectar",
+      "url": "https://cssnectar.com",
+      "category": "web_design",
+      "subcategories": [
+        "web"
+      ],
+      "priority": 7,
+      "authority": 7,
+      "freshness": "medium",
+      "production_relevance": 7,
+      "crawl_frequency": "weekly",
+      "source_type": "gallery",
+      "primary_value": "Curated website examples",
+      "tags": [
+        "web"
+      ],
+      "weighted_score": 6.6,
+      "provenance": "original_registry",
+      "fastidious_id": "L-038"
+    },
+    {
+      "id": "webdesign_inspiration",
+      "name": "Webdesign Inspiration",
+      "url": "https://www.webdesign-inspiration.com",
+      "category": "web_design",
+      "subcategories": [
+        "web",
+        "layout"
+      ],
+      "priority": 6,
+      "authority": 6,
+      "freshness": "medium",
+      "production_relevance": 7,
+      "crawl_frequency": "weekly",
+      "source_type": "gallery",
+      "primary_value": "Broad website inspiration",
+      "tags": [
+        "web"
+      ],
+      "weighted_score": 6.1,
+      "provenance": "original_registry",
+      "fastidious_id": "L-039"
+    },
+    {
+      "id": "404_design",
+      "name": "404.design",
+      "url": "https://www.404.design",
+      "category": "web_design",
+      "subcategories": [
+        "error_states",
+        "404"
+      ],
+      "priority": 6,
+      "authority": 6,
+      "freshness": "medium",
+      "production_relevance": 6,
+      "crawl_frequency": "monthly",
+      "source_type": "specialist_gallery",
+      "primary_value": "Error page inspiration",
+      "tags": [
+        "404",
+        "error_state"
+      ],
+      "weighted_score": 5.8,
+      "provenance": "original_registry",
+      "fastidious_id": "L-040"
+    },
+    {
+      "id": "ex_ciuslabs",
+      "name": "CIUSLABS (exemplar)",
+      "url": "https://ciuslabs.com/",
+      "category": "web_design",
+      "subcategories": [
+        "exemplar",
+        "scroll",
+        "illustration",
+        "texture"
+      ],
+      "priority": 9,
+      "authority": 8,
+      "freshness": "high",
+      "production_relevance": 9,
+      "crawl_frequency": "on_demand",
+      "source_type": "exemplar_site",
+      "primary_value": "Scroll-built illustration performing the idea (process as a structure assembling); torn-edge world change; grain; blur-to-sharp text",
+      "tags": [
+        "scroll",
+        "motion",
+        "illustration",
+        "texture",
+        "hero",
+        "exemplar"
+      ],
+      "weighted_score": 8.55,
+      "provenance": "user_supplied_exemplar_2026-10-27; annotated in detail-craft/references/exemplars.md",
+      "fastidious_id": "L-090"
+    },
+    {
+      "id": "ex_later_home",
+      "name": "Later homepage (exemplar)",
+      "url": "https://later.com/",
+      "category": "web_design",
+      "subcategories": [
+        "exemplar",
+        "saas",
+        "scroll"
+      ],
+      "priority": 9,
+      "authority": 8,
+      "freshness": "high",
+      "production_relevance": 9,
+      "crawl_frequency": "on_demand",
+      "source_type": "exemplar_site",
+      "primary_value": "One brand polygon across components; proof by volume (real UGC video wall); pinned depth scenes with floating UI cards; disciplined lazy video",
+      "tags": [
+        "branding",
+        "scroll",
+        "social_proof",
+        "cards",
+        "exemplar"
+      ],
+      "weighted_score": 8.55,
+      "provenance": "user_supplied_exemplar_2026-10-27; annotated in detail-craft/references/exemplars.md",
+      "fastidious_id": "L-091"
+    },
+    {
+      "id": "ex_later_made_you_look",
+      "name": "Later: Made You Look (exemplar)",
+      "url": "https://later.com/made-you-look/",
+      "category": "web_design",
+      "subcategories": [
+        "exemplar",
+        "campaign",
+        "horizontal_scroll"
+      ],
+      "priority": 9,
+      "authority": 8,
+      "freshness": "high",
+      "production_relevance": 8,
+      "crawl_frequency": "on_demand",
+      "source_type": "exemplar_site",
+      "primary_value": "Page staged as its medium (film): honest preloader, title card, credits, horizontal reel, vertical type chapter markers",
+      "tags": [
+        "scroll",
+        "motion",
+        "typography",
+        "hero",
+        "exemplar"
+      ],
+      "weighted_score": 8.25,
+      "provenance": "user_supplied_exemplar_2026-10-27; annotated in detail-craft/references/exemplars.md",
+      "fastidious_id": "L-092"
+    },
+    {
+      "id": "ex_bmwf3",
+      "name": "BMW Next Move by Format-3 (exemplar)",
+      "url": "https://www.bmwf3.com/",
+      "category": "web_design",
+      "subcategories": [
+        "exemplar",
+        "immersive",
+        "audio",
+        "video",
+        "pitch"
+      ],
+      "priority": 10,
+      "authority": 8,
+      "freshness": "very_high",
+      "production_relevance": 7,
+      "crawl_frequency": "on_demand",
+      "source_type": "exemplar_site",
+      "primary_value": "Entry ritual that unlocks a sound system; cinematic footage; morphing line geometry; stages with prev/next; colour-coded sees/underneath explanation",
+      "tags": [
+        "motion",
+        "scroll",
+        "interaction",
+        "3d",
+        "hero",
+        "exemplar"
+      ],
+      "provenance": "user_supplied_exemplar_2026-10-28; annotated in detail-craft/references/exemplars.md",
+      "weighted_score": 8.6,
+      "fastidious_id": "L-093"
+    },
+    {
+      "id": "ex_goofymew",
+      "name": "Goofy Mew by Mint Playground (exemplar)",
+      "url": "https://goofymew.mintplayground.com/",
+      "category": "web_design",
+      "subcategories": [
+        "exemplar",
+        "3d",
+        "product",
+        "interaction"
+      ],
+      "priority": 9,
+      "authority": 7,
+      "freshness": "very_high",
+      "production_relevance": 9,
+      "crawl_frequency": "on_demand",
+      "source_type": "exemplar_site",
+      "primary_value": "Light real-time 3D product (three.js + crisp label art) you can spin and read; claw-machine game as the product picker",
+      "tags": [
+        "3d",
+        "interaction",
+        "hero",
+        "microinteraction",
+        "exemplar"
+      ],
+      "weighted_score": 8.7,
+      "provenance": "user_supplied_exemplar_2026-10-28; annotated in detail-craft/references/exemplars.md",
+      "fastidious_id": "L-094"
+    },
+    {
+      "id": "ex_mintplayground",
+      "name": "Mint Playground, Trang's portfolio (exemplar)",
+      "url": "https://mintplayground.com/",
+      "category": "web_design",
+      "subcategories": [
+        "exemplar",
+        "3d",
+        "portfolio",
+        "scroll"
+      ],
+      "priority": 10,
+      "authority": 7,
+      "freshness": "very_high",
+      "production_relevance": 9,
+      "crawl_frequency": "on_demand",
+      "source_type": "exemplar_site",
+      "primary_value": "Pre-rendered 3D hero character scrubbed by scroll (192-frame canvas sequence) telling the designer's promise as a short story",
+      "tags": [
+        "3d",
+        "scroll",
+        "hero",
+        "motion",
+        "exemplar"
+      ],
+      "weighted_score": 8.95,
+      "provenance": "user_supplied_exemplar_2026-10-28; annotated in detail-craft/references/exemplars.md",
+      "fastidious_id": "L-095"
+    },
+    {
+      "id": "ex_dispersion",
+      "name": "Dispersion by oavivo (exemplar)",
+      "url": "https://oavivo.github.io/dispersion/",
+      "category": "web_design",
+      "subcategories": [
+        "exemplar",
+        "3d",
+        "shader",
+        "explainer"
+      ],
+      "priority": 10,
+      "authority": 7,
+      "freshness": "very_high",
+      "production_relevance": 8,
+      "crawl_frequency": "on_demand",
+      "source_type": "exemplar_site",
+      "primary_value": "Procedural WebGL2 SDF glass object refracting the page's own headline per colour channel; scroll morphs material with a live readout; zero assets",
+      "tags": [
+        "3d",
+        "scroll",
+        "interaction",
+        "hero",
+        "typography",
+        "exemplar"
+      ],
+      "provenance": "user_supplied_exemplar_2026-10-28; annotated in detail-craft/references/exemplars.md",
+      "weighted_score": 8.65,
+      "fastidious_id": "L-096"
+    },
+    {
+      "id": "ex_hopenovel",
+      "name": "Hope novel by G.D. Colwill (exemplar)",
+      "url": "https://www.hopenovel.com/",
+      "category": "web_design",
+      "subcategories": [
+        "exemplar",
+        "book",
+        "narrative",
+        "scroll"
+      ],
+      "priority": 9,
+      "authority": 7,
+      "freshness": "very_high",
+      "production_relevance": 10,
+      "crawl_frequency": "on_demand",
+      "source_type": "exemplar_site",
+      "primary_value": "Diegetic scroll meter (distance to impact) in the nav that hits 0 at a pinned climax; page ordered as a stakes arc; proof strip in the hero; low-tech, high concept",
+      "tags": [
+        "scroll",
+        "hero",
+        "social_proof",
+        "cta",
+        "typography",
+        "exemplar"
+      ],
+      "provenance": "user_supplied_exemplar_2026-10-28; annotated in detail-craft/references/exemplars.md",
+      "weighted_score": 9.0,
+      "fastidious_id": "L-097"
+    },
+    {
+      "id": "ex_mrblack",
+      "name": "Mr.BLACK franchise case by Dolganev (exemplar)",
+      "url": "https://mrblack-case.dolganev.com/",
+      "category": "web_design",
+      "subcategories": [
+        "exemplar",
+        "3d",
+        "business",
+        "scroll"
+      ],
+      "priority": 9,
+      "authority": 7,
+      "freshness": "very_high",
+      "production_relevance": 10,
+      "crawl_frequency": "on_demand",
+      "source_type": "exemplar_site",
+      "primary_value": "3D product as a persistent guide object across chapters; exact qualified figures around it; stacked option cards; typewriter voice for terms; mixed glTF + image sequence",
+      "tags": [
+        "3d",
+        "scroll",
+        "cards",
+        "pricing",
+        "typography",
+        "exemplar"
+      ],
+      "provenance": "user_supplied_exemplar_2026-10-28; annotated in detail-craft/references/exemplars.md",
+      "weighted_score": 9.0,
+      "fastidious_id": "L-098"
+    },
+    {
+      "id": "ex_two26",
+      "name": "Two26 Studio (exemplar)",
+      "url": "https://two26.studio/",
+      "category": "web_design",
+      "subcategories": [
+        "exemplar",
+        "studio",
+        "illustration",
+        "voice"
+      ],
+      "priority": 9,
+      "authority": 7,
+      "freshness": "very_high",
+      "production_relevance": 10,
+      "crawl_frequency": "on_demand",
+      "source_type": "exemplar_site",
+      "primary_value": "Founders as collage characters with a style shift on scroll; reading fill with a leading edge; marginalia stickers; services as one self-drawing route; voice at every seam",
+      "tags": [
+        "hero",
+        "scroll",
+        "motion",
+        "microinteraction",
+        "typography",
+        "branding",
+        "exemplar"
+      ],
+      "provenance": "user_supplied_exemplar_2026-10-28; annotated in detail-craft/references/exemplars.md",
+      "weighted_score": 9.0,
+      "fastidious_id": "L-099"
+    },
+    {
+      "id": "ex_primary",
+      "name": "Primary brand studio (exemplar)",
+      "url": "https://www.primary.studio/",
+      "category": "branding",
+      "subcategories": [
+        "exemplar",
+        "studio",
+        "restraint",
+        "conversion"
+      ],
+      "priority": 10,
+      "authority": 9,
+      "freshness": "very_high",
+      "production_relevance": 10,
+      "crawl_frequency": "on_demand",
+      "source_type": "exemplar_site",
+      "primary_value": "Restraint as premium: one face, black/white, one meaningful accent with a mark; one metaphor (sprint) through name, copy, icon and CTA; outcomes as captions; argument as a chart; label-to-bar hover",
+      "tags": [
+        "branding",
+        "hero",
+        "cta",
+        "social_proof",
+        "typography",
+        "hover",
+        "exemplar"
+      ],
+      "provenance": "user_supplied_exemplar_2026-10-28; annotated in detail-craft/references/exemplars.md",
+      "weighted_score": 9.75,
+      "fastidious_id": "L-100"
+    }
+  ],
+  "fastidious_ids": "L-001 to L-004 are reserved for the third-party skill packages Fastidious builds on; L-005 to L-089 are the 85 registry sources and L-090 to L-100 the exemplar sites, matching the Fastidious references page."
+}

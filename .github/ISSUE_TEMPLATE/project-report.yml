@@ -1,0 +1,45 @@
+name: Project report
+description: Tell us how Fastidious did on a real brief
+title: "Project report: "
+labels: ["project report"]
+body:
+  - type: input
+    id: brief
+    attributes:
+      label: The brief, in a sentence
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Link or screenshots of the result
+  - type: dropdown
+    id: portfolio
+    attributes:
+      label: Would you show this to a client or put it in your portfolio as it stands?
+      options: ["Yes", "With edits", "No"]
+    validations:
+      required: true
+  - type: textarea
+    id: ai
+    attributes:
+      label: What still looked like AI made it?
+      description: The question that matters most. Be fastidious about it.
+    validations:
+      required: true
+  - type: textarea
+    id: surprise
+    attributes:
+      label: What surprised you, for better or worse?
+  - type: textarea
+    id: stall
+    attributes:
+      label: Where did it stall, break or go off course?
+  - type: input
+    id: cost
+    attributes:
+      label: How long did it take, and which plan and model did you use?
+  - type: textarea
+    id: hand
+    attributes:
+      label: What would you have done differently by hand?

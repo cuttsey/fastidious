@@ -1,0 +1,30 @@
+{
+  "_help": "Fill every field from the Fastidious artefacts named beside it. Leave nothing to the model's defaults: whatever the brief does not say, the model will make generic.",
+  "title": "",
+  "purpose": "",
+  "_purpose_from": "FRAME.md: the reframed problem, and why this film exists at all",
+  "audience": "",
+  "_audience_from": "POSITIONING.md: the one person, their pain, and what they should do after watching",
+  "single_idea": "",
+  "_single_idea_from": "BEAT-MAP.md or POSITIONING.md: the one sentence the film defends",
+  "sign": "",
+  "_sign_from": "SIGN-SYSTEM.md: what every frame should signify, in a few words",
+  "tokens": {
+    "_from": "BRAND-SYSTEM.md",
+    "palette": {"ink": "#000000", "lead": "#000000", "paper": "#FFFFFF"},
+    "light": "",
+    "lens": "",
+    "texture": "",
+    "composition": "",
+    "mood": ""
+  },
+  "references": [
+    {"id": "R-001", "path": "motion/refs/R-001.jpg", "borrow": "", "reject": "", "_from": "REFERENCES.md (taste-library)"}
+  ],
+  "avoid": [
+    "glossy chrome and plastic surfaces", "teal and orange grading", "lens flares", "floating particles or dust motes",
+    "holographic or glowing interfaces", "neon brains, circuits or robots", "hands typing on keyboards",
+    "stock-photo smiles", "symmetrical hero-pose centring", "fake depth of field on everything"
+  ],
+  "music": {"path": "", "licence": "", "_note": "Choose before the shot list, so cuts can land on the beat."}
+}

@@ -1,0 +1,40 @@
+{
+  "_help": "One shot, one idea, one camera move. Write the frame as a still a photographer could take; write the motion as what changes and how the camera moves. Never ask for words, logos or interface text: type is set in post.",
+  "film": {
+    "id": "A-001",
+    "ratio": "16:9",
+    "resolution": "1080p",
+    "size": "1920x1080",
+    "fps": 24,
+    "seed": 41,
+    "video_provider": "seedance"
+  },
+  "shots": [
+    {
+      "id": "S01",
+      "intent": "",
+      "seconds": 4,
+      "clip_seconds": 5,
+      "type_space": "in the left third",
+      "super": "",
+      "frame": {
+        "prompt": "",
+        "directions": [
+          "",
+          ""
+        ],
+        "references": [],
+        "size": "1536x1024"
+      },
+      "motion": {
+        "prompt": "",
+        "camera": "",
+        "camera_fixed": false,
+        "end_frame": null,
+        "references": [],
+        "provider": null
+      },
+      "avoid": []
+    }
+  ]
+}

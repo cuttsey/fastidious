@@ -1,0 +1,22 @@
+{
+  "title": "Fastidious: for designers who are never satisfied",
+  "purpose": "Designers can now produce a plausible website in minutes, and most of what gets made looks the same. This film shows designers how Fastidious gets them to a result they would put their name to: it starts with why, gives the work a personality worth keeping, sweats the small things, and shows the work as well as it was made.",
+  "audience": "A designer or design lead who already uses AI tools, is quietly unhappy with how generic the output is, and wants a process that raises the bar rather than lowering the effort. After watching, they install Fastidious and run it on a real brief.",
+  "single_idea": "The best designers are always dissatisfied. Fastidious is built for them.",
+  "sign": "exacting care; a hand that knows when something is a hair off; quiet confidence rather than spectacle",
+  "tokens": {
+    "palette": {"ink": "#0E1454", "deep": "#080C33", "cobalt": "#1F4BFF", "tint": "#8FA6FF", "paper": "#F4F2EC", "signal": "#FFE600"},
+    "light": "a single soft key from high camera left, deep falloff into ink-blue shadow, no fill, no rim light",
+    "lens": "50mm to 100mm macro equivalent, shallow but believable depth, locked or slow dolly, no handheld shake",
+    "texture": "real materials: uncoated paper, enamel, brass, wax, planed wood; fine grain like 35mm print film, never glossy CGI",
+    "composition": "one subject, generous negative space, horizon and edges deliberately placed, asymmetric",
+    "mood": "the quiet of a studio after hours; patient, precise, unhurried"
+  },
+  "references": [],
+  "avoid": [
+    "glossy chrome and plastic surfaces", "teal and orange grading", "lens flares", "floating particles or dust motes",
+    "holographic or glowing interfaces", "neon brains, circuits or robots", "hands typing on keyboards", "people's faces",
+    "racing cars, helmets or chequered flags", "stock-photo smiles", "symmetrical hero-pose centring"
+  ],
+  "music": {"path": "", "licence": "", "_note": "A restrained piano or string pulse around 80 to 90 BPM suits the mood; choose and license it before generating."}
+}
