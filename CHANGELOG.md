@@ -9,6 +9,7 @@ All notable changes to this repository. Versions follow [Semantic Versioning](ht
 - A personal reference library that follows the designer across projects: `~/.claude/fastidious/REFERENCES.md`, with images in `references/` beside it (or wherever `FASTIDIOUS_LIBRARY` points). `taste-library` proposes its entries first on every project, keeps their numbers, and offers to add each project's best finds back.
 - `taste-library/scripts/library.py` (`init`, `check`, `list`, `path`) and a starter `templates/REFERENCES.md`.
 - "Bring your own taste" in the README; the film "One shot at greatness" leads the README.
+- `PRFAQ.md`: the press release, who it is for and not for, the FAQ and the rude FAQs.
 
 ### Changed
 

@@ -8,7 +8,7 @@
 
 <p align="center"><a href="assets/fastidious-film.mp4"><img src="assets/fastidious-teaser.gif" alt="A generic AI website, then an invented ferry site whose tide dial turns as the page scrolls, ending on One shot at greatness. Fastidious." width="100%"></a></p>
 
-<p align="center"><a href="assets/fastidious-film.mp4"><b>Watch the film: One shot at greatness (56 seconds)</b></a></p>
+<p align="center"><a href="assets/fastidious-film.mp4"><b>Watch the film: One shot at greatness (56 seconds)</b></a> &middot; <a href="PRFAQ.md"><b>Read the press release and FAQ</b></a></p>
 
 # Fastidious
 
@@ -166,6 +166,9 @@ This repository is a Claude Code plugin marketplace with two plugins.
 They live in [`plugins/fastidious/skills/fastidious/scripts`](plugins/fastidious/skills/fastidious/scripts).
 
 ## Fair questions
+
+The short version is below. The [press release and FAQ](PRFAQ.md) covers who Fastidious is for and who it is not for, and answers the rude questions too.
+
 
 **Will it replace a designer?** No. It needs someone who can tell a good answer from a plausible one, and it leaves the last word with you.
 

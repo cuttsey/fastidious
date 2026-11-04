@@ -128,7 +128,7 @@ for dirpath, dirnames, files in os.walk(ROOT):
             fail(f"{rel}: uses a retired name")
 
 # House style in the repository's own documents
-for doc in ("README.md", "NOTICE.md", "CHANGELOG.md", "CONTRIBUTING.md", "SECURITY.md",
+for doc in ("README.md", "PRFAQ.md", "NOTICE.md", "CHANGELOG.md", "CONTRIBUTING.md", "SECURITY.md",
             os.path.join("plugins", "fastidious", "skills", "fastidious", "CREW.md")):
     text = read(doc)
     if "—" in text:
@@ -136,7 +136,7 @@ for doc in ("README.md", "NOTICE.md", "CHANGELOG.md", "CONTRIBUTING.md", "SECURI
     for h in re.findall(r"^#{2,6} (.+)$", text, re.M):
         words = re.findall(r"[A-Za-z][A-Za-z'-]*", h)
         caps = [w for w in words[1:] if w[0].isupper() and not w.isupper()]
-        allowed = {"Fastidious", "Claude", "Code", "GitHub", "WCAG", "Seedance", "Kling", "OpenAI", "ElevenLabs", "HyperFrames", "Changelog"}
+        allowed = {"Fastidious", "Claude", "Code", "GitHub", "FAQ", "FAQs", "Rude", "WCAG", "Seedance", "Kling", "OpenAI", "ElevenLabs", "HyperFrames", "Changelog"}
         if [w for w in caps if w not in allowed]:
             fail(f"{doc}: heading not in sentence case: {h!r}")
 
