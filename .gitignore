@@ -10,3 +10,4 @@ motion/
 *.mp4
 *.mov
 !plugins/**/examples/**/*.mp4
+!assets/*.mp4

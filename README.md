@@ -6,11 +6,13 @@
   <a href="LICENSE"><img src="https://img.shields.io/badge/licence-MIT-171717?style=flat-square" alt="MIT licence"></a>
 </p>
 
-<p align="center"><img src="assets/fastidious-social-preview.png" alt="Fastidious. Design skills for Claude Code: purpose, identity, craft and presentation." width="100%"></p>
+<p align="center"><a href="assets/fastidious-film.mp4"><img src="assets/fastidious-teaser.gif" alt="A generic AI website, then an invented ferry site whose tide dial turns as the page scrolls, ending on One shot at greatness. Fastidious." width="100%"></a></p>
+
+<p align="center"><a href="assets/fastidious-film.mp4"><b>Watch the film: One shot at greatness (56 seconds)</b></a></p>
 
 # Fastidious
 
-**Design skills for Claude Code that will not settle for good.**
+**One shot at greatness.** Design skills for Claude Code that will not settle for good.
 
 The best designers are always dissatisfied. They know the work could be better, and they keep going until it is. They are fastidious. This is Fastidious.
 

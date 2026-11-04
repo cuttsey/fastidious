@@ -22,7 +22,7 @@ These skills are fetched from their authors' repositories by `crew_stack.py` and
 ## Included in this repository
 
 - `blender-build/cache/polyhaven/studio_small_09/studio_small_09_1k.hdr`: "Studio Small 09" by Sergej Majboroda, from [Poly Haven](https://polyhaven.com/a/studio_small_09), CC0 1.0.
-- `assets/fastidious-social-preview.png` is set in [Gloock](https://fonts.google.com/specimen/Gloock) and [Archivo](https://fonts.google.com/specimen/Archivo), both under the SIL Open Font License.
+- `assets/fastidious-film.mp4`, `assets/fastidious-teaser.gif` and `assets/fastidious-social-preview.png`: the film's music is "Cat Walk" by Arulo, from [Mixkit](https://mixkit.co/free-stock-music/), under the Mixkit Stock Music Free License. Type is [Archivo](https://fonts.google.com/specimen/Archivo) and [IBM Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Mono); the invented sites in the film also use Instrument Serif, Fredoka, Bricolage Grotesque, Big Shoulders Display and Inter, all under the SIL Open Font License. The four businesses in the film are invented.
 - `reference-curator` data files index public design sources and published design systems by name and address only. Those sources and systems, and any trademarks in them, belong to their owners.
 - `detail-craft/references/exemplars.md` annotates publicly visible websites for study. Those sites and any trademarks they contain belong to their owners.
 
