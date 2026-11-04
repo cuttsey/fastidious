@@ -1,3 +1,11 @@
+<p align="center">
+  <a href="https://code.claude.com/docs/en/plugins"><img src="https://img.shields.io/badge/Claude_Code-plugin-171717?style=flat-square&logo=claude&logoColor=white" alt="Claude Code plugin"></a>
+  <a href="https://agentskills.io"><img src="https://img.shields.io/badge/Agent_Skills-compatible-171717?style=flat-square" alt="Agent Skills compatible"></a>
+  <a href="#install"><img src="https://img.shields.io/badge/runs_on-Python_3_%C2%B7_Node_22-171717?style=flat-square&logo=python&logoColor=white" alt="Runs on Python 3 and Node 22"></a>
+  <a href="https://github.com/cuttsey/fastidious/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/cuttsey/fastidious/ci.yml?branch=main&style=flat-square&label=CI&color=171717" alt="CI status"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/licence-MIT-171717?style=flat-square" alt="MIT licence"></a>
+</p>
+
 <p align="center"><img src="assets/fastidious-social-preview.png" alt="Fastidious. Design skills for Claude Code: purpose, identity, craft and presentation." width="100%"></p>
 
 # Fastidious
