@@ -2,6 +2,18 @@
 
 All notable changes to this repository. Versions follow [Semantic Versioning](https://semver.org/).
 
+## Fastidious 1.1.0: 2026-11-04
+
+### Added
+
+- A personal reference library that follows the designer across projects: `~/.claude/fastidious/REFERENCES.md`, with images in `references/` beside it (or wherever `FASTIDIOUS_LIBRARY` points). `taste-library` proposes its entries first on every project, keeps their numbers, and offers to add each project's best finds back.
+- `taste-library/scripts/library.py` (`init`, `check`, `list`, `path`) and a starter `templates/REFERENCES.md`.
+- "Bring your own taste" in the README; the film "One shot at greatness" leads the README.
+
+### Changed
+
+- `taste-library` and `reference-curator` no longer refer to an unpublished references page; a pasted references table is adopted as it is.
+
 ## Fastidious 1.0.0 and fastidious-motion 0.2.1: 2026-11-04
 
 First public release, under the MIT Licence.

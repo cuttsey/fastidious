@@ -1,19 +1,28 @@
 {
   "name": "fastidious",
-  "owner": {"name": "Jamie Acutt"},
+  "owner": {
+    "name": "Jamie Acutt"
+  },
   "metadata": {
     "description": "Fastidious: design skills for Claude Code that set the purpose, decide the identity, refine the craft and present the work, and never settle for good.",
-    "version": "1.0.0"
+    "version": "1.1.0"
   },
   "plugins": [
     {
       "name": "fastidious",
       "source": "./plugins/fastidious",
       "description": "27 design skills for Claude Code, from questioning the brief to the final accessibility gate, with an installer that pins the 19 third-party skills they work alongside.",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "license": "MIT",
       "category": "design",
-      "keywords": ["design", "brand", "web design", "art direction", "accessibility", "motion"]
+      "keywords": [
+        "design",
+        "brand",
+        "web design",
+        "art direction",
+        "accessibility",
+        "motion"
+      ]
     },
     {
       "name": "fastidious-motion",
@@ -22,7 +31,13 @@
       "version": "0.2.1",
       "license": "MIT",
       "category": "design",
-      "keywords": ["video", "brand film", "seedance", "kling", "gpt-image-2"]
+      "keywords": [
+        "video",
+        "brand film",
+        "seedance",
+        "kling",
+        "gpt-image-2"
+      ]
     }
   ]
 }

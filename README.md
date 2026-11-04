@@ -89,6 +89,24 @@ For one job, call a specialist directly:
 
 A full project runs many stages and can use a good part of your Claude allowance, so try it on a real brief when you have time to engage with it.
 
+## Bring your own taste
+
+Fastidious starts from your references, not a house style. Keep the sites you admire and the images you learn from in a personal library, and every project begins there before it looks anywhere else.
+
+```bash
+python3 plugins/fastidious/skills/taste-library/scripts/library.py init
+```
+
+That creates `~/.claude/fastidious/REFERENCES.md`, with a `references/` folder beside it for screenshots, photographs and scans named by ID (`R-003.png`). Or skip the file and hand them over in Claude Code:
+
+```text
+/fastidious:taste-library add these to my library: https://example.com, https://example.org and the three screenshots attached. For each, note what to borrow and what to reject.
+```
+
+Every reference gets a permanent number and two notes: what to borrow and what to reject. A link without both is not yet a reference. On each project, `taste-library` proposes the entries that fit the brief, copies the ones you choose into the project with their numbers unchanged, and `reference-curator` builds the reference board from them first, reaching into the 235 design systems and 96 ranked sources only to fill the gaps. At the end it offers to add the project's best finds back to your library, and only you decide what goes in. `library.py check` confirms every entry has its notes and every image is where its number says.
+
+Images you want used in the work itself, such as a logo, photography or product shots, belong in the project's assets, where `asset-director` handles them. The library is for learning from.
+
 ## What you get back
 
 Alongside the work, a full run leaves the reasoning in the project:

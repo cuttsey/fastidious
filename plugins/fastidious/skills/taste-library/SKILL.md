@@ -9,8 +9,12 @@ A designer's set of references is the schema for their personal style, and the b
 
 ## Files
 
-- `REFERENCES.md` in the project root. Every reference has a permanent `R-` ID, shared with option-ledger. A retired ID is never reused.
-- `.references/R-xxx.<ext>`: a stored image or excerpt for any reference that is not a public page, such as a photo, a screenshot or a scan.
+There are two libraries, and the person owns both.
+
+- **The personal library**, kept across every project: `~/.claude/fastidious/REFERENCES.md`, with images, screenshots and scans in `~/.claude/fastidious/references/`, or wherever `FASTIDIOUS_LIBRARY` points. This is the designer's own standard: the sites they love and the images they learn from. `python3 scripts/library.py init` creates it from `templates/REFERENCES.md`, and `python3 scripts/library.py check` confirms every entry has its notes and every image is where its ID says. Run the scripts from this skill's folder.
+- **The project library**: `REFERENCES.md` in the project root, with stored items in `.references/R-xxx.<ext>`. It holds the references chosen for this job.
+
+Every reference has a permanent `R-` ID, shared with option-ledger. A retired ID is never reused. When a personal library exists, it owns the numbering: a reference keeps its ID when it is copied into a project, and anything new takes the next free ID from the personal library, so an `R-` number means the same thing in every project.
 
 ```markdown
 # References
@@ -30,7 +34,16 @@ Next free ID: R-003
 - **Fit:** `direct` (similar industry, register and audience) or `aspirational`.
 - **From:** `own`, the registry ID (`L-xxx`) when it came from the source registry, or the catalogue ID (`DS-xxx`) when it came from the design systems catalogue.
 
-IDs follow the Fastidious references page and reference-curator's data files, where each entry carries the same `fastidious_id`: L-001 to L-004 are reserved for the third-party skill packages, L-005 to L-089 are the 85 registry sources, L-090 to L-100 are the exemplar sites, and DS-001 to DS-235 are the production design systems. A design system is a structure reference: borrow how it organises and names components, never its values without fetching the live page. That page builds this file for the person: pin sources from the registry, add their own, annotate, then copy the Markdown into the project. When the person pastes that export, adopt it as-is and keep its IDs.
+IDs follow reference-curator's data files, where each entry carries the same `fastidious_id`: L-001 to L-004 are reserved for the third-party skill packages, L-005 to L-089 are the 85 registry sources, L-090 to L-100 are the exemplar sites, and DS-001 to DS-235 are the production design systems. A design system is a structure reference: borrow how it organises and names components, never its values without fetching the live page. When the person pastes a references table of their own, in this format or close to it, adopt it as it is, keep their IDs and wording, and fill only the columns they left empty, saying which ones you filled.
+
+## Start from the person's own library
+
+Before gathering anything new, read the personal library if it exists.
+
+1. Run `python3 scripts/library.py check`. Fix or flag anything it reports before relying on the library.
+2. Pick the active entries that fit this job's frame, register and audience, look at each image and live page, and propose them first, as `O-` options, before any registry source.
+3. Copy the chosen entries into the project's `REFERENCES.md` with their IDs and notes unchanged, and copy their images into `.references/`.
+4. If there is no personal library, offer once to start one (`library.py init`), then carry on with the project library alone.
 
 ## Gather
 
@@ -67,6 +80,7 @@ When briefing reference-curator, say so directly: "Start from R-004, R-009 and R
 
 At the end of each project:
 
+- Offer to send the project's best new references back to the personal library, with their notes and images. Only the person decides what enters it.
 - Retire the weakest reference and add the best thing met during the project. Retiring changes status; the ID stays taken.
 - Any reference still missing its borrow or reject note gets annotated or retired.
 - Keep the active library small enough to be a standard, around 40 entries, not an archive.

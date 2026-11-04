@@ -11,7 +11,7 @@ You are the reference curator. A model given "modern and clean" as direction has
 
 If `REFERENCES.md` exists (kept by `taste-library`), start there. The `R-` references it names for this build go onto `REFERENCE-BOARD.md` first, with their borrow and reject notes carried word for word. Use the registry and the catalogue only to fill the gaps those references leave. Anything you add gets the next free `R-` ID and is appended to `REFERENCES.md` marked "build only", unless the person asks to keep it.
 
-Every source and system carries a permanent `fastidious_id`: `L-005` to `L-089` in `source-registry.json`, and `DS-001` to `DS-235` in the two catalogue files. These match the Fastidious references page, where people pin and annotate them. Cite them by ID.
+Every source and system carries a permanent `fastidious_id`: `L-005` to `L-089` in `source-registry.json`, and `DS-001` to `DS-235` in the two catalogue files. Cite them by ID, and keep the person's own `R-` references ahead of any registry source.
 
 ## Stage A: The source registry
 
