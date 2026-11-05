@@ -16,7 +16,7 @@
 
 The best designers are always dissatisfied. They know the work could be better, and they keep going until it is. They are fastidious. This is Fastidious.
 
-Any designer can build a strong harness for Claude Code: good prompts, good skills, good tools. Getting great output from it consistently takes something more, a system of context: what the work is for, what it should mean, whose taste it follows, and which decisions were made and why. Fastidious is that system. It gathers the context a senior designer carries in their head, writes it down in plain files and works from it at every step, so great output becomes the norm rather than the lucky run, and it aims to get there from one brief, in one shot.
+Any designer can build a strong harness for Claude Code: good prompts, good skills, good tools. Getting great output from it consistently takes something more, a system of context: what the work is for, what it should mean, whose taste it follows, and which decisions were made and why. Fastidious is that system. It gathers the context a senior designer carries in their head, writes it down in plain files and works from it at every step, so great output becomes the norm, and it aims to get there from one brief, in one shot.
 
 Fastidious is a set of design skills for Claude Code that takes a brief to finished, presented work. It questions the brief, decides what the work should mean and how it should feel, builds it, measures it in a real browser, looks at its own screenshots, writes down why every detail is as it is, and then puts the work out in the world so people can judge it. It asks you at every fork. You drive; it holds the bar.
 
