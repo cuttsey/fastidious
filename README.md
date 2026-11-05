@@ -18,9 +18,11 @@ The best designers are always dissatisfied. They know the work could be better, 
 
 Any designer can build a strong harness for Claude Code: good prompts, good skills, good tools. Getting great output from it consistently takes something more, a system of context: what the work is for, what it should mean, whose taste it follows, and which decisions were made and why. Fastidious is that system. It gathers the context a senior designer carries in their head, writes it down in plain files and works from it at every step, so great output becomes the norm, and it aims to get there from one brief, in one shot.
 
-Fastidious is a set of design skills for Claude Code that takes a brief to finished, presented work. It questions the brief, decides what the work should mean and how it should feel, builds it, measures it in a real browser, looks at its own screenshots, writes down why every detail is as it is, and then puts the work out in the world so people can judge it. It asks you at every fork. You drive; it holds the bar.
+Fastidious is a set of design skills for Claude Code that takes a brief to finished, presented work. It questions the brief, decides what the work should mean and how it should feel, builds it, measures it in a real browser, looks at its own screenshots, writes down why every detail is as it is, and then puts the work out in the world so people can judge it. It asks you at every fork. You drive; it holds the bar high.
 
-## Four disciplines, one standard
+It holds the highest standards on purpose. A first impression is the one shot a site gets, and visitors forgive a site that is merely good by forgetting it. The distance between good and great is made of dozens of small decisions that are easy to skip when a deadline is close, so Fastidious is designed to refuse to skip them.
+
+## Four disciplines, held to the highest standard
 
 Most AI design tools are strong at one thing, usually the build. Fastidious covers the four places where good work becomes great work, and each is grounded in published practice rather than taste alone.
 
