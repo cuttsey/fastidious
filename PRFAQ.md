@@ -4,13 +4,13 @@
 
 ### Fastidious gives designers one shot at greatness with Claude Code
 
-*Free, open-source design skills that question the brief, design persuasion in honestly, check every pixel and present the work, so a single brief becomes a site a designer would put their name to.*
+*Free, open-source design skills that give Claude Code a system of context: they question the brief, decide what the work should mean, start from your own references, check every pixel and present the work, so a single brief becomes a site a designer would put their name to, consistently.*
 
 **London, November 2026.** Fastidious, released today under the MIT licence, is a set of 27 design skills for Claude Code, working alongside 19 more by leading practitioners. It takes one brief from a designer and runs the whole studio around it: framing the problem, deciding what the work should mean, building the brand from that meaning, designing the details people remember, checking the result in a real browser, and presenting it in place, in motion and on film. It asks the designer at every fork, and writes down why every choice was made.
 
-**The problem.** AI has made a first draft almost free, and most first drafts now look the same: a gradient, a headline that would fit any business, three feature cards and a button. Designers know a first impression is the one shot a site gets, and that the difference between good and great lives in purpose, meaning and dozens of small decisions. General-purpose AI tools are built to get to a draft quickly, so they skip exactly the work that makes a site distinctive and defensible.
+**The problem.** AI has made a first draft almost free, and most first drafts now look the same: a gradient, a headline that would fit any business, three feature cards and a button. Designers know a first impression is the one shot a site gets, and that the difference between good and great lives in purpose, meaning and dozens of small decisions. General-purpose AI tools are built to get to a draft quickly, so they skip exactly the work that makes a site distinctive and defensible. Designers can already build a strong harness around them, with good prompts, skills and tools. What a harness cannot supply on its own is context: what the work is for, what it should mean, whose taste it follows and why each decision was made. Without that, quality depends on the day.
 
-**The solution.** Fastidious covers the four places where good work becomes great.
+**The solution.** Fastidious is a system of context. It builds that context in the four places where good work becomes great, keeps it in plain files the designer owns, and works from it at every step, so great output is consistent, and it aims to get there from one brief, in one shot.
 
 - **Purpose.** It questions the brief before anyone opens a colour picker, offers alternative frames and lets the designer choose one, then names one person, one pain and one promise a competitor could not repeat.
 - **Identity.** It decides what the work should signify, grounded in semiotics, and turns that meaning into a brand system: colour, type, motion and voice.
@@ -19,7 +19,7 @@
 
 Behind its judgement sit 235 production design systems, 96 ranked design sources and 11 exemplar sites taken apart in a real browser. Each designer can add a personal library of the sites and images they admire, and every project starts from that library before anything else.
 
-"The best designers are always dissatisfied," said Jamie Acutt, who built Fastidious. "They know the work could be better, and they keep going until it is. I spent two years teaching Claude to collect taste the way a designer does: to study references closely, take them apart and keep the best parts with the reasons they work. Fastidious is the result. It holds your work to the standard you would hold it to on your best day, and it shows its reasoning so you can argue with it."
+"The best designers are always dissatisfied," said Jamie Acutt, who built Fastidious. "They know the work could be better, and they keep going until it is. I spent two years teaching Claude to collect taste the way a designer does: to study references closely, take them apart and keep the best parts with the reasons they work. Fastidious is the result. A strong harness gets you a great result on a good day; a system of context is what makes it consistent. It holds your work to the standard you would hold it to on your best day, and it shows its reasoning so you can argue with it."
 
 **How it works.** A designer installs Fastidious in Claude Code with two commands, opens an empty folder and gives it one sentence, such as a site for a small ferry that only runs when the tide allows. Fastidious asks which frame fits, proposes references from the designer's own library, builds the brand and the site, checks it, and leaves its reasoning in plain files the designer keeps: the frame, the positioning, the sign system, the brand system, a numbered decision log and a reason for every detail.
 
