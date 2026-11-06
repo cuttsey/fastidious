@@ -81,6 +81,15 @@ void main(){vec2 p=uv;vec3 A,C;float k=0.;
     return { index: i, id: s.id, t, trans, next: next ? i + 1 : -1 };
   }
 
+  // Pure: the smallest frame width that still covers the screen at its real pixel density (capped at 2x),
+  // so a narrow but dense phone gets sharp frames and a small window does not download the largest.
+  function pickSize(m, vw, vh, dpr) {
+    const aspect = m.width / m.height;
+    const need = Math.max(vw, vh * aspect) * dpr;
+    const sizes = m.sizes.slice().sort((a, b) => a - b);
+    return sizes.find(w => w >= need) || sizes[sizes.length - 1];
+  }
+
   // Pure: the order to fetch frames in, nearest to what is on screen first. Exported for tests.
   function priority(counts, index, frame, window) {
     const out = [];
@@ -99,7 +108,6 @@ void main(){vec2 p=uv;vec3 A,C;float k=0.;
     const canvas = opts.canvas;
     const scenes = opts.scenes.map(s => Object.assign({ focus: [0.5, 0.5] }, s));
     const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const small = matchMedia('(max-width: 820px)').matches;
     const gl = canvas && (canvas.getContext('webgl', { antialias: false, alpha: false, preserveDrawingBuffer: false }) ||
       canvas.getContext('experimental-webgl'));
     if (!gl) { html.classList.add('film-static'); return null; }
@@ -155,7 +163,7 @@ void main(){vec2 p=uv;vec3 A,C;float k=0.;
       fetch(s.src.replace(/\/$/, '') + '/manifest.json').then(r => r.json()).then(m => {
         s.m = m;
         s.count = reduced ? 0 : m.count;
-        s.size = small ? m.sizes[m.sizes.length - 1] : m.sizes[0];
+        s.size = pickSize(m, innerWidth, innerHeight, Math.min(devicePixelRatio || 1, 2));
         const poster = new Image();
         poster.decoding = 'async';
         poster.onload = () => { s.poster = poster; };
@@ -202,7 +210,7 @@ void main(){vec2 p=uv;vec3 A,C;float k=0.;
       return clamp(-r.top / range, 0, 1);
     }
     const marks = Array.from(document.querySelectorAll('[data-film-scene]'));
-    let dprCap = small ? 1.5 : 2, slow = 0, lastT = 0, raf = 0;
+    let dprCap = matchMedia('(max-width: 820px)').matches ? 1.5 : 2, slow = 0, lastT = 0, raf = 0;
     const t0 = performance.now();
     function frame(now) {
       raf = requestAnimationFrame(frame);
@@ -255,7 +263,7 @@ void main(){vec2 p=uv;vec3 A,C;float k=0.;
     };
   }
 
-  const api = { mount, locate, priority, MODES };
+  const api = { mount, locate, priority, pickSize, MODES };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   root.ScrollFilm = api;
 })(typeof window !== 'undefined' ? window : globalThis);

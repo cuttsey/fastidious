@@ -16,7 +16,9 @@ const k = require(process.argv[1]);
 const scenes = [{id:'A',at:0,len:0.5,out:{type:'iris',len:0.2}},{id:'B',at:0.5,len:0.5}];
 const r = [k.locate(scenes,0), k.locate(scenes,0.45), k.locate(scenes,0.75), k.locate(scenes,1)];
 const pr = k.priority([4,4], 0, 2, 1000).slice(0, 5);
-console.log(JSON.stringify({r, pr, modes: k.MODES}));
+const m = {width:960,height:540,sizes:[960,480]};
+const sz = [k.pickSize(m,390,844,3), k.pickSize(m,1440,900,1), k.pickSize(m,320,180,1)];
+console.log(JSON.stringify({r, pr, sz, modes: k.MODES}));
 """
 
 
@@ -48,6 +50,9 @@ class ScrollFilm(unittest.TestCase):
         self.assertEqual(pr[0], [0, 2])
         self.assertEqual(sorted(map(tuple, pr[1:3])), [(0, 1), (0, 3)])
         self.assertTrue(all(s == 0 for s, _ in pr[:4]))
+
+    def test_frame_size_covers_dense_phones(self):
+        self.assertEqual(self.run_node()["sz"], [960, 960, 480])
 
     def test_no_scroll_interception(self):
         src = open(os.path.join(KIT, "assets", "scroll-film.js")).read()

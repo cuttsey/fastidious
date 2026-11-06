@@ -2,6 +2,18 @@
 
 All notable changes to this repository. Versions follow [Semantic Versioning](https://semver.org/).
 
+## Fastidious 1.3.1: 2026-11-06
+
+### Fixed
+
+- `legibility-check.js` treated full-screen fixed backdrops (a WebGL canvas, a scrim) as covering bars and skipped every glyph over them, so it passed dark text on a dark film. It now counts a fixed element as covering only where it is on top, renders WebGL with software GL, and gains `--motion` to measure a scroll film frame by frame.
+- `scroll-film.js` chooses frame width from the screen's real pixel density, so dense phones get sharp frames.
+- Hollow Lane: text colour set on `body`, a darker scrim behind the text column (worst frame now 7.7:1), darker labels on paper, visible focus rings on paper, `scroll-padding-top`, copy visible at rest, unique region names, posters kept for screen readers, errors tied to fields, the page language kept, and no ambient grain.
+
+### Changed
+
+- `accessibility-performance-auditor` adds checks for text colour on `body`, contrast against real backdrops with and without motion, copy visible at rest, focus rings on every surface, unique region names and errors tied to fields.
+
 ## Fastidious 1.3.0: 2026-11-06
 
 ### Added

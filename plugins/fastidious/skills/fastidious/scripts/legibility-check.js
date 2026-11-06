@@ -13,7 +13,9 @@
   Fails a line when more than 3% of its glyph pixels sit on a backdrop below 4.5:1, or 3:1 for large text
   (24px and up, or 18.66px and up at weight 700). Exit code 1 on any failure, so it can gate a hook or CI.
 
-  Usage: node legibility-check.js <url> [--widths 390,1110,1440] [--heights 700,900] [--full] [--setup "<js run before each pass>"]
+  Usage: node legibility-check.js <url> [--widths 390,1110,1440] [--heights 700,900] [--full] [--motion] [--setup "<js run before each pass>"]
+  --motion keeps motion on, so on a scroll film each stop is measured against the frame actually showing there;
+  with --full it walks the whole page in half-screen steps. Run it both ways on any page with a canvas or film.
   Each --setup expression may change the page state (for example, switch a theme); separate several with ' ;; '.
 */
 const {chromium} = require('playwright');
@@ -25,6 +27,7 @@ const opt = (k, d) => { const i = args.indexOf(k); return i < 0 ? d : args[i + 1
 const widths = opt('--widths', '390,1110,1440').split(',').map(Number);
 const heights = opt('--heights', '700,900').split(',').map(Number);
 const full = args.includes('--full');
+const motion = args.includes('--motion');
 const setups = (opt('--setup', '') || '').split(' ;; ').filter(Boolean);
 if (!url) { console.error('Usage: node legibility-check.js <url> [--widths ...] [--full] [--setup "..."]'); process.exit(2); }
 
@@ -50,7 +53,12 @@ async function runs(page) {
         if (r.width < 2 || r.height < 2 || r.top < 0 || r.left < 0 || r.bottom > vh || r.right > vw) continue;
         // Pixels of text scrolled underneath a fixed or sticky bar are covered on purpose and skipped;
         // the bar's own text is checked as text in its own right.
-        const skip = bars.filter(b => !b.el.contains(el)).map(b => b.r).filter(b => b.right > r.left && b.left < r.right && b.bottom > r.top && b.top < r.bottom).map(b => [b.left, b.top, b.right, b.bottom]);
+        // A bar only covers the text where it is actually on top: a full-screen fixed canvas or scrim behind
+        // the text is a backdrop, not a cover, so test the topmost element at the middle of the overlap.
+        const skip = bars.filter(b => !b.el.contains(el)).map(b => b.r).filter(b => b.right > r.left && b.left < r.right && b.bottom > r.top && b.top < r.bottom)
+          .filter((b, i, all) => { const cx = (Math.max(b.left, r.left) + Math.min(b.right, r.right)) / 2, cy = (Math.max(b.top, r.top) + Math.min(b.bottom, r.bottom)) / 2;
+            const top = document.elementFromPoint(cx, cy); return top && !el.contains(top) && !top.contains(el) && bars.some(x => x.r === b && x.el.contains(top)); })
+          .map(b => [b.left, b.top, b.right, b.bottom]);
         out.push({ t: n.textContent.trim().slice(0, 48), x: Math.floor(r.left), y: Math.floor(r.top), w: Math.ceil(r.width), h: Math.ceil(r.height), c: m.slice(0, 3), need: big ? 3 : 4.5, skip });
       }
     }
@@ -77,9 +85,10 @@ function analyse(k1, k2, b, list) {
 }
 
 (async () => {
-  const browser = await chromium.launch(); let failures = 0, passes = 0;
+  // Software WebGL, so canvas and WebGL backdrops are drawn and measured like any other pixels.
+  const browser = await chromium.launch({ args: ['--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist'] }); let failures = 0, passes = 0;
   for (const w of widths) for (const vh of heights) {
-    const page = await browser.newPage({ viewport: { width: w, height: vh }, reducedMotion: 'reduce' });
+    const page = await browser.newPage({ viewport: { width: w, height: vh }, reducedMotion: motion ? 'no-preference' : 'reduce' });
     await page.goto(url, { waitUntil: 'load' }); await page.waitForTimeout(1200);
     for (const setup of (setups.length ? setups : [''])) {
       if (setup) { await page.evaluate(setup); await page.waitForTimeout(900); }
@@ -89,7 +98,7 @@ function analyse(k1, k2, b, list) {
       const found = [];
       for (const y of stops) {
         await page.evaluate(y => { document.documentElement.style.scrollBehavior = 'auto'; scrollTo(0, y); }, y);
-        await page.waitForTimeout(250);
+        await page.waitForTimeout(motion ? 1500 : 250);
         const list = await runs(page);
         // Wait two animation frames after each style change, or the screenshot can capture the previous paint.
         const frames = () => page.evaluate(() => new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r))));

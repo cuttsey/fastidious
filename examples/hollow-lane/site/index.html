@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Hollow Lane cider</title>
+<script>document.documentElement.lang = "en-GB";</script>
 <meta name="description" content="An invented Somerset cider maker, built to test Fastidious: dry cider, pressed in autumn and poured the following spring.">
 <meta name="theme-color" content="#2b2621">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,17 +12,18 @@
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&display=swap" rel="stylesheet">
 <style>
 :root{color-scheme:dark;
-  --ink:#2b2621;--studio:#1f1b17;--paper:#f0e6d1;--paper-2:#e7dcc4;--lane:#d9c499;--oak:#8a6138;--russet:#a86b2b;--cider:#c99a3b;
+  --ink:#2b2621;--studio:#1f1b17;--paper:#f0e6d1;--paper-2:#e7dcc4;--lane:#d9c499;--oak:#8a6138;--oak-ink:#6b4a2a;--russet:#a86b2b;--cider:#c99a3b;
   --rule:rgba(240,230,209,.28);--ease:cubic-bezier(.22,1,.36,1);
   --serif:"Newsreader","Iowan Old Style",Georgia,serif;
   --gutter:clamp(16px,5vw,72px);
 }
 *{box-sizing:border-box}
-html{background:var(--studio);color:var(--paper);-webkit-text-size-adjust:100%}
-body{margin:0;font-family:var(--serif);font-optical-sizing:auto;font-size:clamp(17px,1.1vw + 10px,20px);line-height:1.5;background:var(--studio)}
+html{background:var(--studio);color:var(--paper);-webkit-text-size-adjust:100%;scroll-padding-top:110px}
+body{margin:0;color:var(--paper);font-family:var(--serif);font-optical-sizing:auto;font-size:clamp(17px,1.1vw + 10px,20px);line-height:1.5;background:var(--studio)}
 ::selection{background:var(--russet);color:var(--paper)}
 a{color:inherit}
 :focus-visible{outline:2px solid var(--lane);outline-offset:3px}
+.paper :focus-visible{outline-color:var(--ink)}
 .skip{position:absolute;left:-9999px;top:8px;background:var(--paper);color:var(--ink);padding:8px 12px;z-index:50}
 .skip:focus{left:8px}
 
@@ -29,9 +31,9 @@ a{color:inherit}
 .film{position:fixed;inset:0;width:100%;height:100%;display:block;z-index:0;opacity:0;transition:opacity .9s var(--ease)}
 .film-ready .film{opacity:1}
 .scrim{position:fixed;inset:0;z-index:1;pointer-events:none;
-  background:linear-gradient(90deg,rgba(24,20,17,.82) 0%,rgba(24,20,17,.55) 34%,rgba(24,20,17,0) 62%),linear-gradient(0deg,rgba(24,20,17,.5),rgba(24,20,17,0) 30%)}
+  background:linear-gradient(90deg,rgba(24,20,17,.92) 0%,rgba(24,20,17,.86) 38%,rgba(24,20,17,.4) 56%,rgba(24,20,17,0) 70%),linear-gradient(0deg,rgba(24,20,17,.5),rgba(24,20,17,0) 30%)}
 .poster{display:block;width:100%;height:auto;margin:0 0 24px;border-radius:2px}
-.film-live .poster{display:none}
+.film-live .poster{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
 html:not(.film-live) .scrim{display:none}
 
 /* The drawn lane: the long way round, drawn as you scroll, with a chalk tally per chapter */
@@ -60,11 +62,6 @@ h2{font-size:clamp(38px,5vw,76px);line-height:.98}
 .ln{display:block;overflow:hidden;padding-bottom:.08em;margin-bottom:-.08em}
 .ln>span{display:block}
 @media (min-width:821px){.ln>span{white-space:nowrap}}
-.film-live .scene:not([data-film-scene="S01"]) .ln>span{transform:translateY(105%);transition:transform .9s var(--ease)}
-.film-live .scene.is-active .ln>span{transform:none}
-.film-live .scene.is-active .ln:nth-child(2)>span{transition-delay:.08s}
-.film-live .scene:not([data-film-scene="S01"]) p{opacity:0;transition:opacity .7s var(--ease) .25s}
-.film-live .scene.is-active p,.film-live .scene.is-active .cta{opacity:1}
 .lede{font-size:1.18em;line-height:1.4;max-width:28rem;margin:0 0 28px}
 .detail{max-width:27rem;color:rgba(240,230,209,.88)}
 em.num{font-style:normal;font-variant-numeric:oldstyle-nums}
@@ -77,12 +74,12 @@ em.num{font-style:normal;font-variant-numeric:oldstyle-nums}
 
 /* Paper chapters cover the film: the questions and the list */
 .paper{position:relative;z-index:4;background:var(--paper);color:var(--ink);padding:clamp(72px,12vh,140px) var(--gutter)}
-.paper .label{color:var(--oak)}
+.paper .label{color:var(--oak-ink)}
 .paper h2{max-width:14ch}
 .faq{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,22rem),1fr));gap:36px 56px;margin-top:48px;max-width:72rem}
 .faq h3{font-weight:500;font-size:1.25em;margin:0 0 6px}
 .faq p{margin:0;color:#4a4038}
-.faq .n{font-variant:small-caps;letter-spacing:.08em;color:var(--oak);display:block;margin-bottom:6px}
+.faq .n{font-variant:small-caps;letter-spacing:.08em;color:var(--oak-ink);display:block;margin-bottom:6px}
 .list{background:var(--paper-2)}
 .list form{display:grid;gap:18px;max-width:30rem;margin-top:32px}
 label{display:grid;gap:6px;font-variant:small-caps;letter-spacing:.08em;font-size:.92rem;color:#4a4038}
@@ -97,13 +94,11 @@ footer p{margin:0 0 6px;max-width:44rem}
 
 @media (max-width:820px){
   .scene{min-height:170vh}
-  .scrim{background:linear-gradient(0deg,rgba(24,20,17,.86) 0%,rgba(24,20,17,.6) 45%,rgba(24,20,17,.15) 75%)}
+  .scrim{background:linear-gradient(0deg,rgba(24,20,17,.93) 0%,rgba(24,20,17,.88) 62%,rgba(24,20,17,.35) 82%,rgba(24,20,17,.15) 100%)}
   .scene .hold{justify-content:flex-end;padding-bottom:12vh}
   .lane{display:none}
 }
 @media (prefers-reduced-motion:reduce){
-  .film-live .scene .ln>span{transform:none;transition:none}
-  .film-live .scene p,.film-live .scene .cta{opacity:1;transition:none}
   .film{transition:none}
 }
 </style>
@@ -191,16 +186,16 @@ footer p{margin:0 0 6px;max-width:44rem}
   <h2 id="h-list">The spring list</h2>
   <p style="max-width:30rem;margin:0">Leave your name and how many cases you would like. We write once, in spring, when the cider is ready.</p>
   <form novalidate>
-    <label>Your name <input name="name" autocomplete="name" required></label>
-    <label>Email <input name="email" type="email" autocomplete="email" required></label>
-    <label>Cases (of twelve) <input name="cases" type="number" min="1" max="6" value="1" inputmode="numeric"></label>
+    <label>Your name <input id="f-name" name="name" autocomplete="name" required aria-describedby="f-status"></label>
+    <label>Email <input id="f-email" name="email" type="email" autocomplete="email" required aria-describedby="f-status"></label>
+    <label>Cases (of twelve) <input id="f-cases" name="cases" type="number" min="1" max="6" value="1" inputmode="numeric"></label>
     <button type="submit">Join the spring list</button>
-    <p class="status" role="status" aria-live="polite"></p>
+    <p class="status" id="f-status" role="status" aria-live="polite"></p>
   </form>
 </section>
 
 <div class="close-wrap" style="position:relative;z-index:2">
-  <section class="scene close" data-film-scene="S06" aria-labelledby="h-close" style="min-height:160vh">
+  <section class="scene close" data-film-scene="S06" aria-label="Closing scene" style="min-height:160vh">
     <div class="hold">
       <img class="poster" src="frames/S06/poster.jpg" alt="The whole model orchard seen from above, the lane bending twice from one corner to the other." width="960" height="540">
       <h2 id="h-close"><span class="ln"><span>The long way</span></span> <span class="ln"><span>round, on purpose.</span></span></h2>
@@ -240,7 +235,7 @@ footer p{margin:0 0 6px;max-width:44rem}
     scenes.forEach((s, i) => { const pt = drawn.getPointAtLength(L * s.at);
       ticks.insertAdjacentHTML('beforeend', `<path class="tick" data-i="${i}" d="M${pt.x - 6} ${pt.y} h12"/>`); });
     film = ScrollFilm.mount({ canvas: document.querySelector('canvas.film'), track: document.documentElement, scenes,
-      grain: 0.035, ease: 0.12, onFrame: st => {
+      grain: 0, ease: 0.12, onFrame: st => {
         drawn.style.strokeDashoffset = L * (1 - st.p);
         ticks.querySelectorAll('.tick').forEach((t, i) => t.classList.toggle('on', st.p >= scenes[i].at - 0.001));
       } });
@@ -251,8 +246,9 @@ footer p{margin:0 0 6px;max-width:44rem}
   form.addEventListener('submit', e => {
     e.preventDefault();
     const email = form.email.value.trim();
-    if (!form.name.value.trim()) { status.textContent = 'Please add your name.'; form.name.focus(); return; }
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { status.textContent = 'Please check your email address so we can write in spring.'; form.email.focus(); return; }
+    form.name.removeAttribute('aria-invalid'); form.email.removeAttribute('aria-invalid');
+    if (!form.name.value.trim()) { form.name.setAttribute('aria-invalid', 'true'); status.textContent = 'Please add your name.'; form.name.focus(); return; }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { form.email.setAttribute('aria-invalid', 'true'); status.textContent = 'Please check your email address so we can write in spring.'; form.email.focus(); return; }
     status.textContent = 'This is a test page, so nothing was sent. On a real site: you are on the list. We will write in spring.';
   });
 })();

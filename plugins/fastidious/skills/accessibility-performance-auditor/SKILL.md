@@ -148,6 +148,11 @@ function analyse(k1, k2, b, list) {
 **Degradation and access**
 - A WebGL/WebGPU scene that fails to initialise falls back to a static image or poster frame rather than a blank section.
 - Keyboard navigation still reaches every piece of content despite any pinning or scroll-hijacking; a visitor who tabs through the page is not trapped in a pinned section.
+- Text colour is set on `body` (or on every text element), never only on `html`: hosts and embeds often wrap a page in their own reset that colours `body`, and an `html`-only colour then loses to it. Test with a stylesheet rule `body{color:#111}` inserted first in `<head>`.
+- Contrast is measured against the pixels actually behind the text, not CSS colours. Run `legibility-check.js` twice on any page with a canvas, WebGL scene, video or scroll film: once at rest, and once with `--full --motion`, so each scroll stop is measured against the frame showing there. axe-core's colour-contrast cannot see these backdrops and reports them as incomplete.
+- Copy is visible at rest. Nothing meant to be read waits at zero opacity or off-screen for a scroll observer, so find-in-page, zoom and a failed script still show it.
+- Focus rings reach 3:1 against every surface they cross (dark film and light paper alike), and `scroll-padding-top` keeps a focused element clear of any fixed header.
+- Every region has a unique accessible name, and form errors are tied to their field with `aria-describedby` and `aria-invalid`.
 - Native scrolling is kept. No `preventDefault` on `wheel`, `touchmove` or scrolling keys (arrows, Page Up and Down, space, Home, End) to drive a custom scroll; smoothing that follows the native scroll position is acceptable. Search the shipped script for these listeners.
 - The DOM order matches the visual reading order, so screen readers and search read the page top to bottom. Check that the first heading in the DOM is the hero's, and that sections are not assembled in reverse and positioned over a canvas.
 - Every chapter told by a canvas, WebGL scene or frame sequence has a still poster and its copy in the HTML, so the story survives without WebGL or JavaScript. Every form field has a visible `<label>`.
