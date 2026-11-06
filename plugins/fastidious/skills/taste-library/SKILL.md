@@ -34,7 +34,7 @@ Next free ID: R-003
 - **Fit:** `direct` (similar industry, register and audience) or `aspirational`.
 - **From:** `own`, the registry ID (`L-xxx`) when it came from the source registry, or the catalogue ID (`DS-xxx`) when it came from the design systems catalogue.
 
-IDs follow reference-curator's data files, where each entry carries the same `fastidious_id`: L-001 to L-004 are reserved for the third-party skill packages, L-005 to L-089 are the 85 registry sources, L-090 to L-100 are the exemplar sites, and DS-001 to DS-235 are the production design systems. A design system is a structure reference: borrow how it organises and names components, never its values without fetching the live page. When the person pastes a references table of their own, in this format or close to it, adopt it as it is, keep their IDs and wording, and fill only the columns they left empty, saying which ones you filled.
+IDs follow reference-curator's data files, where each entry carries the same `fastidious_id`: L-001 to L-004 are reserved for the third-party skill packages, L-005 to L-089 are the 85 registry sources, L-090 to L-101 are the exemplar sites, and DS-001 to DS-235 are the production design systems. A design system is a structure reference: borrow how it organises and names components, never its values without fetching the live page. When the person pastes a references table of their own, in this format or close to it, adopt it as it is, keep their IDs and wording, and fill only the columns they left empty, saying which ones you filled.
 
 ## Start from the person's own library
 

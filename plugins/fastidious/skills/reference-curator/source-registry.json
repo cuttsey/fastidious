@@ -2,7 +2,7 @@
   "version": "1.1.0",
   "name": "Design Intelligence Source Registry",
   "description": "A curated registry of design inspiration and design intelligence sources for autonomous crawling, pattern extraction, trend detection and research. Extended with three sources added after the original registry (21st.dev, Godly, Motionsites.ai), and a precomputed weighted_score on every entry using the registry's own source_weight_formula (freshness converted from its qualitative label via low=2, medium=5, high=8, very_high=10, since reference-curator has no code-execution tool to compute this live).",
-  "updated": "2026-09-02",
+  "updated": "2026-11-06",
   "categories": [
     {
       "id": "product_ui_ux",
@@ -2491,7 +2491,42 @@
       "provenance": "user_supplied_exemplar_2026-10-28; annotated in detail-craft/references/exemplars.md",
       "weighted_score": 9.75,
       "fastidious_id": "L-100"
+    },
+    {
+      "id": "ex_pear",
+      "name": "Pear software and SEO firm (exemplar)",
+      "url": "https://pear.no/",
+      "category": "motion_interaction",
+      "subcategories": [
+        "exemplar",
+        "allegory",
+        "webgl",
+        "scroll_film",
+        "copy"
+      ],
+      "priority": 10,
+      "authority": 9,
+      "freshness": "very_high",
+      "production_relevance": 10,
+      "crawl_frequency": "on_demand",
+      "source_type": "exemplar_site",
+      "primary_value": "A whole page as one allegory from the name: claims staged as labours in one painted Renaissance world, played as a scroll-scrubbed film through a single WebGL compositor under a fixed survey-grid type layer; disclosure and disqualification copy",
+      "tags": [
+        "branding",
+        "hero",
+        "typography",
+        "layout",
+        "grid",
+        "scroll",
+        "motion",
+        "cta",
+        "forms",
+        "exemplar"
+      ],
+      "provenance": "user_supplied_exemplar_2026-11-06; annotated in detail-craft/references/exemplars.md",
+      "weighted_score": 9.75,
+      "fastidious_id": "L-101"
     }
   ],
-  "fastidious_ids": "L-001 to L-004 are reserved for the third-party skill packages Fastidious builds on; L-005 to L-089 are the 85 registry sources and L-090 to L-100 the exemplar sites."
+  "fastidious_ids": "L-001 to L-004 are reserved for the third-party skill packages Fastidious builds on; L-005 to L-089 are the 85 registry sources and L-090 to L-101 the exemplar sites."
 }

@@ -205,7 +205,31 @@ The story is the promise made literal: pressing Enter releases the idea, and the
 **Borrow:** a quiet frame that lets the work supply colour; an accent with one meaning plus a mark; one metaphor through name, copy, icon and action; outcomes as captions; argument as a simple chart; lineage with a turn of phrase; the label-to-bar hover; one big closing action.
 **Reject:** a comparison chart without data behind it unless it's clearly illustrative; scarcity copy unless it's genuinely true and kept current.
 
-## What all ten share
+## pear.no (Pear, an Oslo software and SEO firm paid by revenue share)
+
+Observed 2026-11-06 at 1440 × 900 in a real browser, with its stylesheet, script and shaders read.
+
+**Idea performed:** the name. "Pear makes you appear", and the firm is paid only from growth, so the page is an allegory of cultivation: figures from Renaissance paintings graft, grow, pick, peel, gild and finally raise a golden pear onto a plinth. Each labour carries one claim ("We build it." "We rank it." "We share in what it earns.").
+
+**World:** Italian Renaissance oil painting throughout (blue fresco skies, velvet, marble, timber scaffolding, gold leaf), crossed with modern instruments: a holographic, prismatic trowel, lens flare, halftone dots and a surveyor's grid. Nothing on the page leaves that world.
+
+**Details worth learning:**
+- **One WebGL compositor** under a fixed HTML type layer. A hand-written fragment shader mixes films, frame sequences and plates, with a halftone dot screen (the pear is "printed" before it is gilded), a noisy burn edge between scenes, simulated paper (pulp, fibre, tooth, fleck), light rays and a reel move (zoom, spin, drift, motion blur). A second shader does chapter transitions: an iris opening from the centre broken by noise, a push, a wipe, a fade, a cut; incoming scenes "develop" from slightly desaturated to full colour.
+- **Painted film, scrubbed by scroll:** four 10-second films (1080p H.264) and about 1,060 WebP frames in sequences of 89 to 483, with 768-px versions for phones. Frames load eight at a time by distance from the scroll position and decode three either side ahead.
+- **Timeline in fractions:** one 48,150-px page; every scene, film and chapter link is placed in units out of 5,350. Chapter links jump to 1.2%, 23.2%, 40% and 62.8%.
+- **Survey frame:** hairline rules at fixed percentages (header band 5.3vw; verticals at 5.3% and 85.6%), four-point stars where rules cross, a tick rail that is also the chapter indicator, mono labels on soft chips. Text stays in the frame; the paintings move beneath it.
+- **Type:** Flecha in three optical sizes (L at 117 px, M at 77 px, S at 20 to 27 px), light weights for display; GT Standard for explanation; GT Standard Mono at 9 to 12 px, uppercase, tracked +0.16 to +0.2 em. Serif states, sans explains.
+- **Colour:** press #0b0a09, paper #f2f1ed, ink #1d1c19, sky #015186; gold only inside the paintings, never as a UI colour.
+- **Line reveals:** headings split into masked lines that slide up or across; the hero headline is split to characters. One easing, `cubic-bezier(.22,1,.36,1)`, with 0.26 to 0.82 s transitions.
+- **The form is part of the world:** at the coda a robed figure on marble steps points at the night sky, and the three fields are tilted glass panels joined to the send button by constellation lines. The close returns to the start: two figures water and prune a young pear tree under the wordmark, so the story is a cycle of growth.
+- **Text that focuses:** some statements arrive blurred and sharpen as they settle; incoming scenes start slightly grey and "develop" to full colour.
+- **Copy:** antithesis as positioning ("Not an agency on the clock, a partner in the upside", opening and closing the page); "Full disclosure" chips; disqualification ("We say no more often than yes"); an FAQ ordered as a finance director's objections; an application, not a contact form.
+- Stack: React, Vite, Tailwind 4, raw WebGL, two SVG filters (ink bleed, torn edge), adaptive pixel ratio on phones by frame time, Cloudflare Turnstile loaded on first focus of the form.
+
+**Borrow:** the idea mined from the name and the payment model; claims staged as labours in one world; a survey frame over moving pictures; scenes that develop into colour; a halftone-to-gold "becoming visible" device; optical sizes matched to set size; disclosure and disqualification as trust.
+**Reject:** wheel and key hijacking on desktop (it does turn off for reduced motion and touch); a DOM assembled in reverse, so assistive technology and search read the page bottom to top; unlabelled form fields; small text over moving paintings; 60 fps films for painted scenes; no still fallback when WebGL is missing; an unlabelled "40%".
+
+## What they share
 
 1. A single idea, performed by the signature moment.
 2. A committed material world (wood and papyrus; contour and colour fields; aurora and film).
@@ -224,3 +248,4 @@ The story is the promise made literal: pressing Enter releases the idea, and the
 15. Business pages can be just as crafted: the product as a guide object, with exact, qualified figures arranged around it.
 16. Voice is a detail layer too: the funniest one puts a line in the brand's voice at every seam, and its devices (stickers, a drawn route, a reading fill) are cheap and repeatable.
 17. Restraint can be the premium choice: the best studio site is one face, black, white and one meaningful accent, letting the work be the colour.
+18. A whole page can be one allegory: the name becomes an image, and each claim becomes a labour in that image's world, played as a film under a quiet typographic frame.

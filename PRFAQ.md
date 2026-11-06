@@ -17,7 +17,7 @@
 - **Craft.** It designs the details people remember, such as scroll-driven moments, a cursor and hover gesture from the subject's own world, and signature transitions, and then measures every line of text against the real pixels behind it at every width.
 - **Presentation.** It puts the work on devices and in the world, and makes film to show it moving.
 
-Behind its judgement sit 235 production design systems, 96 ranked design sources and 11 exemplar sites taken apart in a real browser. Each designer can add a personal library of the sites and images they admire, and every project starts from that library before anything else.
+Behind its judgement sit 235 production design systems, 97 ranked design sources and 12 exemplar sites taken apart in a real browser. Each designer can add a personal library of the sites and images they admire, and every project starts from that library before anything else.
 
 "The best designers are always dissatisfied," said Jamie Acutt, who built Fastidious. "They know the work could be better, and they keep going until it is. I spent two years teaching Claude to collect taste the way a designer does: to study references closely, take them apart and keep the best parts with the reasons they work. Fastidious is the result. A strong harness gets you a great result on a good day; a system of context is what makes it consistent. It holds your work to the highest standard on purpose, the one you would hold it to on your best day, because a first impression is the one shot the work gets. And it shows its reasoning so you can argue with it."
 

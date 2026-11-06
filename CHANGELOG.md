@@ -2,6 +2,13 @@
 
 All notable changes to this repository. Versions follow [Semantic Versioning](https://semver.org/).
 
+## Fastidious 1.1.1: 2026-11-06
+
+### Added
+
+- A twelfth exemplar, pear.no, studied in a real browser: a whole page as one allegory drawn from the company's name, played as a scroll-scrubbed painted film through a single WebGL compositor under a fixed typographic frame. Its annotation in `detail-craft/references/exemplars.md` covers what to borrow and what to reject, and it is registered as `L-101` in `reference-curator`.
+- An eighteenth shared lesson in the exemplars: a page can be one allegory, with each claim staged as a labour in that world.
+
 ## Fastidious 1.1.0: 2026-11-04
 
 ### Added
