@@ -148,6 +148,9 @@ function analyse(k1, k2, b, list) {
 **Degradation and access**
 - A WebGL/WebGPU scene that fails to initialise falls back to a static image or poster frame rather than a blank section.
 - Keyboard navigation still reaches every piece of content despite any pinning or scroll-hijacking; a visitor who tabs through the page is not trapped in a pinned section.
+- Native scrolling is kept. No `preventDefault` on `wheel`, `touchmove` or scrolling keys (arrows, Page Up and Down, space, Home, End) to drive a custom scroll; smoothing that follows the native scroll position is acceptable. Search the shipped script for these listeners.
+- The DOM order matches the visual reading order, so screen readers and search read the page top to bottom. Check that the first heading in the DOM is the hero's, and that sections are not assembled in reverse and positioned over a canvas.
+- Every chapter told by a canvas, WebGL scene or frame sequence has a still poster and its copy in the HTML, so the story survives without WebGL or JavaScript. Every form field has a visible `<label>`.
 - Dynamic content introduced by `reveal` beats doesn't silently break for screen reader users; check that content is present in the DOM and announced appropriately, not only visually revealed.
 
 ## Output

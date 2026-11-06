@@ -52,6 +52,8 @@ Tag every beat with exactly one intent, using this fixed vocabulary (do not inve
 - `reveal` — introduce content progressively, without implying causality between elements
 - `rest` — give the visitor a breathing beat after a dense one
 
+When the idea is best shown as an allegory, write each beat's job as an act in one world ("a gardener grafts a cutting", "labourers raise the gold"), one claim per act, with an object that changes state across the beats and a close that answers the opening. `world-bible` turns those acts into scene cards.
+
 Deliberately include `rest` beats. A build with no rest beats is a common failure mode, not a sign of ambition.
 
 ## Output

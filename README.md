@@ -29,7 +29,7 @@ Most AI design tools are strong at one thing, usually the build. Fastidious cove
 | Discipline | What it settles | Skills | Grounded in |
 | --- | --- | --- | --- |
 | **Purpose** | Why the work exists, who it is for, and the one idea it defends | `frame-shifter`, `positioning-strategist`, `analogy-scout`, `narrative-architect` | Problem framing (Rittel and Webber, 1973; Schön, 1983; Dorst, 2015) and analogical transfer (Gentner, 1983) |
-| **Identity** | What the work signifies, its personality, and the tokens that hold it | `sign-system-architect`, `brand-system-architect`, `brand-book`, `iconography`, `taste-library`, `reference-curator` | Semiotics (Barthes, 1977; Chandler, 2017; Kress and van Leeuwen, 2021), with 235 production design systems and 97 ranked sources on file |
+| **Identity** | What the work signifies, its personality, the world its pictures live in, the words it speaks, and the tokens that hold it | `sign-system-architect`, `brand-system-architect`, `world-bible`, `copy-director`, `brand-book`, `iconography`, `taste-library`, `reference-curator` | Semiotics (Barthes, 1977; Chandler, 2017; Kress and van Leeuwen, 2021), iconology (Panofsky, 1939) and rhetoric, with 235 production design systems and 97 ranked sources on file |
 | **Craft** | The dozens of small loops that move a product from good to great | `detail-craft`, `interaction-minimum-designer`, `component-librarian`, `motion-choreographer`, `render-engineer`, `asset-director`, `blender-build`, then `mobile-auditor`, `scroll-verifier` and `accessibility-performance-auditor` | Exemplar sites taken apart in a real browser, and [WCAG 2.2](https://www.w3.org/TR/WCAG22/) measured against rendered pixels |
 | **Presentation** | Showing the work as it will live: in place, in motion, in public | `supermock`, `showreel-director`, and the separate `fastidious-motion` plugin | Frame-exact capture, an independent critic for every film, and a [WCAG 2.3.1](https://www.w3.org/WAI/WCAG22/Understanding/three-flashes-or-below-threshold.html) flash screen |
 
@@ -45,6 +45,8 @@ Every phase opens wide and then narrows, and you choose. Options are scored agai
 - **Every page gets checked in a real browser.** Pages are measured at phone, tablet and desktop widths, and every line of text is tested against the pixels actually behind it.
 - **Every site starts with its own details.** Cursor, scrollbar and hover gesture ship in version 1, drawn from the subject's world.
 - **Every detail comes with its reason.** The rationale covers six registers: personality, persuasion, routes dropped, proof, inclusion, and craft and cost.
+- **Every line of copy earns its place.** Terms stated early, who it is not for, objections answered in the order a sceptic raises them, every claim tied to its evidence, and a lint that fails the cliches.
+- **Every picture belongs to one world.** A bible fixes the medium, light, palette and cast before anything is generated, and a series critic judges the set as one story.
 - **Every decision gets written down.** A numbered log records what was chosen, what was given up and what would reopen it.
 - **Every piece of work gets presented.** Mock-ups in place, animated display ads and a film, so the work is judged as people will meet it.
 
@@ -121,6 +123,8 @@ Alongside the work, a full run leaves the reasoning in the project:
 | `POSITIONING.md` | One specific person, their pain and a promise a competitor could not copy |
 | `SIGN-SYSTEM.md` | What the work should signify, and the personality behind it |
 | `BRAND-SYSTEM.md` | Tokens for colour, type, spacing and motion, plus voice |
+| `COPY-DECK.md` | Every line of copy by key, with its job, its device and the evidence behind it |
+| `WORLD-BIBLE.md` | The one pictorial world the imagery lives in, its scenes and anchor frames, when the work needs a series of pictures |
 | `REFERENCE-BOARD.md` | Annotated references, each stating what was borrowed and what was rejected |
 | `DETAIL-PLAN.md` | Signature moments, cursor, scrollbar, hover, budgets and fallbacks |
 | `DESIGN-RATIONALE.md` | The numbered decision log |
@@ -132,13 +136,13 @@ Alongside the work, a full run leaves the reasoning in the project:
 
 This repository is a Claude Code plugin marketplace with two plugins.
 
-**`plugins/fastidious`**: 27 skills.
+**`plugins/fastidious`**: 29 skills.
 
 | Group | Skills |
 | --- | --- |
 | Spine | `fastidious`, `studio-conductor`, `build-sequencer`, `option-ledger`, `model-switcher` |
 | Purpose | `frame-shifter`, `positioning-strategist`, `analogy-scout`, `narrative-architect` |
-| Identity | `sign-system-architect`, `brand-system-architect`, `brand-book`, `iconography`, `taste-library`, `reference-curator` |
+| Identity | `sign-system-architect`, `brand-system-architect`, `world-bible`, `copy-director`, `brand-book`, `iconography`, `taste-library`, `reference-curator` |
 | Craft | `detail-craft`, `interaction-minimum-designer`, `component-librarian`, `motion-choreographer`, `render-engineer`, `asset-director`, `blender-build` |
 | Checks | `mobile-auditor`, `scroll-verifier`, `accessibility-performance-auditor` |
 | Presentation | `supermock`, `showreel-director` |
@@ -195,6 +199,7 @@ The skills carry their full reading lists. These are the works cited above.
 - Gentner, D. (1983) ['Structure-mapping: a theoretical framework for analogy'](https://doi.org/10.1207/s15516709cog0702_3), *Cognitive Science*, 7(2), pp. 155 to 170.
 - Kress, G. and van Leeuwen, T. (2021) [*Reading Images: The Grammar of Visual Design*](https://www.routledge.com/Reading-Images-The-Grammar-of-Visual-Design/Kress-vanLeeuwen/p/book/9780415672573). 3rd edn. London: Routledge.
 - MacLean, A., Young, R. M., Bellotti, V. M. E. and Moran, T. P. (1991) ['Questions, options, and criteria: elements of design space analysis'](https://dblp.org/rec/journals/hhci/MacLeanYBM91.html), *Human-Computer Interaction*, 6(3 and 4), pp. 201 to 250.
+- Panofsky, E. (1939) *Studies in Iconology: Humanistic Themes in the Art of the Renaissance*. New York: Oxford University Press.
 - Pugh, S. (1991) *Total Design: Integrated Methods for Successful Product Engineering*. Wokingham: Addison-Wesley.
 - Rittel, H. W. J. and Webber, M. M. (1973) ['Dilemmas in a general theory of planning'](https://doi.org/10.1007/BF01405730), *Policy Sciences*, 4(2), pp. 155 to 169.
 - Schön, D. A. (1983) *The Reflective Practitioner: How Professionals Think in Action*. New York: Basic Books.

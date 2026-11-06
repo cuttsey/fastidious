@@ -6,7 +6,7 @@
 
 *Free, open-source design skills that give Claude Code a system of context: they question the brief, decide what the work should mean, start from your own references, check every pixel and present the work, so a single brief becomes a site a designer would put their name to, consistently.*
 
-**London, November 2026.** Fastidious, released today under the MIT licence, is a set of 27 design skills for Claude Code, working alongside 19 more by leading practitioners. It takes one brief from a designer and runs the whole studio around it: framing the problem, deciding what the work should mean, building the brand from that meaning, designing the details people remember, checking the result in a real browser, and presenting it in place, in motion and on film. It asks the designer at every fork, and writes down why every choice was made.
+**London, November 2026.** Fastidious, released today under the MIT licence, is a set of 29 design skills for Claude Code, working alongside 19 more by leading practitioners. It takes one brief from a designer and runs the whole studio around it: framing the problem, deciding what the work should mean, building the brand from that meaning, designing the details people remember, checking the result in a real browser, and presenting it in place, in motion and on film. It asks the designer at every fork, and writes down why every choice was made.
 
 **The problem.** AI has made a first draft almost free, and most first drafts now look the same: a gradient, a headline that would fit any business, three feature cards and a button. Designers know a first impression is the one shot a site gets, and that the difference between good and great lives in purpose, meaning and dozens of small decisions. General-purpose AI tools are built to get to a draft quickly, so they skip exactly the work that makes a site distinctive and defensible. Designers can already build a strong harness around them, with good prompts, skills and tools. What a harness cannot supply on its own is context: what the work is for, what it should mean, whose taste it follows and why each decision was made. Without that, quality depends on the day.
 
@@ -52,7 +52,7 @@ Behind its judgement sit 235 production design systems, 97 ranked design sources
 ## Frequently asked questions
 
 **What exactly do I install?**
-Two plugins from one marketplace. `fastidious` holds 27 skills; on first run it offers to install 19 skills by other authors (Impeccable, Taste, Emil Kowalski's skills, GreenSock's GSAP skills and Anatomy) at fixed versions, without ever overwriting a skill you already have. `fastidious-motion` is optional and adds generated stills and film through image and video model APIs.
+Two plugins from one marketplace. `fastidious` holds 29 skills; on first run it offers to install 19 skills by other authors (Impeccable, Taste, Emil Kowalski's skills, GreenSock's GSAP skills and Anatomy) at fixed versions, without ever overwriting a skill you already have. `fastidious-motion` is optional and adds generated stills and film through image and video model APIs.
 
 **What do I need?**
 Claude Code, git, Python 3, Node 22 and Chrome. Blender for 3D objects and ffmpeg for film are optional.

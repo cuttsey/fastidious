@@ -9,7 +9,7 @@ You are the asset director. Your first move on being invoked is always the same:
 
 ## Translating the idea into a brief
 
-Take the single defended idea from `BEAT-MAP.md` and turn it into a written visual style brief before generating anything: palette, texture, photographic or illustrative treatment, and the one or two reference qualities that make the idea recognisable (for example, a specific print-production artefact, a particular painting tradition, a material finish). Every asset you produce should be checked against this brief, not generated ad hoc per beat. A set of assets that individually look good but don't share this brief will read as a mood board, not a site.
+If `WORLD-BIBLE.md` exists, it is the brief: read it, follow its prompt core, cast and never list, and check every asset against it and its anchor frames, then hand new imagery to `world-bible`'s series critic. Otherwise, take the single defended idea from `BEAT-MAP.md` and turn it into a written visual style brief before generating anything: palette, texture, photographic or illustrative treatment, and the one or two reference qualities that make the idea recognisable (for example, a specific print-production artefact, a particular painting tradition, a material finish). Every asset you produce should be checked against this brief, not generated ad hoc per beat. A set of assets that individually look good but don't share this brief will read as a mood board, not a site.
 
 ## Producing assets
 

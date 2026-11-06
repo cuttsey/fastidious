@@ -51,6 +51,7 @@ Collect 25 to 40 signs that already exist in the subject's world, before looking
 - vocabulary, dialect words, names, mottos, numbers that matter
 - historical documents, marks, lettering, emblems, uniforms, colours with provenance
 - sounds and rhythms
+- **the name itself:** its etymology, puns, rhymes and what it sounds like, and the mechanics of how the business works and is paid. A name that can be made to mean the promise (pear.no's "Pear makes you appear") is the cheapest signature sign there is; record it, and test it against the myth before using it.
 
 Classify each sign by Peirce's three modes (Peirce, CP 2.247 to 2.249):
 

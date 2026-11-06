@@ -29,7 +29,7 @@ Score each option 0 to 3 on every line. 0 means fails, 1 means weak, 2 means goo
 | Composition | The `type_space` is clean; edges and horizon are deliberate | Centred hero pose; clutter where the super goes |
 | Artefacts | None: no extra fingers, warped geometry, text-like glyphs or melted edges | Pseudo-lettering, doubled objects |
 | Motion (clips) | One move, eased, physically plausible, ends where the prompt said | Morphing, flicker, drift, a second camera move |
-| Continuity (clips, cuts) | Matches neighbouring shots in light, lens and material | Each shot from a different film |
+| Continuity (clips, cuts) | Matches neighbouring shots, and the anchor frames and cast in `WORLD-BIBLE.md` when there is one, in light, lens and material | Each shot from a different film |
 
 ## Comparing providers
 

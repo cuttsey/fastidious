@@ -127,6 +127,15 @@ for dirpath, dirnames, files in os.walk(ROOT):
         if RETIRED.search(text):
             fail(f"{rel}: uses a retired name")
 
+# The copy lint on the repository's own front pages: Fastidious holds its own words to the bar it sets
+sys.path.insert(0, os.path.join(plugins["fastidious"], "skills", "copy-director", "scripts"))
+import copy_lint  # noqa: E402
+_fw, _ww = copy_lint.cliches()
+for doc in ("README.md", "PRFAQ.md"):
+    items = copy_lint.visible_text(read(doc), ".md")
+    for key, rule, text in copy_lint.lint(items, _fw, _ww)[0]:
+        fail(f"{doc} {key}: {rule}")
+
 # House style in the repository's own documents
 for doc in ("README.md", "PRFAQ.md", "NOTICE.md", "CHANGELOG.md", "CONTRIBUTING.md", "SECURITY.md",
             os.path.join("plugins", "fastidious", "skills", "fastidious", "CREW.md")):

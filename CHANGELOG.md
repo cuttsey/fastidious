@@ -2,6 +2,20 @@
 
 All notable changes to this repository. Versions follow [Semantic Versioning](https://semver.org/).
 
+## Fastidious 1.2.0: 2026-11-06
+
+### Added
+
+- `copy-director`: writes and edits every line of a site, film or brand book. It turns the positioning, beats and voice into a spine line, three-beat claims, terms stated early, disclosure asides, a fit statement that names who the work is not for, an FAQ ordered as a sceptic's objections and all the microcopy, with every factual line tied to its evidence. It writes `COPY-DECK.md`, and `scripts/copy_lint.py` fails copy on em dashes, the "not X, it's Y" shape and a shared cliche list.
+- `world-bible`: builds one pictorial world for the imagery (medium, palette, light, lens, materials, cast, props and overlaid devices), stages the idea as a sequence of acts in that world, locks three anchor frames, and runs a series critic over the whole set. It writes `WORLD-BIBLE.md` and `SERIES-REVIEW.md`, and `scripts/series_check.py` measures palette share, key, contrast, chroma, warmth and light side across a series and draws a contact sheet.
+- Both were prompted by the study of pear.no, the twelfth exemplar.
+
+### Changed
+
+- `studio-conductor` runs `world-bible` and `copy-director` in phase 4, and gives each the lead in its precedence table.
+- `sign-system-architect` mines the name itself for signs; `narrative-architect` can write beats as acts in an allegory; `asset-director`, `motion-director` and `frame-critic` follow `WORLD-BIBLE.md` when there is one.
+- `accessibility-performance-auditor` adds three checks: native scrolling kept, DOM order matching visual order, and a still poster and copy in the HTML for every chapter told on a canvas, with labelled form fields.
+
 ## Fastidious 1.1.1: 2026-11-06
 
 ### Added
