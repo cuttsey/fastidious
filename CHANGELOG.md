@@ -2,6 +2,18 @@
 
 All notable changes to this repository. Versions follow [Semantic Versioning](https://semver.org/).
 
+## Fastidious 1.4.0: 2026-11-06
+
+### Added
+
+- `type-director`: chooses typography from meaning, then by looking. A curated catalogue of about eighty faces on Google Fonts and Fontshare with genre, lineage, voice, features, pairings, cautions and an overuse rating, plus commercial suggestions; `type_lookup.py` searches it and confirms any face live against Google Fonts metadata (or the google-font-metadata package offline); `specimen.py` downloads the real font files from Fontsource and sets three pairings with the project's own copy at desktop and phone sizes on its own colours.
+- `colour-director`: sources palettes instead of picking colours. `palette.py` extracts the colours of the subject's world from photographs and frames in OKLab, searches the 348 combinations of Sanzo Wada's *A Dictionary of Color Combinations* for sets near chosen anchors, builds OKLCH tonal ramps, and checks contrast, value range, chroma and the palettes every template uses (cream with terracotta, near-black with an acid pop, purple-to-blue, teal and orange, pure greys, one muddy temperature).
+- Hollow Lane is redesigned with both: the Fell types with Source Serif 4, and a palette after Wada's combination 243 (raw sienna, ivory buff, olive green and slate), which gives the orchard's warm, low-chroma world a cool counterweight. The old palette fails the new check as one muddy temperature.
+
+### Changed
+
+- `brand-system-architect` runs `colour-director` and `type-director` before setting colour and type tokens, and builds ramps in OKLCH; `studio-conductor` gives each the lead on its choice.
+
 ## Fastidious 1.3.1: 2026-11-06
 
 ### Fixed

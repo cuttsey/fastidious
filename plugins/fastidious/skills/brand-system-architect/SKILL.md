@@ -23,8 +23,10 @@ Also read `FRAME.md`, `POSITIONING.md` and `TRANSFER-BRIEF.md` if they exist. Ne
 
 ## Stage B: Colour system
 
+Run `colour-director` first when it is installed. It sources the palette from the subject's world and historic combinations, builds the ramps and checks contrast and clichés; this stage then turns its chosen palette into tokens and semantic pairs.
+
 - Define primary, secondary, and one accent colour, plus semantic colours for success, warning, error, and info. Each semantic colour needs a paired "on-colour" (the text colour used against it) defined at the same time, not left for a component to guess later.
-- Generate a full tint and shade ramp for each core colour (a 50 to 900 scale is a reasonable convention) using a stated, reproducible method, typically stepped lightness in HSL, rather than eyeballing intermediate values. Record the method so the ramp can be regenerated or extended consistently.
+- Generate a full tint and shade ramp for each core colour (a 50 to 900 scale is a reasonable convention) using a stated, reproducible method, preferably even lightness steps in OKLCH (`colour-director/scripts/palette.py scale`), rather than eyeballing intermediate values. Record the method so the ramp can be regenerated or extended consistently.
 - Check contrast for every text and background pairing that will actually appear in the build, not just the default pairing: body text needs at least 4.5:1 against its background; large text (roughly 24px, or 19px bold, and above) and UI components need at least 3:1. Record any pairing that fails rather than assuming a pass; a failing pairing gets fixed here, not worked around case by case downstream.
 - Count decorations as backgrounds. Any stripe, band, rule, gradient or image that text can sit over is part of that text's pairing, at every viewport and in every theme. A decoration that text can cross never takes that text's colour: derive the decoration's colour from the text colour (for example, a `--line` token that turns dark when the on-colour is white and white when it is dark) rather than hard-coding it. Rule-based contrast checkers miss this case, so `mobile-auditor` and `scroll-verifier` measure it in pixels.
 - If dark mode is in scope, decide that explicitly and say so; do not treat it as an automatic inversion. Semantic colours in particular often need distinct values in dark mode to preserve both their perceived meaning and their contrast ratio, since a saturated error red that reads clearly on white can lose legibility or feel alarmingly loud on near-black.
@@ -32,6 +34,8 @@ Also read `FRAME.md`, `POSITIONING.md` and `TRANSFER-BRIEF.md` if they exist. Ne
 Before choosing values, read `detail-craft/references/brand-lessons.md` in full: a brand needs a commitment taken past good sense, not just correct tokens. Then read `detail-craft/references/taste-lessons.md` (lessons 1–3): build the palette as one temperature with a dark tinted toward it, assign colour roles that can rotate between surfaces, and give each typeface one job (one face carries the personality; any accent face is used for a single word per composition).
 
 ## Stage C: Typography system
+
+Run `type-director` first when it is installed. It looks up faces whose history fits the sign system, confirms them against live Google Fonts data and renders specimens with the real copy; this stage then turns the chosen pairing into tokens.
 
 - Define two typeface roles: a display or heading face and a body or text face. Add a monospace third only if the site will display code, data, or tabular figures where alignment matters.
 - Selection criteria for the body face: legible at small sizes (open counters, distinct letterforms at 14 to 16px), and cleared for commercial web embedding, checked before commitment. Many faces marked free are free for personal use only; verify the licence covers the actual use case before it goes further into the build.

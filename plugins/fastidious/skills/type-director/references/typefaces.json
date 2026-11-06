@@ -1,0 +1,1390 @@
+{
+ "about": "A curated catalogue for type-director. overuse: 0 rare, 1 seen, 2 common, 3 the default of templates and AI-built pages. Facts were checked against Google Fonts metadata where the face is on Google Fonts; verify availability and features live before use.",
+ "updated": "2026-11-06",
+ "faces": [
+  {
+   "family": "EB Garamond",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "serif",
+   "genre": "Old style (Garalde)",
+   "lineage": "Claude Garamond, from the Egenolff-Berner specimen of 1592",
+   "voice": "literary, classical, calm",
+   "features": [
+    "small caps",
+    "old-style figures",
+    "ligatures"
+   ],
+   "good_for": "long reading, books, heritage",
+   "pair_with": "Cabin, Source Sans 3, Alegreya Sans",
+   "cautions": "Light colour on screen below 18 px; set body at 19 px or more",
+   "overuse": 1
+  },
+  {
+   "family": "Cormorant Garamond",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "serif",
+   "genre": "Old style display",
+   "lineage": "Garamond, drawn for display sizes",
+   "voice": "elegant, fashion, fragile",
+   "features": [
+    "very high contrast",
+    "many weights"
+   ],
+   "good_for": "large headlines only",
+   "pair_with": "a sturdy grotesque",
+   "cautions": "Breaks up below 24 px; one of the most used AI and template serifs",
+   "overuse": 3
+  },
+  {
+   "family": "IM Fell English",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "serif",
+   "genre": "Seventeenth-century English",
+   "lineage": "The Fell types, given to Oxford by Bishop John Fell, digitised by Igino Marini",
+   "voice": "rustic, historic, hand-printed, English",
+   "features": [
+    "true irregular texture",
+    "italic",
+    "SC companion (IM Fell English SC)"
+   ],
+   "good_for": "display, short passages, heritage, craft, rural English subjects",
+   "pair_with": "Source Serif 4, Crimson Pro, Cabin",
+   "cautions": "Uneven by design; one weight; not for long text or small UI",
+   "overuse": 0
+  },
+  {
+   "family": "IM Fell Double Pica",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "serif",
+   "genre": "Seventeenth-century English",
+   "lineage": "Fell types, Double Pica size",
+   "voice": "rustic, warm, bookish",
+   "features": [
+    "italic",
+    "SC companion"
+   ],
+   "good_for": "display and pull quotes",
+   "pair_with": "Source Serif 4, Alegreya Sans",
+   "cautions": "One weight; irregular",
+   "overuse": 0
+  },
+  {
+   "family": "IM Fell French Canon",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "serif",
+   "genre": "Seventeenth-century French in England",
+   "lineage": "Fell types, French Canon size",
+   "voice": "grand, historic",
+   "features": [
+    "italic",
+    "SC companion"
+   ],
+   "good_for": "large display",
+   "pair_with": "a quiet text serif",
+   "cautions": "Display only",
+   "overuse": 0
+  },
+  {
+   "family": "Libre Caslon Text",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "serif",
+   "genre": "Old style, English",
+   "lineage": "William Caslon, 1720s",
+   "voice": "English, trustworthy, plain-spoken",
+   "features": [
+    "italic",
+    "bold"
+   ],
+   "good_for": "body text with heritage",
+   "pair_with": "Libre Caslon Display, Source Sans 3",
+   "cautions": "Wide; set a little smaller than other text faces",
+   "overuse": 1
+  },
+  {
+   "family": "Libre Caslon Display",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "serif",
+   "genre": "Old style display",
+   "lineage": "Caslon, for large sizes",
+   "voice": "English, refined",
+   "features": [
+    "high contrast"
+   ],
+   "good_for": "headlines",
+   "pair_with": "Libre Caslon Text",
+   "cautions": "Display only",
+   "overuse": 0
+  },
+  {
+   "family": "Libre Baskerville",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "serif",
+   "genre": "Transitional",
+   "lineage": "John Baskerville, 1750s, optimised for screens",
+   "voice": "rational, academic",
+   "features": [
+    "large x-height"
+   ],
+   "good_for": "body on screen",
+   "pair_with": "Source Sans 3",
+   "cautions": "Common in templates",
+   "overuse": 2
+  },
+  {
+   "family": "Crimson Pro",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "serif",
+   "genre": "Old style (Garalde)",
+   "lineage": "Garamond-inspired, by Jacques Le Bailly",
+   "voice": "bookish, warm",
+   "features": [
+    "variable weight",
+    "italic"
+   ],
+   "good_for": "long text",
+   "pair_with": "Work Sans, Alegreya Sans",
+   "cautions": "",
+   "overuse": 1
+  },
+  {
+   "family": "Source Serif 4",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "serif",
+   "genre": "Transitional",
+   "lineage": "Pierre-Simon Fournier, by Frank Griesshammer for Adobe",
+   "voice": "clear, editorial, neutral-warm",
+   "features": [
+    "optical sizes",
+    "variable",
+    "small caps via smcp",
+    "old-style figures"
+   ],
+   "good_for": "body and headings in one family",
+   "pair_with": "Source Sans 3, IBM Plex Mono",
+   "cautions": "Neutral: needs a display partner for character",
+   "overuse": 1
+  },
+  {
+   "family": "Newsreader",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "serif",
+   "genre": "Transitional editorial",
+   "lineage": "Production Type, for news reading",
+   "voice": "editorial, contemporary, calm",
+   "features": [
+    "optical sizes 6 to 72",
+    "variable"
+   ],
+   "good_for": "editorial pages, long reads",
+   "pair_with": "a grotesque for labels",
+   "cautions": "Pleasant but common in 2025 to 2026 builds",
+   "overuse": 2
+  },
+  {
+   "family": "Spectral",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "serif",
+   "genre": "Transitional, screen-first",
+   "lineage": "Production Type",
+   "voice": "literary, cool",
+   "features": [
+    "seven weights"
+   ],
+   "good_for": "long reading on screen",
+   "pair_with": "Karla, Work Sans",
+   "cautions": "",
+   "overuse": 1
+  },
+  {
+   "family": "Literata",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "serif",
+   "genre": "Contemporary book serif",
+   "lineage": "TypeTogether, for Google Play Books",
+   "voice": "sturdy, reading",
+   "features": [
+    "optical sizes",
+    "variable"
+   ],
+   "good_for": "books, long reading",
+   "pair_with": "Source Sans 3",
+   "cautions": "",
+   "overuse": 1
+  },
+  {
+   "family": "Fraunces",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "serif",
+   "genre": "Soft old style",
+   "lineage": "Undercase Type; Windsor and Cooper-style softness",
+   "voice": "friendly, retro, wonky",
+   "features": [
+    "optical size, SOFT and WONK axes"
+   ],
+   "good_for": "playful brands",
+   "pair_with": "a plain grotesque",
+   "cautions": "Very heavily used since 2021; now reads as a template choice",
+   "overuse": 3
+  },
+  {
+   "family": "Playfair Display",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "serif",
+   "genre": "Didone-ish display",
+   "lineage": "Claus Eggers Sorensen",
+   "voice": "luxury, fashion",
+   "features": [
+    "high contrast"
+   ],
+   "good_for": "headlines",
+   "pair_with": "a geometric sans",
+   "cautions": "One of the most used template serifs; avoid unless asked",
+   "overuse": 3
+  },
+  {
+   "family": "Instrument Serif",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "serif",
+   "genre": "Condensed display serif",
+   "lineage": "Instrument",
+   "voice": "chic, editorial",
+   "features": [
+    "italic"
+   ],
+   "good_for": "large headlines",
+   "pair_with": "Instrument Sans",
+   "cautions": "Ubiquitous on 2024 to 2026 startup and AI sites",
+   "overuse": 3
+  },
+  {
+   "family": "DM Serif Display",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "serif",
+   "genre": "Transitional display",
+   "lineage": "Colophon Foundry for Google",
+   "voice": "editorial",
+   "features": [
+    "high contrast"
+   ],
+   "good_for": "headlines",
+   "pair_with": "DM Sans",
+   "cautions": "Template default",
+   "overuse": 2
+  },
+  {
+   "family": "Young Serif",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "serif",
+   "genre": "Heavy old style",
+   "lineage": "Bastien Sozeau",
+   "voice": "warm, confident, old-fashioned",
+   "features": [
+    "one heavy weight"
+   ],
+   "good_for": "headlines, packaging",
+   "pair_with": "a light grotesque",
+   "cautions": "One weight",
+   "overuse": 1
+  },
+  {
+   "family": "Gloock",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "serif",
+   "genre": "High-contrast serif",
+   "lineage": "Duarte Pinto",
+   "voice": "dramatic, fashion",
+   "features": [
+    "one weight"
+   ],
+   "good_for": "display",
+   "pair_with": "a quiet sans",
+   "cautions": "One weight",
+   "overuse": 1
+  },
+  {
+   "family": "Bodoni Moda",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "serif",
+   "genre": "Didone",
+   "lineage": "Bodoni, with optical sizes, by Indestructible Type",
+   "voice": "luxury, precise",
+   "features": [
+    "optical sizes",
+    "variable"
+   ],
+   "good_for": "fashion, perfume, formal",
+   "pair_with": "a grotesque",
+   "cautions": "Hairlines vanish when small",
+   "overuse": 1
+  },
+  {
+   "family": "Alegreya",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "serif",
+   "genre": "Calligraphic old style",
+   "lineage": "Juan Pablo del Peral",
+   "voice": "literary, dynamic, humane",
+   "features": [
+    "small caps family",
+    "companion sans",
+    "old-style figures"
+   ],
+   "good_for": "literature, culture, long text",
+   "pair_with": "Alegreya Sans, Alegreya SC",
+   "cautions": "",
+   "overuse": 1
+  },
+  {
+   "family": "Cardo",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "serif",
+   "genre": "Old style, scholarly",
+   "lineage": "Bembo-like, by David Perry, for classicists",
+   "voice": "scholarly, classical",
+   "features": [
+    "wide Unicode incl. Greek",
+    "small caps"
+   ],
+   "good_for": "scholarship, history, multilingual text",
+   "pair_with": "Alegreya Sans",
+   "cautions": "Three styles only",
+   "overuse": 0
+  },
+  {
+   "family": "Sorts Mill Goudy",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "serif",
+   "genre": "Old style (Goudy)",
+   "lineage": "Frederic Goudy's Goudy Old Style, by Barry Schwartz",
+   "voice": "warm, American arts-and-crafts",
+   "features": [
+    "italic"
+   ],
+   "good_for": "craft, books",
+   "pair_with": "Cabin",
+   "cautions": "Two styles",
+   "overuse": 0
+  },
+  {
+   "family": "Old Standard TT",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "serif",
+   "genre": "Modern (nineteenth century)",
+   "lineage": "Late nineteenth-century Modern faces",
+   "voice": "Victorian, scientific, almanac",
+   "features": [
+    "italic",
+    "bold"
+   ],
+   "good_for": "heritage, science, almanacs",
+   "pair_with": "a grotesque",
+   "cautions": "",
+   "overuse": 0
+  },
+  {
+   "family": "Castoro",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "serif",
+   "genre": "Dutch old style",
+   "lineage": "Tiro Typeworks",
+   "voice": "sturdy, warm",
+   "features": [
+    "italic"
+   ],
+   "good_for": "body text",
+   "pair_with": "Source Sans 3",
+   "cautions": "Regular and italic only",
+   "overuse": 0
+  },
+  {
+   "family": "Piazzolla",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "serif",
+   "genre": "Contemporary serif",
+   "lineage": "Huerta Tipografica",
+   "voice": "compact, sharp",
+   "features": [
+    "optical sizes",
+    "variable"
+   ],
+   "good_for": "dense editorial text",
+   "pair_with": "a grotesque",
+   "cautions": "",
+   "overuse": 0
+  },
+  {
+   "family": "Besley",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "serif",
+   "genre": "Clarendon",
+   "lineage": "Robert Besley's Clarendon of 1845, by Indestructible Type",
+   "voice": "Victorian, robust, poster",
+   "features": [
+    "variable weight"
+   ],
+   "good_for": "posters, labels, headlines",
+   "pair_with": "a grotesque",
+   "cautions": "",
+   "overuse": 0
+  },
+  {
+   "family": "Zilla Slab",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "serif",
+   "genre": "Slab",
+   "lineage": "Typotheque for Mozilla",
+   "voice": "friendly, technical",
+   "features": [
+    "five weights"
+   ],
+   "good_for": "UI headings",
+   "pair_with": "Zilla Slab Highlight",
+   "cautions": "",
+   "overuse": 1
+  },
+  {
+   "family": "Merriweather",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "serif",
+   "genre": "Screen serif",
+   "lineage": "Sorkin Type",
+   "voice": "sturdy, generic",
+   "features": [
+    "many weights"
+   ],
+   "good_for": "body on small screens",
+   "pair_with": "Merriweather Sans",
+   "cautions": "Template default",
+   "overuse": 2
+  },
+  {
+   "family": "Lora",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "serif",
+   "genre": "Contemporary calligraphic",
+   "lineage": "Cyreal",
+   "voice": "soft, generic",
+   "features": [
+    "variable"
+   ],
+   "good_for": "body",
+   "pair_with": "a sans",
+   "cautions": "Template default",
+   "overuse": 2
+  },
+  {
+   "family": "Inter",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "sans-serif",
+   "genre": "Neo-grotesque UI",
+   "lineage": "Rasmus Andersson",
+   "voice": "neutral, product",
+   "features": [
+    "variable",
+    "tabular figures",
+    "optical size"
+   ],
+   "good_for": "UI, dashboards",
+   "pair_with": "JetBrains Mono",
+   "cautions": "The default of AI-built pages; choose it only for product UI",
+   "overuse": 3
+  },
+  {
+   "family": "Space Grotesk",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "sans-serif",
+   "genre": "Grotesque with quirks",
+   "lineage": "Florian Karsten, from Space Mono",
+   "voice": "tech, startup",
+   "features": [
+    "variable"
+   ],
+   "good_for": "tech display",
+   "pair_with": "Space Mono",
+   "cautions": "Heavily overused on AI and startup pages",
+   "overuse": 3
+  },
+  {
+   "family": "Montserrat",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "sans-serif",
+   "genre": "Geometric",
+   "lineage": "Julieta Ulanovsky, Buenos Aires signage",
+   "voice": "generic geometric",
+   "features": [
+    "many weights"
+   ],
+   "good_for": "",
+   "pair_with": "",
+   "cautions": "Template default",
+   "overuse": 3
+  },
+  {
+   "family": "Poppins",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "sans-serif",
+   "genre": "Geometric",
+   "lineage": "Indian Type Foundry",
+   "voice": "generic friendly",
+   "features": [
+    "many weights"
+   ],
+   "good_for": "",
+   "pair_with": "",
+   "cautions": "Template default",
+   "overuse": 3
+  },
+  {
+   "family": "DM Sans",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "sans-serif",
+   "genre": "Low-contrast geometric",
+   "lineage": "Colophon for Google",
+   "voice": "generic product",
+   "features": [
+    "variable"
+   ],
+   "good_for": "",
+   "pair_with": "",
+   "cautions": "Template default",
+   "overuse": 3
+  },
+  {
+   "family": "Plus Jakarta Sans",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "sans-serif",
+   "genre": "Geometric grotesque",
+   "lineage": "Tokotype",
+   "voice": "generic startup",
+   "features": [
+    "variable"
+   ],
+   "good_for": "",
+   "pair_with": "",
+   "cautions": "Template default",
+   "overuse": 3
+  },
+  {
+   "family": "Manrope",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "sans-serif",
+   "genre": "Semi-condensed grotesque",
+   "lineage": "Mikhail Sharanda",
+   "voice": "tech",
+   "features": [
+    "variable"
+   ],
+   "good_for": "UI",
+   "pair_with": "",
+   "cautions": "Common",
+   "overuse": 2
+  },
+  {
+   "family": "Work Sans",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "sans-serif",
+   "genre": "Grotesque",
+   "lineage": "Wei Huang, early grotesques",
+   "voice": "plain, slightly quirky",
+   "features": [
+    "variable"
+   ],
+   "good_for": "UI and text",
+   "pair_with": "Spectral",
+   "cautions": "Common",
+   "overuse": 2
+  },
+  {
+   "family": "IBM Plex Sans",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "sans-serif",
+   "genre": "Grotesque",
+   "lineage": "Mike Abbink with Bold Monday for IBM",
+   "voice": "engineered, corporate-humane",
+   "features": [
+    "superfamily with Serif and Mono",
+    "tabular figures"
+   ],
+   "good_for": "technical, data",
+   "pair_with": "IBM Plex Mono, IBM Plex Serif",
+   "cautions": "Recognisably IBM",
+   "overuse": 2
+  },
+  {
+   "family": "Source Sans 3",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "sans-serif",
+   "genre": "Humanist sans",
+   "lineage": "Paul D. Hunt for Adobe, after Franklin and News Gothic",
+   "voice": "clear, open, neutral",
+   "features": [
+    "variable",
+    "tabular figures"
+   ],
+   "good_for": "body and UI",
+   "pair_with": "Source Serif 4",
+   "cautions": "",
+   "overuse": 1
+  },
+  {
+   "family": "Public Sans",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "sans-serif",
+   "genre": "Neo-grotesque",
+   "lineage": "US Web Design System",
+   "voice": "civic, plain",
+   "features": [
+    "variable"
+   ],
+   "good_for": "public services, forms",
+   "pair_with": "a serif",
+   "cautions": "",
+   "overuse": 1
+  },
+  {
+   "family": "Atkinson Hyperlegible",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "sans-serif",
+   "genre": "Legibility sans",
+   "lineage": "Braille Institute",
+   "voice": "accessible, plain",
+   "features": [
+    "distinct letterforms"
+   ],
+   "good_for": "low-vision audiences, forms",
+   "pair_with": "a characterful serif",
+   "cautions": "Two weights in the original release",
+   "overuse": 0
+  },
+  {
+   "family": "Hanken Grotesk",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "sans-serif",
+   "genre": "Grotesque",
+   "lineage": "Hanken Design Co.",
+   "voice": "clean, modern",
+   "features": [
+    "variable"
+   ],
+   "good_for": "UI",
+   "pair_with": "a serif",
+   "cautions": "",
+   "overuse": 1
+  },
+  {
+   "family": "Schibsted Grotesk",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "sans-serif",
+   "genre": "Grotesque",
+   "lineage": "Bakken & Baeck for Schibsted",
+   "voice": "news, Scandinavian",
+   "features": [
+    "variable"
+   ],
+   "good_for": "editorial UI",
+   "pair_with": "a serif",
+   "cautions": "",
+   "overuse": 1
+  },
+  {
+   "family": "Familjen Grotesk",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "sans-serif",
+   "genre": "Grotesque with character",
+   "lineage": "Familjen STHLM",
+   "voice": "Nordic, warm-quirky",
+   "features": [
+    "variable"
+   ],
+   "good_for": "branding",
+   "pair_with": "a text serif",
+   "cautions": "",
+   "overuse": 0
+  },
+  {
+   "family": "Bricolage Grotesque",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "sans-serif",
+   "genre": "Expressive grotesque",
+   "lineage": "Mathieu Triay",
+   "voice": "playful, eclectic",
+   "features": [
+    "optical size and width axes"
+   ],
+   "good_for": "expressive display",
+   "pair_with": "a quiet text face",
+   "cautions": "Trendy since 2024",
+   "overuse": 2
+  },
+  {
+   "family": "Archivo",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "sans-serif",
+   "genre": "Grotesque with widths",
+   "lineage": "Omnibus-Type",
+   "voice": "industrial, news",
+   "features": [
+    "width axis 62 to 125",
+    "variable"
+   ],
+   "good_for": "headlines, tables, labels",
+   "pair_with": "a serif",
+   "cautions": "",
+   "overuse": 1
+  },
+  {
+   "family": "Barlow",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "sans-serif",
+   "genre": "Rounded grotesque",
+   "lineage": "Jeremy Tribby, after Californian highway signs",
+   "voice": "civic, road signage",
+   "features": [
+    "Semi Condensed and Condensed families"
+   ],
+   "good_for": "labels, wayfinding, data",
+   "pair_with": "a serif",
+   "cautions": "",
+   "overuse": 1
+  },
+  {
+   "family": "Fira Sans",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "sans-serif",
+   "genre": "Humanist sans",
+   "lineage": "Erik Spiekermann and Carrois for Mozilla",
+   "voice": "technical-humane",
+   "features": [
+    "many weights",
+    "Fira Code companion"
+   ],
+   "good_for": "UI, technical text",
+   "pair_with": "Fira Code",
+   "cautions": "",
+   "overuse": 1
+  },
+  {
+   "family": "Cabin",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "sans-serif",
+   "genre": "Humanist sans",
+   "lineage": "Pablo Impallari, after Edward Johnston and Eric Gill",
+   "voice": "English, humane, civic",
+   "features": [
+    "variable weight and width"
+   ],
+   "good_for": "labels and text with an English accent",
+   "pair_with": "IM Fell, EB Garamond, Sorts Mill Goudy",
+   "cautions": "",
+   "overuse": 1
+  },
+  {
+   "family": "Alegreya Sans",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "sans-serif",
+   "genre": "Humanist sans",
+   "lineage": "Juan Pablo del Peral, companion to Alegreya",
+   "voice": "humane, literary",
+   "features": [
+    "small caps family",
+    "old-style figures"
+   ],
+   "good_for": "text and labels beside Alegreya or a Garalde",
+   "pair_with": "Alegreya, EB Garamond",
+   "cautions": "",
+   "overuse": 1
+  },
+  {
+   "family": "Jost",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "sans-serif",
+   "genre": "Geometric",
+   "lineage": "Indestructible Type, after Futura",
+   "voice": "modernist, 1920s",
+   "features": [
+    "variable"
+   ],
+   "good_for": "Bauhaus or modernist subjects",
+   "pair_with": "a Didone",
+   "cautions": "",
+   "overuse": 1
+  },
+  {
+   "family": "Big Shoulders",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "sans-serif",
+   "genre": "Condensed grotesque",
+   "lineage": "Patric King, for Chicago",
+   "voice": "civic, industrial, loud",
+   "features": [
+    "variable",
+    "Stencil and Inline families"
+   ],
+   "good_for": "headlines, wayfinding",
+   "pair_with": "a plain text sans",
+   "cautions": "Display only",
+   "overuse": 0
+  },
+  {
+   "family": "Oswald",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "sans-serif",
+   "genre": "Condensed gothic",
+   "lineage": "Vernon Adams, after Alternate Gothic",
+   "voice": "loud, generic",
+   "features": [
+    "variable"
+   ],
+   "good_for": "",
+   "pair_with": "",
+   "cautions": "Template default",
+   "overuse": 3
+  },
+  {
+   "family": "Bebas Neue",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "display",
+   "genre": "Condensed caps",
+   "lineage": "Dharma Type",
+   "voice": "generic poster",
+   "features": [
+    "caps only"
+   ],
+   "good_for": "",
+   "pair_with": "",
+   "cautions": "Template default",
+   "overuse": 3
+  },
+  {
+   "family": "Syne",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "sans-serif",
+   "genre": "Expressive grotesque",
+   "lineage": "Bonjour Monde",
+   "voice": "art, avant-garde",
+   "features": [
+    "variable"
+   ],
+   "good_for": "art and culture display",
+   "pair_with": "a mono",
+   "cautions": "Trendy",
+   "overuse": 2
+  },
+  {
+   "family": "Unbounded",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "display",
+   "genre": "Wide display",
+   "lineage": "NaN",
+   "voice": "crypto, tech",
+   "features": [
+    "variable"
+   ],
+   "good_for": "display",
+   "pair_with": "",
+   "cautions": "Trendy",
+   "overuse": 2
+  },
+  {
+   "family": "Instrument Sans",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "sans-serif",
+   "genre": "Grotesque",
+   "lineage": "Instrument",
+   "voice": "startup",
+   "features": [
+    "width axis"
+   ],
+   "good_for": "UI",
+   "pair_with": "Instrument Serif",
+   "cautions": "Trendy pairing with Instrument Serif",
+   "overuse": 2
+  },
+  {
+   "family": "Geist",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "sans-serif",
+   "genre": "Neo-grotesque",
+   "lineage": "Vercel",
+   "voice": "developer tools",
+   "features": [
+    "variable"
+   ],
+   "good_for": "UI",
+   "pair_with": "Geist Mono",
+   "cautions": "Reads as Vercel and AI tooling",
+   "overuse": 3
+  },
+  {
+   "family": "JetBrains Mono",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "monospace",
+   "genre": "Monospace",
+   "lineage": "JetBrains",
+   "voice": "code",
+   "features": [
+    "ligatures"
+   ],
+   "good_for": "code",
+   "pair_with": "Inter",
+   "cautions": "Common in AI tool pages",
+   "overuse": 2
+  },
+  {
+   "family": "IBM Plex Mono",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "monospace",
+   "genre": "Monospace",
+   "lineage": "IBM",
+   "voice": "engineered",
+   "features": [
+    "italic"
+   ],
+   "good_for": "data and labels",
+   "pair_with": "IBM Plex Sans",
+   "cautions": "",
+   "overuse": 2
+  },
+  {
+   "family": "Space Mono",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "monospace",
+   "genre": "Monospace",
+   "lineage": "Colophon for Google",
+   "voice": "retro tech",
+   "features": [
+    "four styles"
+   ],
+   "good_for": "",
+   "pair_with": "",
+   "cautions": "Overused with Space Grotesk",
+   "overuse": 2
+  },
+  {
+   "family": "DM Mono",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "monospace",
+   "genre": "Monospace",
+   "lineage": "Colophon for Google",
+   "voice": "soft tech",
+   "features": [
+    "three weights"
+   ],
+   "good_for": "labels",
+   "pair_with": "DM Sans",
+   "cautions": "",
+   "overuse": 2
+  },
+  {
+   "family": "Courier Prime",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "monospace",
+   "genre": "Typewriter",
+   "lineage": "Alan Dague-Greene, for screenplays",
+   "voice": "typewritten, documentary",
+   "features": [
+    "four styles"
+   ],
+   "good_for": "documents, scripts, case files",
+   "pair_with": "a serif",
+   "cautions": "",
+   "overuse": 1
+  },
+  {
+   "family": "Fragment Mono",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "monospace",
+   "genre": "Monospace",
+   "lineage": "Wei Huang, from Helvetica-like grotesque forms",
+   "voice": "Swiss, neat",
+   "features": [
+    "regular and italic"
+   ],
+   "good_for": "labels and data",
+   "pair_with": "a grotesque",
+   "cautions": "",
+   "overuse": 1
+  },
+  {
+   "family": "Azeret Mono",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "monospace",
+   "genre": "Monospace",
+   "lineage": "Displaay Type Foundry",
+   "voice": "technical, precise",
+   "features": [
+    "variable"
+   ],
+   "good_for": "data, labels",
+   "pair_with": "a grotesque",
+   "cautions": "",
+   "overuse": 0
+  },
+  {
+   "family": "Rye",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "display",
+   "genre": "Wood type, Western",
+   "lineage": "Nineteenth-century wood type",
+   "voice": "frontier, fairground",
+   "features": [
+    "one style"
+   ],
+   "good_for": "single words, posters",
+   "pair_with": "a plain serif",
+   "cautions": "Display only; theme-park risk",
+   "overuse": 0
+  },
+  {
+   "family": "Ultra",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "display",
+   "genre": "Fat face slab",
+   "lineage": "Astigmatic",
+   "voice": "loud, Victorian poster",
+   "features": [
+    "one style"
+   ],
+   "good_for": "posters",
+   "pair_with": "a plain serif",
+   "cautions": "Display only",
+   "overuse": 0
+  },
+  {
+   "family": "UnifrakturMaguntia",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "display",
+   "genre": "Blackletter (Fraktur)",
+   "lineage": "J. Fischer's Fraktur",
+   "voice": "German, medieval, gothic",
+   "features": [
+    "one style"
+   ],
+   "good_for": "single words, mastheads",
+   "pair_with": "a humanist serif",
+   "cautions": "Hard to read; never for text",
+   "overuse": 0
+  },
+  {
+   "family": "Cinzel",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "display",
+   "genre": "Roman inscriptional capitals",
+   "lineage": "Trajan-like capitals",
+   "voice": "classical, fantasy",
+   "features": [
+    "caps only"
+   ],
+   "good_for": "carved-capital titles",
+   "pair_with": "a Garalde",
+   "cautions": "Overused for fantasy and luxury",
+   "overuse": 2
+  },
+  {
+   "family": "Atkinson Hyperlegible Next",
+   "source": "google",
+   "licence": "SIL Open Font Licence",
+   "category": "sans-serif",
+   "genre": "Legibility sans",
+   "lineage": "Braille Institute, expanded family",
+   "voice": "accessible",
+   "features": [
+    "seven weights"
+   ],
+   "good_for": "accessible UI",
+   "pair_with": "a serif",
+   "cautions": "",
+   "overuse": 0
+  },
+  {
+   "family": "Gambetta",
+   "source": "fontshare",
+   "licence": "ITF Free Font Licence",
+   "category": "serif",
+   "genre": "Transitional serif",
+   "lineage": "Indian Type Foundry",
+   "voice": "warm editorial",
+   "features": [
+    "variable"
+   ],
+   "good_for": "editorial",
+   "pair_with": "Switzer",
+   "cautions": "Fontshare: inline the files, Artifacts block other hosts",
+   "overuse": 0
+  },
+  {
+   "family": "Zodiak",
+   "source": "fontshare",
+   "licence": "ITF Free Font Licence",
+   "category": "serif",
+   "genre": "High-contrast serif",
+   "lineage": "Indian Type Foundry",
+   "voice": "dramatic editorial",
+   "features": [
+    "variable"
+   ],
+   "good_for": "headlines",
+   "pair_with": "Switzer",
+   "cautions": "Fontshare",
+   "overuse": 1
+  },
+  {
+   "family": "Erode",
+   "source": "fontshare",
+   "licence": "ITF Free Font Licence",
+   "category": "serif",
+   "genre": "Wedge serif",
+   "lineage": "Indian Type Foundry",
+   "voice": "sharp, contemporary",
+   "features": [
+    "variable"
+   ],
+   "good_for": "headlines and text",
+   "pair_with": "a grotesque",
+   "cautions": "Fontshare",
+   "overuse": 0
+  },
+  {
+   "family": "Sentient",
+   "source": "fontshare",
+   "licence": "ITF Free Font Licence",
+   "category": "serif",
+   "genre": "Old style",
+   "lineage": "Indian Type Foundry",
+   "voice": "warm",
+   "features": [
+    "variable"
+   ],
+   "good_for": "text",
+   "pair_with": "a grotesque",
+   "cautions": "Fontshare",
+   "overuse": 0
+  },
+  {
+   "family": "Switzer",
+   "source": "fontshare",
+   "licence": "ITF Free Font Licence",
+   "category": "sans-serif",
+   "genre": "Neo-grotesque",
+   "lineage": "Indian Type Foundry",
+   "voice": "Swiss, neutral",
+   "features": [
+    "variable"
+   ],
+   "good_for": "UI and labels",
+   "pair_with": "Gambetta",
+   "cautions": "Fontshare",
+   "overuse": 1
+  },
+  {
+   "family": "Satoshi",
+   "source": "fontshare",
+   "licence": "ITF Free Font Licence",
+   "category": "sans-serif",
+   "genre": "Geometric grotesque",
+   "lineage": "Indian Type Foundry",
+   "voice": "startup",
+   "features": [
+    "variable"
+   ],
+   "good_for": "",
+   "pair_with": "",
+   "cautions": "Very common on startup pages",
+   "overuse": 3
+  },
+  {
+   "family": "Clash Display",
+   "source": "fontshare",
+   "licence": "ITF Free Font Licence",
+   "category": "display",
+   "genre": "Display grotesque",
+   "lineage": "Indian Type Foundry",
+   "voice": "loud startup",
+   "features": [
+    "variable"
+   ],
+   "good_for": "",
+   "pair_with": "",
+   "cautions": "Very common",
+   "overuse": 3
+  },
+  {
+   "family": "Cabinet Grotesk",
+   "source": "fontshare",
+   "licence": "ITF Free Font Licence",
+   "category": "display",
+   "genre": "Display grotesque",
+   "lineage": "Indian Type Foundry",
+   "voice": "quirky startup",
+   "features": [
+    "variable"
+   ],
+   "good_for": "",
+   "pair_with": "",
+   "cautions": "Very common",
+   "overuse": 3
+  }
+ ],
+ "commercial": [
+  {
+   "family": "Söhne",
+   "foundry": "Klim Type Foundry",
+   "genre": "Grotesque after Akzidenz",
+   "voice": "precise, modern"
+  },
+  {
+   "family": "Tiempos",
+   "foundry": "Klim Type Foundry",
+   "genre": "Editorial serif",
+   "voice": "newspaper, authoritative"
+  },
+  {
+   "family": "Signifier",
+   "foundry": "Klim Type Foundry",
+   "genre": "Seventeenth-century serif, sharpened",
+   "voice": "scholarly, digital"
+  },
+  {
+   "family": "Untitled Sans and Serif",
+   "foundry": "Klim Type Foundry",
+   "genre": "Plain grotesque and serif",
+   "voice": "quiet, essential"
+  },
+  {
+   "family": "GT America",
+   "foundry": "Grilli Type",
+   "genre": "American and European grotesque",
+   "voice": "confident, versatile"
+  },
+  {
+   "family": "GT Alpina",
+   "foundry": "Grilli Type",
+   "genre": "Contemporary serif",
+   "voice": "literary, characterful"
+  },
+  {
+   "family": "GT Sectra",
+   "foundry": "Grilli Type",
+   "genre": "Calligraphic, cut serif",
+   "voice": "sharp, editorial"
+  },
+  {
+   "family": "Canela",
+   "foundry": "Commercial Type",
+   "genre": "Serif between serif and sans",
+   "voice": "luxurious, soft"
+  },
+  {
+   "family": "Lyon",
+   "foundry": "Commercial Type",
+   "genre": "Editorial serif after Robert Granjon",
+   "voice": "literary, refined"
+  },
+  {
+   "family": "Graphik",
+   "foundry": "Commercial Type",
+   "genre": "Grotesque",
+   "voice": "plain, modernist"
+  },
+  {
+   "family": "ABC Diatype",
+   "foundry": "Dinamo",
+   "genre": "Grotesque",
+   "voice": "neutral, contemporary"
+  },
+  {
+   "family": "ABC Favorit",
+   "foundry": "Dinamo",
+   "genre": "Grotesque with quirks",
+   "voice": "playful, art"
+  },
+  {
+   "family": "Ogg",
+   "foundry": "Sharp Type",
+   "genre": "Calligraphic display serif",
+   "voice": "expressive, editorial"
+  },
+  {
+   "family": "Reader",
+   "foundry": "Colophon Foundry",
+   "genre": "Grotesque",
+   "voice": "bookish sans"
+  },
+  {
+   "family": "Raisonné",
+   "foundry": "Colophon Foundry",
+   "genre": "Geometric with Futura sketches",
+   "voice": "modernist"
+  }
+ ]
+}

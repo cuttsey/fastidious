@@ -29,7 +29,7 @@ Most AI design tools are strong at one thing, usually the build. Fastidious cove
 | Discipline | What it settles | Skills | Grounded in |
 | --- | --- | --- | --- |
 | **Purpose** | Why the work exists, who it is for, and the one idea it defends | `frame-shifter`, `positioning-strategist`, `analogy-scout`, `narrative-architect` | Problem framing (Rittel and Webber, 1973; Schön, 1983; Dorst, 2015) and analogical transfer (Gentner, 1983) |
-| **Identity** | What the work signifies, its personality, the world its pictures live in, the words it speaks, and the tokens that hold it | `sign-system-architect`, `brand-system-architect`, `world-bible`, `copy-director`, `brand-book`, `iconography`, `taste-library`, `reference-curator` | Semiotics (Barthes, 1977; Chandler, 2017; Kress and van Leeuwen, 2021), iconology (Panofsky, 1939) and rhetoric, with 235 production design systems and 97 ranked sources on file |
+| **Identity** | What the work signifies, its personality, the world its pictures live in, the words it speaks, and the tokens that hold it | `sign-system-architect`, `brand-system-architect`, `world-bible`, `copy-director`, `type-director`, `colour-director`, `brand-book`, `iconography`, `taste-library`, `reference-curator` | Semiotics (Barthes, 1977; Chandler, 2017; Kress and van Leeuwen, 2021), iconology (Panofsky, 1939) and rhetoric, with 235 production design systems and 97 ranked sources on file |
 | **Craft** | The dozens of small loops that move a product from good to great | `detail-craft`, `interaction-minimum-designer`, `component-librarian`, `motion-choreographer`, `render-engineer`, `asset-director`, `blender-build`, then `mobile-auditor`, `scroll-verifier` and `accessibility-performance-auditor` | Exemplar sites taken apart in a real browser, and [WCAG 2.2](https://www.w3.org/TR/WCAG22/) measured against rendered pixels |
 | **Presentation** | Showing the work as it will live: in place, in motion, in public | `supermock`, `showreel-director`, and the separate `fastidious-motion` plugin | Frame-exact capture, an independent critic for every film, and a [WCAG 2.3.1](https://www.w3.org/WAI/WCAG22/Understanding/three-flashes-or-below-threshold.html) flash screen |
 
@@ -46,6 +46,7 @@ Every phase opens wide and then narrows, and you choose. Options are scored agai
 - **Every site starts with its own details.** Cursor, scrollbar and hover gesture ship in version 1, drawn from the subject's world.
 - **Every detail comes with its reason.** The rationale covers six registers: personality, persuasion, routes dropped, proof, inclusion, and craft and cost.
 - **Every line of copy earns its place.** Terms stated early, who it is not for, objections answered in the order a sceptic raises them, every claim tied to its evidence, and a lint that fails the cliches.
+- **Every typeface and colour is looked up, not remembered.** Faces are found by the history they carry, checked against live Google Fonts data and judged in specimens set with the real copy; palettes come from the subject's own world and Sanzo Wada's historic combinations, and fail if they match the palettes every template uses.
 - **Every picture belongs to one world.** A bible fixes the medium, light, palette and cast before anything is generated, and a series critic judges the set as one story.
 - **Every decision gets written down.** A numbered log records what was chosen, what was given up and what would reopen it.
 - **Every piece of work gets presented.** Mock-ups in place, animated display ads and a film, so the work is judged as people will meet it.
@@ -136,13 +137,13 @@ Alongside the work, a full run leaves the reasoning in the project:
 
 This repository is a Claude Code plugin marketplace with two plugins.
 
-**`plugins/fastidious`**: 29 skills.
+**`plugins/fastidious`**: 31 skills.
 
 | Group | Skills |
 | --- | --- |
 | Spine | `fastidious`, `studio-conductor`, `build-sequencer`, `option-ledger`, `model-switcher` |
 | Purpose | `frame-shifter`, `positioning-strategist`, `analogy-scout`, `narrative-architect` |
-| Identity | `sign-system-architect`, `brand-system-architect`, `world-bible`, `copy-director`, `brand-book`, `iconography`, `taste-library`, `reference-curator` |
+| Identity | `sign-system-architect`, `brand-system-architect`, `world-bible`, `copy-director`, `type-director`, `colour-director`, `brand-book`, `iconography`, `taste-library`, `reference-curator` |
 | Craft | `detail-craft`, `interaction-minimum-designer`, `component-librarian`, `motion-choreographer`, `render-engineer`, `asset-director`, `blender-build` |
 | Checks | `mobile-auditor`, `scroll-verifier`, `accessibility-performance-auditor` |
 | Presentation | `supermock`, `showreel-director` |

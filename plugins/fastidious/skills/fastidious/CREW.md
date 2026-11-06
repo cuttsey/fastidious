@@ -1,6 +1,6 @@
 # The crew
 
-Fastidious is 29 skills of its own working alongside 19 skills by other people. The 19 are installed by `scripts/crew_stack.py`, each at an exact commit recorded in `crew.lock.json`, and copied unchanged. They are not bundled in this repository, so each stays under its author's licence, is fetched from its author's repository, and moves only when the lock is deliberately edited.
+Fastidious is 31 skills of its own working alongside 19 skills by other people. The 19 are installed by `scripts/crew_stack.py`, each at an exact commit recorded in `crew.lock.json`, and copied unchanged. They are not bundled in this repository, so each stays under its author's licence, is fetched from its author's repository, and moves only when the lock is deliberately edited.
 
 ## What is installed
 
