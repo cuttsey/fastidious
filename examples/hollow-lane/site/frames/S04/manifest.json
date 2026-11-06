@@ -1,0 +1,13 @@
+{
+ "count": 16,
+ "width": 960,
+ "height": 540,
+ "sizes": [
+  960,
+  480
+ ],
+ "pattern": "{size}/f_{n}.webp",
+ "pad": 3,
+ "poster": 16,
+ "bytes": 183472
+}

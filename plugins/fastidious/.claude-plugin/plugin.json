@@ -1,6 +1,6 @@
 {
   "name": "fastidious",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "29 design skills for Claude Code, from questioning the brief to the final accessibility gate, with an installer that pins the 19 third-party skills they work alongside.",
   "author": {
     "name": "Jamie Acutt"

@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hollow Lane cider</title>
+<meta name="description" content="An invented Somerset cider maker, built to test Fastidious: dry cider, pressed in autumn and poured the following spring.">
+<meta name="theme-color" content="#2b2621">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;
+  --ink:#2b2621;--studio:#1f1b17;--paper:#f0e6d1;--paper-2:#e7dcc4;--lane:#d9c499;--oak:#8a6138;--russet:#a86b2b;--cider:#c99a3b;
+  --rule:rgba(240,230,209,.28);--ease:cubic-bezier(.22,1,.36,1);
+  --serif:"Newsreader","Iowan Old Style",Georgia,serif;
+  --gutter:clamp(16px,5vw,72px);
+}
+*{box-sizing:border-box}
+html{background:var(--studio);color:var(--paper);-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--serif);font-optical-sizing:auto;font-size:clamp(17px,1.1vw + 10px,20px);line-height:1.5;background:var(--studio)}
+::selection{background:var(--russet);color:var(--paper)}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--lane);outline-offset:3px}
+.skip{position:absolute;left:-9999px;top:8px;background:var(--paper);color:var(--ink);padding:8px 12px;z-index:50}
+.skip:focus{left:8px}
+
+/* The film: fixed behind the page. Posters carry the story when it cannot run. */
+.film{position:fixed;inset:0;width:100%;height:100%;display:block;z-index:0;opacity:0;transition:opacity .9s var(--ease)}
+.film-ready .film{opacity:1}
+.scrim{position:fixed;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(90deg,rgba(24,20,17,.82) 0%,rgba(24,20,17,.55) 34%,rgba(24,20,17,0) 62%),linear-gradient(0deg,rgba(24,20,17,.5),rgba(24,20,17,0) 30%)}
+.poster{display:block;width:100%;height:auto;margin:0 0 24px;border-radius:2px}
+.film-live .poster{display:none}
+html:not(.film-live) .scrim{display:none}
+
+/* The drawn lane: the long way round, drawn as you scroll, with a chalk tally per chapter */
+.lane{position:fixed;left:calc(var(--gutter) * .35);top:12vh;height:76vh;width:28px;z-index:3;pointer-events:none;opacity:.9}
+.lane path{fill:none;stroke:var(--lane);stroke-width:1.4;stroke-linecap:round}
+.lane .ghost{stroke:var(--rule)}
+.lane .tick{stroke:var(--paper);stroke-width:1.6;opacity:0;transition:opacity .4s linear}
+.lane .tick.on{opacity:.9}
+html:not(.film-live) .lane{display:none}
+
+header.top{position:fixed;top:0;left:0;right:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:calc(18px + env(safe-area-inset-top, 0px)) var(--gutter) 30px;
+  background:linear-gradient(rgba(24,20,17,.94),rgba(24,20,17,.82) 62%,rgba(24,20,17,0))}
+.mark{font-size:1.05rem;letter-spacing:.02em;text-decoration:none;font-weight:500}
+.mark span{font-style:italic;font-weight:400}
+.nav-cta{font-variant:small-caps;letter-spacing:.08em;text-decoration:none;border:1px solid var(--rule);padding:6px 14px 8px;border-radius:999px;background:rgba(31,27,23,.5)}
+.nav-cta:hover{border-color:var(--lane)}
+
+main{position:relative;z-index:2}
+.scene{position:relative;min-height:190vh;padding:0 var(--gutter)}
+.scene .hold{position:sticky;top:0;min-height:100vh;display:flex;flex-direction:column;justify-content:center;max-width:min(48rem,100%);padding:96px 0 64px}
+.scene .hold>p{max-width:30rem}
+.label{font-variant:small-caps;letter-spacing:.1em;font-size:.86rem;color:var(--lane);margin:0 0 18px}
+h1,h2{font-weight:300;letter-spacing:-.015em;margin:0 0 .45em;text-wrap:balance}
+h1{font-size:clamp(44px,6.4vw,104px);line-height:.95}
+h2{font-size:clamp(38px,5vw,76px);line-height:.98}
+.ln{display:block;overflow:hidden;padding-bottom:.08em;margin-bottom:-.08em}
+.ln>span{display:block}
+@media (min-width:821px){.ln>span{white-space:nowrap}}
+.film-live .scene:not([data-film-scene="S01"]) .ln>span{transform:translateY(105%);transition:transform .9s var(--ease)}
+.film-live .scene.is-active .ln>span{transform:none}
+.film-live .scene.is-active .ln:nth-child(2)>span{transition-delay:.08s}
+.film-live .scene:not([data-film-scene="S01"]) p{opacity:0;transition:opacity .7s var(--ease) .25s}
+.film-live .scene.is-active p,.film-live .scene.is-active .cta{opacity:1}
+.lede{font-size:1.18em;line-height:1.4;max-width:28rem;margin:0 0 28px}
+.detail{max-width:27rem;color:rgba(240,230,209,.88)}
+em.num{font-style:normal;font-variant-numeric:oldstyle-nums}
+.cta{display:inline-flex;align-items:center;gap:12px;align-self:flex-start;text-decoration:none;font-variant:small-caps;letter-spacing:.08em;
+  background:var(--paper);color:var(--ink);padding:10px 20px 12px;border-radius:999px;transition:background .2s linear}
+.cta:hover{background:var(--lane)}
+.cta svg{width:22px;height:10px}
+.aside{border-left:1px solid var(--rule);padding-left:16px;font-size:.92em;max-width:27rem;color:rgba(240,230,209,.86)}
+.aside b{font-variant:small-caps;letter-spacing:.08em;font-weight:500;color:var(--lane)}
+
+/* Paper chapters cover the film: the questions and the list */
+.paper{position:relative;z-index:4;background:var(--paper);color:var(--ink);padding:clamp(72px,12vh,140px) var(--gutter)}
+.paper .label{color:var(--oak)}
+.paper h2{max-width:14ch}
+.faq{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,22rem),1fr));gap:36px 56px;margin-top:48px;max-width:72rem}
+.faq h3{font-weight:500;font-size:1.25em;margin:0 0 6px}
+.faq p{margin:0;color:#4a4038}
+.faq .n{font-variant:small-caps;letter-spacing:.08em;color:var(--oak);display:block;margin-bottom:6px}
+.list{background:var(--paper-2)}
+.list form{display:grid;gap:18px;max-width:30rem;margin-top:32px}
+label{display:grid;gap:6px;font-variant:small-caps;letter-spacing:.08em;font-size:.92rem;color:#4a4038}
+input{font:inherit;font-variant:normal;letter-spacing:0;font-size:1.05rem;color:var(--ink);background:var(--paper);border:1px solid #b7a98d;border-radius:4px;padding:10px 12px}
+input:focus-visible{outline:2px solid var(--russet);outline-offset:1px;border-color:var(--russet)}
+.list button{justify-self:start;font:inherit;font-variant:small-caps;letter-spacing:.08em;border:0;border-radius:999px;background:var(--ink);color:var(--paper);padding:11px 22px 13px;cursor:pointer}
+.list button:hover{background:var(--russet)}
+.status{min-height:1.5em;color:#4a4038}
+.close .hold{max-width:44rem}
+footer{position:relative;z-index:4;background:var(--studio);color:rgba(240,230,209,.8);padding:40px var(--gutter) 56px;font-size:.92rem;border-top:1px solid var(--rule)}
+footer p{margin:0 0 6px;max-width:44rem}
+
+@media (max-width:820px){
+  .scene{min-height:170vh}
+  .scrim{background:linear-gradient(0deg,rgba(24,20,17,.86) 0%,rgba(24,20,17,.6) 45%,rgba(24,20,17,.15) 75%)}
+  .scene .hold{justify-content:flex-end;padding-bottom:12vh}
+  .lane{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  .film-live .scene .ln>span{transform:none;transition:none}
+  .film-live .scene p,.film-live .scene .cta{opacity:1;transition:none}
+  .film{transition:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#list">Skip to the spring list</a>
+<canvas class="film" aria-hidden="true"></canvas>
+<div class="scrim" aria-hidden="true"></div>
+<svg class="lane" viewBox="0 0 28 400" preserveAspectRatio="none" aria-hidden="true">
+  <path class="ghost" d="M14 2 C 2 60, 26 90, 14 150 S 2 240, 14 290 S 26 360, 14 398"/>
+  <path class="drawn" d="M14 2 C 2 60, 26 90, 14 150 S 2 240, 14 290 S 26 360, 14 398"/>
+  <g class="ticks"></g>
+</svg>
+<header class="top">
+  <a class="mark" href="#top">Hollow <span>Lane</span></a>
+  <a class="nav-cta" href="#list">Join the spring list</a>
+</header>
+
+<main id="top">
+  <section class="scene" data-film-scene="S01" aria-labelledby="h-hero">
+    <div class="hold">
+      <img class="poster" src="frames/S01/poster.jpg" alt="A tabletop model of an orchard on a walnut table: felt hills, small turned-wood trees with red apples, a cream barn, and a pale lane that bends twice through it, lit by a low sun from the left." width="960" height="540">
+      <p class="label">Somerset cider</p>
+      <h1 id="h-hero"><span class="ln"><span>The long way</span></span> <span class="ln"><span>round, on purpose.</span></span></h1>
+      <p class="lede">Dry Somerset cider, pressed in autumn and poured the following spring.</p>
+      <a class="cta" href="#list">Join the spring list <svg viewBox="0 0 22 10" aria-hidden="true"><path d="M0 5h20M16 1l4 4-4 4" fill="none" stroke="currentColor"/></svg></a>
+    </div>
+  </section>
+
+  <section class="scene" data-film-scene="S02" aria-labelledby="h-pick">
+    <div class="hold">
+      <img class="poster" src="frames/S02/poster.jpg" alt="Close on one model apple tree: a felt canopy with small red apples and one larger russet apple nearest the camera." width="960" height="540">
+      <p class="label">Autumn</p>
+      <h2 id="h-pick"><span class="ln"><span>We pick by hand.</span></span></h2>
+      <p class="detail">From fourteen old trees on one lane: Kingston Black, Dabinett and Yarlington Mill.</p>
+    </div>
+  </section>
+
+  <section class="scene" data-film-scene="S03" aria-labelledby="h-press">
+    <div class="hold">
+      <img class="poster" src="frames/S03/poster.jpg" alt="A small wooden cider press beside the barn, with straw layers stacked under an iron screw, a pool of golden juice in the tray and a cream jug." width="960" height="540">
+      <p class="label">October</p>
+      <h2 id="h-press"><span class="ln"><span>We press by weight.</span></span></h2>
+      <p class="detail">Milled apples are built into straw cheeses and pressed slowly in a wooden press.</p>
+    </div>
+  </section>
+
+  <section class="scene" data-film-scene="S04" aria-labelledby="h-wait">
+    <div class="hold">
+      <img class="poster" src="frames/S04/poster.jpg" alt="Oak barrels on their sides in front of the barn; on the middle barrel's head, eleven chalk tally marks." width="960" height="540">
+      <p class="label">November to September</p>
+      <h2 id="h-wait"><span class="ln"><span>We wait</span></span> <span class="ln"><span>eleven months.</span></span></h2>
+      <p class="detail">Wild yeast ferments the juice, then it rests in old oak until the next autumn. The chalk on the barrel is the only clock we keep.</p>
+    </div>
+  </section>
+
+  <section class="scene" data-film-scene="S05" aria-labelledby="h-pour">
+    <div class="hold">
+      <img class="poster" src="frames/S05/poster.jpg" alt="At the lane's end, an oak crate holding a green bottle and a tumbler of golden cider, with the russet apple beside them." width="960" height="540">
+      <p class="label">Spring</p>
+      <h2 id="h-pour"><span class="ln"><span>Then we pour.</span></span></h2>
+      <p class="detail">Bottle-conditioned and bone dry. About <em class="num">4,000</em> bottles a year, and no more.</p>
+      <p class="detail"><b>Twelve bottles, once a year.</b> A case of twelve 750 ml bottles is <em class="num">£84</em>, delivered in Great Britain each spring.</p>
+      <p class="aside"><b>Plainly:</b> the list is first come, first served. If we sell out, you are first in line the following spring, and you pay nothing until your case is ready.</p>
+    </div>
+  </section>
+</main>
+
+<section class="paper" aria-labelledby="h-faq">
+  <p class="label">Who it is for</p>
+  <p style="max-width:34rem;font-size:1.15em;margin:0 0 10px">For people who like their cider dry and are happy to wait for it.</p>
+  <p style="max-width:34rem;margin:0 0 64px;color:#4a4038">Not for parties of fifty, or for anyone who needs it by Friday. We make what the trees give us.</p>
+  <h2 id="h-faq">Asked at the gate</h2>
+  <div class="faq">
+    <div><span class="n">One</span><h3>Is it sweet?</h3><p>No. Every bottle is fermented fully dry, so it tastes of apples, not sugar.</p></div>
+    <div><span class="n">Two</span><h3>When will it arrive?</h3><p>In spring, once the eleven months are up. We email you the week it ships.</p></div>
+    <div><span class="n">Three</span><h3>What does it cost?</h3><p>£84 for a case of twelve, delivered. You pay when your case is ready.</p></div>
+    <div><span class="n">Four</span><h3>Why so few bottles?</h3><p>Fourteen trees make about 4,000 bottles in a good year. We would rather sell out than buy in fruit.</p></div>
+    <div><span class="n">Five</span><h3>Can I visit?</h3><p>On pressing day, the first Saturday of October. Places are offered to the spring list first.</p></div>
+  </div>
+</section>
+
+<section class="paper list" id="list" aria-labelledby="h-list">
+  <p class="label">Once a year</p>
+  <h2 id="h-list">The spring list</h2>
+  <p style="max-width:30rem;margin:0">Leave your name and how many cases you would like. We write once, in spring, when the cider is ready.</p>
+  <form novalidate>
+    <label>Your name <input name="name" autocomplete="name" required></label>
+    <label>Email <input name="email" type="email" autocomplete="email" required></label>
+    <label>Cases (of twelve) <input name="cases" type="number" min="1" max="6" value="1" inputmode="numeric"></label>
+    <button type="submit">Join the spring list</button>
+    <p class="status" role="status" aria-live="polite"></p>
+  </form>
+</section>
+
+<div class="close-wrap" style="position:relative;z-index:2">
+  <section class="scene close" data-film-scene="S06" aria-labelledby="h-close" style="min-height:160vh">
+    <div class="hold">
+      <img class="poster" src="frames/S06/poster.jpg" alt="The whole model orchard seen from above, the lane bending twice from one corner to the other." width="960" height="540">
+      <h2 id="h-close"><span class="ln"><span>The long way</span></span> <span class="ln"><span>round, on purpose.</span></span></h2>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <p><b>Hollow Lane is an invented cider maker, made to test Fastidious.</b> Nothing here is for sale, and the form sends nothing.</p>
+  <p>The orchard is a model built and rendered in code with Blender. Type: Newsreader, by Production Type, under the SIL Open Font Licence.</p>
+</footer>
+
+<script src="scroll-film.js"></script>
+<script>
+(function () {
+  const order = ['S01', 'S02', 'S03', 'S04', 'S05', 'S06'];
+  const transitions = { S01: { type: 'iris', len: 0.22, origin: [0.62, 0.5] }, S02: { type: 'dissolve', len: 0.22 },
+    S03: { type: 'push', len: 0.18 }, S04: { type: 'dissolve', len: 0.22 }, S05: { type: 'iris', len: 0.2, origin: [0.6, 0.55] } };
+  const extra = { S02: { develop: true }, S04: { develop: true }, S05: { develop: true }, S01: { focus: [0.55, 0.5] } };
+  let film = null;
+  function measure() {
+    const doc = document.documentElement, range = Math.max(1, doc.scrollHeight - innerHeight);
+    const tops = order.map(id => { const el = document.querySelector(`[data-film-scene="${id}"]`); return el.getBoundingClientRect().top + scrollY; });
+    return order.map((id, i) => {
+      const at = Math.max(0, (tops[i] - innerHeight * 0.15) / range);
+      const end = i < order.length - 1 ? Math.max(0, (tops[i + 1] - innerHeight * 0.15) / range) : 1;
+      return Object.assign({ id, src: 'frames/' + id, at: i === 0 ? 0 : at, len: Math.max(0.02, end - (i === 0 ? 0 : at)), out: transitions[id] }, extra[id] || {});
+    });
+  }
+  const drawn = document.querySelector('.lane .drawn'), ticks = document.querySelector('.lane .ticks');
+  const L = drawn.getTotalLength();
+  drawn.style.strokeDasharray = L; drawn.style.strokeDashoffset = L;
+  function start() {
+    if (film) film.destroy();
+    const scenes = measure();
+    ticks.innerHTML = '';
+    scenes.forEach((s, i) => { const pt = drawn.getPointAtLength(L * s.at);
+      ticks.insertAdjacentHTML('beforeend', `<path class="tick" data-i="${i}" d="M${pt.x - 6} ${pt.y} h12"/>`); });
+    film = ScrollFilm.mount({ canvas: document.querySelector('canvas.film'), track: document.documentElement, scenes,
+      grain: 0.035, ease: 0.12, onFrame: st => {
+        drawn.style.strokeDashoffset = L * (1 - st.p);
+        ticks.querySelectorAll('.tick').forEach((t, i) => t.classList.toggle('on', st.p >= scenes[i].at - 0.001));
+      } });
+  }
+  let rt; addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(start, 250); });
+  start();
+  const form = document.querySelector('form'), status = form.querySelector('.status');
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const email = form.email.value.trim();
+    if (!form.name.value.trim()) { status.textContent = 'Please add your name.'; form.name.focus(); return; }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { status.textContent = 'Please check your email address so we can write in spring.'; form.email.focus(); return; }
+    status.textContent = 'This is a test page, so nothing was sent. On a real site: you are on the list. We will write in spring.';
+  });
+})();
+</script>
+</body>
+</html>

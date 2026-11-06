@@ -173,6 +173,18 @@ This repository is a Claude Code plugin marketplace with two plugins.
 
 They live in [`plugins/fastidious/skills/fastidious/scripts`](plugins/fastidious/skills/fastidious/scripts).
 
+Three more travel with the skills that use them:
+
+| Script | What it does | Needs |
+| --- | --- | --- |
+| `copy-director/scripts/copy_lint.py` | Fails copy on em dashes, the "not X, it's Y" shape and a shared cliche list; warns on long sentences and Title Case | Python 3 |
+| `world-bible/scripts/series_check.py` | Measures a series of images and films against the world bible and each other, and draws a contact sheet | `ffmpeg` |
+| `render-engineer/scripts/make_sequence.py` and `assets/scroll-film.js` | Turn a film or rendered frames into WebP sequences, then play them on one WebGL canvas as the page scrolls, with an iris, grain dissolve, push, fade or cut between scenes. Native scrolling is never intercepted | `ffmpeg` with libwebp |
+
+## A worked example
+
+[Hollow Lane](examples/hollow-lane) is an invented cider maker, built end to end to prove the copy director, the world bible and the scroll film together in a trade unlike the exemplars. Its imagery is a miniature orchard rendered in code with Blender, its series review records what the critic caught, and its page plays the world as a film while keeping native scrolling, posters and copy in the HTML, and a still version for reduced motion.
+
 ## Fair questions
 
 The short version is below. The [press release and FAQ](PRFAQ.md) covers who Fastidious is for and who it is not for, and answers the rude questions too.

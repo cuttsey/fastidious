@@ -2,6 +2,14 @@
 
 All notable changes to this repository. Versions follow [Semantic Versioning](https://semver.org/).
 
+## Fastidious 1.3.0: 2026-11-06
+
+### Added
+
+- `render-engineer` gains a scroll-film kit for rung 3. `scripts/make_sequence.py` turns a film or a folder of rendered frames into WebP sequences at two widths with a poster and a manifest. `assets/scroll-film.js` plays them on one WebGL canvas: frames blend so short sequences glide, scenes change through an iris, a grain dissolve, a push, a fade or a cut, scenes can develop from grey into colour or arrive as halftone, and frames load nearest the playhead first. It reads the native scroll position and never intercepts it, falls back to posters and copy without WebGL, and shows still posters with fades for reduced motion.
+- `examples/hollow-lane`: an invented cider maker built end to end with `copy-director`, `world-bible` and the scroll-film kit, with its imagery rendered in code with Blender, two rounds of series review and contact sheets of the finished page.
+- Tests for the kit's timeline, its loading order and its promise not to intercept scrolling.
+
 ## Fastidious 1.2.0: 2026-11-06
 
 ### Added
