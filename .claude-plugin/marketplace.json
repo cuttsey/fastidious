@@ -28,7 +28,7 @@
       "name": "fastidious-motion",
       "source": "./plugins/fastidious-motion",
       "description": "Generated stills and film for Fastidious projects: gpt-image-2 styleframes, Seedance 2.0 or Kling motion, scored review and checked cuts.",
-      "version": "0.2.1",
+      "version": "0.2.2",
       "license": "MIT",
       "category": "design",
       "keywords": [

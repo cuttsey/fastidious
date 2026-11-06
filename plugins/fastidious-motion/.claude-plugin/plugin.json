@@ -1,6 +1,6 @@
 {
   "name": "fastidious-motion",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Generated stills and film for Fastidious projects: a brief compiled from Fastidious artefacts drives gpt-image-2 styleframes and Seedance 2.0 or Kling motion, with scored review, IDs for every option and checked cuts.",
   "author": {
     "name": "Jamie Acutt"

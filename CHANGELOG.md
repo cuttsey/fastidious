@@ -14,6 +14,7 @@ All notable changes to this repository. Versions follow [Semantic Versioning](ht
 
 - `studio-conductor` runs `world-bible` and `copy-director` in phase 4, and gives each the lead in its precedence table.
 - `sign-system-architect` mines the name itself for signs; `narrative-architect` can write beats as acts in an allegory; `asset-director`, `motion-director` and `frame-critic` follow `WORLD-BIBLE.md` when there is one.
+- fastidious-motion 0.2.2: `motion-director` takes its look, cast and shot list from `WORLD-BIBLE.md` when there is one, and `frame-critic` checks continuity against its anchor frames.
 - `accessibility-performance-auditor` adds three checks: native scrolling kept, DOM order matching visual order, and a still poster and copy in the HTML for every chapter told on a canvas, with labelled form fields.
 
 ## Fastidious 1.1.1: 2026-11-06
