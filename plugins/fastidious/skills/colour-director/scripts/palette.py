@@ -6,6 +6,7 @@
     python3 palette.py scale "#5c6e30" --steps 11                           # a tonal ramp in OKLCH
     python3 palette.py check tokens.json                                    # contrast, value, chroma, cliches
     python3 palette.py sheet tokens.json --out colour/sheet.html            # a swatch sheet with text samples
+    python3 palette.py fit tokens.json --register trust --category "#0a66c2,#1b1f3b"   # register and ownership
 
 tokens.json is {"colours": {"name": "#hex", ...}, "pairs": [["text", "ground"], ...], "large": [["display", "ground"]]}.
 extract samples images and films with ffmpeg. Everything else is the Python 3 standard library.
@@ -21,6 +22,8 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 WADA = os.path.join(os.path.dirname(HERE), "references", "wada-colours.json")
+PRECEDENTS = os.path.join(os.path.dirname(os.path.dirname(HERE)), "identity-director", "references", "precedents.json")
+REGISTERS = ("trust", "warm", "expressive")
 
 
 # Colour maths -------------------------------------------------------------------------------------------------
@@ -250,6 +253,92 @@ def sheet(tokens, out):
     return out
 
 
+# Fit: register, structure and ownership ------------------------------------------------------------------------
+
+def structure(colours, gradient=False):
+    """Which of the five palette structures seen in strong startup identities this palette follows."""
+    lch = [oklch(rgb_oklab(hex_rgb(h))) for h in colours.values()]
+    if gradient:
+        return "gradient as identity", "a gradient that carries meaning, used as an object on a quiet ground (Lovable)"
+    loud = [v for v in lch if v[1] > 0.12]
+    families = []
+    for v in sorted((v for v in lch if v[1] > 0.07), key=lambda v: -v[1]):
+        if all(hue_gap(v[2], f) >= 60 for f in families):
+            families.append(v[2])
+    if len(families) >= 3:
+        return "colour kit", "three or more distinct colours used flat as a named set (Gist, Weaver, Craft, Loti)"
+    dark = [v for v in lch if v[0] < 0.35 and v[1] >= 0.015]
+    light = [v for v in lch if v[0] > 0.88 or (v[0] > 0.78 and v[1] < 0.06)]
+    if dark and light and len(loud) <= 2:
+        return "deep ground, warm light, one signal", "a hued dark, a tinted light and one saturated note (Alan, Heron, Incentiv, Frame)"
+    hued = [v for v in lch if v[1] > 0.04]
+    if hued and max(v[1] for v in hued) > 0.1:
+        hs = [v[2] for v in hued]
+        if max(hue_gap(a, b) for a in hs for b in hs) <= 25:
+            return "one hue owns everything", "one saturated hue across the whole system, with neutrals (Owner)"
+    return "picture palette or unclassified", "colours taken from an illustrated or photographed world (Solidroad, Paper), or no clear structure yet"
+
+
+def signal(colours):
+    """The name of the most saturated colour: the one most likely to carry the brand's action and recall."""
+    return max(colours, key=lambda n: oklch(rgb_oklab(hex_rgb(colours[n])))[1])
+
+
+def hue_gap(h1, h2):
+    d = abs(h1 - h2) % 360
+    return min(d, 360 - d)
+
+
+def fit(tokens, register, category=()):
+    """Judge a palette against the register the business's stakes call for and against its competitors' colours.
+    Returns {"structure", "signal", "breaks": [...], "notes": [...]}. Breaks fail the check."""
+    colours = tokens["colours"]
+    lch = {n: oklch(rgb_oklab(hex_rgb(h))) for n, h in colours.items()}
+    breaks, notes = [], []
+    name, why = structure(colours, tokens.get("gradient", False))
+    sig = signal(colours)
+    sL, sC, sh = lch[sig]
+    darks = [n for n, v in lch.items() if v[0] < 0.35]
+    lights = [n for n, v in lch.items() if v[0] > 0.9]
+    loud = [n for n, v in lch.items() if v[1] > 0.13]
+    if lights and all(v[1] < 0.004 and v[0] > 0.995 for n, v in lch.items() if n in lights):
+        notes.append("the only light is pure white: strong identities tint it (Alan #F8F5EE, Heron #F3EFE6, Paper #FBEEDE)")
+    if darks and all(lch[n][1] < 0.012 for n in darks):
+        notes.append("the darks carry no hue: a neutral near-black is the least distinctive ground (Stellar, Titan); tint it towards the palette")
+    if register == "trust":
+        if not darks or all(lch[n][1] < 0.015 for n in darks):
+            breaks.append("trust register: needs a deep ground that carries hue (navy, teal-navy, green-black), the base of every restrained case")
+        if len(loud) > 2:
+            breaks.append(f"trust register: {len(loud)} saturated colours ({', '.join(loud)}); keep one signal, two at most")
+        if name == "colour kit" and len(loud) >= 3:
+            breaks.append("trust register: a saturated colour kit reads as play where customers risk money, health or reputation")
+        if sC < 0.1:
+            notes.append("trust register: no warm or saturated signal; restrained cases keep one (Alan's orange, Heron's ochre, Incentiv's orange dot)")
+    elif register == "warm":
+        if sC < 0.09:
+            breaks.append(f"warm register: no clear colour (the most saturated, {sig}, has chroma {sC:.2f}); warmth needs one colour people can name, at 0.09 or more")
+    elif register == "expressive":
+        if sC < 0.12:
+            breaks.append(f"expressive register: the most saturated colour ({sig}, chroma {sC:.2f}) is too quiet; expressive identities own at least one colour above 0.12")
+        if name == "deep ground, warm light, one signal" and len(loud) == 1:
+            notes.append("expressive register in a trust structure: consider a gradient, a named kit or one hue across everything")
+    for hx in category:
+        cL, cC, ch = oklch(rgb_oklab(hex_rgb(hx)))
+        if cC > 0.06 and sC > 0.06 and hue_gap(sh, ch) < 25 and abs(sC - cC) < 0.08:
+            breaks.append(f"ownership: the signal {sig} {colours[sig]} sits {hue_gap(sh, ch):.0f} degrees from competitor {hx}; own a hue the category does not")
+    return {"structure": name, "why": why, "signal": f"{sig} {colours[sig]}", "breaks": breaks, "notes": notes,
+            "ok": not breaks}
+
+
+def precedents(register=None, structure_name=None, path=PRECEDENTS):
+    """Studied identities that share the register or structure, from identity-director's precedents."""
+    if not os.path.exists(path):
+        return []
+    with open(path, encoding="utf-8") as f:
+        cases = json.load(f)["cases"]
+    return [c for c in cases if (not register or c["register"] == register) and (not structure_name or c["structure"] == structure_name)]
+
+
 # Command line --------------------------------------------------------------------------------------------------
 
 def main(argv):
@@ -260,6 +349,8 @@ def main(argv):
     s = sub.add_parser("scale"); s.add_argument("hex"); s.add_argument("--steps", type=int, default=11)
     c = sub.add_parser("check"); c.add_argument("tokens")
     h = sub.add_parser("sheet"); h.add_argument("tokens"); h.add_argument("--out", default="palette-sheet.html")
+    ft = sub.add_parser("fit"); ft.add_argument("tokens"); ft.add_argument("--register", choices=REGISTERS, required=True)
+    ft.add_argument("--category", default="", help="competitors' main colours, comma-separated hexes")
     a = ap.parse_args(argv)
     if a.cmd == "extract":
         for hx, share, (L, C, hue) in extract(a.paths, a.k):
@@ -269,6 +360,19 @@ def main(argv):
             print(f"Combination {n} (distance {s_}): " + ", ".join(f"{name} {hx}" for name, hx in cs))
     elif a.cmd == "scale":
         print(" ".join(scale(a.hex, a.steps)))
+    elif a.cmd == "fit":
+        with open(a.tokens, encoding="utf-8") as f:
+            tokens = json.load(f)
+        r = fit(tokens, a.register, [x for x in a.category.split(",") if x.strip()])
+        print(f"structure  {r['structure']}: {r['why']}")
+        print(f"signal     {r['signal']}")
+        for b in r["breaks"]:
+            print("BREAK  " + b)
+        for n in r["notes"]:
+            print("note   " + n)
+        for c in precedents(a.register)[:6]:
+            print(f"precedent  {c['brand']} ({c['business']}): {c['structure']}; " + ", ".join(f"{k} {v}" for k, v in c["palette"].items()))
+        return 0 if r["ok"] else 1
     elif a.cmd in ("check", "sheet"):
         with open(a.tokens, encoding="utf-8") as f:
             tokens = json.load(f)

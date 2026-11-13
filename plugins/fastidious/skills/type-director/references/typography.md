@@ -16,6 +16,18 @@ Typefaces carry history. Start from the period, material and register in `SIGN-S
 | English civic and craft, twentieth century | Humanist sans after Johnston and Gill (Cabin) | London Transport and English lettering |
 | Engineering, data, documents | Grotesque plus monospace (IBM Plex, Fragment Mono, Courier Prime for typed records) | Instruments and typed records |
 
+## From register to role
+
+Genre comes from meaning; how loud the type may be comes from the register `identity-director` sets from what the customer has at stake. Startup identities studied on Primary's portfolio (2026-11-13, `identity-director/references/primary-portfolio.md`) show a consistent pattern:
+
+| Register | Display | Text and utility | Seen in |
+| --- | --- | --- | --- |
+| Trust (money, health, reputation) | An editorial serif in the Plantin or Caslon tradition, or a calm geometric sans set large and loose | A quiet sans; a monospace only where figures or codes are the product | Heron and Frame (Martina; Frame adds IBM Plex Mono), Alan (Centra) |
+| Warm (owners, service teams) | A friendly grotesk or rounded humanist sans | The same family; illustration carries the warmth | Owner, Solidroad |
+| Expressive (people who make things) | A family that stretches: serif, sans and condensed widths in one family, or a characterful serif | A neutral grotesk to steady the noise | Gist (Instrument Serif, Sans, Condensed), Paper (Matter with Sequel Sans), Craft |
+
+A trust brand earns warmth through one face, not through decoration: the serif's history or the sans's open shapes. An expressive brand still needs one steady face for reading.
+
 ## Scoring candidates
 
 Score each candidate 0 to 3 on every line. Shortlist three pairings that differ in genre, not three variants of one.

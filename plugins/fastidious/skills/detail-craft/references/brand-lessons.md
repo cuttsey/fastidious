@@ -27,3 +27,7 @@ Studied in a browser, 2026-10-30, at laptop and desktop widths: Pink Pony Creati
 
 ## My own tells, to watch for
 Restraint offered as taste. Dark, tasteful grounds. Irony instead of warmth. Concept over commitment. Treating "nothing wrong" as a result.
+
+## The client work, not the studio site
+
+The lessons above come from studios' own sites. What makes their client work great is fit: the identity's loudness follows what the customer has at stake, and one idea from the business becomes the mark, the motif and the system. Primary's fourteen startup identities, studied on 2026-11-13, are the worked evidence; `identity-director` turns them into a method, and its `references/primary-portfolio.md` records the cases, the five palette structures and the weaker cases.

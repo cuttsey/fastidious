@@ -12,7 +12,7 @@ This skill chooses type the way a type director does: from meaning first, then b
 ## Where it sits in the pipeline
 
 - **Runs:** in phase 4, after `SIGN-SYSTEM.md` and the voice in `BRAND-SYSTEM.md`, and before brand-system-architect locks the type tokens. Run it again whenever the work's register changes.
-- **Reads:** `SIGN-SYSTEM.md` (period, material, register, Typography channel), `BRAND-SYSTEM.md` (voice), `COPY-DECK.md` (the real lines), `WORLD-BIBLE.md` if there is one, `REFERENCES.md`, and the colours from `colour-director` when they exist.
+- **Reads:** `IDENTITY.md` (the register and the genre the idea suggests), `SIGN-SYSTEM.md` (period, material, register, Typography channel), `BRAND-SYSTEM.md` (voice), `COPY-DECK.md` (the real lines), `WORLD-BIBLE.md` if there is one, `REFERENCES.md`, and the colours from `colour-director` when they exist.
 - **Writes:** `type/` (specimens) and the Typography section of `BRAND-SYSTEM.md`.
 - **Hands to:** brand-system-architect (tokens), the build (faces, loading, settings), `copy-director` (display line lengths at the chosen sizes) and `detail-craft` (the one display-type event).
 

@@ -12,7 +12,7 @@ Painters and printers solved this long ago by working from combinations, not sin
 ## Where it sits in the pipeline
 
 - **Runs:** in phase 4, after `SIGN-SYSTEM.md` (its Colour channel), alongside `world-bible` (whose frames are a source) and `type-director` (whose specimens need the colours), and before brand-system-architect locks the colour tokens.
-- **Reads:** `SIGN-SYSTEM.md`, `BRAND-SYSTEM.md` (voice), `WORLD-BIBLE.md` and its frames, the person's `REFERENCES.md` and images, and any existing brand colours.
+- **Reads:** `IDENTITY.md` (the register, the owned colour move and the category's colours, from `identity-director`), `SIGN-SYSTEM.md`, `BRAND-SYSTEM.md` (voice), `WORLD-BIBLE.md` and its frames, the person's `REFERENCES.md` and images, and any existing brand colours.
 - **Writes:** `colour/` (sources, tokens, sheets) and the Colour section of `BRAND-SYSTEM.md`.
 - **Hands to:** brand-system-architect (tokens), `world-bible` (the palette its scenes must hold), `type-director` (grounds and text colours for specimens), and the build.
 
@@ -24,8 +24,9 @@ Painters and printers solved this long ago by working from combinations, not sin
 4. **Value first.** A palette that fails in greyscale fails in colour. Keep a wide range of lightness so hierarchy survives without hue.
 5. **One loud colour.** At most one, occasionally two, high-chroma colours; the rest support.
 6. **Muddy needs a counterweight.** One temperature works when values are wide and colours are clean (as `detail-craft/references/taste-lessons.md` advises, with a dark tinted towards it). When the sources are low in chroma and all one hue family, add one cool to a warm palette, or one warm to a cool one, or it turns muddy.
-7. **Variants, then lock.** Three palettes that differ in idea (for example: the world's own light, a historic combination, a cooler counterpoint). The person chooses; record it with `option-ledger`.
-8. **Write plainly.** British English, sentence case headings.
+7. **Fit the register, own a move.** The loudness follows what the customer has at stake (`identity-director` sets the register: trust, warm or expressive). Tint the lights, give the darks a hue, and make the signal a hue no competitor uses. Strong startup identities follow one of five structures: deep ground, warm light and one signal; one hue across everything; a gradient with a meaning; a named colour kit; or a picture palette from the brand's world (`identity-director/references/primary-portfolio.md`).
+8. **Variants, then lock.** Three palettes that differ in idea (for example: the world's own light, a historic combination, a cooler counterpoint). The person chooses; record it with `option-ledger`.
+9. **Write plainly.** British English, sentence case headings.
 
 ## Stage 1: Gather sources
 
@@ -49,7 +50,7 @@ python3 scripts/palette.py check colour/tokens.json
 python3 scripts/palette.py sheet colour/tokens.json --out colour/sheet.html
 ```
 
-The check reports WCAG contrast for every pair (4.5:1 text, 3:1 large text), the value range, the number of high-chroma colours, and the palettes every template uses: cream with terracotta, near-black with an acid pop, purple-to-blue, teal and orange, pure greys, and one muddy temperature. It exits with a failure for a contrast failure or a cliché. The sheet shows the swatches and every text pair. Then check by eye on the real work: on the specimens, the frames and the page.
+The check reports WCAG contrast for every pair (4.5:1 text, 3:1 large text), the value range, the number of high-chroma colours, and the palettes every template uses: cream with terracotta, near-black with an acid pop, purple-to-blue, teal and orange, pure greys, and one muddy temperature. It exits with a failure for a contrast failure or a cliché. `fit` names the palette's structure and its signal, breaks a palette that is too loud or too quiet for the register, fails a signal within 25 degrees of a competitor's hue at similar chroma, notes pure-white lights and hueless darks, and lists studied identities in the same register as precedents. Add `"gradient": true` to the tokens when a gradient is the identity. The sheet shows the swatches and every text pair. Then check by eye on the real work: on the specimens, the frames and the page.
 
 ## Stage 4: The colour system
 
@@ -61,6 +62,7 @@ Write the Colour section of `BRAND-SYSTEM.md`: every token with its hex, OKLCH v
 - **Swap test:** the palette could not move unchanged to a competitor's site.
 - **Source test:** every colour names where it came from.
 - **Temperature test:** a single-temperature palette is clean and wide in value; a muddy one has gained a counterweight.
+- **Fit test:** `palette.py fit` passes for the register in `IDENTITY.md` and the category's colours.
 - **Contrast test:** every pair passes, in both themes, on the real backdrops (run `legibility-check.js` over images and film).
 
 ## Anti-patterns
@@ -70,11 +72,12 @@ Write the Colour section of `BRAND-SYSTEM.md`: every token with its hex, OKLCH v
 - Several loud colours competing.
 - A dark theme made by inverting the light one.
 - Neutrals that are pure grey.
+- The category's colour code: blue for money, purple on black for creative tools.
 - An accent used for decoration as well as action.
 
 ## Files
 
-- `scripts/palette.py`: extract, wada, scale, check and sheet (standard library; ffmpeg for extract).
+- `scripts/palette.py`: extract, wada, scale, check, sheet and fit (standard library; ffmpeg for extract).
 - `references/wada-colours.json` and `wada-colours.LICENSE.md`: the Wada dataset (MIT, Matt DesLauriers, after Dain Blodorn Kim).
 
 ## References

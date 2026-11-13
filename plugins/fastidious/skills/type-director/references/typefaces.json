@@ -1385,6 +1385,24 @@
    "foundry": "Colophon Foundry",
    "genre": "Geometric with Futura sketches",
    "voice": "modernist"
+  },
+  {
+   "family": "Martina Plantijn",
+   "foundry": "Klim Type Foundry",
+   "genre": "Garalde after Plantin, drawn for editorial use",
+   "voice": "cultured, financial, editorial (Heron, Frame)"
+  },
+  {
+   "family": "Matter",
+   "foundry": "Displaay",
+   "genre": "Grotesque with geometric touches",
+   "voice": "friendly product sans (Paper)"
+  },
+  {
+   "family": "Sequel Sans",
+   "foundry": "OGJ Type Design",
+   "genre": "Neo-grotesque superfamily",
+   "voice": "neutral, wide range of widths (Paper)"
   }
  ]
 }

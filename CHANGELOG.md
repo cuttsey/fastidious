@@ -2,6 +2,19 @@
 
 All notable changes to this repository. Versions follow [Semantic Versioning](https://semver.org/).
 
+## Fastidious 1.5.0: 2026-11-13
+
+### Added
+
+- `identity-director`: designs an identity that fits the business. It reads what customers have at stake to set a register (trust, warm or expressive), audits the category's colour code, mines one idea from the name, verb, promise, customer's world or an outside reference, draws it as a mark that works at 16 pixels, grows a motif from it, and proves the system on at least six applications, two of them objects only that brand would make. Writes `IDENTITY.md`.
+- `identity-director/references/primary-portfolio.md` and `precedents.json`: Primary's fourteen startup identities, studied on 2026-11-13, with each one's register, idea source, mark, palette structure, measured colours, type, material and verdict, including the weaker cases. `precedents.py` searches them.
+- `palette.py fit`: names a palette's structure (deep ground, warm light and one signal; one hue across everything; a gradient with a meaning; a colour kit; a picture palette), breaks a palette that is too loud or too quiet for its register, fails a signal within 25 degrees of a competitor's hue, notes pure-white lights and hueless darks, and lists precedents in the same register.
+- `type-director`: a register-to-role table from the same study, and Martina Plantijn, Matter and Sequel Sans in the commercial list.
+
+### Changed
+
+- `studio-conductor` runs `identity-director` first in phase 4 and gives it the lead on the identity; `colour-director`, `type-director` and `brand-book` read `IDENTITY.md`.
+
 ## Fastidious 1.4.0: 2026-11-06
 
 ### Added

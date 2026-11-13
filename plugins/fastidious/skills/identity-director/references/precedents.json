@@ -1,0 +1,265 @@
+{
+ "source": "Primary (primary.studio) case studies, observed 2026-11-13. Hexes measured from the published images; Alan and Gist read from their own specimen boards. Descriptions only: no images are stored.",
+ "cases": [
+  {
+   "brand": "Lovable",
+   "url": "https://www.primary.studio/work/lovable",
+   "business": "AI app builder",
+   "register": "expressive",
+   "idea_source": "name",
+   "idea": "A living heartbeat",
+   "mark": "Heart that pulses",
+   "structure": "gradient as identity",
+   "palette": {
+    "orange": "#FC5616",
+    "magenta": "#DB258B",
+    "cream": "#F5F1E6",
+    "black": "#0B0B0C"
+   },
+   "type": "neutral grotesk",
+   "material": "light, glow, motion",
+   "verdict": "strong",
+   "gradient": true
+  },
+  {
+   "brand": "Craft",
+   "url": "https://www.primary.studio/work/craft",
+   "business": "notes and documents",
+   "register": "expressive",
+   "idea_source": "name",
+   "idea": "Craft paper and open sky",
+   "mark": "Chunky 3D letters in mixed materials",
+   "structure": "colour kit",
+   "palette": {
+    "sky": "#CEE7EB",
+    "deep sky": "#529CBD",
+    "leaf": "#338441",
+    "mauve": "#B3819E"
+   },
+   "type": "soft serif headlines",
+   "material": "paper grain, clouds",
+   "verdict": "strong"
+  },
+  {
+   "brand": "Paper",
+   "url": "https://www.primary.studio/work/paper",
+   "business": "canvas design tool",
+   "register": "expressive",
+   "idea_source": "name",
+   "idea": "Two sheets make a P",
+   "mark": "Folded-sheet P",
+   "structure": "picture palette or unclassified",
+   "palette": {
+    "periwinkle": "#9DBDEE",
+    "amber": "#FEB42C",
+    "paper": "#FBEEDE",
+    "black": "#0B0B0B"
+   },
+   "type": "Matter and Sequel Sans",
+   "material": "torn-paper collage",
+   "verdict": "strong"
+  },
+  {
+   "brand": "Weaver",
+   "url": "https://www.primary.studio/work/weaver",
+   "business": "design platform",
+   "register": "expressive",
+   "idea_source": "name",
+   "idea": "Interface grids woven together",
+   "mark": "Cross-hatched star",
+   "structure": "colour kit",
+   "palette": {
+    "pale sky": "#91E5FF",
+    "pink": "#FBB3E6",
+    "green": "#419236",
+    "sage": "#CFDAD2"
+   },
+   "type": "tight grotesk",
+   "material": "checks, knit, gingham",
+   "verdict": "strong"
+  },
+  {
+   "brand": "Gist",
+   "url": "https://www.primary.studio/work/gist",
+   "business": "podcasting",
+   "register": "expressive",
+   "idea_source": "verb",
+   "idea": "A remixable collage for creators",
+   "mark": "Wordmark",
+   "structure": "colour kit",
+   "palette": {
+    "electric blue": "#3448FB",
+    "highlighter": "#DFFF82",
+    "neon pink": "#F673FE",
+    "teal": "#7CE1D3",
+    "black": "#121212",
+    "cornflower": "#E7E9FF"
+   },
+   "type": "Instrument Serif, Sans and Condensed",
+   "material": "cut-out collage",
+   "verdict": "strong"
+  },
+  {
+   "brand": "Solidroad",
+   "url": "https://www.primary.studio/work/solidroad",
+   "business": "AI training for customer service",
+   "register": "warm",
+   "idea_source": "name",
+   "idea": "A golden road to better service",
+   "mark": "Roadrunner",
+   "structure": "picture palette or unclassified",
+   "palette": {
+    "sky": "#4ED2EB",
+    "gold": "#F6D145",
+    "green": "#4DBA1A"
+   },
+   "type": "grotesk",
+   "material": "illustrated landscapes",
+   "verdict": "strong"
+  },
+  {
+   "brand": "Owner",
+   "url": "https://www.primary.studio/work/owner",
+   "business": "restaurant growth platform",
+   "register": "warm",
+   "idea_source": "promise",
+   "idea": "Help owners shine",
+   "mark": "Pin with a star",
+   "structure": "one hue owns everything",
+   "palette": {
+    "green": "#015C22",
+    "black": "#020302"
+   },
+   "type": "grotesk",
+   "material": "merch, stage, phones",
+   "verdict": "strong"
+  },
+  {
+   "brand": "Loti",
+   "url": "https://www.primary.studio/work/loti",
+   "business": "likeness protection",
+   "register": "warm",
+   "idea_source": "product",
+   "idea": "A watchful bird; blur and reveal",
+   "mark": "Bird",
+   "structure": "colour kit",
+   "palette": {
+    "sky": "#629BC6",
+    "olive": "#74762D",
+    "pink": "#F4C5FB",
+    "black": "#000000"
+   },
+   "type": "serif headlines",
+   "material": "blur, concealment",
+   "verdict": "strong"
+  },
+  {
+   "brand": "Heron",
+   "url": "https://www.primary.studio/work/heron",
+   "business": "private credit investing",
+   "register": "trust",
+   "idea_source": "reference",
+   "idea": "New Yorker sophistication",
+   "mark": "Heron and serif wordmark",
+   "structure": "deep ground, warm light, one signal",
+   "palette": {
+    "teal-navy": "#093C4C",
+    "cream": "#F3EFE6",
+    "ochre": "#CE952E"
+   },
+   "type": "Martina",
+   "material": "editorial illustration",
+   "verdict": "strong"
+  },
+  {
+   "brand": "Frame",
+   "url": "https://www.primary.studio/work/frame",
+   "business": "payments",
+   "register": "trust",
+   "idea_source": "name",
+   "idea": "Framing data; 90s NYC old money",
+   "mark": "Rising bars in a frame",
+   "structure": "deep ground, warm light, one signal",
+   "palette": {
+    "green-black": "#101B17",
+    "mint": "#98C7CD",
+    "tan": "#9D8362"
+   },
+   "type": "Martina and IBM Plex Mono",
+   "material": "nested frames, leather, card",
+   "verdict": "strong"
+  },
+  {
+   "brand": "Alan",
+   "url": "https://www.primary.studio/work/alan",
+   "business": "weight-loss telehealth",
+   "register": "trust",
+   "idea_source": "category",
+   "idea": "Premium beside Hims and Hers",
+   "mark": "Elegant wordmark",
+   "structure": "deep ground, warm light, one signal",
+   "palette": {
+    "orange": "#FE802C",
+    "cream": "#F8F5EE",
+    "navy": "#132B4D",
+    "blue": "#3C80E5"
+   },
+   "type": "Centra",
+   "material": "bodies in activewear, packaging",
+   "verdict": "strong"
+  },
+  {
+   "brand": "Incentiv",
+   "url": "https://www.primary.studio/work/incentiv",
+   "business": "executive pay for private equity",
+   "register": "trust",
+   "idea_source": "category",
+   "idea": "Buttoned up",
+   "mark": "Percent sign: orange dot, teal slash",
+   "structure": "deep ground, warm light, one signal",
+   "palette": {
+    "navy": "#0A2C45",
+    "teal": "#0891B3",
+    "ice": "#D6E2EE",
+    "orange": "#EA580C"
+   },
+   "type": "grotesk",
+   "material": "dot-grid charts, boxed reports",
+   "verdict": "competent: category palette, saved by the orange dot"
+  },
+  {
+   "brand": "Titan",
+   "url": "https://www.primary.studio/work/titan",
+   "business": "data security",
+   "register": "trust",
+   "idea_source": "reference",
+   "idea": "The 1980s",
+   "mark": "Striped chrome T",
+   "structure": "picture palette or unclassified",
+   "palette": {
+    "near-black": "#0E0E0E",
+    "light": "#DDDFDA"
+   },
+   "type": "heavy grotesk capitals",
+   "material": "cinema screens",
+   "verdict": "competent: contrarian in category, familiar retro code outside it"
+  },
+  {
+   "brand": "Stellar",
+   "url": "https://www.primary.studio/work/stellar",
+   "business": "directory of designers",
+   "register": "expressive",
+   "idea_source": "name",
+   "idea": "A star",
+   "mark": "Star of squares",
+   "structure": "one hue owns everything",
+   "palette": {
+    "near-black": "#161616",
+    "purple": "#321B6C"
+   },
+   "type": "grotesk",
+   "material": "devices on black",
+   "verdict": "weak: the category default (near-black with a purple glow)"
+  }
+ ]
+}

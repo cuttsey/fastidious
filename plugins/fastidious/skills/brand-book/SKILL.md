@@ -13,7 +13,7 @@ A brand book is the identity's operating manual. Someone who has never met the t
 
 ## Where it sits
 
-- **Reads (in this order of authority):** `POSITIONING.md`, `FRAME.md`, `SIGN-SYSTEM.md`, `BRAND-SYSTEM.md`, `DETAIL-PLAN.md`, `DESIGN-RATIONALE-DETAILS.md`, the built site (CSS tokens, components, copy), logo files, imagery folders, and any older brand material the person has, such as decks, guides, merch or social templates.
+- **Reads (in this order of authority):** `POSITIONING.md`, `FRAME.md`, `SIGN-SYSTEM.md`, `IDENTITY.md`, `BRAND-SYSTEM.md`, `DETAIL-PLAN.md`, `DESIGN-RATIONALE-DETAILS.md`, the built site (CSS tokens, components, copy), logo files, imagery folders, and any older brand material the person has, such as decks, guides, merch or social templates.
 - **Writes:** `brand-book/` in the project. It holds `index.html` (the book), `brand-book.css` and `img/`, plus `BRAND-BOOK-GAPS.md`, the list of decisions the book could not source. Publish it as an Artifact when the person wants to share it.
 - **Design comes from the studio, not the reference.** Use `brand-system-architect` tokens, `design-taste-frontend` house rules and checks (`lint.mjs`, `inspect.mjs`), and `detail-craft`, including the v1 baseline of cursor, scrollbar and hover gesture plus a six-register rationale for the book's own signature details. Brand portals such as Frontify-style sites taught us **what content to include, not how to lay it out.**
 
