@@ -45,7 +45,10 @@ async function runs(page) {
     let n;
     while ((n = w.nextNode())) {
       const el = n.parentElement; if (!el || el.closest('script,style,noscript,[hidden]')) continue;
-      const cs = getComputedStyle(el); if (cs.visibility === 'hidden' || +cs.opacity === 0) continue;
+      const cs = getComputedStyle(el); if (cs.visibility === 'hidden') continue;
+      // Text inside an ancestor at zero opacity is not on screen (a closed panel, a card's hidden back).
+      let seen = true; for (let a = el; a && a !== document.body; a = a.parentElement) if (+getComputedStyle(a).opacity === 0) { seen = false; break; }
+      if (!seen) continue;
       const m = cs.color.match(/[\d.]+/g).map(Number); if (m.length > 3 && m[3] < .99) continue;
       const fs = parseFloat(cs.fontSize), big = fs >= 24 || (fs >= 18.66 && +cs.fontWeight >= 700);
       const rg = document.createRange(); rg.selectNodeContents(n);

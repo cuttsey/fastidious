@@ -2,6 +2,12 @@
 
 All notable changes to this repository. Versions follow [Semantic Versioning](https://semver.org/).
 
+## Fastidious 1.5.1: 2026-11-15
+
+### Fixed
+
+- `legibility-check.js` skips text inside any ancestor at zero opacity, such as a card's hidden back or a closed panel. It used to measure that text against the colour beneath it and report false failures.
+
 ## Fastidious 1.5.0: 2026-11-13
 
 ### Added
