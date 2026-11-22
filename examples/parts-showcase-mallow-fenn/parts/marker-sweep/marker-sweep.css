@@ -1,0 +1,31 @@
+/* marker-sweep — tokens: --ms-fill, --ms-ink, --ms-radius, --ms-inset-top, --ms-inset-bottom, --ms-overhang.
+   Without JavaScript, or with reduced motion, every mark shows at rest (fully filled). */
+[data-emphasis] {
+  --ms-scale: 1;
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;           /* keep marks to a figure or a short phrase */
+  color: var(--ms-ink, inherit);
+  isolation: isolate;
+  background: none;              /* resets the default <mark> highlight */
+}
+
+[data-emphasis]::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  left: calc(-1 * var(--ms-overhang, 0.12em));
+  right: calc(-1 * var(--ms-overhang, 0.12em));
+  top: var(--ms-inset-top, 0.18em);
+  bottom: var(--ms-inset-bottom, 0.02em);
+  background: var(--ms-fill, #ffe14d);
+  border-radius: var(--ms-radius, 0.12em);
+  transform-origin: 0 50%;
+  transform: scaleX(var(--ms-scale));
+}
+
+[data-emphasis].ms-armed { --ms-scale: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  [data-emphasis].ms-armed { --ms-scale: 1; }
+}

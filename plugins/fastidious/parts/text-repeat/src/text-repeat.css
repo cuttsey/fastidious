@@ -1,0 +1,13 @@
+/* text-repeat — tokens: --tr-copy (colour of the copies), --tr-stroke (outline width; 0 fills). */
+.tr { display: block; }
+.tr .tr-stack { display: grid; overflow-x: clip; overflow-y: visible; } /* sideways drift stays inside the part */
+.tr .tr-stack > span { grid-area: 1 / 1; will-change: transform; }
+.tr .tr-copy {
+  color: var(--tr-copy, currentColor);
+  background: var(--tr-bg, transparent);
+}
+.tr .tr-word { position: relative; background: var(--tr-bg, transparent); }
+.tr.tr--outline .tr-copy {
+  color: transparent;
+  -webkit-text-stroke: var(--tr-stroke, 1px) var(--tr-copy, currentColor);
+}

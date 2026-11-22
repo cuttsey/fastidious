@@ -1,0 +1,12 @@
+/* view-change / pixel-cover — tokens: --pxc-colour (the cells), --pxc-gap. */
+.pxc {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  grid-template-columns: repeat(var(--pxc-columns, 14), 1fr);
+  grid-template-rows: repeat(var(--pxc-rows, 8), 1fr);
+  gap: var(--pxc-gap, 0);
+  pointer-events: none;
+}
+.pxc > div { background: var(--pxc-colour, #000); will-change: transform, opacity; }

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>hero-slideshow — clean-room example (Mallow &amp; Fenn, invented brand)</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/norwester@5.3.0/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/hanken-grotesk@5.3.0/wght.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/hanken-grotesk@5.3.0/wght-italic.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/trispace@5.3.0/standard.css">
+<style id="fd-fonts">:root { --fd-display: 'Norwester', sans-serif; --fd-body: 'Hanken Grotesk Variable', sans-serif; --fd-mono: 'Trispace Variable', monospace; } html { font-synthesis: none; }</style>
+<script type="importmap">
+{ "imports": {
+  "gsap": "https://cdn.jsdelivr.net/npm/gsap@3.15.1/index.js",
+  "gsap/": "https://cdn.jsdelivr.net/npm/gsap@3.15.1/"
+} }
+</script>
+<link rel="stylesheet" href="src/hero-slideshow.css">
+<style>
+  /* Clean-room brand: a chandlery's four objects, original still-life artwork, condensed caps. */
+  * { box-sizing: border-box; margin: 0; }
+  body { background: #0e1a22; color: #f3f1ec; font: 1rem/1.4 var(--fd-body); }
+  .hs { --hs-focus: #ff4f1f; }
+  .hs-text { position: absolute; z-index: 5; left: 4vw; bottom: 6vh; pointer-events: none; color: #f3f1ec; text-shadow: 0 1px 30px rgba(0,0,0,.35); }
+  .hs-text p { font: 600 .72rem/1.2 var(--fd-mono); letter-spacing: .12em; text-transform: uppercase; margin-bottom: .8rem; }
+  .hs-text .fact { margin: 1rem 0 0; font-size: .85rem; }
+  .hs-text h2 { font: 800 clamp(3rem, 11vw, 10rem)/.86 var(--fd-display); text-transform: uppercase; }
+  .hs-nav { position: absolute; z-index: 6; right: 4vw; bottom: 6vh; display: flex; gap: .6rem; }
+  .hs-nav button { font: 600 .8rem/1 var(--fd-mono); color: inherit; background: rgba(0,0,0,.25); border: 1px solid currentColor; padding: .8rem 1.1rem; cursor: pointer; }
+  .switch { position: fixed; z-index: 10; top: 1rem; right: 1rem; display: flex; gap: .4rem; font: 600 .7rem/1 var(--fd-mono); }
+  .switch a { color: #f3f1ec; padding: .4rem .6rem; border: 1px solid #f3f1ec55; text-decoration: none; }
+</style>
+</head>
+<body>
+  <nav class="switch" aria-label="Transition"><a href="?t=push">push</a><a href="?t=recede">recede</a><a href="?t=card">card</a><a href="?t=camera">camera</a></nav>
+  <section class="hs" id="hero">
+    <div class="hs-slide"><div class="hs-img"><img src="../_example/img/still-coil.svg" alt="A coil of hemp rope on a stone floor"></div><div class="hs-text"><p class="hs-line"><span>01 / 04</span></p><h2 class="hs-line"><span>The coil</span></h2><p class="hs-line fact"><span>[fill in: length] of hemp</span></p></div></div>
+    <div class="hs-slide"><div class="hs-img"><img src="../_example/img/still-hook.svg" alt="A forged iron hook against a rust wall"></div><div class="hs-text"><p class="hs-line"><span>02 / 04</span></p><h2 class="hs-line"><span>The hook</span></h2><p class="hs-line fact"><span>Forged at [fill in: °C]</span></p></div></div>
+    <div class="hs-slide"><div class="hs-img"><img src="../_example/img/still-buoy.svg" alt="A red buoy with a white band"></div><div class="hs-text"><p class="hs-line"><span>03 / 04</span></p><h2 class="hs-line"><span>The buoy</span></h2><p class="hs-line fact"><span>Ringed for [fill in: harbour]</span></p></div></div>
+    <div class="hs-slide"><div class="hs-img"><img src="../_example/img/still-weights.svg" alt="Stacked grey weights topped with an orange block"></div><div class="hs-text"><p class="hs-line"><span>04 / 04</span></p><h2 class="hs-line"><span>The weights</span></h2><p class="hs-line fact"><span>Cast to [fill in: kg]</span></p></div></div>
+    <div class="hs-nav"><button class="hs-prev" aria-label="Previous slide">Prev</button><button class="hs-next" aria-label="Next slide">Next</button></div>
+  </section>
+<script type="module">
+  import { mountHeroSlideshow } from './src/hero-slideshow.js';
+  window.hs = mountHeroSlideshow(document.getElementById('hero'), {
+    label: 'Mallow & Fenn objects',
+    transition: new URLSearchParams(location.search).get('t') || 'push',
+  });
+</script>
+</body>
+</html>

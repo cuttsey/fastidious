@@ -1,0 +1,20 @@
+/* live-status — tokens: --ls-on, --ls-warn, --ls-off, --ls-font. A breathing dot when on; still when off. */
+.ls { display: inline-flex; align-items: center; gap: 0.55em; font: var(--ls-font, 600 0.78rem/1 var(--fd-mono, monospace)); letter-spacing: 0.06em; text-transform: uppercase; }
+.ls-dot { position: relative; width: 0.55em; height: 0.55em; border-radius: 50%; background: var(--ls-off, #8b8f92); }
+.ls[data-state='on'] .ls-dot { background: var(--ls-on, #3fbf6f); }
+.ls[data-state='warn'] .ls-dot { background: var(--ls-warn, #e8a33a); }
+.ls[data-state='on'] .ls-dot::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: inherit;
+  animation: ls-breathe 2.4s ease-out infinite;
+}
+@keyframes ls-breathe {
+  0% { transform: scale(1); opacity: 0.6; }
+  70%, 100% { transform: scale(2.6); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ls-dot::after { animation: none !important; display: none; }
+}

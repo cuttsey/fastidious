@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>process-curve — clean-room example (Tidewater, invented brand)</title>
+<link rel="stylesheet" href="../fonts/faces/mattone.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/hanken-grotesk@5.3.0/wght.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/hanken-grotesk@5.3.0/wght-italic.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/trispace@5.3.0/standard.css">
+<style id="fd-fonts">:root { --fd-display: 'Mattone', sans-serif; --fd-body: 'Hanken Grotesk Variable', sans-serif; --fd-mono: 'Trispace Variable', monospace; } html { font-synthesis: none; }</style>
+<script type="importmap">
+{ "imports": {
+  "gsap": "https://cdn.jsdelivr.net/npm/gsap@3.15.1/index.js",
+  "gsap/": "https://cdn.jsdelivr.net/npm/gsap@3.15.1/"
+} }
+</script>
+<link rel="stylesheet" href="src/process-curve.css">
+<style>
+  * { box-sizing: border-box; margin: 0; }
+  body { background: #0f2733; color: #f2f5f6; font: 1rem/1.5 var(--fd-body); --pc-accent: #ff7a52; }
+  section { padding: 30vh 6vw; }
+  .eyebrow { font: 600 .72rem/1 var(--fd-mono); letter-spacing: .12em; text-transform: uppercase; margin-bottom: 1rem; opacity: .8; }
+  h2 { font: 900 clamp(2rem, 5vw, 4rem)/.95 var(--fd-display); margin-bottom: 4vh; }
+  .sample { margin-top: 1.5rem; font: .8rem/1.4 var(--fd-mono); opacity: .6; }
+</style>
+</head>
+<body>
+  <section><p class="eyebrow">01 — Scroll down</p><h2>The tide at the club steps.</h2></section>
+  <section>
+    <p class="eyebrow">02 — Today's water</p>
+    <div id="curve"></div>
+    <p class="sample">Sample data for the parts library only. In a build the points come from the business's own log or a tide table, never from the part.</p>
+  </section>
+  <section style="min-height:80vh"></section>
+<script type="module">
+  import { mountProcessCurve } from './src/process-curve.js';
+  const h = (t) => `${String(Math.floor(t)).padStart(2, '0')}:${String(Math.round((t % 1) * 60)).padStart(2, '0')}`;
+  mountProcessCurve(document.getElementById('curve'), {
+    title: 'Sample tide height through the morning',
+    xLabel: 'Time', yLabel: 'Height',
+    data: [[5, 0.9], [6, 1.6], [7, 2.8], [8, 3.9], [9, 4.6], [10, 4.8], [11, 4.4], [12, 3.5]],
+    formatX: h, formatY: (y) => `${y.toFixed(1)} m`,
+    marks: [{ x: 7.5, label: 'Swim window' }, { x: 10, label: 'High water' }],
+  });
+</script>
+</body>
+</html>

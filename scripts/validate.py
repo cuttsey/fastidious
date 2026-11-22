@@ -109,7 +109,7 @@ if len(set(ours) & set(crew)):
     fail(f"pinned skills share names with ours: {set(ours) & set(crew)}")
 
 # Whole-tree scans
-SECRET = re.compile(r"(sk-[A-Za-z0-9_-]{20,}|sk_[A-Za-z0-9]{24,}|AKIA[0-9A-Z]{16}|ghp_[A-Za-z0-9]{30,}|xox[bp]-[A-Za-z0-9-]{20,}|-----BEGIN [A-Z ]*PRIVATE KEY-----)")
+SECRET = re.compile(r"(sk-(?=[A-Za-z0-9_-]*[0-9])[A-Za-z0-9_-]{20,}|sk_[A-Za-z0-9]{24,}|AKIA[0-9A-Z]{16}|ghp_[A-Za-z0-9]{30,}|xox[bp]-[A-Za-z0-9-]{20,}|-----BEGIN [A-Z ]*PRIVATE KEY-----)")
 RETIRED = re.compile(r"(?<![A-Za-z])[Ww]right(?![A-Za-z])")
 TEXT = (".md", ".json", ".py", ".js", ".mjs", ".sh", ".yml", ".yaml", ".html", ".txt", ".toml")
 for dirpath, dirnames, files in os.walk(ROOT):

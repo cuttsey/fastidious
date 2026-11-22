@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>travelling-object — clean-room example (Mallow &amp; Fenn, invented brand)</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/archivo-narrow@5.3.0/wght.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/archivo-narrow@5.3.0/wght-italic.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/spectral@5.3.0/300.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/spectral@5.3.0/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/spectral@5.3.0/400-italic.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/spectral@5.3.0/600.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/spectral@5.3.0/700.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/geist-mono@5.3.0/wght.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/geist-mono@5.3.0/wght-italic.css">
+<style id="fd-fonts">:root { --fd-display: 'Archivo Narrow Variable', sans-serif; --fd-body: 'Spectral', serif; --fd-mono: 'Geist Mono Variable', monospace; } html { font-synthesis: none; }</style>
+<script type="importmap">
+{ "imports": {
+  "gsap": "https://cdn.jsdelivr.net/npm/gsap@3.15.1/index.js",
+  "gsap/": "https://cdn.jsdelivr.net/npm/gsap@3.15.1/"
+} }
+</script>
+<link rel="stylesheet" href="src/travelling-object.css">
+<style>
+  /* Clean-room brand: deliberately unlike the source demo (cold grey, condensed ink, signal orange). */
+  :root {
+    --paper: #d9dee0; --ink: #0e1a22; --signal: #ff4f1f;
+    --to-radius: 2px; --to-fill: #5e4524; --to-slot-ratio: 4 / 5;
+    font-family: var(--fd-display);
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body { background: var(--paper); color: var(--ink); }
+  .eyebrow { font: 600 0.75rem/1 var(--fd-mono); letter-spacing: .08em; text-transform: uppercase; }
+  .eyebrow b { color: var(--signal); }
+  .hero-copy { position: absolute; z-index: 3; left: 4vw; bottom: 6vh; color: #f3f1ec; mix-blend-mode: difference; }
+  .hero-copy h1 { font-size: clamp(3rem, 12vw, 11rem); line-height: .82; font-weight: 800; letter-spacing: -.02em; text-transform: uppercase; }
+  section { padding: 14vh 4vw; }
+  .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 6vw; align-items: center; }
+  .pair h2 { font-size: clamp(2rem, 5vw, 4.5rem); line-height: .95; text-transform: uppercase; }
+  .pair p { max-width: 34ch; margin-top: 1.25rem; font: 1.05rem/1.5 var(--fd-body); }
+  .slot-sm { width: min(28vw, 340px); justify-self: end; }
+  .slot-lg { width: min(70vw, 900px); margin: 0 auto; --to-slot-ratio: 16 / 9; }
+  .fill { color: var(--signal); }
+  footer { padding: 30vh 4vw 10vh; }
+  @media (max-width: 47.99em) { .pair { grid-template-columns: 1fr; } .slot-sm { width: 70vw; justify-self: start; } }
+</style>
+</head>
+<body>
+  <section class="to-stage" aria-label="Introduction" style="padding:0">
+    <div class="to-object" id="travel"><img src="../_example/img/rope.svg" alt="Three-strand hemp rope, close up"></div>
+    <div class="hero-copy"><p class="eyebrow"><b>01</b> — Ropewalk</p><h1>Mallow<br>&amp; Fenn</h1></div>
+  </section>
+
+  <section class="pair">
+    <div>
+      <p class="eyebrow"><b>02</b> — The walk</p>
+      <h2>[fill in: length] metres, laid by hand.</h2>
+      <p>Placeholder copy. Every figure on this page is a <span class="fill">[fill in]</span> slot; the part never supplies facts.</p>
+    </div>
+    <div class="to-slot slot-sm" data-slot></div>
+  </section>
+
+  <section>
+    <p class="eyebrow"><b>03</b> — The lay</p>
+    <div class="to-slot slot-lg" data-slot style="margin-top:4vh"></div>
+  </section>
+
+  <section class="pair">
+    <div class="to-slot slot-sm" data-slot style="justify-self:start"></div>
+    <div>
+      <p class="eyebrow"><b>04</b> — The coil</p>
+      <h2>Coiled, tagged, shipped [fill in: day].</h2>
+    </div>
+  </section>
+
+  <footer><p class="eyebrow">Clean-room example for the Fastidious parts library. Invented brand, original artwork.</p></footer>
+
+<script type="module">
+  import { mountTravellingObject } from './src/travelling-object.js';
+  mountTravellingObject({
+    object: document.getElementById('travel'),
+    slots: [...document.querySelectorAll('[data-slot]')],
+    ease: 'power2.inOut',
+    hold: 0.4,
+  });
+</script>
+</body>
+</html>

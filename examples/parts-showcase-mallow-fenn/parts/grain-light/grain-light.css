@@ -1,0 +1,47 @@
+/* grain-light — tokens: --gl-grain-opacity, --gl-grain-blend, --gl-light-colour, --gl-light-size, --gl-light-opacity, --gl-light-blend. */
+.gl-host { position: relative; }
+.gl-layer { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 20; }
+.gl-grain {
+  position: absolute;
+  inset: -10%;                    /* just enough overscan for the shifts below */
+  pointer-events: none;
+  z-index: 20;
+  opacity: var(--gl-grain-opacity, 0.08);
+  mix-blend-mode: var(--gl-grain-blend, normal);
+  animation: gl-shift 0.9s steps(6) infinite;
+  will-change: transform;
+}
+@keyframes gl-shift {
+  0% { transform: translate3d(0, 0, 0); }
+  17% { transform: translate3d(-6%, 3%, 0); }
+  33% { transform: translate3d(4%, -7%, 0); }
+  50% { transform: translate3d(-8%, 2%, 0); }
+  67% { transform: translate3d(7%, 5%, 0); }
+  83% { transform: translate3d(-3%, -5%, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+.gl-light {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 19;
+  will-change: transform;
+}
+.gl-light::before {
+  content: '';
+  position: absolute;
+  width: var(--gl-light-size, 70vmax);
+  height: var(--gl-light-size, 70vmax);
+  left: calc(var(--gl-light-size, 70vmax) / -2);
+  top: calc(var(--gl-light-size, 70vmax) / -2);
+  border-radius: 50%;
+  background: radial-gradient(closest-side, var(--gl-light-colour, #fff6e0), transparent);
+  opacity: var(--gl-light-opacity, 0.35);
+  mix-blend-mode: var(--gl-light-blend, soft-light);
+}
+@media (prefers-reduced-motion: reduce) {
+  .gl-grain { animation: none; }
+}

@@ -17,6 +17,17 @@ If `WORLD-BIBLE.md` exists, it is the brief: read it, follow its prompt core, ca
 - **Video for scroll-scrub beats.** When `render-engineer` specifies an all-intra or short-GOP requirement, deliver footage encoded to that specification directly; do not hand back a standard long-GOP export and leave the re-encode to someone else. Confirm the exact resolution, frame rate, and duration against the scroll range the beat occupies.
 - **Sound design.** Treat sound as a UX layer, not decoration: it supplies emotional cues and feedback the same way it does in film or games. Commission or select audio deliberately for tone (a site's sound design should be as considered as its typography), and always provide an easily discoverable mute control, since autoplaying audio is one of the fastest ways to lose a visitor's trust.
 
+## The asset pack
+
+Every build ends with a complete, owned asset pack, because sites whose imagery is invented at build time are the ones that look AI-made.
+
+- Write all final assets to `assets/`, at final dimensions and encode, in modern formats (WebP or AVIF for images, all-intra or short-GOP MP4 or WebM for scrubbed video). Fonts are not copied into `assets/`: they are referenced from `font-registry`.
+- Keep `assets/MANIFEST.md`: for each file, its role on the page, the beat it serves, whether it is generated or licensed, its licence, and the exact prompt or source link used to make it. A later session must be able to regenerate or re-license every file from the manifest alone.
+- Include the fonts by reference. Choose every face from `font-registry` and link the stylesheets it lists; record each font's licence in the asset pack. Never a basic or generic face: a fallback stack is not a typeface. If a client must self-host, they take their own copy from the official source under that font's licence.
+- Include textures and materials the build uses for depth (grain, paper, glass, light maps) as files, not as effects the next session must reinvent.
+- Product, place and packaging imagery should show the actual business where possible. When it must be generated, brief it to the real facts in `FACTS.md` (the real product, the real room, the real material), never to a generic category image.
+- No placeholder survives sign-off. A beat still waiting on an asset is reported as unfinished, not filled with stock.
+
 ## Non-negotiables
 
 - Never deliver an asset that ignores the format constraint a requesting agent gave you (dimensions, duration, encode, file size ceiling). If the constraint seems wrong, say so and ask, rather than silently substituting your own judgement.

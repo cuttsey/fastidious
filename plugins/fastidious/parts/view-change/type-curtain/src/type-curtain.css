@@ -1,0 +1,33 @@
+/* type-curtain — tokens: --tc-font, --tc-weight, --tc-colour, --tc-size, --tc-ground. The type is the brand's display face. */
+.tc-wall {
+  position: fixed;
+  z-index: 1000;
+  top: 50%;
+  left: 50%;
+  width: 100vmax;
+  height: 100vmax;
+  margin: -50vmax 0 0 -50vmax;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  pointer-events: none;
+  will-change: transform;
+}
+.tc-line {
+  white-space: nowrap;
+  font-family: var(--tc-font, inherit);
+  font-weight: var(--tc-weight, 800);
+  font-size: var(--tc-size, clamp(7rem, 18.75vh, 15rem));
+  line-height: 0.75;
+  text-transform: uppercase;
+  color: var(--tc-colour, currentColor);
+  will-change: transform, opacity;
+}
+.tc-ground {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: var(--tc-ground, #000);
+  pointer-events: none;
+}

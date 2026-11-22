@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>marker-sweep — clean-room example (Ferrous, invented brand)</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/archivo-narrow@5.3.0/wght.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/archivo-narrow@5.3.0/wght-italic.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/libertinus-serif@5.3.0/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/libertinus-serif@5.3.0/400-italic.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/libertinus-serif@5.3.0/600.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/libertinus-serif@5.3.0/700.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/geist-mono@5.3.0/wght.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/geist-mono@5.3.0/wght-italic.css">
+<style id="fd-fonts">:root { --fd-display: 'Archivo Narrow Variable', sans-serif; --fd-body: 'Libertinus Serif', serif; --fd-mono: 'Geist Mono Variable', monospace; } html { font-synthesis: none; }</style>
+<script type="importmap">
+{ "imports": {
+  "gsap": "https://cdn.jsdelivr.net/npm/gsap@3.15.1/index.js",
+  "gsap/": "https://cdn.jsdelivr.net/npm/gsap@3.15.1/"
+} }
+</script>
+<link rel="stylesheet" href="src/marker-sweep.css">
+<style>
+  /* Clean-room brand: iron-grey paper, serif reading text, rust marker. Unlike the source demo's violet night. */
+  :root { --bg: #e7e5e0; --ink: #1d2124; --ms-fill: #e0663a; --ms-ink: #14181b; --ms-radius: 1px; --ms-inset-top: .52em; --ms-inset-bottom: .04em; }
+  * { box-sizing: border-box; margin: 0; }
+  body { background: var(--bg); color: var(--ink); font: 1.35rem/1.6 var(--fd-body); }
+  header { height: 92vh; display: grid; place-items: end start; padding: 6vw; background: url(../../_example/img/iron.svg) center/cover; color: #eef0f1; }
+  header h1 { font: 800 clamp(3rem, 10vw, 9rem)/.85 var(--fd-display); letter-spacing: -.02em; text-transform: uppercase; }
+  .eyebrow { font: 600 .72rem/1 var(--fd-mono); letter-spacing: .1em; text-transform: uppercase; margin-bottom: 1rem; }
+  article { max-width: 38rem; margin: 0 auto; padding: 16vh 6vw 40vh; }
+  article p + p { margin-top: 32vh; }
+</style>
+</head>
+<body>
+  <header><div><p class="eyebrow">01 — Ironmongery</p><h1>Ferrous</h1></div></header>
+  <article>
+    <p class="eyebrow">02 — How we forge</p>
+    <p>Every hinge is drop-forged from <mark data-emphasis>[fill in: grade]</mark> steel and hand-filed before it is blacked.</p>
+    <p>We keep <mark data-emphasis>[fill in: number]</mark> patterns in the loft, some of them older than the shop itself, and we cast to order in <mark data-emphasis>[fill in: weeks]</mark>.</p>
+    <p>Placeholder copy. The part only emphasises; every figure here is a slot for a real fact from <code>FACTS.md</code>.</p>
+  </article>
+<script type="module">
+  import { mountMarkerSweep } from './src/marker-sweep.js';
+  mountMarkerSweep(document);
+</script>
+</body>
+</html>

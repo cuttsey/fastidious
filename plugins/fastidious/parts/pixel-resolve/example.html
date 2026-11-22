@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pixel-resolve — clean-room example (Mallow &amp; Fenn, invented brand)</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/archivo-narrow@5.3.0/wght.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/archivo-narrow@5.3.0/wght-italic.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/bitter@5.3.0/wght.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/bitter@5.3.0/wght-italic.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/geist-mono@5.3.0/wght.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/geist-mono@5.3.0/wght-italic.css">
+<style id="fd-fonts">:root { --fd-display: 'Archivo Narrow Variable', sans-serif; --fd-body: 'Bitter Variable', serif; --fd-mono: 'Geist Mono Variable', monospace; } html { font-synthesis: none; }</style>
+<link rel="stylesheet" href="src/pixel-resolve.css">
+<style>
+  /* Clean-room brand: a chandlery's catalogue on cold paper; editorial grid, not a fashion lookbook. */
+  * { box-sizing: border-box; margin: 0; }
+  body { background: #d9dee0; color: #0e1a22; font: 1rem/1.5 var(--fd-body); }
+  header { padding: 20vh 5vw 10vh; }
+  h1 { font: 800 clamp(3rem, 10vw, 9rem)/.85 var(--fd-display); text-transform: uppercase; }
+  .row { display: grid; grid-template-columns: 1.4fr 1fr; gap: 5vw; align-items: end; padding: 12vh 5vw; }
+  .row:nth-child(even) { grid-template-columns: 1fr 1.4fr; }
+  .row:nth-child(even) .pr-box { order: 2; }
+  .pr-box { aspect-ratio: 16 / 10; }
+  h2 { font: 800 clamp(2rem, 5vw, 4.5rem)/.9 var(--fd-display); text-transform: uppercase; }
+  .eyebrow { font: 600 .72rem/1 var(--fd-mono); letter-spacing: .1em; text-transform: uppercase; margin-bottom: 1rem; }
+  @media (max-width: 47.99em) { .row, .row:nth-child(even) { grid-template-columns: 1fr; } .row:nth-child(even) .pr-box { order: 0; } }
+</style>
+</head>
+<body>
+  <header><p class="eyebrow">01 — The objects</p><h1>Mallow &amp; Fenn<br>catalogue</h1></header>
+  <main>
+    <section class="row"><div class="pr-box"><img data-pixel-resolve src="../_example/img/still-coil.jpg" alt="A coil of hemp rope on a stone floor" loading="lazy"></div><div><p class="eyebrow">02</p><h2>The coil</h2></div></section>
+    <section class="row"><div class="pr-box"><img data-pixel-resolve src="../_example/img/still-hook.jpg" alt="A forged iron hook against a rust wall" loading="lazy"></div><div><p class="eyebrow">03</p><h2>The hook</h2></div></section>
+    <section class="row"><div class="pr-box"><img data-pixel-resolve src="../_example/img/still-buoy.jpg" alt="A red buoy with a white band" loading="lazy"></div><div><p class="eyebrow">04</p><h2>The buoy</h2></div></section>
+    <section class="row"><div class="pr-box"><img data-pixel-resolve src="../_example/img/still-weights.jpg" alt="Stacked grey weights" loading="lazy"></div><div><p class="eyebrow">05</p><h2>The weights</h2></div></section>
+  </main>
+<script type="module">
+  import { mountPixelResolve } from './src/pixel-resolve.js';
+  mountPixelResolve(document);
+</script>
+</body>
+</html>

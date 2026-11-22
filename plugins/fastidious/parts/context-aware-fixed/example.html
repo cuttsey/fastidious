@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>context-aware-fixed — clean-room example (Tidelock, invented brand)</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/archivo@5.3.0/standard.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/libertinus-serif@5.3.0/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/libertinus-serif@5.3.0/400-italic.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/geist-mono@5.3.0/wght.css">
+<style id="fd-fonts">:root { --fd-display: 'Archivo Variable', sans-serif; --fd-body: 'Libertinus Serif', serif; --fd-mono: 'Geist Mono Variable', monospace; } html { font-synthesis: none; }</style>
+<script type="importmap">
+{ "imports": {
+  "gsap": "https://cdn.jsdelivr.net/npm/gsap@3.15.1/index.js",
+  "gsap/": "https://cdn.jsdelivr.net/npm/gsap@3.15.1/"
+} }
+</script>
+<link rel="stylesheet" href="src/context-aware-fixed.css">
+<style>
+  /* Clean-room brand: narrowboat hire on a canal. Paper, lock-gate red, canal green-black. */
+  :root { --paper: #f3eee2; --gate: #b8322a; --canal: #13201c; }
+  * { box-sizing: border-box; margin: 0; }
+  body { background: var(--paper); color: var(--canal); font: 1.15rem/1.6 var(--fd-body); }
+  .logo { position: fixed; top: 22px; left: 5vw; z-index: 10; font: 800 1.35rem/1 var(--fd-display); font-stretch: 112%; letter-spacing: -.01em; color: var(--gate); text-decoration: none; }
+  .book { position: fixed; bottom: 22px; right: 5vw; z-index: 10; font: 500 .78rem/1 var(--fd-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--canal); text-decoration: none; border-bottom: 1px solid currentColor; padding-bottom: 3px; }
+  .book:focus-visible, .logo:focus-visible { outline: 2px solid var(--gate); outline-offset: 4px; }
+  .text { max-width: 38rem; margin: 0 auto; padding: 22vh 5vw; }
+  .text h1, .text h2 { font: 800 clamp(2.4rem, 6vw, 4.6rem)/.95 var(--fd-display); font-stretch: 90%; margin-bottom: 1.4rem; }
+  .mono { font: 500 .72rem/1 var(--fd-mono); letter-spacing: .12em; text-transform: uppercase; margin-bottom: 1rem; }
+  .full { height: 110vh; background: center / cover no-repeat; }
+  .note { padding: 6vh 5vw 14vh; font-size: .85rem; opacity: .65; }
+</style>
+</head>
+<body>
+  <a class="logo" href="#top" data-fixed>Tidelock</a>
+  <a class="book" href="#book" data-fixed-book>Book a boat</a>
+
+  <main id="top">
+    <section class="text"><p class="mono">Narrowboats from the top lock</p><h1>Four miles, eleven locks, one slow afternoon.</h1><p>[fill in: where the boats leave from, and the first lock's name.] The logo and the booking link step aside whenever a picture passes under them, then come back.</p></section>
+    <section class="full" data-caf-block style="background-image:url(../_example/img/still-coil.jpg)" aria-label="Rope on the towpath"></section>
+    <section class="text"><p class="mono">The boats</p><h2>Six boats, each named after a lock-keeper.</h2><p>[fill in: berths, length, whether dogs are welcome.]</p></section>
+    <section class="full" data-caf-block style="background-image:url(../_example/img/still-buoy.jpg)" aria-label="A buoy in still water"></section>
+    <section class="text" id="book"><p class="mono">Booking</p><h2>Half days from [fill in: price].</h2><p>Tab to the booking link while a picture is under it: it comes back for keyboard focus.</p></section>
+    <section class="full" data-caf-block style="background-image:url(../_example/img/still-hook.jpg)" aria-label="An iron hook"></section>
+    <p class="note">Tidelock is invented. Pictures are the library's own sample artwork. Fonts: Archivo, Libertinus Serif and Geist Mono from the font registry.</p>
+  </main>
+<script type="module">
+  import { mountContextAwareFixed } from './src/context-aware-fixed.js';
+  const effect = new URLSearchParams(location.search).get('effect') || 'slide';
+  mountContextAwareFixed('[data-fixed]', { effect });
+  mountContextAwareFixed('[data-fixed-book]', { effect: new URLSearchParams(location.search).get('book') || 'shuffle' });
+</script>
+</body>
+</html>

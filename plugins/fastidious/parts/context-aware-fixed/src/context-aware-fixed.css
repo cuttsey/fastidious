@@ -1,0 +1,4 @@
+/* context-aware-fixed — the part only adds a mask inside the element for the slide effect. */
+.caf-mask { display: inline-block; overflow: clip; vertical-align: top; }
+.caf-inner { display: inline-block; }
+.caf-char { display: inline-block; }

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>inline-image-expand — clean-room example (Mallow &amp; Fenn, invented brand)</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/archivo-narrow@5.3.0/wght.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/archivo-narrow@5.3.0/wght-italic.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/spectral@5.3.0/300.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/spectral@5.3.0/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/spectral@5.3.0/400-italic.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/spectral@5.3.0/600.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/spectral@5.3.0/700.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/geist-mono@5.3.0/wght.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/geist-mono@5.3.0/wght-italic.css">
+<style id="fd-fonts">:root { --fd-display: 'Archivo Narrow Variable', sans-serif; --fd-body: 'Spectral', serif; --fd-mono: 'Geist Mono Variable', monospace; } html { font-synthesis: none; }</style>
+<script type="importmap">
+{ "imports": {
+  "gsap": "https://cdn.jsdelivr.net/npm/gsap@3.15.1/index.js",
+  "gsap/": "https://cdn.jsdelivr.net/npm/gsap@3.15.1/"
+} }
+</script>
+<link rel="stylesheet" href="src/inline-image-expand.css">
+<style>
+  /* Clean-room brand: stark white, heavy condensed caps, square windows. Unlike the source's soft pastel serif. */
+  :root { --ink: #101010; --ie-radius: 0px; --ie-width: 2.2em; --ie-ratio: 4 / 3; }
+  * { box-sizing: border-box; margin: 0; }
+  body { background: #fbfbf9; color: var(--ink); font-family: var(--fd-display); }
+  section { min-height: 100vh; display: grid; align-content: center; padding: 6vw; }
+  h2 { font-weight: 800; font-size: clamp(2.4rem, 8vw, 7.5rem); line-height: .95; text-transform: uppercase; letter-spacing: -.015em; }
+  .eyebrow { font: 600 .72rem/1 var(--fd-mono); letter-spacing: .1em; text-transform: uppercase; margin-bottom: 2rem; }
+  .eyebrow b { color: #c0391b; }
+</style>
+</head>
+<body>
+  <section><p class="eyebrow"><b>01</b> — Scroll down</p><h2>Rope, the way it<br>used to be made.</h2></section>
+  <section>
+    <p class="eyebrow"><b>02</b> — The fibre</p>
+    <h2 data-ie>Hemp from<br>[fill in: place].<br>Twisted<span class="ie-window"><img src="../_example/img/rope.svg" alt=""></span><span class="ie-after">tight.</span></h2>
+  </section>
+  <section>
+    <p class="eyebrow"><b>03</b> — The yard</p>
+    <h2 data-ie style="--ie-ratio: 16 / 9; --ie-width: 2.8em">Salt<span class="ie-window"><img src="../_example/img/tide.svg" alt=""></span><span class="ie-after">air.</span></h2>
+  </section>
+  <section><p class="eyebrow">Clean-room example for the Fastidious parts library. Invented brand, original artwork.</p></section>
+<script type="module">
+  import { mountInlineImageExpand } from './src/inline-image-expand.js';
+  mountInlineImageExpand(document);
+</script>
+</body>
+</html>

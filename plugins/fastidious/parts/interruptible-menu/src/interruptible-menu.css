@@ -1,0 +1,13 @@
+/* interruptible-menu — tokens: --im-bg, --im-ink. The menu covers the viewport. */
+.im-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 800;
+  display: grid;
+  place-content: center;
+  gap: 0.4em;
+  background: var(--im-bg, #111);
+  color: var(--im-ink, #fff);
+  visibility: hidden;
+}
+.im-toggle { position: relative; z-index: 900; }

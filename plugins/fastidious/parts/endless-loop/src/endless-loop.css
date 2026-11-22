@@ -1,0 +1,5 @@
+/* endless-loop — the panels are the host's own. Lenis needs its stylesheet rules below for smooth scrolling. */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-stopped { overflow: hidden; }
+.el-clone { pointer-events: none; }

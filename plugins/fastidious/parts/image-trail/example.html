@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>image-trail — clean-room example (Tidewater, invented brand)</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/bebas-neue@5.3.0/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/geist@5.3.0/wght.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/geist@5.3.0/wght-italic.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/geist-mono@5.3.0/wght.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/geist-mono@5.3.0/wght-italic.css">
+<style id="fd-fonts">:root { --fd-display: 'Bebas Neue', sans-serif; --fd-body: 'Geist Variable', sans-serif; --fd-mono: 'Geist Mono Variable', monospace; } html { font-synthesis: none; }</style>
+<script type="importmap">
+{ "imports": {
+  "gsap": "https://cdn.jsdelivr.net/npm/gsap@3.15.1/index.js",
+  "gsap/": "https://cdn.jsdelivr.net/npm/gsap@3.15.1/"
+} }
+</script>
+<link rel="stylesheet" href="src/image-trail.css">
+<style>
+  /* Clean-room brand: a swim club's season in pictures; cold sea ground, rounded heavy type. */
+  * { box-sizing: border-box; margin: 0; }
+  body { background: #0f2733; color: #f2f5f6; font: 1rem/1.5 var(--fd-body); }
+  .it-area { height: 100vh; display: grid; place-items: center; --it-radius: 3px; }
+  h1 { position: relative; z-index: 0; font: 900 clamp(3rem, 12vw, 11rem)/.85 var(--fd-display); text-align: center; pointer-events: none; }
+  .hint { position: absolute; bottom: 4vh; left: 0; right: 0; text-align: center; font: 600 .7rem/1 var(--fd-mono); letter-spacing: .12em; text-transform: uppercase; opacity: .6; }
+  .it-img { z-index: 1; }
+</style>
+</head>
+<body>
+  <section class="it-area" id="area" aria-label="Season in pictures">
+    <h1>A season<br>in the sea.</h1>
+    <p class="hint">Move the pointer, or drag on a phone</p>
+    <img class="it-img" src="../_example/img/still-buoy.jpg" alt="">
+    <img class="it-img" src="../_example/img/still-coil.jpg" alt="">
+    <img class="it-img" src="../_example/img/still-hook.jpg" alt="">
+    <img class="it-img" src="../_example/img/still-weights.jpg" alt="">
+  </section>
+<script type="module">
+  import { mountImageTrail } from './src/image-trail.js';
+  mountImageTrail(document.getElementById('area'));
+</script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+/* lagging-columns — the grid is the host's own. This only prepares items for transform. */
+.lc-grid > * {
+  will-change: transform;
+  backface-visibility: hidden;
+}
