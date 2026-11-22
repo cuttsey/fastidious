@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>axis-ramp — clean-room example (Leaven, invented brand)</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/archivo@5.3.0/standard.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/archivo@5.3.0/standard-italic.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/geist-mono@5.3.0/wght.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/geist-mono@5.3.0/wght-italic.css">
+<style id="fd-fonts">:root { --fd-display: 'Archivo Variable', sans-serif; --fd-body: 'Archivo Variable', sans-serif; --fd-mono: 'Geist Mono Variable', monospace; } html { font-synthesis: none; }</style>
+<script type="importmap">
+{ "imports": {
+  "gsap": "https://cdn.jsdelivr.net/npm/gsap@3.15.1/index.js",
+  "gsap/": "https://cdn.jsdelivr.net/npm/gsap@3.15.1/"
+} }
+</script>
+<link rel="stylesheet" href="src/axis-ramp.css">
+<style>
+  :root { --flour: #dde6ee; --rye: #26170e; --yeast: #f2c230; --crumb: #8a6a52; }
+  * { box-sizing: border-box; margin: 0; }
+  body { background: var(--flour); color: var(--rye); font: 400 1.0625rem/1.5 var(--fd-body); overflow-x: clip; }
+  .mono { font: 500 .75rem/1 var(--fd-mono); letter-spacing: .1em; text-transform: uppercase; }
+  .hero { min-height: 100svh; display: grid; align-content: center; justify-items: center; gap: 4vh; padding: 10vh 5vw; text-align: center; }
+  .hero h1 { font-size: clamp(5rem, 19vw, 17rem); line-height: .8; letter-spacing: -.04em; }
+  .hero p { max-width: 34ch; font-size: clamp(1.05rem, 1.6vw, 1.3rem); }
+  .proof { height: 320svh; position: relative; background: var(--rye); color: var(--flour); }
+  .proof .stage { position: sticky; top: 0; height: 100svh; display: grid; grid-template-rows: auto 1fr auto; padding: 6vh 5vw; }
+  .proof .word { align-self: center; justify-self: center; font-size: min(24vw, 40vh); line-height: .8; letter-spacing: -.035em; color: var(--yeast); }
+  .proof .foot { display: flex; justify-content: space-between; gap: 2rem; align-items: end; }
+  .proof .foot p { max-width: 32ch; opacity: .85; }
+  .copy { padding: 18vh 5vw; max-width: 46rem; margin: 0 auto; font-size: clamp(1.4rem, 2.6vw, 2.1rem); line-height: 1.25; letter-spacing: -.01em; }
+  .copy .hot { color: var(--crumb); }
+  .end { min-height: 90svh; display: grid; place-content: center; text-align: center; padding: 10vh 5vw; background: var(--yeast); }
+  .end h2 { font-size: clamp(4rem, 15vw, 13rem); line-height: .82; letter-spacing: -.045em; }
+  .end p { margin-top: 3vh; }
+  .note { padding: 3rem 5vw; font-size: .8rem; opacity: .6; }
+</style>
+</head>
+<body>
+  <section class="hero">
+    <p class="mono">Leaven, a starter that keeps time</p>
+    <h1 id="mark">Leaven</h1>
+    <p>It knows when you last fed it, and it tells you before it goes flat.</p>
+  </section>
+
+  <section class="proof" id="proof">
+    <div class="stage">
+      <p class="mono">After a feed</p>
+      <p class="word" id="rise">Rising</p>
+      <div class="foot">
+        <p>As the jar fills, the word fills. When it is at its fullest, it is time to bake.</p>
+        <p class="mono">Scroll</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="copy">
+    <p>A healthy starter <span class="hot" id="doubles">doubles</span> in four to eight hours, and the words either side of it should not move an inch while it does.</p>
+  </section>
+
+  <section class="end">
+    <h2 id="feed">Feed me.</h2>
+    <p class="mono">Sample brand for the parts library only</p>
+  </section>
+  <p class="note">Leaven is invented. The font is Archivo (SIL Open Font Licence), loaded from the font registry (see fonts/CATALOGUE.md).</p>
+
+<script type="module">
+  import { mountAxisRamp } from './src/axis-ramp.js';
+
+  // Intro: the mark grows heavier and wider letter by letter, like a rise.
+  mountAxisRamp('#mark', {
+    mode: 'intro', delay: 0.2,
+    startState: { wght: 100, wdth: 62 },
+    ramp: { wght: [140, 900], wdth: [70, 125] },
+    duration: 1.6, stagger: 0.08,
+  });
+
+  // Scrub: the word fills as the reader scrolls through the proof.
+  mountAxisRamp('#rise', {
+    mode: 'scrub', trigger: '#proof',
+    from: { wght: 140, wdth: 62, opacity: 0.45 },
+    to: { wght: 900, wdth: 125, opacity: 1 },
+    scrubStart: 'top top', scrubEnd: 'bottom bottom',
+  });
+
+  // Enter, inline: one word in a sentence; its neighbours must not shift.
+  mountAxisRamp('#doubles', {
+    mode: 'enter',
+    startState: { wght: 300, wdth: 100 },
+    ramp: { wght: [900, 900], wdth: [100, 125] },
+    duration: 1.1, stagger: 0.05, start: 'top 75%',
+  });
+
+  // Enter: the closing line lands heavy at the end.
+  mountAxisRamp('#feed', {
+    mode: 'enter',
+    startState: { wght: 100, wdth: 100 },
+    ramp: { wght: [300, 900], wdth: [85, 125] },
+    duration: 1.3, stagger: 0.06, start: 'top 80%',
+  });
+</script>
+</body>
+</html>

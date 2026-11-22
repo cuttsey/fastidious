@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>char-rise — clean-room example (Tidewater, invented brand)</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/poetsen-one@5.3.0/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/hanken-grotesk@5.3.0/wght.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/hanken-grotesk@5.3.0/wght-italic.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/trispace@5.3.0/standard.css">
+<style id="fd-fonts">:root { --fd-display: 'Poetsen One', sans-serif; --fd-body: 'Hanken Grotesk Variable', sans-serif; --fd-mono: 'Trispace Variable', monospace; } html { font-synthesis: none; }</style>
+<script type="importmap">
+{ "imports": {
+  "gsap": "https://cdn.jsdelivr.net/npm/gsap@3.15.1/index.js",
+  "gsap/": "https://cdn.jsdelivr.net/npm/gsap@3.15.1/"
+} }
+</script>
+<link rel="stylesheet" href="src/char-rise.css">
+<style>
+  /* Clean-room brand: cold sea bands, rounded heavy display, chalk white. */
+  :root { --chalk: #f2f5f6; --deep: #0f2733; }
+  * { box-sizing: border-box; margin: 0; }
+  body { background: var(--deep); color: var(--chalk); font: 1.1rem/1.5 var(--fd-body); }
+  .band { min-height: 100vh; display: grid; place-items: center; padding: 6vw; text-align: center; }
+  .band:first-child { background: url(../../_example/img/tide.svg) center/cover; }
+  h2 { font: 900 clamp(2.6rem, 9vw, 8rem)/.9 var(--fd-display); letter-spacing: -.01em; }
+  .eyebrow { font: 600 .72rem/1 var(--fd-mono); letter-spacing: .12em; text-transform: uppercase; margin-bottom: 1.5rem; opacity: .8; }
+</style>
+</head>
+<body>
+  <section class="band"><div><p class="eyebrow">01 — Tidewater swim club</p><h2 data-char-rise>In before eight.</h2></div></section>
+  <section class="band"><div><p class="eyebrow">02 — The water</p><h2 data-char-rise>[fill in: °C] today.</h2></div></section>
+  <section class="band"><div><p class="eyebrow">03 — The swim</p><h2 data-char-rise>Out to the buoy and back.</h2></div></section>
+<script type="module">
+  import { mountCharRise } from './src/char-rise.js';
+  mountCharRise(document);
+</script>
+</body>
+</html>

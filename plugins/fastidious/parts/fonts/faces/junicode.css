@@ -1,0 +1,3 @@
+/* junicode: referenced from its official repository psb1558/Junicode-font, pinned to commit 6978714. OFL 1.1. No font files are kept in Fastidious. */
+@font-face { font-family: 'Junicode VF'; font-style: normal; font-weight: 300 700; font-stretch: 75% 125%; font-display: swap; src: url(https://cdn.jsdelivr.net/gh/psb1558/Junicode-font@6978714c2bb053861a68489c052b1c88e7596bfb/webfiles/JunicodeVF-Roman.woff2) format('woff2'); }
+@font-face { font-family: 'Junicode VF'; font-style: italic; font-weight: 300 700; font-stretch: 75% 125%; font-display: swap; src: url(https://cdn.jsdelivr.net/gh/psb1558/Junicode-font@6978714c2bb053861a68489c052b1c88e7596bfb/webfiles/JunicodeVF-Italic.woff2) format('woff2'); }

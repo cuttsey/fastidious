@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>live-status — clean-room example (Ferrous, invented brand)</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/norwester@5.3.0/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/aleo@5.3.0/wght.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/aleo@5.3.0/wght-italic.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/trispace@5.3.0/standard.css">
+<style id="fd-fonts">:root { --fd-display: 'Norwester', sans-serif; --fd-body: 'Aleo Variable', serif; --fd-mono: 'Trispace Variable', monospace; } html { font-synthesis: none; }</style>
+<link rel="stylesheet" href="src/live-status.css">
+<style>
+  * { box-sizing: border-box; margin: 0; }
+  body { background: #e7e5e0; color: #1d2124; font: 1rem/1.5 var(--fd-body); }
+  header { display: flex; justify-content: space-between; align-items: center; padding: 1.4rem 5vw; border-bottom: 1px solid #c9c6bf; }
+  .mark { font: 800 1.1rem/1 var(--fd-display); text-transform: uppercase; letter-spacing: .04em; }
+  main { padding: 18vh 5vw; max-width: 60rem; }
+  h1 { font: 800 clamp(3rem, 9vw, 8rem)/.85 var(--fd-display); text-transform: uppercase; margin-bottom: 2rem; }
+  .note { font: .85rem/1.5 var(--fd-mono); color: #6b6a66; max-width: 46ch; }
+</style>
+</head>
+<body>
+  <header><span class="mark">Ferrous</span><span id="status"></span></header>
+  <main><h1>The forge,<br>[fill in: street]</h1>
+  <p class="note">Hours below are placeholders in the example's code. In a build they come from FACTS.md, computed in the business's own time zone, so a visitor abroad still sees the forge's real state.</p></main>
+<script type="module">
+  import { mountLiveStatus } from './src/live-status.js';
+  const week = [['07:00', '19:00']];
+  mountLiveStatus(document.getElementById('status'), {
+    timeZone: 'Europe/London',
+    schedule: { mon: week, tue: week, wed: week, thu: week, fri: week, sat: [['08:00', '16:00']] },
+  });
+</script>
+</body>
+</html>

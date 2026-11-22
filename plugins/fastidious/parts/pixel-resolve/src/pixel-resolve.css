@@ -1,0 +1,5 @@
+/* pixel-resolve — wrap each image in a positioned box; the canvas sits over it while it resolves. */
+.pr-box { position: relative; overflow: hidden; }
+.pr-box > img { display: block; width: 100%; height: 100%; object-fit: cover; }
+img.pr-armed:not(.pr-ready):not(.pr-done) { opacity: 0; }   /* hidden only until the first coarse step paints */
+.pr-canvas { position: absolute; inset: 0; width: 100%; height: 100%; image-rendering: pixelated; pointer-events: none; }

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>endless-loop — clean-room example (Ferrous, invented brand)</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/bebas-neue@5.3.0/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/hanken-grotesk@5.3.0/wght.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/hanken-grotesk@5.3.0/wght-italic.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/trispace@5.3.0/standard.css">
+<style id="fd-fonts">:root { --fd-display: 'Bebas Neue', sans-serif; --fd-body: 'Hanken Grotesk Variable', sans-serif; --fd-mono: 'Trispace Variable', monospace; } html { font-synthesis: none; }</style>
+<script type="importmap">
+{ "imports": {
+  "gsap": "https://cdn.jsdelivr.net/npm/gsap@3.15.1/index.js",
+  "gsap/": "https://cdn.jsdelivr.net/npm/gsap@3.15.1/",
+  "lenis": "https://cdn.jsdelivr.net/npm/lenis@1.3.27/dist/lenis.mjs"
+} }
+</script>
+<link rel="stylesheet" href="src/endless-loop.css">
+<style>
+  /* Clean-room brand: an ironmonger's endless index of objects, iron-grey and rust; huge condensed names. */
+  * { box-sizing: border-box; margin: 0; }
+  body { background: #1d2124; color: #eef0f1; }
+  .panel { height: 100vh; display: grid; place-items: center; position: relative; overflow: hidden; }
+  .panel h2 { font: 800 clamp(5rem, 22vw, 20rem)/.8 var(--fd-display); text-transform: uppercase; letter-spacing: -.02em; position: relative; z-index: 1; mix-blend-mode: difference; }
+  .panel img { position: absolute; width: min(34vw, 420px); aspect-ratio: 4 / 5; object-fit: cover; }
+  .panel .n { position: absolute; left: 3vw; bottom: 3vh; font: 600 .7rem/1 var(--fd-mono); letter-spacing: .12em; text-transform: uppercase; opacity: .6; z-index: 1; }
+  .nav { position: fixed; z-index: 10; top: 1.2rem; right: 3vw; font: 600 .7rem/1 var(--fd-mono); letter-spacing: .12em; text-transform: uppercase; }
+  .nav a { color: inherit; }
+</style>
+</head>
+<body>
+  <nav class="nav"><a href="#contact">Contact the forge</a></nav>
+  <main id="loop">
+    <section class="panel"><img src="../_example/img/still-hook.jpg" alt="A forged iron hook"><h2>Hook</h2><p class="n">01 / 04 — keeps going</p></section>
+    <section class="panel"><img src="../_example/img/still-weights.jpg" alt="Stacked cast weights"><h2>Weight</h2><p class="n">02 / 04</p></section>
+    <section class="panel"><img src="../_example/img/still-coil.jpg" alt="A coil of rope on an iron hook"><h2>Coil</h2><p class="n">03 / 04</p></section>
+    <section class="panel" id="contact"><img src="../_example/img/still-buoy.jpg" alt="A painted buoy"><h2>Buoy</h2><p class="n">04 / 04 — [fill in: address]</p></section>
+  </main>
+<script type="module">
+  import { mountEndlessLoop } from './src/endless-loop.js';
+  mountEndlessLoop(document.getElementById('loop'), { clones: 1 });
+</script>
+</body>
+</html>

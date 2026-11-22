@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tidewater — a second Fastidious parts composition test</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/poetsen-one@5.3.0/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/hanken-grotesk@5.3.0/wght.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/hanken-grotesk@5.3.0/wght-italic.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/trispace@5.3.0/standard.css">
+<style id="fd-fonts">:root { --fd-display: 'Poetsen One', sans-serif; --fd-body: 'Hanken Grotesk Variable', sans-serif; --fd-mono: 'Trispace Variable', monospace; } html { font-synthesis: none; }</style>
+<script type="importmap">
+{ "imports": {
+  "gsap": "https://cdn.jsdelivr.net/npm/gsap@3.15.1/index.js",
+  "gsap/": "https://cdn.jsdelivr.net/npm/gsap@3.15.1/"
+} }
+</script>
+<link rel="stylesheet" href="parts/drifting-words/drifting-words.css">
+<link rel="stylesheet" href="parts/image-trail/image-trail.css">
+<link rel="stylesheet" href="parts/pixel-resolve/pixel-resolve.css">
+<link rel="stylesheet" href="parts/live-status/live-status.css">
+<link rel="stylesheet" href="parts/interruptible-menu/interruptible-menu.css">
+<link rel="stylesheet" href="parts/scramble/scramble.css">
+<link rel="stylesheet" href="parts/pixel-cover/pixel-cover.css">
+<style>
+  /* ---- Sign system: a cold-water swim club. Deep sea, chalk, one buoy orange; rounded heavy display, mono data. ---- */
+  :root {
+    --deep: #0f2733; --sea: #3f7f96; --foam: #cfe3ea; --chalk: #f2f5f6; --buoy: #ff6a3d;
+    --display: var(--fd-display);
+    --mono: var(--fd-mono);
+    --im-bg: var(--buoy); --im-ink: var(--deep);
+    --pxc-colour: var(--foam);   /* contrasts with both the orange join and the deep joined view */
+    --ls-on: #3fd18a; --ls-font: 600 .68rem/1 var(--mono);
+    --it-radius: 4px;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body { background: var(--deep); color: var(--chalk); font: 1.05rem/1.55 var(--fd-body); }
+  .eyebrow { font: 600 .7rem/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; margin-bottom: 1.4rem; opacity: .85; }
+  .eyebrow b { color: var(--buoy); font-weight: 600; }
+  .view[hidden] { display: none; }
+
+  .bar { position: fixed; z-index: 900; inset: 0 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1.1rem 4vw; }
+  .word { font: 900 1.05rem/1 var(--display); color: inherit; text-decoration: none; }
+  .bar-right { display: flex; align-items: center; gap: 1.2rem; }
+  .im-toggle { font: 600 .7rem/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: inherit; background: none; border: 1px solid currentColor; border-radius: 999px; padding: .65rem 1.1rem; cursor: pointer; }
+  .im-menu a { font: 900 clamp(2.4rem, 8vw, 6rem)/1 var(--display); color: inherit; text-decoration: none; text-align: center; }
+  .im-menu a:hover, .im-menu a:focus-visible { color: var(--chalk); outline: none; }
+
+  /* Opening: the visitor paints with the season's pictures */
+  .open { height: 100svh; display: grid; place-items: center; text-align: center; background: radial-gradient(120% 80% at 50% 0%, #1d3a48, var(--deep)); }
+  .open h1 { position: relative; z-index: 0; font: 900 clamp(3.4rem, 13vw, 12rem)/.84 var(--display); pointer-events: none; }
+  .open .hint { position: absolute; bottom: 4vh; left: 0; right: 0; font: 600 .68rem/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; opacity: .6; }
+  .it-img { z-index: 1; }
+
+  /* Signature: the club's vocabulary drifts like the tide */
+  .field { padding: 24vh 3vw 30vh; font: 600 .95rem/1.15 var(--mono); text-transform: uppercase; letter-spacing: .08em; color: var(--foam); --dw-space: 20vh; }
+  .dw-xl { font: 900 clamp(8rem, 30vw, 26rem)/.8 var(--display); color: var(--buoy); letter-spacing: -.02em; }
+
+  /* Conditions board */
+  .board { padding: 18vh 6vw; background: var(--sea); color: var(--deep); }
+  .board h2 { font: 900 clamp(2.6rem, 8vw, 7rem)/.88 var(--display); margin-bottom: 6vh; }
+  .board dl { display: grid; grid-template-columns: auto 1fr; gap: 1.4rem 3rem; align-items: baseline; }
+  .board dt { font: 600 .7rem/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; }
+  .board dd { font: 700 clamp(1.6rem, 4.4vw, 3.6rem)/1 var(--mono); text-transform: uppercase; color: var(--chalk); }
+  .board .note { margin-top: 5vh; font: .78rem/1.5 var(--mono); max-width: 44ch; }
+
+  /* Gallery */
+  .gallery { padding: 18vh 6vw; display: grid; grid-template-columns: repeat(12, 1fr); gap: 2vw; align-items: end; }
+  .gallery h2 { grid-column: 1 / -1; font: 900 clamp(2.6rem, 8vw, 7rem)/.88 var(--display); margin-bottom: 6vh; }
+  .pr-box { border-radius: 4px; }
+  .g1 { grid-column: 1 / 8; }
+  .g2 { grid-column: 8 / 13; }
+  .g3 { grid-column: 2 / 6; }
+  .g4 { grid-column: 6 / 13; }
+  .cap { font: 600 .68rem/1.3 var(--mono); letter-spacing: .1em; text-transform: uppercase; opacity: .7; margin-top: .6rem; }
+
+  /* Join */
+  .join { min-height: 90svh; display: grid; align-content: end; padding: 10vh 6vw 7vh; background: var(--buoy); color: var(--deep); }
+  .join h2 { font: 900 clamp(3.4rem, 13vw, 12rem)/.84 var(--display); }
+  .cta { justify-self: start; margin-top: 4vh; font: 600 .78rem/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--buoy); background: var(--deep); border: 0; border-radius: 999px; padding: 1.1rem 1.6rem; cursor: pointer; }
+  .foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; margin-top: 6vh; font: 600 .68rem/1.5 var(--mono); letter-spacing: .1em; text-transform: uppercase; }
+
+  .joined { min-height: 100svh; display: grid; align-content: center; padding: 8vw; background: var(--deep); }
+  .joined h2 { font: 900 clamp(3rem, 10vw, 9rem)/.86 var(--display); margin-bottom: 4vh; }
+  .joined p { max-width: 40ch; }
+  .joined .cta { color: var(--deep); background: var(--buoy); }
+
+  @media (max-width: 47.99em) {
+    .gallery > * { grid-column: 1 / -1 !important; }
+    .board dl { grid-template-columns: 1fr; gap: .4rem; }
+    .board dd { margin-bottom: 1rem; }
+    .bar .ls-text { display: none; }
+  }
+</style>
+</head>
+<body>
+  <header class="bar">
+    <a class="word" href="#top">Tidewater</a>
+    <div class="bar-right"><span id="status"></span><button class="im-toggle" id="menu-toggle">Menu</button></div>
+  </header>
+  <nav class="im-menu" id="menu" aria-label="Main">
+    <a href="#tide">The tide</a><a href="#board">Today's water</a><a href="#season">The season</a><a href="#join">Join</a>
+  </nav>
+
+  <div class="view" id="v-main">
+    <main id="top">
+      <section class="open it-area" id="open" aria-label="Opening">
+        <h1>A season<br>in the sea.</h1>
+        <p class="hint">Move the pointer, or drag on a phone</p>
+        <img class="it-img" src="img/still-buoy.jpg" alt=""><img class="it-img" src="img/still-coil.jpg" alt="">
+        <img class="it-img" src="img/still-hook.jpg" alt=""><img class="it-img" src="img/still-weights.jpg" alt="">
+      </section>
+
+      <section class="field dw" id="tide" aria-label="The words of the club">
+        <div data-dw data-dw-home="2" data-dw-away="5">Ebb</div><div data-dw data-dw-home="2" data-dw-away="5">Flood</div><div data-dw data-dw-home="2" data-dw-away="5">Slack water</div>
+        <div class="dw-break"></div>
+        <div data-dw data-dw-home="1" data-dw-away="4" class="dw-xl">T</div>
+        <div class="dw-break"></div>
+        <div data-dw data-dw-home="6" data-dw-away="3">Steps</div><div data-dw data-dw-home="6" data-dw-away="3">Buoy</div><div data-dw data-dw-home="6" data-dw-away="3">Groyne</div><div data-dw data-dw-home="6" data-dw-away="3">Harbour wall</div>
+        <div class="dw-break"></div>
+        <div data-dw data-dw-home="5" data-dw-away="1" class="dw-xl">I</div>
+        <div class="dw-break"></div>
+        <div data-dw data-dw-home="3" data-dw-away="7">Neoprene</div><div data-dw data-dw-home="3" data-dw-away="7">Bobble hat</div><div data-dw data-dw-home="3" data-dw-away="7">Flask</div>
+        <div class="dw-break"></div>
+        <div data-dw data-dw-home="2" data-dw-away="6" class="dw-xl">D</div>
+        <div class="dw-break"></div>
+        <div data-dw data-dw-home="7" data-dw-away="4">Dawn</div><div data-dw data-dw-home="7" data-dw-away="4">Lengths</div><div data-dw data-dw-home="7" data-dw-away="4">Tea on the wall</div>
+        <div class="dw-break"></div>
+        <div data-dw data-dw-home="6" data-dw-away="2" class="dw-xl">E</div>
+      </section>
+
+      <section class="board" id="board">
+        <p class="eyebrow"><b style="color:var(--deep)">03</b> — Today's water</p>
+        <h2>Read the board<br>before you go in.</h2>
+        <dl>
+          <dt>Water</dt><dd data-scramble>11.4 °C</dd>
+          <dt>High tide</dt><dd data-scramble>07:42</dd>
+          <dt>Flag</dt><dd data-scramble data-scramble-duration="1.6">Green — swim</dd>
+          <dt>On the steps</dt><dd data-scramble>Lifeguard until 10:00</dd>
+        </dl>
+        <p class="note">Sample values for a composition test. In a build these come from the club's own log or a live feed, never from the page.</p>
+      </section>
+
+      <section class="gallery" id="season">
+        <h2><span class="eyebrow" style="display:block"><b>04</b> — The season</span>Every morning,<br>all winter.</h2>
+        <figure class="g1"><div class="pr-box" style="aspect-ratio:16/10"><img data-pixel-resolve src="img/still-buoy.jpg" alt="The club's buoy, a hundred metres out"></div><figcaption class="cap">The buoy · 100 m out</figcaption></figure>
+        <figure class="g2"><div class="pr-box" style="aspect-ratio:4/5"><img data-pixel-resolve src="img/still-coil.jpg" alt="Coiled safety line on the steps"></div><figcaption class="cap">Safety line</figcaption></figure>
+        <figure class="g3"><div class="pr-box" style="aspect-ratio:4/5"><img data-pixel-resolve src="img/still-weights.jpg" alt="Stacked mooring weights"></div><figcaption class="cap">Mooring weights</figcaption></figure>
+        <figure class="g4"><div class="pr-box" style="aspect-ratio:16/9"><img data-pixel-resolve src="img/still-hook.jpg" alt="An iron hook on the harbour wall"></div><figcaption class="cap">The harbour wall</figcaption></figure>
+      </section>
+
+      <section class="join" id="join">
+        <p class="eyebrow"><b style="color:var(--deep)">05</b> — Join</p>
+        <h2>In before<br>eight.</h2>
+        <button class="cta" data-go="v-joined">How to join</button>
+        <div class="foot"><span id="status-foot"></span><span>Invented club · sample figures · a Fastidious composition test</span></div>
+      </section>
+    </main>
+  </div>
+
+  <div class="view" id="v-joined" hidden>
+    <section class="joined">
+      <p class="eyebrow"><b>06</b> — Joining</p>
+      <h2>Bring a hat.<br>We'll bring tea.</h2>
+      <p>Placeholder: membership details come from the club. This view exists to test the view change.</p>
+      <button class="cta" data-go="v-main" style="margin-top:4vh">Back to the water</button>
+    </section>
+  </div>
+
+<script type="module">
+  import { mountDriftingWords } from './parts/drifting-words/drifting-words.js';
+  import { mountImageTrail } from './parts/image-trail/image-trail.js';
+  import { mountPixelResolve } from './parts/pixel-resolve/pixel-resolve.js';
+  import { mountLiveStatus } from './parts/live-status/live-status.js';
+  import { mountInterruptibleMenu } from './parts/interruptible-menu/interruptible-menu.js';
+  import { mountScramble } from './parts/scramble/scramble.js';
+  import { mountPixelCover } from './parts/pixel-cover/pixel-cover.js';
+
+  // Signature: the club's own words drift like the tide (one signature per page).
+  mountDriftingWords(document.getElementById('tide'), { columns: 10 });
+  mountImageTrail(document.getElementById('open'));
+  mountPixelResolve(document);
+  mountScramble(document, { chars: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789°:.—' });
+
+  // Living detail: sample session times, computed in the club's own time zone.
+  const dawn = [['06:30', '09:30']];
+  const hours = { timeZone: 'Europe/London', schedule: { mon: dawn, tue: dawn, wed: dawn, thu: dawn, fri: dawn, sat: [['07:00', '11:00']], sun: [['07:00', '11:00']] },
+    labels: { open: (c) => `Session on · until ${c}`, closingSoon: (c) => `Last swimmers · ${c}`, closed: (d, t) => `Next session ${d} ${t}` } };
+  mountLiveStatus(document.getElementById('status'), hours);
+  mountLiveStatus(document.getElementById('status-foot'), hours);
+
+  const menu = document.getElementById('menu');
+  const api = mountInterruptibleMenu({ toggle: document.getElementById('menu-toggle'), menu });
+  menu.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => api.close()));
+
+  const cover = mountPixelCover({ rows: 7, columns: 12, direction: 'up' });
+  document.querySelectorAll('[data-go]').forEach((btn) => btn.addEventListener('click', () => cover.play(() => {
+    document.querySelectorAll('.view').forEach((v) => (v.hidden = v.id !== btn.dataset.go));
+    window.scrollTo(0, btn.dataset.go === 'v-main' ? document.getElementById('join').offsetTop : 0);
+    document.querySelector(`#${btn.dataset.go} [data-go]`)?.focus({ preventScroll: true });
+  })));
+</script>
+</body>
+</html>

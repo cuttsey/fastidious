@@ -1,0 +1,20 @@
+/* sticky-stack — the stacking itself is pure CSS (works without JavaScript and with reduced motion).
+   Tokens: --ss-height, --ss-dim-colour. */
+.ss-section {
+  --ss-dim: 0;
+  position: sticky;
+  top: 0;
+  min-height: var(--ss-height, 100svh);
+  overflow: hidden;
+  isolation: isolate;
+  transform-origin: 50% 50%;
+}
+.ss-section::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--ss-dim-colour, #000);
+  opacity: var(--ss-dim);
+  pointer-events: none;
+  z-index: 10;
+}

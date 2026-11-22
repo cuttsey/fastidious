@@ -2,6 +2,24 @@
 
 All notable changes to this repository. Versions follow [Semantic Versioning](https://semver.org/).
 
+## Fastidious 1.6.0: 2026-11-22
+
+### Added
+
+- The parts library, `plugins/fastidious/parts`: 21 vetted interaction and experience parts in 25 modules, among them `travelling-object`, `hero-slideshow`, `process-curve`, `live-status`, `grain-light`, `drifting-words`, `endless-loop`, `text-repeat`, `context-aware-fixed`, `page-transition`, the `text-emphasis` concept (`marker-sweep`, `char-rise`, `scramble`, `axis-ramp`), `index-to-detail` (`echo-trail`, `flip`, `push`) and `view-change` (`type-curtain`, `pixel-cover`). Each part is one framework-neutral module with its tokens, measured costs, fallbacks for reduced motion and assistive technology, licence and provenance in `PART.md`, and an example restyled for a made-up brand. Sources are Codrops demos (MIT) and originals; `INTAKE-LOG.md` records every verdict, `WANTED.md` the techniques still missing, and `HUB-SURVEY.md` the queue through the 555 demos on the Codrops Creative Hub.
+- `parts-librarian`: finds, vets (licence, craft, clean room, performance and access, best in class), normalises and admits parts. Resemblance to effects on other sites is never a reason to reject one: a site is memorable for its combination of parts.
+- `recipe-compiler`: compiles a build that has passed sign-off into a tested, replayable recipe.
+- `font-registry`: every typeface comes from a registry drawn from the Awwwards free fonts collection, loaded by reference (jsDelivr for open fonts, the Fontshare API for Fontshare fonts). No font files are kept, and no basic or generic face is ever used. `parts/fonts/CATALOGUE.md` lists all 287 entries with their licence status.
+- Two composition tests in `examples/`: Mallow & Fenn and Tidewater, two different sites built from the same parts.
+
+### Changed
+
+- `build-sequencer`: a facts intake before stage 1, recipes as starting points, and a premium bar of nine markers checked after sign-off, including "registry type only".
+- `motion-choreographer`: chooses parts from the library for each beat, with composition rules (one signature part, no collage, a motion budget); variable-font axes are the one allowed exception to animating only transform and opacity.
+- `asset-director`: keeps an asset pack with a manifest; fonts are referenced from `font-registry`, never copied.
+- `type-director`: shortlists only faces in `font-registry`; its catalogue still informs genre and fit.
+- `validate.py`: the credential pattern for `sk-` keys now needs a digit, so a font named SK-Modernist no longer trips it.
+
 ## Fastidious 1.5.1: 2026-11-15
 
 ### Fixed

@@ -1,0 +1,22 @@
+/* text-emphasis / axis-ramp — Fastidious parts library (MIT). */
+
+/* The host supplies a variable font with weight (and, for width moves, width) axes. */
+.ar {
+  font-kerning: normal;
+  white-space: nowrap;
+}
+/* Block words: axis changes reflow inside this box only. Inline words skip layout
+   containment because it would drop their baseline; their locked width does the job. */
+.ar:not(.ar-inline) { contain: layout style; }
+.ar.ar-ready {
+  font-weight: var(--ar-w, inherit);
+  font-stretch: calc(var(--ar-s, 100) * 1%);
+  opacity: var(--ar-o, 1);
+}
+/* An inline word gets a box so its locked width can hold (set by the script). */
+.ar.ar-inline { display: inline-block; }
+
+.ar .ar-char {
+  font-weight: var(--ar-w, inherit);
+  font-stretch: calc(var(--ar-s, 100) * 1%);
+}

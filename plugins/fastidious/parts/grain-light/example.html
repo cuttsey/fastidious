@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>grain-light — clean-room example (Tidewater, invented brand)</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/bagnard@5.3.0/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/inter@5.3.0/standard.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/inter@5.3.0/standard-italic.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/geist-mono@5.3.0/wght.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/geist-mono@5.3.0/wght-italic.css">
+<style id="fd-fonts">:root { --fd-display: 'Bagnard', serif; --fd-body: 'Inter Variable', sans-serif; --fd-mono: 'Geist Mono Variable', monospace; } html { font-synthesis: none; }</style>
+<link rel="stylesheet" href="src/grain-light.css">
+<style>
+  * { box-sizing: border-box; margin: 0; }
+  body { background: #0f2733; color: #f2f5f6; font: 1rem/1.5 var(--fd-body); }
+  section { min-height: 100vh; display: grid; place-items: center; text-align: center; padding: 6vw; }
+  .a { background: linear-gradient(#1d3a48, #0f2733); --gl-light-colour: #cfe3ea; --gl-light-opacity: .45; }
+  .b { background: #c9583a; color: #1d2124; --gl-light-colour: #ffd7c2; --gl-grain-opacity: .1; }
+  h1, h2 { font: 900 clamp(3rem, 11vw, 10rem)/.85 var(--fd-display); position: relative; z-index: 1; }
+  p { font: 600 .72rem/1 var(--fd-mono); letter-spacing: .12em; text-transform: uppercase; margin-bottom: 1.2rem; position: relative; z-index: 1; }
+</style>
+</head>
+<body>
+  <section class="a" id="a"><div><p>01 — Tidewater swim club</p><h1>Cold water,<br>warm light.</h1></div></section>
+  <section class="b" id="b"><div><p>02 — After</p><h2>Tea on<br>the wall.</h2></div></section>
+<script type="module">
+  import { mountGrainLight } from './src/grain-light.js';
+  mountGrainLight(document.getElementById('a'));
+  mountGrainLight(document.getElementById('b'), { light: true });
+</script>
+</body>
+</html>

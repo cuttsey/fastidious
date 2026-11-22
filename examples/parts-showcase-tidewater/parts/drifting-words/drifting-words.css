@@ -1,0 +1,18 @@
+/* drifting-words — a full-width grid; each word sits in its home column (data-dw-home). Tokens: --dw-gap, --dw-row. */
+.dw {
+  display: grid;
+  grid-template-columns: repeat(var(--dw-columns, 10), 1fr);
+  row-gap: var(--dw-row, 0.15em);
+  column-gap: var(--dw-gap, 0);
+  overflow-x: clip;               /* words drifting past the edge never cause sideways scroll */
+}
+.dw [data-dw] {
+  grid-column: var(--dw-home, 1) / -1;
+  justify-self: start;
+  white-space: nowrap;
+  will-change: transform;
+}
+.dw .dw-break { grid-column: 1 / -1; height: var(--dw-space, 30vh); }
+@media (max-width: 47.99em) {
+  .dw [data-dw] { grid-column: 1 / -1; }   /* home columns collapse to the left edge; the drift still plays */
+}

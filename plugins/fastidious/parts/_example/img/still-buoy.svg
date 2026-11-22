@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+<defs>
+<radialGradient id="w" cx="0.4" cy="0.15" r="0.9"><stop offset="0" stop-color="#9fc3d1"/><stop offset="1" stop-color="#1d3a48"/></radialGradient>
+<linearGradient id="f" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3f6f80"/><stop offset="1" stop-color="#0f2733"/></linearGradient>
+<radialGradient id="sh" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#000" stop-opacity=".55"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+<filter id="g" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" seed="4"/><feColorMatrix values="0 0 0 0 .5  0 0 0 0 .5  0 0 0 0 .5  0 0 0 .09 0"/></filter>
+<radialGradient id="b" cx=".35" cy=".3" r=".75"><stop offset="0" stop-color="#ffd7c2"/><stop offset=".4" stop-color="#e5532e"/><stop offset="1" stop-color="#5d140a"/></radialGradient><clipPath id="c"><circle cx="800" cy="500" r="240"/></clipPath>
+</defs>
+<rect width="1600" height="700" fill="url(#w)"/><rect y="700" width="1600" height="300" fill="url(#f)"/>
+<ellipse cx="800" cy="745" rx="330" ry="38" fill="url(#sh)"/>
+<circle cx="800" cy="500" r="240" fill="url(#b)"/><rect x="540" y="470" width="520" height="60" fill="#f1efe9" opacity=".85" clip-path="url(#c)"/>
+<rect width="1600" height="1000" filter="url(#g)"/>
+</svg>

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>index-to-detail / push — clean-room example (Saltbox tool library, invented brand)</title>
+<link rel="stylesheet" href="../../fonts/faces/mattone.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/libertinus-sans@5.3.0/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/libertinus-sans@5.3.0/700.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/trispace@5.3.0/standard.css">
+<style id="fd-fonts">:root { --fd-display: 'Mattone', sans-serif; --fd-body: 'Libertinus Sans', sans-serif; --fd-mono: 'Trispace Variable', monospace; } html { font-synthesis: none; }</style>
+<script type="importmap">
+{ "imports": {
+  "gsap": "https://cdn.jsdelivr.net/npm/gsap@3.15.1/index.js",
+  "gsap/": "https://cdn.jsdelivr.net/npm/gsap@3.15.1/"
+} }
+</script>
+<link rel="stylesheet" href="src/push.css">
+<style>
+  /* Clean-room brand: a lending library of tools, moss green and bone. */
+  :root { --et-panel-bg: #1f3a2c; --et-panel-ink: #efe9dc; --et-radius: 10px; }
+  * { box-sizing: border-box; margin: 0; }
+  body { background: #1f3a2c; color: #efe9dc; overflow-x: clip; font: 1rem/1.45 var(--fd-body); }
+  header { padding: 8vh 5vw 4vh; }
+  h1 { font: 900 clamp(2rem, 6vw, 5rem)/.95 var(--fd-display); }
+  .eyebrow { font: 600 .72rem/1 var(--fd-mono); letter-spacing: .1em; text-transform: uppercase; margin-bottom: 1rem; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 1rem; padding: 0 5vw 10vh; }
+  .et-item { all: unset; cursor: pointer; display: block; }
+  .et-item .frame { aspect-ratio: 4 / 5; }
+  .et-item span { display: block; margin-top: .4rem; font: .75rem/1.2 var(--fd-mono); }
+  .et-item:focus-visible { outline: 2px solid #e8b04a; outline-offset: 4px; }
+  .et-panel h2 { font: 800 clamp(2rem, 5vw, 4rem)/.95 var(--fd-display); text-transform: uppercase; margin-bottom: 1rem; }
+  .et-close { color: inherit; margin-top: 2rem; font: 600 .8rem/1 var(--fd-mono); background: none; border: 1px solid currentColor; padding: .6rem 1rem; cursor: pointer; }
+</style>
+</head>
+<body>
+  <header id="head"><p class="eyebrow">Borrow, do not buy</p><h1>Saltbox<br>tool library</h1></header>
+  <main class="grid" id="grid"></main>
+  <section class="et-panel" id="panel" aria-label="Tool detail">
+    <img class="et-panel-img" alt="">
+    <div class="et-panel-body">
+      <p class="eyebrow" data-code></p>
+      <h2 data-title></h2>
+      <p data-desc></p>
+      <button class="et-close">Back to the shelf</button>
+    </div>
+  </section>
+<script type="module">
+  import { mountPush } from './src/push.js';
+  const art = ['still-hook.jpg', 'still-weights.jpg', 'iron.svg', 'still-coil.jpg', 'still-buoy.jpg'];
+  const kinds = ['Billhook', 'Sash clamps', 'Saw set', 'Draw knife', 'Spoke shave', 'Froe', 'Wedges'];
+  const grid = document.getElementById('grid');
+  grid.innerHTML = Array.from({ length: 18 }, (_, i) => `
+    <button class="et-item" data-desc="[fill in: what it does, who donated it, when it is next free]">
+      <div class="frame"><img src="../../_example/img/${art[i % art.length]}" alt="${kinds[i % kinds.length]}, original artwork"></div>
+      <span>${String(i + 1).padStart(2, '0')} — ${kinds[i % kinds.length]}</span>
+    </button>`).join('');
+  const panel = document.getElementById('panel');
+  mountPush({
+    grid, panel, items: '.et-item', chrome: [document.getElementById('head')],
+    onOpen: (item) => {
+      panel.querySelector('[data-title]').textContent = item.querySelector('span').textContent.split(' — ')[1];
+      panel.querySelector('[data-code]').textContent = item.querySelector('span').textContent.split(' — ')[0];
+      panel.querySelector('[data-desc]').textContent = item.dataset.desc;
+    },
+  });
+</script>
+</body>
+</html>

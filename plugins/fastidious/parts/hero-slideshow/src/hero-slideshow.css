@@ -1,0 +1,23 @@
+/* hero-slideshow — tokens: --hs-height, --hs-bg, --hs-focus. Pictures are <img> elements in .hs-img wrappers. */
+.hs {
+  position: relative;
+  height: var(--hs-height, 100svh);
+  overflow: hidden;
+  display: grid;
+  background: var(--hs-bg, #000);
+  touch-action: pan-y;           /* vertical page scroll stays native; horizontal swipes change slides */
+}
+.hs:focus-visible { outline: 2px solid var(--hs-focus, currentColor); outline-offset: -6px; }
+.hs-slide {
+  grid-area: 1 / 1;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+.hs-slide.hs-current { opacity: 1; pointer-events: auto; }
+.hs-img { position: absolute; inset: 0; will-change: transform; }
+.hs-img > img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.hs-live { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.hs-line { display: block; overflow: hidden; }
+.hs-line > * { display: inline-block; will-change: transform; }

@@ -1,0 +1,20 @@
+/* page-transition — tokens: --pt-duration, --pt-ease. */
+.pt-announce { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+/* Only the changing part of the page moves: the rest (header, footer) holds still.
+   If the shell's `container` option is not [data-pt-container], give that element this name. */
+[data-pt-container] { view-transition-name: pt-page; }
+::view-transition-old(root), ::view-transition-new(root) { animation: none; }
+/* The page leaves with a short rise; shared elements morph with the browser's own animation. */
+::view-transition-old(pt-page) { animation: var(--pt-duration, .45s) var(--pt-ease, cubic-bezier(.7, 0, .2, 1)) both pt-out; }
+::view-transition-new(pt-page) { animation: var(--pt-duration, .45s) var(--pt-ease, cubic-bezier(.7, 0, .2, 1)) both pt-in; }
+::view-transition-group(*) { animation-duration: var(--pt-duration, .45s); animation-timing-function: var(--pt-ease, cubic-bezier(.7, 0, .2, 1)); }
+@keyframes pt-out { to { opacity: 0; transform: translateY(-2vh); } }
+@keyframes pt-in { from { opacity: 0; transform: translateY(3vh); } }
+
+/* Multi-page sites without the script: this rule alone gives cross-document transitions where the browser supports them. */
+@view-transition { navigation: auto; }
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; }
+}

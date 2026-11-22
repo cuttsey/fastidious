@@ -1,0 +1,14 @@
+/* image-trail — tokens: --it-width, --it-ratio, --it-radius. The area is the host's; images stack inside it. */
+.it-area { position: relative; overflow: hidden; touch-action: pan-y; }   /* vertical scrolling stays native on touch */
+.it-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--it-width, clamp(120px, 16vw, 240px));
+  aspect-ratio: var(--it-ratio, 4 / 5);
+  object-fit: cover;
+  border-radius: var(--it-radius, 0);
+  opacity: 0;
+  pointer-events: none;
+  will-change: transform, opacity;
+}

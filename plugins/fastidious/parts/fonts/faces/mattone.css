@@ -1,0 +1,4 @@
+/* mattone: referenced from its official repository collletttivo/mattone, pinned to commit b1dc55d. OFL 1.1. No font files are kept in Fastidious. */
+@font-face { font-family: 'Mattone'; font-style: normal; font-weight: 400; font-display: swap; src: url(https://cdn.jsdelivr.net/gh/collletttivo/mattone@b1dc55dc6a432708ab00329d452d8f6907c6e570/fonts/Mattone-Regular.woff2) format('woff2'); }
+@font-face { font-family: 'Mattone'; font-style: normal; font-weight: 700; font-display: swap; src: url(https://cdn.jsdelivr.net/gh/collletttivo/mattone@b1dc55dc6a432708ab00329d452d8f6907c6e570/fonts/Mattone-Bold.woff2) format('woff2'); }
+@font-face { font-family: 'Mattone'; font-style: normal; font-weight: 900; font-display: swap; src: url(https://cdn.jsdelivr.net/gh/collletttivo/mattone@b1dc55dc6a432708ab00329d452d8f6907c6e570/fonts/Mattone-Black.woff2) format('woff2'); }

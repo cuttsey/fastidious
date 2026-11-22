@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>index-to-detail / echo-trail — clean-room example (Mallow &amp; Fenn, invented brand)</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/bagnard-sans@5.3.0/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/spectral@5.3.0/300.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/spectral@5.3.0/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/spectral@5.3.0/400-italic.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/spectral@5.3.0/600.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/spectral@5.3.0/700.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/geist-mono@5.3.0/wght.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/geist-mono@5.3.0/wght-italic.css">
+<style id="fd-fonts">:root { --fd-display: 'Bagnard Sans', sans-serif; --fd-body: 'Spectral', serif; --fd-mono: 'Geist Mono Variable', monospace; } html { font-synthesis: none; }</style>
+<script type="importmap">
+{ "imports": {
+  "gsap": "https://cdn.jsdelivr.net/npm/gsap@3.15.1/index.js",
+  "gsap/": "https://cdn.jsdelivr.net/npm/gsap@3.15.1/"
+} }
+</script>
+<link rel="stylesheet" href="src/echo-trail.css">
+<style>
+  /* Clean-room brand: a ropemaker's product index on cold grey, not a fashion lookbook. */
+  :root { --et-panel-bg: #d9dee0; --et-radius: 2px; }
+  * { box-sizing: border-box; margin: 0; }
+  body { background: #d9dee0; color: #0e1a22; font: 1rem/1.45 var(--fd-body); }
+  header { padding: 8vh 5vw 4vh; }
+  h1 { font: 800 clamp(2.5rem, 7vw, 6rem)/.9 var(--fd-display); text-transform: uppercase; }
+  .eyebrow { font: 600 .72rem/1 var(--fd-mono); letter-spacing: .1em; text-transform: uppercase; margin-bottom: 1rem; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 1.5rem 1rem; padding: 0 5vw 10vh; }
+  .et-item { all: unset; cursor: pointer; display: block; }
+  .et-item .frame { aspect-ratio: 4 / 5; }
+  .et-item span { display: block; margin-top: .4rem; font: .75rem/1.2 var(--fd-mono); }
+  .et-item:focus-visible { outline: 2px solid #ff4f1f; outline-offset: 4px; }
+  .et-panel h2 { font: 800 clamp(2rem, 5vw, 4rem)/.95 var(--fd-display); text-transform: uppercase; margin-bottom: 1rem; }
+  .et-close { margin-top: 2rem; font: 600 .8rem/1 var(--fd-mono); background: none; border: 1px solid currentColor; padding: .6rem 1rem; cursor: pointer; }
+</style>
+</head>
+<body>
+  <header id="head"><p class="eyebrow">01 — The range</p><h1>Mallow &amp; Fenn<br>rope index</h1></header>
+  <main class="grid" id="grid"></main>
+  <section class="et-panel" id="panel" aria-label="Product detail">
+    <img class="et-panel-img" alt="">
+    <div class="et-panel-body">
+      <p class="eyebrow" data-code></p>
+      <h2 data-title></h2>
+      <p data-desc></p>
+      <button class="et-close">Back to the index</button>
+    </div>
+  </section>
+<script type="module">
+  import { mountEchoTrail } from './src/echo-trail.js';
+  const art = ['rope', 'tide', 'iron'];
+  const kinds = ['Three-strand hemp', 'Tarred marline', 'Manila hawser', 'Flax lashing', 'Cotton sash', 'Sisal twine'];
+  const grid = document.getElementById('grid');
+  grid.innerHTML = Array.from({ length: 18 }, (_, i) => `
+    <button class="et-item" data-desc="[fill in: what it is for, what it is laid from]">
+      <div class="frame"><img src="../../_example/img/${art[i % 3]}.svg" alt="${kinds[i % kinds.length]}, original artwork"></div>
+      <span>${String(i + 1).padStart(2, '0')} — ${kinds[i % kinds.length]}</span>
+    </button>`).join('');
+  const panel = document.getElementById('panel');
+  mountEchoTrail({
+    grid, panel, items: '.et-item', chrome: [document.getElementById('head')],
+    onOpen: (item) => {
+      panel.querySelector('[data-title]').textContent = item.querySelector('span').textContent.split(' — ')[1];
+      panel.querySelector('[data-code]').textContent = item.querySelector('span').textContent.split(' — ')[0];
+      panel.querySelector('[data-desc]').textContent = item.dataset.desc;
+    },
+  });
+</script>
+</body>
+</html>

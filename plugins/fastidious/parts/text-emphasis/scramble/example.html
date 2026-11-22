@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>scramble — clean-room example (Tidewater, invented brand)</title>
+<link rel="stylesheet" href="../../fonts/faces/mattone.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/geist@5.3.0/wght.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/geist@5.3.0/wght-italic.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/geist-mono@5.3.0/wght.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/geist-mono@5.3.0/wght-italic.css">
+<style id="fd-fonts">:root { --fd-display: 'Mattone', sans-serif; --fd-body: 'Geist Variable', sans-serif; --fd-mono: 'Geist Mono Variable', monospace; } html { font-synthesis: none; }</style>
+<script type="importmap">
+{ "imports": {
+  "gsap": "https://cdn.jsdelivr.net/npm/gsap@3.15.1/index.js",
+  "gsap/": "https://cdn.jsdelivr.net/npm/gsap@3.15.1/"
+} }
+</script>
+<link rel="stylesheet" href="src/scramble.css">
+<style>
+  /* Clean-room brand: a swim club's conditions board, cold sea colours, mono figures. */
+  * { box-sizing: border-box; margin: 0; }
+  body { background: #0f2733; color: #f2f5f6; font: 1rem/1.5 var(--fd-body); }
+  section { min-height: 100vh; display: grid; align-content: center; padding: 6vw; }
+  h1 { font: 900 clamp(3rem, 10vw, 9rem)/.85 var(--fd-display); }
+  dl { display: grid; grid-template-columns: auto 1fr; gap: 1.2rem 3rem; font: 600 clamp(1.2rem, 3vw, 2.4rem)/1 var(--fd-mono); text-transform: uppercase; }
+  dt { opacity: .55; font-size: .45em; letter-spacing: .12em; align-self: center; }
+  dd { color: #ff7a52; }
+  .eyebrow { font: 600 .72rem/1 var(--fd-mono); letter-spacing: .12em; text-transform: uppercase; margin-bottom: 2rem; opacity: .8; }
+</style>
+</head>
+<body>
+  <section><p class="eyebrow">01 — Tidewater swim club</p><h1>Today's<br>water.</h1></section>
+  <section>
+    <p class="eyebrow">02 — Conditions board (sample values)</p>
+    <dl>
+      <dt>Water</dt><dd data-scramble>[fill in: °C]</dd>
+      <dt>High tide</dt><dd data-scramble>[fill in: time]</dd>
+      <dt>Flag</dt><dd data-scramble data-scramble-duration="1.6">Green — swim</dd>
+      <dt>Lifeguard</dt><dd data-scramble>On the steps</dd>
+    </dl>
+  </section>
+  <section></section>
+<script type="module">
+  import { mountScramble } from './src/scramble.js';
+  mountScramble(document, { chars: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789°:—' });
+</script>
+</body>
+</html>

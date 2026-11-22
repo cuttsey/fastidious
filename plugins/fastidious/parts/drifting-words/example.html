@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>drifting-words — clean-room example (Ferrous, invented brand)</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/archivo-narrow@5.3.0/wght.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/archivo-narrow@5.3.0/wght-italic.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/hanken-grotesk@5.3.0/wght.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/hanken-grotesk@5.3.0/wght-italic.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/trispace@5.3.0/standard.css">
+<style id="fd-fonts">:root { --fd-display: 'Archivo Narrow Variable', sans-serif; --fd-body: 'Hanken Grotesk Variable', sans-serif; --fd-mono: 'Trispace Variable', monospace; } html { font-synthesis: none; }</style>
+<script type="importmap">
+{ "imports": {
+  "gsap": "https://cdn.jsdelivr.net/npm/gsap@3.15.1/index.js",
+  "gsap/": "https://cdn.jsdelivr.net/npm/gsap@3.15.1/"
+} }
+</script>
+<link rel="stylesheet" href="src/drifting-words.css">
+<style>
+  /* Clean-room brand: an ironmonger's vocabulary on warm iron-grey, condensed caps, rust initials. */
+  * { box-sizing: border-box; margin: 0; }
+  body { background: #2b2f33; color: #eef0f1; }
+  .dw { padding: 30vh 3vw 50vh; font: 600 .95rem/1.15 var(--fd-mono); text-transform: uppercase; letter-spacing: .06em; --dw-space: 22vh; }
+  .dw-xl { font: 800 clamp(8rem, 30vw, 26rem)/.8 var(--fd-display); color: #c9583a; letter-spacing: -.02em; }
+  .cap { position: fixed; left: 3vw; bottom: 3vh; font: 600 .7rem/1 var(--fd-mono); letter-spacing: .1em; text-transform: uppercase; opacity: .6; }
+</style>
+</head>
+<body>
+  <main class="dw" id="dw">
+      <div data-dw data-dw-home="2" data-dw-away="6">Bar</div>
+      <div data-dw data-dw-home="2" data-dw-away="6">Flat</div>
+      <div data-dw data-dw-home="2" data-dw-away="6">Round</div>
+      <div data-dw data-dw-home="2" data-dw-away="6">Square</div>
+      <div class="dw-break"></div>
+      <div data-dw data-dw-home="5" data-dw-away="3" class="dw-xl">F</div>
+      <div class="dw-break"></div>
+      <div data-dw data-dw-home="3" data-dw-away="7">Quench</div>
+      <div data-dw data-dw-home="3" data-dw-away="7">Temper</div>
+      <div data-dw data-dw-home="3" data-dw-away="7">Anneal</div>
+      <div class="dw-break"></div>
+      <div data-dw data-dw-home="4" data-dw-away="8" class="dw-xl">E</div>
+      <div class="dw-break"></div>
+      <div data-dw data-dw-home="1" data-dw-away="5">Hinge</div>
+      <div data-dw data-dw-home="1" data-dw-away="5">Hasp</div>
+      <div data-dw data-dw-home="1" data-dw-away="5">Latch</div>
+      <div data-dw data-dw-home="1" data-dw-away="5">Bolt</div>
+      <div data-dw data-dw-home="1" data-dw-away="5">Pin</div>
+      <div class="dw-break"></div>
+      <div data-dw data-dw-home="1" data-dw-away="4" class="dw-xl">R</div>
+      <div class="dw-break"></div>
+      <div data-dw data-dw-home="3" data-dw-away="7">Scale</div>
+      <div data-dw data-dw-home="3" data-dw-away="7">Slag</div>
+      <div data-dw data-dw-home="3" data-dw-away="7">Flux</div>
+      <div class="dw-break"></div>
+      <div data-dw data-dw-home="2" data-dw-away="1" class="dw-xl">R</div>
+      <div class="dw-break"></div>
+      <div data-dw data-dw-home="4" data-dw-away="8">Anvil</div>
+      <div data-dw data-dw-home="4" data-dw-away="8">Swage</div>
+      <div data-dw data-dw-home="4" data-dw-away="8">Fuller</div>
+      <div data-dw data-dw-home="4" data-dw-away="8">Hardy</div>
+      <div class="dw-break"></div>
+      <div data-dw data-dw-home="7" data-dw-away="10" class="dw-xl">O</div>
+      <div class="dw-break"></div>
+      <div data-dw data-dw-home="4" data-dw-away="7">Black</div>
+      <div data-dw data-dw-home="4" data-dw-away="7">Bright</div>
+      <div data-dw data-dw-home="4" data-dw-away="7">Waxed</div>
+      <div class="dw-break"></div>
+      <div data-dw data-dw-home="6" data-dw-away="4" class="dw-xl">U</div>
+      <div class="dw-break"></div>
+      <div data-dw data-dw-home="2" data-dw-away="1">Hook</div>
+      <div data-dw data-dw-home="2" data-dw-away="1">Ring</div>
+      <div data-dw data-dw-home="2" data-dw-away="1">Staple</div>
+      <div class="dw-break"></div>
+      <div data-dw data-dw-home="7" data-dw-away="10" class="dw-xl">S</div>
+      <div class="dw-break"></div>
+      <div data-dw data-dw-home="4" data-dw-away="1">[fill in: city]</div>
+      <div data-dw data-dw-home="4" data-dw-away="1">[fill in: year]</div>
+      <div class="dw-break"></div>
+  </main>
+  <p class="cap">Ferrous — the words of the forge. Clean-room example, invented brand.</p>
+<script type="module">
+  import { mountDriftingWords } from './src/drifting-words.js';
+  mountDriftingWords(document.getElementById('dw'), { columns: 10 });
+</script>
+</body>
+</html>

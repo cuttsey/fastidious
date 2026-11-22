@@ -1,0 +1,7 @@
+/* char-rise — display type only. The look (font, size, colour) comes entirely from the host. */
+[data-char-rise] {
+  font-kerning: normal;
+}
+[data-char-rise] .cr-char {
+  will-change: transform, opacity;
+}

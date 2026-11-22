@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>text-repeat — clean-room example (Spore Hall, invented brand)</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/norwester@5.3.0/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/bitter@5.3.0/wght.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/geist-mono@5.3.0/wght.css">
+<style id="fd-fonts">:root { --fd-display: 'Norwester', sans-serif; --fd-body: 'Bitter Variable', serif; --fd-mono: 'Geist Mono Variable', monospace; } html { font-synthesis: none; }</style>
+<script type="importmap">
+{ "imports": {
+  "gsap": "https://cdn.jsdelivr.net/npm/gsap@3.15.1/index.js",
+  "gsap/": "https://cdn.jsdelivr.net/npm/gsap@3.15.1/"
+} }
+</script>
+<link rel="stylesheet" href="src/text-repeat.css">
+<style>
+  /* Clean-room brand: a mushroom farm in a disused railway shed. Charcoal, cap cream, rust. */
+  :root { --char: #1b1a17; --cream: #ece3cf; --rust: #c2552d; }
+  * { box-sizing: border-box; margin: 0; }
+  body { background: var(--char); color: var(--cream); font: 1.05rem/1.55 var(--fd-body); overflow-x: clip; }
+  .mono { font: 500 .72rem/1 var(--fd-mono); letter-spacing: .12em; text-transform: uppercase; opacity: .75; }
+  header { min-height: 90vh; display: grid; align-content: end; gap: 2rem; padding: 6vh 5vw; }
+  header p:last-child { max-width: 34ch; }
+  section { padding: 28vh 5vw; text-align: center; }
+  h2 { font: 400 clamp(4rem, 16vw, 14rem)/.85 var(--fd-display); text-transform: uppercase; --tr-copy: var(--rust); --tr-bg: var(--char); }
+  h2.s { font-size: clamp(3rem, 9vw, 8rem); }
+  .note { padding: 6vh 5vw 10vh; font-size: .85rem; opacity: .6; }
+</style>
+</head>
+<body>
+  <header>
+    <p class="mono">Spore Hall · the old engine shed</p>
+    <p>Three crops, grown in the dark under the arches. Scroll down the shed.</p>
+  </header>
+  <section><h2 data-tr>Oyster</h2></section>
+  <section><h2 class="s" data-tr data-tr-mode="fan">Lion's mane</h2></section>
+  <section><h2 data-tr data-tr-mode="outline">Shiitake</h2></section>
+  <p class="note">Spore Hall is invented. Fonts: Norwester, Bitter and Geist Mono from the font registry.</p>
+<script type="module">
+  import { mountTextRepeat } from './src/text-repeat.js';
+  document.querySelectorAll('[data-tr]').forEach((h) => {
+    const mode = h.dataset.trMode;
+    if (mode === 'outline') h.classList.add('tr--outline');
+    mountTextRepeat(h, mode === 'fan' ? { copies: 7, spread: 40, stagger: 0.05, drift: 0.1, fade: true, ease: 'sine.inOut' } : {});
+  });
+</script>
+</body>
+</html>

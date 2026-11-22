@@ -1,0 +1,37 @@
+/* index-to-detail / push (shares the echo-trail markup contract) — tokens: --et-panel-bg, --et-panel-ink, --et-radius. */
+.et-locked, .et-locked body { overflow: hidden; }
+.et-item { cursor: pointer; }
+.et-item img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: var(--et-radius, 0); }
+
+.et-panel {
+  position: fixed;
+  inset: 0;
+  z-index: 900;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4vw;
+  align-items: center;
+  padding: 6vw;
+  background: var(--et-panel-bg, #fff);
+  color: var(--et-panel-ink, inherit);
+  opacity: 0;
+  pointer-events: none;
+}
+.et-panel-img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  max-height: 80vh;
+  object-fit: cover;
+  border-radius: var(--et-radius, 0);
+  clip-path: inset(0% 0% 100% 0%);
+}
+.et-mover {
+  background-size: cover;
+  background-position: 50% 50%;
+  pointer-events: none;
+  border-radius: var(--et-radius, 0);
+}
+@media (max-width: 47.99em) {
+  .et-panel { grid-template-columns: 1fr; align-content: start; overflow-y: auto; }
+  .et-panel-img { max-height: 50vh; }
+}

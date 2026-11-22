@@ -1,0 +1,27 @@
+/* inline-image-expand — tokens: --ie-width (in em, so it scales with the type), --ie-ratio, --ie-radius, --ie-gap.
+   Place the window before the last word or two of a line, so the words that slide have room to land. */
+[data-ie] .ie-window {
+  display: inline-block;
+  vertical-align: -0.08em;
+  width: var(--ie-width, 2.4em);
+  aspect-ratio: var(--ie-ratio, 16 / 9);
+  height: auto;
+  max-height: 0.9em;
+  margin: 0 var(--ie-gap, 0.18em);
+  border-radius: var(--ie-radius, 999px);
+  overflow: hidden;
+  will-change: transform, clip-path;
+}
+[data-ie] .ie-window > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: var(--ie-focus, 50% 50%);
+  display: block;
+  will-change: transform;
+}
+[data-ie] .ie-after {
+  display: inline-block;
+  white-space: nowrap;
+  will-change: transform;
+}

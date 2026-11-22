@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>page-transition — clean-room example (Granite Way, invented brand)</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/bagnard@5.3.0/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/hanken-grotesk@5.3.0/wght.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/trispace@5.3.0/standard.css">
+<style id="fd-fonts">:root { --fd-display: 'Bagnard', serif; --fd-body: 'Hanken Grotesk Variable', sans-serif; --fd-mono: 'Trispace Variable', monospace; } html { font-synthesis: none; }</style>
+<script type="importmap">
+{ "imports": {
+  "gsap": "https://cdn.jsdelivr.net/npm/gsap@3.15.1/index.js",
+  "gsap/": "https://cdn.jsdelivr.net/npm/gsap@3.15.1/"
+} }
+</script>
+<link rel="stylesheet" href="src/page-transition.css">
+<link rel="stylesheet" href="../view-change/pixel-cover/src/pixel-cover.css">
+<style>
+  /* Clean-room brand: a guide to granite moorland walks. Peat, lichen, sky. */
+  :root { --peat: #2a211b; --lichen: #b9c48a; --sky: #eef1f2; --pxc-colour: #b9c48a; }
+  * { box-sizing: border-box; margin: 0; }
+  body { background: var(--sky); color: var(--peat); font: 1.05rem/1.55 var(--fd-body); }
+  .bar { display: flex; justify-content: space-between; align-items: baseline; padding: 22px 5vw; border-bottom: 1px solid #2a211b22; }
+  .bar a { font: 400 1.4rem/1 var(--fd-display); color: inherit; text-decoration: none; }
+  .mono { font: 500 .72rem/1 var(--fd-mono); letter-spacing: .12em; text-transform: uppercase; }
+  main { padding: 8vh 5vw 14vh; }
+  h1 { font: 400 clamp(2.6rem, 7vw, 6rem)/.95 var(--fd-display); margin: 1rem 0 2rem; max-width: 14ch; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 2rem; }
+  .card { color: inherit; text-decoration: none; display: block; }
+  .card img, .hero { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 6px; background: var(--lichen); }
+  .card h2 { font: 400 1.9rem/1 var(--fd-display); margin: .9rem 0 .4rem; }
+  .card:focus-visible { outline: 2px solid var(--peat); outline-offset: 6px; }
+  .detail { display: grid; grid-template-columns: 1.2fr 1fr; gap: 4vw; align-items: start; }
+  .detail h1 { margin-top: 0; }
+  .back { display: inline-block; margin-top: 2rem; color: inherit; }
+  @media (max-width: 760px) { .detail { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+  <header class="bar"><a href="example.html">Granite Way</a><span class="mono">Walks on the high moor</span></header>
+  <main data-pt-container>
+    <p class="mono">Two walks to start with</p>
+    <h1>Short days on the granite.</h1>
+    <div class="cards">
+      <a class="card" href="example-tor.html" data-pt-group="tor">
+        <img data-pt-name="img" src="../_example/img/still-hook.jpg" alt="">
+        <h2 data-pt-name="title">Hound Tor to Haytor</h2>
+        <p class="mono" data-pt-name="meta">4.2 miles</p>
+      </a>
+      <a class="card" href="example-leat.html" data-pt-group="leat">
+        <img data-pt-name="img" src="../_example/img/still-buoy.jpg" alt="">
+        <h2 data-pt-name="title">Along the old leat</h2>
+        <p class="mono" data-pt-name="meta">6.8 miles</p>
+      </a>
+    </div>
+  </main>
+<script type="module">
+  import { mountPageTransition } from './src/page-transition.js';
+  import { mountPixelCover } from '../view-change/pixel-cover/src/pixel-cover.js';
+  const q = new URLSearchParams(location.search);
+  // ?cover=1 forces the fallback path through a view-change part, as in a browser without view transitions.
+  mountPageTransition(q.get('cover') ? { useViewTransitions: false, cover: mountPixelCover({ rows: 6, columns: 10 }) } : {});
+</script>
+</body>
+</html>

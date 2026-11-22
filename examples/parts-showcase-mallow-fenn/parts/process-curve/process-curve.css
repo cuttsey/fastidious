@@ -1,0 +1,14 @@
+/* process-curve — tokens: --pc-ink, --pc-accent, --pc-ghost, --pc-readout-font, --pc-label-font. */
+.pc { position: relative; color: var(--pc-ink, currentColor); }
+.pc-svg { display: block; width: 100%; height: auto; overflow: visible; }
+.pc-axis { stroke: currentColor; stroke-opacity: 0.35; stroke-width: 1; }
+.pc-ghost { fill: none; stroke: var(--pc-ghost, currentColor); stroke-opacity: 0.14; stroke-width: 2; }
+.pc-line { fill: none; stroke: var(--pc-accent, currentColor); stroke-width: 3; stroke-linejoin: round; stroke-linecap: round; }
+.pc-dot { fill: var(--pc-accent, currentColor); }
+.pc-mark line { stroke: currentColor; stroke-opacity: 0.2; stroke-dasharray: 3 5; }
+.pc-mark text { font: var(--pc-label-font, 600 13px var(--fd-mono, monospace)); fill: currentColor; opacity: 0.35; text-transform: uppercase; letter-spacing: 0.06em; transition: opacity 0.3s; }
+.pc-mark.pc-on text { opacity: 1; }
+.pc-readout { display: flex; align-items: baseline; gap: 1rem; margin-bottom: 0.8rem; font-variant-numeric: tabular-nums; }
+.pc-y { font: var(--pc-readout-font, 800 clamp(2.5rem, 7vw, 6rem)/0.9 var(--fd-display, sans-serif)); color: var(--pc-accent, currentColor); }
+.pc-x { font: var(--pc-label-font, 600 0.85rem var(--fd-mono, monospace)); opacity: 0.7; }
+.pc-table { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }

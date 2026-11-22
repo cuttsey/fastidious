@@ -23,8 +23,9 @@ This skill chooses type the way a type director does: from meaning first, then b
 3. **Judge set, not named.** Decide only from a rendered specimen with the project's real copy, at desktop and phone sizes, on the project's real colours.
 4. **Distinction counts.** Faces marked overuse 3 in `references/typefaces.json` are the defaults of templates and AI-built pages. Use one only when its meaning is plainly right, and say why in `DESIGN-RATIONALE.md`.
 5. **Variants, then lock.** Three pairings that differ in genre, not three variants of one. The person chooses; record it with `option-ledger`.
-6. **Licences and hosts.** Google Fonts and Fontshare faces are free to use; commercial faces need a licence the client buys. Artifacts load fonts only from Google Fonts or from inlined files.
-7. **Write plainly.** British English, sentence case headings.
+6. **Registry only.** Every face must come from `font-registry` (the Awwwards free fonts collection, checked for licence and loaded by reference). Use this skill's catalogue and lookups to judge genre, lineage and fit, but shortlist only faces the registry lists. When the right face is in the catalogue but not the registry, check it against the registry's rules for adding a font before proposing it; never fall back to a basic or generic face (Arial, Helvetica, Georgia, system-ui, Roboto, Menlo and the like). Commercial faces still need a licence the client buys, and are proposed as an upgrade, never as the default.
+7. **Licences and hosts.** Load registry fonts from the links `font-registry` lists (jsDelivr for open fonts, the Fontshare API for Fontshare fonts). Fastidious keeps no font files.
+8. **Write plainly.** British English, sentence case headings.
 
 ## Stage 1: The type brief
 

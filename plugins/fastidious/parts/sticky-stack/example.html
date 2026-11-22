@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sticky-stack — clean-room example (Tidewater, invented brand)</title>
+<link rel="stylesheet" href="../fonts/faces/mattone.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/inter@5.3.0/standard.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/inter@5.3.0/standard-italic.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/geist-mono@5.3.0/wght.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/geist-mono@5.3.0/wght-italic.css">
+<style id="fd-fonts">:root { --fd-display: 'Mattone', sans-serif; --fd-body: 'Inter Variable', sans-serif; --fd-mono: 'Geist Mono Variable', monospace; } html { font-synthesis: none; }</style>
+<script type="importmap">
+{ "imports": {
+  "gsap": "https://cdn.jsdelivr.net/npm/gsap@3.15.1/index.js",
+  "gsap/": "https://cdn.jsdelivr.net/npm/gsap@3.15.1/"
+} }
+</script>
+<link rel="stylesheet" href="src/sticky-stack.css">
+<style>
+  /* Clean-room brand: a swim club's timetable, flat colour fields, no 3D objects (unlike the source's chrome renders). */
+  * { box-sizing: border-box; margin: 0; }
+  body { font: 1.05rem/1.5 var(--fd-body); color: #0f2733; }
+  .ss-section { display: grid; grid-template-columns: 1fr 1fr; align-items: end; gap: 4vw; padding: 7vw; }
+  .ss-section:nth-child(1) { background: #cfe3ea; }
+  .ss-section:nth-child(2) { background: #9cc5d4; }
+  .ss-section:nth-child(3) { background: #3f7f96; color: #f2f5f6; }
+  .ss-section:nth-child(4) { background: #0f2733; color: #f2f5f6; }
+  .ss-section h2 { font: 900 clamp(3rem, 10vw, 9rem)/.85 var(--fd-display); }
+  .ss-section p { max-width: 30ch; }
+  .eyebrow { font: 600 .72rem/1 var(--fd-mono); letter-spacing: .12em; text-transform: uppercase; margin-bottom: 1rem; }
+  .ss-media { width: 100%; aspect-ratio: 4/3; background: url(../_example/img/tide.svg) center/cover; border-radius: 4px; }
+  @media (max-width: 47.99em) { .ss-section { grid-template-columns: 1fr; align-content: end; } }
+</style>
+</head>
+<body>
+  <main>
+    <section class="ss-section"><div><p class="eyebrow">01 — Dawn</p><h2>[fill in: time]</h2></div><p>Placeholder copy. Each card is one session; the times are slots for real facts.</p></section>
+    <section class="ss-section"><div><p class="eyebrow">02 — Lengths</p><h2>Lane swim</h2></div><div class="ss-media" role="img" aria-label="Banded sea, original artwork"></div></section>
+    <section class="ss-section"><div><p class="eyebrow">03 — Open water</p><h2>To the buoy</h2></div><p>[fill in: distance] out and back, when the water is above [fill in: °C].</p></section>
+    <section class="ss-section"><div><p class="eyebrow">04 — After</p><h2>Tea on the wall</h2></div><p>Clean-room example for the Fastidious parts library. Invented brand, original artwork.</p></section>
+  </main>
+<script type="module">
+  import { mountStickyStack } from './src/sticky-stack.js';
+  const exit = new URLSearchParams(location.search).get('exit') || 'drift';
+  mountStickyStack(document, { exit, tilt: exit === 'drift' ? -12 : 0 });
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>type-curtain — clean-room example (Ferrous, invented brand)</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/archivo-narrow@5.3.0/wght.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/archivo-narrow@5.3.0/wght-italic.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/libertinus-serif@5.3.0/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/libertinus-serif@5.3.0/400-italic.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/libertinus-serif@5.3.0/600.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/libertinus-serif@5.3.0/700.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/geist-mono@5.3.0/wght.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/geist-mono@5.3.0/wght-italic.css">
+<style id="fd-fonts">:root { --fd-display: 'Archivo Narrow Variable', sans-serif; --fd-body: 'Libertinus Serif', serif; --fd-mono: 'Geist Mono Variable', monospace; } html { font-synthesis: none; }</style>
+<script type="importmap">
+{ "imports": {
+  "gsap": "https://cdn.jsdelivr.net/npm/gsap@3.15.1/index.js",
+  "gsap/": "https://cdn.jsdelivr.net/npm/gsap@3.15.1/"
+} }
+</script>
+<link rel="stylesheet" href="src/type-curtain.css">
+<style>
+  /* Clean-room brand: an ironmonger, condensed caps on iron grey with a rust wall of type (unlike the source's coral and serif). */
+  :root { --tc-font: var(--fd-display); --tc-colour: #c9583a; --tc-ground: #1d2124; }
+  * { box-sizing: border-box; margin: 0; }
+  body { background: #1d2124; color: #eef0f1; font: 1rem/1.5 var(--fd-body); min-height: 100vh; }
+  .view { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; gap: 5vw; align-items: center; padding: 8vw; }
+  .view[hidden] { display: none; }
+  h1, h2 { font: 800 clamp(3rem, 9vw, 8rem)/.85 var(--fd-display); text-transform: uppercase; }
+  .eyebrow { font: 600 .72rem/1 var(--fd-mono); letter-spacing: .1em; text-transform: uppercase; margin-bottom: 1rem; color: #c9583a; }
+  .pic { aspect-ratio: 4/5; background: url(../../_example/img/still-hook.svg) center/cover; }
+  .pic.b { background-image: url(../../_example/img/still-weights.svg); }
+  button { margin-top: 2rem; font: 600 .8rem/1 var(--fd-mono); color: inherit; background: none; border: 1px solid currentColor; padding: .8rem 1.2rem; cursor: pointer; }
+  @media (max-width: 47.99em) { .view { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+  <main>
+    <section class="view" id="a"><div><p class="eyebrow">01 — The forge</p><h1>Hot iron,<br>slow work.</h1><button data-go="b">See the hinges</button></div><div class="pic"></div></section>
+    <section class="view" id="b" hidden><div><p class="eyebrow">02 — Hinges</p><h2>Cast to<br>[fill in: kg]</h2><button data-go="a">Back to the forge</button></div><div class="pic b"></div></section>
+  </main>
+<script type="module">
+  import { mountTypeCurtain } from './src/type-curtain.js';
+  const curtain = mountTypeCurtain({ words: ['forged', 'filed', 'blacked', 'hung'] });
+  window.curtain = curtain;
+  document.querySelectorAll('[data-go]').forEach((btn) => btn.addEventListener('click', async () => {
+    const to = document.getElementById(btn.dataset.go), from = btn.closest('.view');
+    await curtain.play(() => { from.hidden = true; to.hidden = false; to.querySelector('button').focus({ preventScroll: true }); window.scrollTo(0, 0); });
+  }));
+</script>
+</body>
+</html>

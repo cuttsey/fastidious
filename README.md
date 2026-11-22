@@ -29,8 +29,8 @@ Most AI design tools are strong at one thing, usually the build. Fastidious cove
 | Discipline | What it settles | Skills | Grounded in |
 | --- | --- | --- | --- |
 | **Purpose** | Why the work exists, who it is for, and the one idea it defends | `frame-shifter`, `positioning-strategist`, `analogy-scout`, `narrative-architect` | Problem framing (Rittel and Webber, 1973; Schön, 1983; Dorst, 2015) and analogical transfer (Gentner, 1983) |
-| **Identity** | What the work signifies, its mark and personality, the world its pictures live in, the words it speaks, and the tokens that hold it | `sign-system-architect`, `identity-director`, `brand-system-architect`, `world-bible`, `copy-director`, `type-director`, `colour-director`, `brand-book`, `iconography`, `taste-library`, `reference-curator` | Semiotics (Barthes, 1977; Chandler, 2017; Kress and van Leeuwen, 2021), iconology (Panofsky, 1939), distinctive brand assets (Romaniuk, 2018) and rhetoric, with fourteen startup identities studied for fit, 235 production design systems and 97 ranked sources on file |
-| **Craft** | The dozens of small loops that move a product from good to great | `detail-craft`, `interaction-minimum-designer`, `component-librarian`, `motion-choreographer`, `render-engineer`, `asset-director`, `blender-build`, then `mobile-auditor`, `scroll-verifier` and `accessibility-performance-auditor` | Exemplar sites taken apart in a real browser, and [WCAG 2.2](https://www.w3.org/TR/WCAG22/) measured against rendered pixels |
+| **Identity** | What the work signifies, its mark and personality, the world its pictures live in, the words it speaks, and the tokens that hold it | `sign-system-architect`, `identity-director`, `brand-system-architect`, `world-bible`, `copy-director`, `type-director`, `font-registry`, `colour-director`, `brand-book`, `iconography`, `taste-library`, `reference-curator` | Semiotics (Barthes, 1977; Chandler, 2017; Kress and van Leeuwen, 2021), iconology (Panofsky, 1939), distinctive brand assets (Romaniuk, 2018) and rhetoric, with fourteen startup identities studied for fit, 235 production design systems and 97 ranked sources on file |
+| **Craft** | The dozens of small loops that move a product from good to great | `detail-craft`, `interaction-minimum-designer`, `component-librarian`, `parts-librarian`, `motion-choreographer`, `render-engineer`, `asset-director`, `blender-build`, then `mobile-auditor`, `scroll-verifier` and `accessibility-performance-auditor` | Exemplar sites taken apart in a real browser, and [WCAG 2.2](https://www.w3.org/TR/WCAG22/) measured against rendered pixels |
 | **Presentation** | Showing the work as it will live: in place, in motion, in public | `supermock`, `showreel-director`, and the separate `fastidious-motion` plugin | Frame-exact capture, an independent critic for every film, and a [WCAG 2.3.1](https://www.w3.org/WAI/WCAG22/Understanding/three-flashes-or-below-threshold.html) flash screen |
 
 A spine of five skills runs through all four. `fastidious` holds the house rules, `studio-conductor` sequences the work through the [Design Council's double diamond](https://www.designcouncil.org.uk/our-resources/framework-for-innovation/) and logs every decision with its options and criteria (MacLean et al., 1991), `build-sequencer` runs the build stages, `option-ledger` gives every option and decision a permanent ID, and `model-switcher` keeps each step on the cheapest model that does it well.
@@ -138,16 +138,18 @@ Alongside the work, a full run leaves the reasoning in the project:
 
 This repository is a Claude Code plugin marketplace with two plugins.
 
-**`plugins/fastidious`**: 32 skills.
+**`plugins/fastidious`**: 35 skills.
 
 | Group | Skills |
 | --- | --- |
 | Spine | `fastidious`, `studio-conductor`, `build-sequencer`, `option-ledger`, `model-switcher` |
 | Purpose | `frame-shifter`, `positioning-strategist`, `analogy-scout`, `narrative-architect` |
-| Identity | `sign-system-architect`, `identity-director`, `brand-system-architect`, `world-bible`, `copy-director`, `type-director`, `colour-director`, `brand-book`, `iconography`, `taste-library`, `reference-curator` |
-| Craft | `detail-craft`, `interaction-minimum-designer`, `component-librarian`, `motion-choreographer`, `render-engineer`, `asset-director`, `blender-build` |
-| Checks | `mobile-auditor`, `scroll-verifier`, `accessibility-performance-auditor` |
+| Identity | `sign-system-architect`, `identity-director`, `brand-system-architect`, `world-bible`, `copy-director`, `type-director`, `font-registry`, `colour-director`, `brand-book`, `iconography`, `taste-library`, `reference-curator` |
+| Craft | `detail-craft`, `interaction-minimum-designer`, `component-librarian`, `parts-librarian`, `motion-choreographer`, `render-engineer`, `asset-director`, `blender-build` |
+| Checks | `mobile-auditor`, `scroll-verifier`, `accessibility-performance-auditor`, `recipe-compiler` |
 | Presentation | `supermock`, `showreel-director` |
+
+**The parts library** ([`plugins/fastidious/parts`](plugins/fastidious/parts/INDEX.md)): 21 vetted interaction and experience parts in 25 modules (scroll effects, text effects, index-to-detail moves, view and page transitions), each normalised to tokens, measured, licence-checked and proven on a made-up brand, with two whole sites built from them as composition tests in [`examples`](examples). `parts-librarian` admits parts; `motion-choreographer` chooses them. The [font registry](plugins/fastidious/parts/fonts/README.md) catalogues the Awwwards free fonts collection; every build takes its type from it by reference, and never uses a basic or generic face.
 
 **`plugins/fastidious-motion`**: generated stills and film through image and video model APIs (gpt-image-2 for frames, Seedance 2.0 or Kling for motion), driven by the Fastidious artefacts. It adds `motion-director`, `shot-writer` and `frame-critic`, a standard-library command line and a `/film` command. API keys are read from the environment only. See its [README](plugins/fastidious-motion/README.md).
 
